@@ -34,14 +34,14 @@ th{font-size:12px;color:var(--mut)}td.t,th.t{text-align:left}tr.up td:first-chil
 <label>&nbsp;<button id="cmp">Comparar temporadas</button></label>
 </div>
 <div id="vc" class="panels"></div>
-<div id="vs" class="hide"><div class="bar"><button id="rnd">Sortear jogos restantes</button><button id="mcb">Calcular chances (10.000 simulações)</button><button id="clr2">Limpar simulação</button><span class="mut">Digite o placar dos jogos ou sorteie. Jogos definidos ficam fixos no cálculo das chances.</span></div><div class="panels"><div id="ss"></div><div class="card sc" id="sg"></div></div></div>
+<div id="vs" class="hide"><div class="bar"><button id="rnd">Sortear todos os restantes</button><button id="mcb">Calcular chances (10.000 simulações)</button><button id="clr2">Limpar simulação</button><span class="mut">Digite o placar dos jogos ou sorteie. Jogos definidos ficam fixos no cálculo das chances.</span></div><div class="panels"><div id="ss"></div><div class="card sc" id="sg"></div></div></div>
 <div id="vj" class="hide"><div class="bar">
 <label>Ordenar por<div class="seg" id="ord"><button data-o="r" class="on">Rodada</button><button data-o="d">Data</button></div></label>
 <label>Time<select id="ft"></select></label></div><div class="card sc" id="jl"></div></div>
 </div>
 <script>
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
-let G=[],st={t:'c',m:'t',o:'r',cmp:false,sim:{},mc:null};
+let G=[],st={t:'c',m:'t',o:'r',cmp:false,sim:{},mc:null,rd:null};
 const norm=s=>s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').trim();
 const AL={r:['rodada','round'],d:['data','date'],h:['mandante','home','time_mandante'],a:['visitante','away','time_visitante'],hg:['mandante_placar','gols_mandante','home_goals','mandante_gols'],ag:['visitante_placar','gols_visitante','away_goals','visitante_gols'],y:['ano_campeonato','ano','season','temporada']};
 function csv(t){const l1=t.split('\n')[0],d=(l1.match(/;/g)||[]).length>(l1.match(/,/g)||[]).length?';':',';const rows=[];let r=[],c='',q=false;
@@ -91,7 +91,7 @@ const tm=Object.keys(pos).sort((a,b)=>me=='p'?(pos[a][R]||99)-(pos[b][R]||99):(p
 const X=r=>L+(r-1)*(W-L-Rm)/Math.max(1,R-1);
 const Y=me=='p'?p=>T+(p-1)*(H-T-B)/Math.max(1,n-1):v=>H-B-v*(H-T-B)/mx;
 const ticks=[];if(me=='p')for(let p=1;p<=n;p++)ticks.push(p);else{const q=mx>60?10:5;for(let v=0;v<=mx;v+=q)ticks.push(v)}
-let o=`<svg viewBox="0 0 ${W} ${H}" style="width:100%;min-width:600px;height:auto" font-size="10">`;
+let o=`<svg viewBox="0 0 ${W} ${H}" style="width:100%;min-width:${hl&&me=='s'?900:600}px;height:auto" font-size="10">`;
 for(const v of ticks)o+=`<line x1="${L}" x2="${W-Rm}" y1="${Y(v)}" y2="${Y(v)}" style="stroke:var(--line)"/><text x="${L-6}" y="${Y(v)+3}" text-anchor="end" style="fill:var(--mut)">${v}</text>`;
 for(let r=1;r<=R;r++)if(r==1||r%5==0||r==R)o+=`<text x="${X(r)}" y="${H-8}" text-anchor="middle" style="fill:var(--mut)">${r}</text>`;
 const lab=tm.filter(t=>pos[t][R]!=null).map(t=>({t,y:Y(pos[t][R])})).sort((a,b)=>a.y-b.y),ly={};
@@ -102,20 +102,24 @@ for(const t of order){const k=tm.indexOf(t),c=`hsl(${(k*137)%360},65%,50%)`,on=!
 for(let r=1;r<=R;r++)if(pos[t][r]!=null)d+=(d?'L':'M')+X(r).toFixed(1)+' '+Y(pos[t][r]).toFixed(1);
 o+=`<path d="${d}" fill="none" stroke="${c}" stroke-width="${hl&&on?3.5:1.8}" stroke-linejoin="round" opacity="${on?1:.18}"><title>${t}</title></path>`;
 if(ly[t]!=null)o+=`<text x="${W-Rm+6}" y="${ly[t]+3}" fill="${c}" opacity="${on?1:.3}" ${hl&&on?'font-weight="700"':''}>${t}</text>`;
-if(hl&&on)for(let r=1;r<=R;r++)if(pos[t][r]!=null)o+=`<circle cx="${X(r)}" cy="${Y(pos[t][r])}" r="3" fill="${c}"><title>${t}: ${pos[t][r]}${un} após a rodada ${r}</title></circle>`}
+if(hl&&on)for(let r=1;r<=R;r++)if(pos[t][r]!=null)o+=`<circle cx="${X(r)}" cy="${Y(pos[t][r])}" r="3" fill="${c}"><title>${t}: ${pos[t][r]}${un} após a rodada ${r}</title></circle>`+(me=='s'?`<text x="${X(r)}" y="${Y(pos[t][r])-7}" text-anchor="middle" font-size="9" font-weight="700" fill="${c}" style="paint-order:stroke;stroke:var(--card);stroke-width:3px">${pos[t][r]}</text>`:'')}
 return`<div class="card">${head}<div class="sc">${o}</svg></div></div>`}
 const cmpT=(a,b)=>b.P-a.P||b.V-a.V||b.SG-a.SG||b.GP-a.GP||a.n.localeCompare(b.n);
 function calc(l,names){const T={};const get=n=>T[n]||(T[n]={n,P:0,J:0,V:0,E:0,D:0,GP:0,GC:0});names.forEach(get);
 for(const g of l)for(const[n,f,c]of[[g.h,g.hg,g.ag],[g.a,g.ag,g.hg]]){const t=get(n);t.J++;t.GP+=f;t.GC+=c;if(f>c){t.V++;t.P+=3}else if(f==c){t.E++;t.P++}else t.D++}
 return Object.values(T).map(t=>(t.SG=t.GP-t.GC,t)).sort(cmpT)}
 function simY(){const p=G.filter(g=>g.hg==null);return p.length?Math.max(...p.map(g=>g.y)):0}
+function pendRounds(){const y=simY();return[...new Set(G.filter(g=>g.y==y&&g.hg==null).map(g=>g.r))].sort((a,b)=>a-b)}
+function optHtml(){const y=simY();return pendRounds().map(r=>{const t=[];G.forEach((g,i)=>{if(g.y==y&&g.hg==null&&g.r==r)t.push(i)});
+return`<option value="${r}"${r==st.rd?' selected':''}>Rodada ${r} (${t.filter(i=>st.sim[i]).length}/${t.length} definidos)</option>`}).join('')}
 function sim(){const y=simY();
 if(!y){$('#ss').innerHTML='<div class="card"><h2>Simulação</h2><div class="mut">Não há jogos restantes nos dados carregados.</div></div>';$('#sg').innerHTML='';return}
-const pend=[];G.forEach((g,i)=>{if(g.y==y&&g.hg==null)pend.push([g,i])});
-pend.sort((a,b)=>a[0].r-b[0].r||a[0].d.localeCompare(b[0].d));
-const iv=(i,k)=>{const v=st.sim[i];return v?v[k]:''};
-$('#sg').innerHTML=`<h2>Jogos restantes de ${y} <span class="mut">${pend.length} jogos</span></h2><table class="g"><tr><th>Rod.</th><th>Data</th><th style="text-align:right">Mandante</th><th>Placar</th><th style="text-align:left">Visitante</th></tr>`+
-pend.map(([g,i])=>`<tr><td>${g.r}</td><td>${fdt(g.d)}</td><td class="h">${g.h}</td><td style="white-space:nowrap"><input type="number" min="0" max="30" data-i="${i}" value="${iv(i,'h')}" style="width:52px"> x <input type="number" min="0" max="30" data-i="${i}" value="${iv(i,'a')}" style="width:52px"></td><td class="a">${g.a}</td></tr>`).join('')+'</table>';
+const rs=pendRounds();if(!rs.includes(st.rd))st.rd=rs[0];
+const pend=[];G.forEach((g,i)=>{if(g.y==y&&g.hg==null&&g.r==st.rd)pend.push([g,i])});
+pend.sort((a,b)=>a[0].d.localeCompare(b[0].d));
+const iv=(i,k)=>{const v=st.sim[i];return v?v[k]:''},k=rs.indexOf(st.rd);
+$('#sg').innerHTML=`<h2>Jogos restantes de ${y}</h2><div style="display:flex;gap:8px;align-items:center;margin-bottom:8px"><button data-d="-1"${k==0?' disabled':''}>◀</button><select id="rs">${optHtml()}</select><button data-d="1"${k==rs.length-1?' disabled':''}>▶</button></div><table class="g"><tr><th>Data</th><th style="text-align:right">Mandante</th><th>Placar</th><th style="text-align:left">Visitante</th></tr>`+
+pend.map(([g,i])=>`<tr><td>${fdt(g.d)}</td><td class="h">${g.h}</td><td style="white-space:nowrap"><input type="number" min="0" max="30" data-i="${i}" value="${iv(i,'h')}" style="width:52px"> x <input type="number" min="0" max="30" data-i="${i}" value="${iv(i,'a')}" style="width:52px"></td><td class="a">${g.a}</td></tr>`).join('')+'</table>';
 simTable()}
 function simTable(){const y=simY(),all=G.filter(g=>g.y==y),names=[...new Set(all.flatMap(g=>[g.h,g.a]))];
 const played=all.filter(g=>g.hg!=null),fixed=[];let np=0;
@@ -151,8 +155,10 @@ seg('#tabs','t','t');
 $('#rnd').onclick=()=>{const y=simY();G.forEach((g,i)=>{if(g.y==y&&g.hg==null&&!st.sim[i]){const r=Math.random(),w=1+Math.floor(Math.random()*3),l=Math.floor(Math.random()*w),e=Math.floor(Math.random()*3);st.sim[i]=r<.45?{h:w,a:l}:r<.72?{h:e,a:e}:{h:l,a:w}}});st.mc=null;sim()};
 $('#clr2').onclick=()=>{st.sim={};st.mc=null;sim()};
 $('#mcb').onclick=()=>{st.mc=monte();simTable()};
+$('#sg').onclick=e=>{const b=e.target.closest('button[data-d]');if(!b)return;const rs=pendRounds(),k=rs.indexOf(st.rd)+(+b.dataset.d);if(k>=0&&k<rs.length){st.rd=rs[k];sim()}};
+$('#sg').onchange=e=>{if(e.target.id=='rs'){st.rd=+e.target.value;sim()}};
 $('#sg').oninput=e=>{const i=e.target.dataset.i;if(i==null)return;const [a,b]=e.target.closest('tr').querySelectorAll('input');
-if(a.value!==''&&b.value!==''&&+a.value>=0&&+b.value>=0)st.sim[i]={h:Math.floor(+a.value),a:Math.floor(+b.value)};else delete st.sim[i];st.mc=null;simTable()};
+if(a.value!==''&&b.value!==''&&+a.value>=0&&+b.value>=0)st.sim[i]={h:Math.floor(+a.value),a:Math.floor(+b.value)};else delete st.sim[i];st.mc=null;simTable();$('#rs').innerHTML=optHtml()};
 seg('#modo','m','m');seg('#ord','o','o');
 $('#cmp').onclick=()=>{st.cmp=!st.cmp;draw()};
 $('#sa').onchange=()=>{fillTeams();draw()};$('#chk').onchange=draw;$('#mt').onchange=draw;$('#et').onchange=draw;$('#x').oninput=draw;$('#ft').onchange=draw;
