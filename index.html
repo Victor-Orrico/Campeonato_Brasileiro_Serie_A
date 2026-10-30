@@ -16,7 +16,7 @@ button{cursor:pointer}button.on{background:var(--acc);color:#fff;border-color:va
 .card h2{font-size:16px;margin:0 0 8px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
 .sc{overflow-x:auto}table{border-collapse:collapse;width:100%}th,td{padding:5px 6px;text-align:right;white-space:nowrap;border-bottom:1px solid var(--line)}
 th{font-size:12px;color:var(--mut)}td.t,th.t{text-align:left}tr.up td:first-child{box-shadow:inset 3px 0 var(--acc)}tr.up{background:var(--up)}tr.dn{background:var(--dn)}td.p{font-weight:700}
-.g td{text-align:center}.g td.h{text-align:right}.g td.a{text-align:left}.mut{color:var(--mut);font-size:13px}.hide{display:none}
+.g td{text-align:center}.g td.h{text-align:right}.g td.a{text-align:left}.mut{color:var(--mut);font-size:13px}.hide{display:none!important}.chk{display:flex;flex-wrap:wrap;gap:4px;max-width:440px;max-height:90px;overflow:auto}.chk label{flex-direction:row;align-items:center;gap:3px;font-size:13px;color:var(--fg);border:1px solid var(--line);border-radius:6px;padding:2px 6px}
 #imp{border:2px dashed var(--line);border-radius:10px;padding:18px;background:var(--card);margin-bottom:14px}
 </style></head><body>
 <h1>⚽ Brasileirão Série A</h1>
@@ -24,9 +24,10 @@ th{font-size:12px;color:var(--mut)}td.t,th.t{text-align:left}tr.up td:first-chil
 <input type="file" id="file" accept=".csv,.txt"> <button id="clr" class="hide">Apagar dados</button> <span id="msg" class="mut"></span></div>
 <div id="app" class="hide">
 <div class="bar">
-<div class="seg" id="tabs"><button data-t="c" class="on">Classificação</button><button data-t="j">Jogos</button></div>
-<label>Temporada A<select id="sa"></select></label>
-<label id="lb" >Temporada B<select id="sb"></select></label>
+<div class="seg" id="tabs"><button data-t="c" class="on">Classificação</button><button data-t="e">Evolução</button><button data-t="j">Jogos</button></div>
+<label id="la">Temporada<select id="sa"></select></label>
+<div id="lb" class="hide" style="display:flex;flex-direction:column;font-size:12px;color:var(--mut);gap:3px">Temporadas a comparar<div id="chk" class="chk"></div></div>
+<label id="le" class="hide">Destacar time<select id="et"></select></label>
 <label>Após a rodada<input id="x" type="number" min="1" placeholder="todas" style="width:90px"></label>
 <label>Condição<div class="seg" id="modo"><button data-m="t" class="on">Geral</button><button data-m="h">Casa</button><button data-m="a">Fora</button></div></label>
 <label>&nbsp;<button id="cmp">Comparar temporadas</button></label>
@@ -55,8 +56,8 @@ out.push({y,r:rd,d,h:r[ix.h].trim(),a:r[ix.a].trim(),hg:isNaN(hg)?null:hg,ag:isN
 if(!out.length)throw Error('Nenhum jogo válido');return out}
 function save(){try{localStorage.setItem('bra_g',JSON.stringify(G))}catch(e){$('#msg').textContent='Não foi possível salvar no navegador (os dados valem só nesta sessão).'}}
 function init(){if(!G.length)return;$('#app').classList.remove('hide');$('#clr').classList.remove('hide');
-const ys=[...new Set(G.map(g=>g.y))].sort((a,b)=>b-a);const o=ys.map(y=>`<option>${y}</option>`).join('');$('#sa').innerHTML=o;$('#sb').innerHTML=o;
-if(ys.length>1)$('#sb').selectedIndex=Math.min(ys.length-1,ys.indexOf(2010)>=0?ys.indexOf(2010):1);
+const ys=[...new Set(G.map(g=>g.y))].sort((a,b)=>b-a);const def=[ys[0],ys.includes(2010)?2010:ys[1]];const o=ys.map(y=>`<option>${y}</option>`).join('');$('#sa').innerHTML=o;$('#chk').innerHTML=ys.map(y=>`<label><input type="checkbox" value="${y}" ${def.includes(y)?'checked':''}>${y}</label>`).join('');
+
 $('#msg').textContent=`${G.length} jogos • ${ys.length} temporadas (${ys[ys.length-1]}–${ys[0]})`;fillTeams();draw()}
 function fillTeams(){const y=+$('#sa').value,t=[...new Set(G.filter(g=>g.y==y).flatMap(g=>[g.h,g.a]))].sort();$('#ft').innerHTML='<option value="">Todos</option>'+t.map(x=>`<option>${x}</option>`).join('')}
 function table(y,X,m){const T={};const get=n=>T[n]||(T[n]={n,P:0,J:0,V:0,E:0,D:0,GP:0,GC:0});
@@ -72,13 +73,39 @@ l.sort(st.o=='r'?(a,b)=>a.r-b.r||a.d.localeCompare(b.d):(a,b)=>a.d.localeCompare
 const fd=d=>d.split('-').reverse().join('/');
 $('#jl').innerHTML=`<div class="mut">${l.length} jogos – ${y}</div><table class="g"><tr><th>Rod.</th><th>Data</th><th class="h" style="text-align:right">Mandante</th><th>Placar</th><th class="a" style="text-align:left">Visitante</th></tr>`+
 l.map(g=>`<tr><td>${g.r}</td><td>${fd(g.d)}</td><td class="h">${g.h}</td><td><b>${g.hg==null?'–':g.hg+' x '+g.ag}</b></td><td class="a">${g.a}</td></tr>`).join('')+'</table>'}
-function draw(){$('#lb').classList.toggle('hide',!st.cmp||st.t!='c');$('#cmp').classList.toggle('on',st.cmp);$('#cmp').classList.toggle('hide',st.t!='c');
-$('#vc').classList.toggle('hide',st.t!='c');$('#vj').classList.toggle('hide',st.t!='j');
-if(st.t=='c')$('#vc').innerHTML=panel(+$('#sa').value)+(st.cmp?panel(+$('#sb').value):'');else games()}
+const sel=()=>st.cmp?[...$$('#chk input:checked')].map(i=>+i.value).sort((a,b)=>b-a):[+$('#sa').value];
+function fillET(){const ys=sel(),v=$('#et').value,t=[...new Set(G.filter(g=>ys.includes(g.y)).flatMap(g=>[g.h,g.a]))].sort();
+const h='<option value="">Nenhum (todos)</option>'+t.map(x=>`<option>${x}</option>`).join('');
+if($('#et').dataset.k!=h){$('#et').innerHTML=h;$('#et').dataset.k=h;if(t.includes(v))$('#et').value=v}}
+function chart(y){const m=st.m,hl=$('#et').value,mt={t:'Geral',h:'Só em casa',a:'Só fora'}[m];
+const R=Math.max(0,...G.filter(g=>g.y==y&&g.hg!=null).map(g=>g.r));
+const head=`<h2>${y} <span class="mut">${mt} • posição após cada rodada</span></h2>`;
+if(!R)return`<div class="card">${head}<div class="mut">Sem jogos disputados.</div></div>`;
+const pos={};let n=0;
+for(let x=1;x<=R;x++){const rows=table(y,x,m);n=Math.max(n,rows.length);rows.forEach((t,i)=>{(pos[t.n]=pos[t.n]||[])[x]=i+1})}
+const W=780,H=60+n*20,L=30,Rm=130,T=14,B=26,tm=Object.keys(pos).sort((a,b)=>(pos[a][R]||99)-(pos[b][R]||99));
+const X=r=>L+(r-1)*(W-L-Rm)/Math.max(1,R-1),Y=p=>T+(p-1)*(H-T-B)/Math.max(1,n-1);
+let o=`<svg viewBox="0 0 ${W} ${H}" style="width:100%;min-width:600px;height:auto" font-size="10">`;
+for(let p=1;p<=n;p++)o+=`<line x1="${L}" x2="${W-Rm}" y1="${Y(p)}" y2="${Y(p)}" style="stroke:var(--line)"/><text x="${L-6}" y="${Y(p)+3}" text-anchor="end" style="fill:var(--mut)">${p}</text>`;
+for(let r=1;r<=R;r++)if(r==1||r%5==0||r==R)o+=`<text x="${X(r)}" y="${H-8}" text-anchor="middle" style="fill:var(--mut)">${r}</text>`;
+const order=hl?[...tm.filter(t=>t!=hl),...tm.filter(t=>t==hl)]:tm;
+for(const t of order){const k=tm.indexOf(t),c=`hsl(${(k*137)%360},65%,50%)`,on=!hl||t==hl;let d='';
+for(let r=1;r<=R;r++)if(pos[t][r])d+=(d?'L':'M')+X(r).toFixed(1)+' '+Y(pos[t][r]).toFixed(1);
+o+=`<path d="${d}" fill="none" stroke="${c}" stroke-width="${hl&&on?3.5:1.8}" stroke-linejoin="round" opacity="${on?1:.18}"><title>${t}</title></path>`;
+if(pos[t][R])o+=`<text x="${W-Rm+6}" y="${Y(pos[t][R])+3}" fill="${c}" opacity="${on?1:.3}" ${hl&&on?'font-weight="700"':''}>${t}</text>`;
+if(hl&&on)for(let r=1;r<=R;r++)if(pos[t][r])o+=`<circle cx="${X(r)}" cy="${Y(pos[t][r])}" r="3" fill="${c}"><title>${t}: ${pos[t][r]}º após a rodada ${r}</title></circle>`}
+return`<div class="card">${head}<div class="sc">${o}</svg></div></div>`}
+function draw(){const t=st.t,c=st.cmp&&t!='j';
+$('#la').classList.toggle('hide',c);$('#lb').classList.toggle('hide',!c);$('#le').classList.toggle('hide',t!='e');
+$('#cmp').classList.toggle('on',st.cmp);$('#cmp').classList.toggle('hide',t=='j');$('#vc').classList.toggle('hide',t=='j');$('#vj').classList.toggle('hide',t!='j');
+$('#vc').style.gridTemplateColumns=t=='e'?'1fr':'';
+if(t=='c')$('#vc').innerHTML=sel().map(y=>panel(y)).join('')||'<div class="mut">Marque ao menos uma temporada.</div>';
+else if(t=='e'){fillET();$('#vc').innerHTML=sel().map(chart).join('')||'<div class="mut">Marque ao menos uma temporada.</div>'}
+else games()}
 function seg(id,attr,key){$(id).onclick=e=>{const b=e.target.closest('button');if(!b)return;st[key]=b.dataset[attr];$$(id+' button').forEach(x=>x.classList.toggle('on',x==b));draw()}}
 seg('#tabs','t','t');seg('#modo','m','m');seg('#ord','o','o');
 $('#cmp').onclick=()=>{st.cmp=!st.cmp;draw()};
-$('#sa').onchange=()=>{fillTeams();draw()};$('#sb').onchange=draw;$('#x').oninput=draw;$('#ft').onchange=draw;
+$('#sa').onchange=()=>{fillTeams();draw()};$('#chk').onchange=draw;$('#et').onchange=draw;$('#x').oninput=draw;$('#ft').onchange=draw;
 $('#file').onchange=async e=>{const f=e.target.files[0];if(!f)return;try{G=load(await f.text());save();init()}catch(err){$('#msg').textContent='Erro: '+err.message}}
 $('#clr').onclick=()=>{try{localStorage.removeItem('bra_g')}catch(e){}G=[];location.reload()}
 fetch('data/jogos.csv',{cache:'no-cache'}).then(r=>{if(!r.ok)throw 0;return r.text()}).then(t=>{G=load(t);save();$('#imp').classList.add('hide');init()}).catch(()=>{try{const s=localStorage.getItem('bra_g');if(s){G=JSON.parse(s);init()}}catch(e){}})
