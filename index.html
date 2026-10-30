@@ -24,22 +24,24 @@ th{font-size:12px;color:var(--mut)}td.t,th.t{text-align:left}tr.up td:first-chil
 <input type="file" id="file" accept=".csv,.txt"> <button id="clr" class="hide">Apagar dados</button> <span id="msg" class="mut"></span></div>
 <div id="app" class="hide">
 <div class="bar">
-<div class="seg" id="tabs"><button data-t="c" class="on">Classificação</button><button data-t="e">Evolução</button><button data-t="j">Jogos</button></div>
+<div class="seg" id="tabs"><button data-t="c" class="on">Classificação</button><button data-t="e">Evolução</button><button data-t="j">Jogos</button><button data-t="s">Simulação</button></div>
 <label id="la">Temporada<select id="sa"></select></label>
 <div id="lb" class="hide" style="display:flex;flex-direction:column;font-size:12px;color:var(--mut);gap:3px">Temporadas a comparar<div id="chk" class="chk"></div></div>
+<label id="lk" class="hide">Métrica<select id="mt"><option value="p">Posição</option><option value="s">Pontos acumulados</option></select></label>
 <label id="le" class="hide">Destacar time<select id="et"></select></label>
-<label>Após a rodada<input id="x" type="number" min="1" placeholder="todas" style="width:90px"></label>
-<label>Condição<div class="seg" id="modo"><button data-m="t" class="on">Geral</button><button data-m="h">Casa</button><button data-m="a">Fora</button></div></label>
+<label id="lx">Após a rodada<input id="x" type="number" min="1" placeholder="todas" style="width:90px"></label>
+<label id="lm">Condição<div class="seg" id="modo"><button data-m="t" class="on">Geral</button><button data-m="h">Casa</button><button data-m="a">Fora</button></div></label>
 <label>&nbsp;<button id="cmp">Comparar temporadas</button></label>
 </div>
 <div id="vc" class="panels"></div>
+<div id="vs" class="hide"><div class="bar"><button id="rnd">Sortear jogos restantes</button><button id="mcb">Calcular chances (10.000 simulações)</button><button id="clr2">Limpar simulação</button><span class="mut">Digite o placar dos jogos ou sorteie. Jogos definidos ficam fixos no cálculo das chances.</span></div><div class="panels"><div id="ss"></div><div class="card sc" id="sg"></div></div></div>
 <div id="vj" class="hide"><div class="bar">
 <label>Ordenar por<div class="seg" id="ord"><button data-o="r" class="on">Rodada</button><button data-o="d">Data</button></div></label>
 <label>Time<select id="ft"></select></label></div><div class="card sc" id="jl"></div></div>
 </div>
 <script>
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
-let G=[],st={t:'c',m:'t',o:'r',cmp:false};
+let G=[],st={t:'c',m:'t',o:'r',cmp:false,sim:{},mc:null};
 const norm=s=>s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').trim();
 const AL={r:['rodada','round'],d:['data','date'],h:['mandante','home','time_mandante'],a:['visitante','away','time_visitante'],hg:['mandante_placar','gols_mandante','home_goals','mandante_gols'],ag:['visitante_placar','gols_visitante','away_goals','visitante_gols'],y:['ano_campeonato','ano','season','temporada']};
 function csv(t){const l1=t.split('\n')[0],d=(l1.match(/;/g)||[]).length>(l1.match(/,/g)||[]).length?';':',';const rows=[];let r=[],c='',q=false;
@@ -74,38 +76,86 @@ const fd=d=>d.split('-').reverse().join('/');
 $('#jl').innerHTML=`<div class="mut">${l.length} jogos – ${y}</div><table class="g"><tr><th>Rod.</th><th>Data</th><th class="h" style="text-align:right">Mandante</th><th>Placar</th><th class="a" style="text-align:left">Visitante</th></tr>`+
 l.map(g=>`<tr><td>${g.r}</td><td>${fd(g.d)}</td><td class="h">${g.h}</td><td><b>${g.hg==null?'–':g.hg+' x '+g.ag}</b></td><td class="a">${g.a}</td></tr>`).join('')+'</table>'}
 const sel=()=>st.cmp?[...$$('#chk input:checked')].map(i=>+i.value).sort((a,b)=>b-a):[+$('#sa').value];
+const fdt=d=>d.split('-').reverse().join('/');
 function fillET(){const ys=sel(),v=$('#et').value,t=[...new Set(G.filter(g=>ys.includes(g.y)).flatMap(g=>[g.h,g.a]))].sort();
 const h='<option value="">Nenhum (todos)</option>'+t.map(x=>`<option>${x}</option>`).join('');
 if($('#et').dataset.k!=h){$('#et').innerHTML=h;$('#et').dataset.k=h;if(t.includes(v))$('#et').value=v}}
-function chart(y){const m=st.m,hl=$('#et').value,mt={t:'Geral',h:'Só em casa',a:'Só fora'}[m];
+function chart(y){const m=st.m,hl=$('#et').value,me=$('#mt').value,mt={t:'Geral',h:'Só em casa',a:'Só fora'}[m];
 const R=Math.max(0,...G.filter(g=>g.y==y&&g.hg!=null).map(g=>g.r));
-const head=`<h2>${y} <span class="mut">${mt} • posição após cada rodada</span></h2>`;
+const head=`<h2>${y} <span class="mut">${mt} • ${me=='p'?'posição':'pontos acumulados'} após cada rodada</span></h2>`;
 if(!R)return`<div class="card">${head}<div class="mut">Sem jogos disputados.</div></div>`;
-const pos={};let n=0;
-for(let x=1;x<=R;x++){const rows=table(y,x,m);n=Math.max(n,rows.length);rows.forEach((t,i)=>{(pos[t.n]=pos[t.n]||[])[x]=i+1})}
-const W=780,H=60+n*20,L=30,Rm=130,T=14,B=26,tm=Object.keys(pos).sort((a,b)=>(pos[a][R]||99)-(pos[b][R]||99));
-const X=r=>L+(r-1)*(W-L-Rm)/Math.max(1,R-1),Y=p=>T+(p-1)*(H-T-B)/Math.max(1,n-1);
+const pos={};let n=0,mx=1;
+for(let x=1;x<=R;x++){const rows=table(y,x,m);n=Math.max(n,rows.length);rows.forEach((t,i)=>{(pos[t.n]=pos[t.n]||[])[x]=me=='p'?i+1:t.P;mx=Math.max(mx,t.P)})}
+const W=780,H=60+n*20,L=30,Rm=130,T=14,B=26;
+const tm=Object.keys(pos).sort((a,b)=>me=='p'?(pos[a][R]||99)-(pos[b][R]||99):(pos[b][R]||0)-(pos[a][R]||0));
+const X=r=>L+(r-1)*(W-L-Rm)/Math.max(1,R-1);
+const Y=me=='p'?p=>T+(p-1)*(H-T-B)/Math.max(1,n-1):v=>H-B-v*(H-T-B)/mx;
+const ticks=[];if(me=='p')for(let p=1;p<=n;p++)ticks.push(p);else{const q=mx>60?10:5;for(let v=0;v<=mx;v+=q)ticks.push(v)}
 let o=`<svg viewBox="0 0 ${W} ${H}" style="width:100%;min-width:600px;height:auto" font-size="10">`;
-for(let p=1;p<=n;p++)o+=`<line x1="${L}" x2="${W-Rm}" y1="${Y(p)}" y2="${Y(p)}" style="stroke:var(--line)"/><text x="${L-6}" y="${Y(p)+3}" text-anchor="end" style="fill:var(--mut)">${p}</text>`;
+for(const v of ticks)o+=`<line x1="${L}" x2="${W-Rm}" y1="${Y(v)}" y2="${Y(v)}" style="stroke:var(--line)"/><text x="${L-6}" y="${Y(v)+3}" text-anchor="end" style="fill:var(--mut)">${v}</text>`;
 for(let r=1;r<=R;r++)if(r==1||r%5==0||r==R)o+=`<text x="${X(r)}" y="${H-8}" text-anchor="middle" style="fill:var(--mut)">${r}</text>`;
+const lab=tm.filter(t=>pos[t][R]!=null).map(t=>({t,y:Y(pos[t][R])})).sort((a,b)=>a.y-b.y),ly={};
+lab.forEach((l,i)=>{if(i)l.y=Math.max(l.y,lab[i-1].y+10);ly[l.t]=l.y});
+const un=me=='p'?'º':' pts';
 const order=hl?[...tm.filter(t=>t!=hl),...tm.filter(t=>t==hl)]:tm;
 for(const t of order){const k=tm.indexOf(t),c=`hsl(${(k*137)%360},65%,50%)`,on=!hl||t==hl;let d='';
-for(let r=1;r<=R;r++)if(pos[t][r])d+=(d?'L':'M')+X(r).toFixed(1)+' '+Y(pos[t][r]).toFixed(1);
+for(let r=1;r<=R;r++)if(pos[t][r]!=null)d+=(d?'L':'M')+X(r).toFixed(1)+' '+Y(pos[t][r]).toFixed(1);
 o+=`<path d="${d}" fill="none" stroke="${c}" stroke-width="${hl&&on?3.5:1.8}" stroke-linejoin="round" opacity="${on?1:.18}"><title>${t}</title></path>`;
-if(pos[t][R])o+=`<text x="${W-Rm+6}" y="${Y(pos[t][R])+3}" fill="${c}" opacity="${on?1:.3}" ${hl&&on?'font-weight="700"':''}>${t}</text>`;
-if(hl&&on)for(let r=1;r<=R;r++)if(pos[t][r])o+=`<circle cx="${X(r)}" cy="${Y(pos[t][r])}" r="3" fill="${c}"><title>${t}: ${pos[t][r]}º após a rodada ${r}</title></circle>`}
+if(ly[t]!=null)o+=`<text x="${W-Rm+6}" y="${ly[t]+3}" fill="${c}" opacity="${on?1:.3}" ${hl&&on?'font-weight="700"':''}>${t}</text>`;
+if(hl&&on)for(let r=1;r<=R;r++)if(pos[t][r]!=null)o+=`<circle cx="${X(r)}" cy="${Y(pos[t][r])}" r="3" fill="${c}"><title>${t}: ${pos[t][r]}${un} após a rodada ${r}</title></circle>`}
 return`<div class="card">${head}<div class="sc">${o}</svg></div></div>`}
-function draw(){const t=st.t,c=st.cmp&&t!='j';
-$('#la').classList.toggle('hide',c);$('#lb').classList.toggle('hide',!c);$('#le').classList.toggle('hide',t!='e');
-$('#cmp').classList.toggle('on',st.cmp);$('#cmp').classList.toggle('hide',t=='j');$('#vc').classList.toggle('hide',t=='j');$('#vj').classList.toggle('hide',t!='j');
+const cmpT=(a,b)=>b.P-a.P||b.V-a.V||b.SG-a.SG||b.GP-a.GP||a.n.localeCompare(b.n);
+function calc(l,names){const T={};const get=n=>T[n]||(T[n]={n,P:0,J:0,V:0,E:0,D:0,GP:0,GC:0});names.forEach(get);
+for(const g of l)for(const[n,f,c]of[[g.h,g.hg,g.ag],[g.a,g.ag,g.hg]]){const t=get(n);t.J++;t.GP+=f;t.GC+=c;if(f>c){t.V++;t.P+=3}else if(f==c){t.E++;t.P++}else t.D++}
+return Object.values(T).map(t=>(t.SG=t.GP-t.GC,t)).sort(cmpT)}
+function simY(){const p=G.filter(g=>g.hg==null);return p.length?Math.max(...p.map(g=>g.y)):0}
+function sim(){const y=simY();
+if(!y){$('#ss').innerHTML='<div class="card"><h2>Simulação</h2><div class="mut">Não há jogos restantes nos dados carregados.</div></div>';$('#sg').innerHTML='';return}
+const pend=[];G.forEach((g,i)=>{if(g.y==y&&g.hg==null)pend.push([g,i])});
+pend.sort((a,b)=>a[0].r-b[0].r||a[0].d.localeCompare(b[0].d));
+const iv=(i,k)=>{const v=st.sim[i];return v?v[k]:''};
+$('#sg').innerHTML=`<h2>Jogos restantes de ${y} <span class="mut">${pend.length} jogos</span></h2><table class="g"><tr><th>Rod.</th><th>Data</th><th style="text-align:right">Mandante</th><th>Placar</th><th style="text-align:left">Visitante</th></tr>`+
+pend.map(([g,i])=>`<tr><td>${g.r}</td><td>${fdt(g.d)}</td><td class="h">${g.h}</td><td style="white-space:nowrap"><input type="number" min="0" max="30" data-i="${i}" value="${iv(i,'h')}" style="width:52px"> x <input type="number" min="0" max="30" data-i="${i}" value="${iv(i,'a')}" style="width:52px"></td><td class="a">${g.a}</td></tr>`).join('')+'</table>';
+simTable()}
+function simTable(){const y=simY(),all=G.filter(g=>g.y==y),names=[...new Set(all.flatMap(g=>[g.h,g.a]))];
+const played=all.filter(g=>g.hg!=null),fixed=[];let np=0;
+G.forEach((g,i)=>{if(g.y==y&&g.hg==null){np++;if(st.sim[i])fixed.push({h:g.h,a:g.a,hg:st.sim[i].h,ag:st.sim[i].a})}});
+const cur=calc(played,names),prj=calc([...played,...fixed],names),p0={};cur.forEach((t,i)=>p0[t.n]=i+1);
+const n=prj.length,mc=st.mc,ex=mc?'<th>Título</th><th>G4</th><th>Z4</th>':'';
+const pc=v=>(v/mc.N*100).toFixed(1)+'%';
+$('#ss').innerHTML=`<div class="card"><h2>${y} <span class="mut">classificação projetada • ${fixed.length} de ${np} jogos definidos</span></h2><div class="sc"><table><tr><th>#</th><th class="t">Time</th><th>P</th><th>J</th><th>V</th><th>SG</th><th>Δ</th>${ex}</tr>`+
+prj.map((t,i)=>{const d=(p0[t.n]||i+1)-(i+1),dd=d>0?'▲'+d:d<0?'▼'+(-d):'=';const e=mc?`<td>${pc(mc.d[t.n].c)}</td><td>${pc(mc.d[t.n].g)}</td><td>${pc(mc.d[t.n].r)}</td>`:'';
+return`<tr class="${i<4?'up':i>=n-4&&n>=16?'dn':''}"><td>${i+1}</td><td class="t">${t.n}</td><td class="p">${t.P}</td><td>${t.J}</td><td>${t.V}</td><td>${t.SG}</td><td>${dd}</td>${e}</tr>`}).join('')+
+`</table></div><div class="mut" style="margin-top:6px">Δ: variação frente à tabela atual. Preencha os dois campos do placar para definir um jogo. Chances: jogos não definidos são sorteados com 45% mandante, 27% empate e 28% visitante (placares 1x0, 0x0 ou 0x1), igual para todos os times; G4 = 4 primeiros, Z4 = 4 últimos.</div></div>`}
+function monte(){const y=simY(),N=10000,all=G.filter(g=>g.y==y),names=[...new Set(all.flatMap(g=>[g.h,g.a]))].sort(),ix={};names.forEach((q,k)=>ix[q]=k);
+const base=names.map(()=>[0,0,0,0]),free=[];
+const add=(B,h,a,hg,ag)=>{for(const[k,f,c]of[[h,hg,ag],[a,ag,hg]]){const b=B[k];b[2]+=f-c;b[3]+=f;if(f>c){b[0]+=3;b[1]++}else if(f==c)b[0]++}};
+G.forEach((g,i)=>{if(g.y!=y)return;if(g.hg!=null)add(base,ix[g.h],ix[g.a],g.hg,g.ag);else if(st.sim[i])add(base,ix[g.h],ix[g.a],st.sim[i].h,st.sim[i].a);else free.push([ix[g.h],ix[g.a]])});
+const n=names.length,cnt=names.map(()=>[0,0,0]),ord=[...Array(n).keys()];
+for(let s=0;s<N;s++){const B=base.map(b=>b.slice());
+for(const[h,a]of free){const r=Math.random();if(r<.45)add(B,h,a,1,0);else if(r<.72)add(B,h,a,0,0);else add(B,h,a,0,1)}
+ord.sort((p,q)=>B[q][0]-B[p][0]||B[q][1]-B[p][1]||B[q][2]-B[p][2]||B[q][3]-B[p][3]||p-q);
+cnt[ord[0]][0]++;for(let k=0;k<4;k++)cnt[ord[k]][1]++;for(let k=n-4;k<n;k++)cnt[ord[k]][2]++}
+const d={};names.forEach((q,k)=>d[q]={c:cnt[k][0],g:cnt[k][1],r:cnt[k][2]});return{N,d}}
+function draw(){const t=st.t,c=st.cmp&&(t=='c'||t=='e'),s=t=='s';
+$('#la').classList.toggle('hide',c||s);$('#lb').classList.toggle('hide',!c);$('#le').classList.toggle('hide',t!='e');$('#lk').classList.toggle('hide',t!='e');
+$('#lx').classList.toggle('hide',t!='c');$('#lm').classList.toggle('hide',t!='c'&&t!='e');
+$('#cmp').classList.toggle('on',st.cmp);$('#cmp').classList.toggle('hide',t=='j'||s);
+$('#vc').classList.toggle('hide',t=='j'||s);$('#vj').classList.toggle('hide',t!='j');$('#vs').classList.toggle('hide',!s);
 $('#vc').style.gridTemplateColumns=t=='e'?'1fr':'';
 if(t=='c')$('#vc').innerHTML=sel().map(y=>panel(y)).join('')||'<div class="mut">Marque ao menos uma temporada.</div>';
 else if(t=='e'){fillET();$('#vc').innerHTML=sel().map(chart).join('')||'<div class="mut">Marque ao menos uma temporada.</div>'}
-else games()}
+else if(s)sim();else games()}
 function seg(id,attr,key){$(id).onclick=e=>{const b=e.target.closest('button');if(!b)return;st[key]=b.dataset[attr];$$(id+' button').forEach(x=>x.classList.toggle('on',x==b));draw()}}
-seg('#tabs','t','t');seg('#modo','m','m');seg('#ord','o','o');
+seg('#tabs','t','t');
+$('#rnd').onclick=()=>{const y=simY();G.forEach((g,i)=>{if(g.y==y&&g.hg==null&&!st.sim[i]){const r=Math.random(),w=1+Math.floor(Math.random()*3),l=Math.floor(Math.random()*w),e=Math.floor(Math.random()*3);st.sim[i]=r<.45?{h:w,a:l}:r<.72?{h:e,a:e}:{h:l,a:w}}});st.mc=null;sim()};
+$('#clr2').onclick=()=>{st.sim={};st.mc=null;sim()};
+$('#mcb').onclick=()=>{st.mc=monte();simTable()};
+$('#sg').oninput=e=>{const i=e.target.dataset.i;if(i==null)return;const [a,b]=e.target.closest('tr').querySelectorAll('input');
+if(a.value!==''&&b.value!==''&&+a.value>=0&&+b.value>=0)st.sim[i]={h:Math.floor(+a.value),a:Math.floor(+b.value)};else delete st.sim[i];st.mc=null;simTable()};
+seg('#modo','m','m');seg('#ord','o','o');
 $('#cmp').onclick=()=>{st.cmp=!st.cmp;draw()};
-$('#sa').onchange=()=>{fillTeams();draw()};$('#chk').onchange=draw;$('#et').onchange=draw;$('#x').oninput=draw;$('#ft').onchange=draw;
+$('#sa').onchange=()=>{fillTeams();draw()};$('#chk').onchange=draw;$('#mt').onchange=draw;$('#et').onchange=draw;$('#x').oninput=draw;$('#ft').onchange=draw;
 $('#file').onchange=async e=>{const f=e.target.files[0];if(!f)return;try{G=load(await f.text());save();init()}catch(err){$('#msg').textContent='Erro: '+err.message}}
 $('#clr').onclick=()=>{try{localStorage.removeItem('bra_g')}catch(e){}G=[];location.reload()}
 fetch('data/jogos.csv',{cache:'no-cache'}).then(r=>{if(!r.ok)throw 0;return r.text()}).then(t=>{G=load(t);save();$('#imp').classList.add('hide');init()}).catch(()=>{try{const s=localStorage.getItem('bra_g');if(s){G=JSON.parse(s);init()}}catch(e){}})
