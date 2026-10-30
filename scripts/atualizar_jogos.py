@@ -7,7 +7,7 @@ ARQ = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data", "jo
 TOKEN = os.environ.get("FOOTBALL_DATA_TOKEN")
 TEMPORADAS = [int(x) for x in os.environ.get("TEMPORADAS", "2025,2026").split(",")]
 # Ajuste manual de nomes que não casarem sozinhos: {"nome na API": "nome no seu CSV"}
-NOMES = {}
+NOMES = {"Vasco da Gama": "Vasco", "Recife": "Sport", "Mineiro":"Atletico-MG","Botafogo":"Botafogo-RJ"}
 CAMPOS = ["ano_campeonato", "rodada", "data", "hora", "mandante", "visitante", "mandante_placar", "visitante_placar"]
 
 def chave(s):
@@ -16,7 +16,7 @@ def chave(s):
     return "".join(c for c in s.lower() if c.isalnum())
 
 def temporada(r):
-    a = (r.get("ano_campeonato") or "").strip()
+    a = str(r.get("ano_campeonato") or "").strip()
     if a.isdigit():
         return int(a)
     try:
