@@ -2,7 +2,11 @@ name: Atualizar jogos
 on:
   schedule:
     - cron: "0 6 * * *"   # todo dia, 03:00 no horário de Brasília
-  workflow_dispatch: {}    # permite rodar manualmente na aba Actions
+  workflow_dispatch:    # permite rodar manualmente na aba Actions
+    inputs:
+      temporadas:
+        description: "Temporadas (ex.: 2025,2026)"
+        default: "2026"
 permissions:
   contents: write
 jobs:
@@ -16,7 +20,7 @@ jobs:
       - name: Buscar resultados
         env:
           FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
-          TEMPORADAS: "2025,2026"
+          TEMPORADAS: ${{ github.event.inputs.temporadas || '2026' }}
         run: python scripts/atualizar_jogos.py
       - name: Commit se houve mudança
         run: |
