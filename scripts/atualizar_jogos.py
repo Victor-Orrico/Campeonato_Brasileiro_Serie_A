@@ -71,7 +71,7 @@ def main():
                 "hora": dt.strftime("%H:%M"), "mandante": nome(m["homeTeam"]), "visitante": nome(m["awayTeam"]),
                 "mandante_placar": ft["home"] if ok else "", "visitante_placar": ft["away"] if ok else "",
             }
-             mapa = {c.lower(): c for c in campos}
+            mapa = {c.lower(): c for c in campos}
             linhas.append({mapa.get(k.lower(), k): v for k, v in lin.items()})
         print(f"[{ano}] {len(jogos)} jogos atualizados")
     os.makedirs(os.path.dirname(ARQ), exist_ok=True)
