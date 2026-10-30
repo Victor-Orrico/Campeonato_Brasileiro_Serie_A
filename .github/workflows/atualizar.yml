@@ -1,0 +1,26 @@
+name: Atualizar jogos
+on:
+  schedule:
+    - cron: "0 6 * * *"   # todo dia, 03:00 no horário de Brasília
+  workflow_dispatch: {}    # permite rodar manualmente na aba Actions
+permissions:
+  contents: write
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Buscar resultados
+        env:
+          FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
+          TEMPORADAS: "2025,2026"
+        run: python scripts/atualizar_jogos.py
+      - name: Commit se houve mudança
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data/jogos.csv
+          git diff --cached --quiet || (git commit -m "Atualiza jogos" && git push)
