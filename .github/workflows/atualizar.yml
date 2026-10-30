@@ -5,7 +5,7 @@ on:
   workflow_dispatch:    # permite rodar manualmente na aba Actions
     inputs:
       temporadas:
-        description: "Temporadas (ex.: 2025,2026)"
+        description: "Temporadas (ex.: 2026)"
         default: "2026"
 permissions:
   contents: write
