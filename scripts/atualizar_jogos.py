@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 
 ARQ = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data", "jogos.csv")
 TOKEN = os.environ.get("FOOTBALL_DATA_TOKEN")
-TEMPORADAS = [int(x) for x in os.environ.get("TEMPORADAS", "2025,2026").split(",")]
+TEMPORADAS = [int(x) for x in os.environ.get("TEMPORADAS", "2026").split(",")]
 # Ajuste manual de nomes que não casarem sozinhos: {"nome na API": "nome no seu CSV"}
 NOMES = {"Vasco da Gama": "Vasco", "Recife": "Sport", "Mineiro":"Atletico-MG","Botafogo":"Botafogo-RJ"}
 CAMPOS = ["ano_campeonato", "rodada", "data", "hora", "mandante", "visitante", "mandante_placar", "visitante_placar"]
@@ -66,11 +66,13 @@ def main():
             dt = datetime.strptime(m["utcDate"], "%Y-%m-%dT%H:%M:%SZ") - timedelta(hours=3)
             ft = m["score"]["fullTime"]
             ok = m["status"] == "FINISHED" and ft["home"] is not None
-            linhas.append({
+            lin = {
                 "ano_campeonato": ano, "rodada": m["matchday"], "data": dt.strftime("%d/%m/%Y"),
                 "hora": dt.strftime("%H:%M"), "mandante": nome(m["homeTeam"]), "visitante": nome(m["awayTeam"]),
                 "mandante_placar": ft["home"] if ok else "", "visitante_placar": ft["away"] if ok else "",
-            })
+            }
+             mapa = {c.lower(): c for c in campos}
+            linhas.append({mapa.get(k.lower(), k): v for k, v in lin.items()})
         print(f"[{ano}] {len(jogos)} jogos atualizados")
     os.makedirs(os.path.dirname(ARQ), exist_ok=True)
     with open(ARQ, "w", newline="", encoding="utf-8") as f:
