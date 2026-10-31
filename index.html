@@ -55,6 +55,7 @@ img.tb{background:none!important;border-radius:0;object-fit:contain}
 <label id="le" class="hide">Destacar time<select id="et"></select></label>
 <label id="lx">Após a rodada<input id="x" type="number" min="1" placeholder="todas" style="width:90px"></label>
 <label id="lm">Condição<div class="seg" id="modo"><button data-m="t" class="on">Geral</button><button data-m="h">Casa</button><button data-m="a">Fora</button></div></label>
+<label id="ln">Turno<div class="seg" id="turno"><button data-n="t" class="on">Campeonato</button><button data-n="1">1º turno</button><button data-n="2">2º turno</button></div></label>
 <label>&nbsp;<button id="cmp">Comparar temporadas</button></label>
 </div>
 <div id="vc" class="panels"></div>
@@ -66,7 +67,7 @@ img.tb{background:none!important;border-radius:0;object-fit:contain}
 </main>
 <script>
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
-let G=[],st={t:'c',m:'t',o:'r',cmp:false,sim:{},mc:null,rd:null};
+let G=[],st={t:'c',m:'t',o:'r',cmp:false,tn:'t',sim:{},mc:null,rd:null};
 const norm=s=>s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').trim();
 const AL={r:['rodada','round'],d:['data','date'],h:['mandante','home','time_mandante'],a:['visitante','away','time_visitante'],hg:['mandante_placar','gols_mandante','home_goals','mandante_gols'],ag:['visitante_placar','gols_visitante','away_goals','visitante_gols'],y:['ano_campeonato','ano','season','temporada']};
 function csv(t){const l1=t.split('\n')[0],d=(l1.match(/;/g)||[]).length>(l1.match(/,/g)||[]).length?';':',';const rows=[];let r=[],c='',q=false;
@@ -87,15 +88,15 @@ const ys=[...new Set(G.map(g=>g.y))].sort((a,b)=>b-a);const def=[ys[0],ys.includ
 
 $('#msg').textContent=`${G.length} jogos • ${ys.length} temporadas (${ys[ys.length-1]}–${ys[0]})`;fillTeams();draw()}
 function fillTeams(){const y=+$('#sa').value,t=[...new Set(G.filter(g=>g.y==y).flatMap(g=>[g.h,g.a]))].sort();$('#ft').innerHTML='<option value="">Todos</option>'+t.map(x=>`<option>${x}</option>`).join('')}
-function table(y,X,m){const T={};const get=n=>T[n]||(T[n]={n,P:0,J:0,V:0,E:0,D:0,GP:0,GC:0});
-for(const g of G){if(g.y!=y||g.hg==null||g.ag==null||(X&&g.r>X))continue;
+function table(y,X,m,tn='t'){const hf=halfOf(y);const T={};const get=n=>T[n]||(T[n]={n,P:0,J:0,V:0,E:0,D:0,GP:0,GC:0});
+for(const g of G){if(g.y!=y||g.hg==null||g.ag==null||(X&&g.r>X)||(tn=='1'&&g.r>hf)||(tn=='2'&&g.r<=hf))continue;
 const sides=[[g.h,g.hg,g.ag,'h'],[g.a,g.ag,g.hg,'a']];for(const[n,f,c,s]of sides){if(m!='t'&&m!=s)continue;const t=get(n);t.J++;t.GP+=f;t.GC+=c;if(f>c){t.V++;t.P+=3}else if(f==c){t.E++;t.P++}else t.D++}}
-const pn=penOn(y,X,m);
+const pn=penOn(y,X,m,tn);
 return Object.values(T).map(t=>{t.SG=t.GP-t.GC;for(const p of pn)if(nk(p.t)==nk(t.n)){t.P-=p.p;t.pen=(t.pen||0)+p.p}return t}).sort((a,b)=>b.P-a.P||b.V-a.V||b.SG-a.SG||b.GP-a.GP||a.n.localeCompare(b.n))}
-function panel(y){const X=+$('#x').value||0,m=st.m,rows=table(y,X,m),n=rows.length;
+function panel(y){const X=+$('#x').value||0,m=st.m,rows=table(y,X,m,st.tn),n=rows.length,hf=halfOf(y),tl=st.tn=='1'?` • 1º turno (rodadas 1–${hf})`:st.tn=='2'?` • 2º turno (rodadas ${hf+1}–${2*hf})`:'';
 const mt={t:'Geral',h:'Só em casa',a:'Só fora'}[m];
-return`<div class="card"><h2>${y} <span class="mut">${mt} • ${X?'após '+X+' rodadas':'todas as rodadas'}</span></h2><div class="sc"><table><tr><th>#</th><th class="t">Time</th><th>P</th><th>J</th><th>V</th><th>E</th><th>D</th><th>GP</th><th>GC</th><th>SG</th></tr>`+
-rows.map((t,i)=>`<tr class="${i<4?'up':i>=n-4&&n>=16?'dn':''}"><td>${i+1}</td><td class="t">${tb(t.n)}${t.n}</td><td class="p">${t.P}${t.pen?'<sup title="Perdeu '+t.pen+' pts por punição">*</sup>':''}</td><td>${t.J}</td><td>${t.V}</td><td>${t.E}</td><td>${t.D}</td><td>${t.GP}</td><td>${t.GC}</td><td class="${sgc(t.SG)}">${t.SG>0?'+':''}${t.SG}</td></tr>`).join('')+`</table></div><div class="mut" style="margin-top:6px">Critérios: pontos, vitórias, saldo, gols pró. Verde: 4 primeiros; vermelho: 4 últimos.</div>${penOn(y,X,m).length?`<div class="mut" style="margin-top:4px">* Punições: ${penOn(y,X,m).map(p=>`${p.t} −${p.p} pts (${p.m})`).join('; ')}.</div>`:''}</div>`}
+return`<div class="card"><h2>${y} <span class="mut">${mt}${tl} • ${X?'após '+X+' rodadas':'todas as rodadas'}</span></h2><div class="sc"><table><tr><th>#</th><th class="t">Time</th><th>P</th><th>J</th><th>V</th><th>E</th><th>D</th><th>GP</th><th>GC</th><th>SG</th></tr>`+
+rows.map((t,i)=>`<tr class="${i<4?'up':i>=n-4&&n>=16?'dn':''}"><td>${i+1}</td><td class="t">${tb(t.n)}${t.n}</td><td class="p">${t.P}${t.pen?'<sup title="Perdeu '+t.pen+' pts por punição">*</sup>':''}</td><td>${t.J}</td><td>${t.V}</td><td>${t.E}</td><td>${t.D}</td><td>${t.GP}</td><td>${t.GC}</td><td class="${sgc(t.SG)}">${t.SG>0?'+':''}${t.SG}</td></tr>`).join('')+`</table></div><div class="mut" style="margin-top:6px">Critérios: pontos, vitórias, saldo, gols pró. Verde: 4 primeiros; vermelho: 4 últimos.</div>${penOn(y,X,m,st.tn).length?`<div class="mut" style="margin-top:4px">* Punições: ${penOn(y,X,m,st.tn).map(p=>`${p.t} −${p.p} pts (${p.m})`).join('; ')}.</div>`:''}</div>`}
 function games(){const y=+$('#sa').value,f=$('#ft').value;let l=G.filter(g=>g.y==y&&(!f||g.h==f||g.a==f));
 l.sort(st.o=='r'?(a,b)=>a.r-b.r||a.d.localeCompare(b.d):(a,b)=>a.d.localeCompare(b.d)||a.r-b.r);
 const fd=d=>d.split('-').reverse().join('/');
@@ -107,7 +108,8 @@ const PEN=[
  {y:2013,t:'Portuguesa',p:4,r:38,m:'escalação irregular de Héverton'},
  {y:2013,t:'Flamengo',p:4,r:38,m:'escalação irregular de André Santos'}
 ];
-const penOn=(y,X,m)=>m=='t'?PEN.filter(p=>p.y==y&&(!X||X>=p.r)):[];
+const halfOf=y=>new Set(G.filter(g=>g.y==y).flatMap(g=>[g.h,g.a])).size-1;
+const penOn=(y,X,m,tn='t')=>{const hf=halfOf(y);return m=='t'?PEN.filter(p=>p.y==y&&(!X||X>=p.r)&&(tn=='t'||(tn=='1'?p.r<=hf:p.r>hf))):[]};
 const ESC={},ESCN={},nk=s=>norm(s).replace(/[^a-z0-9]/g,'');
 const tbi=n=>{let h=0;for(const c of n)h=(h*31+c.charCodeAt(0))%360;return`<span class="tb" style="background:hsl(${h},50%,42%)">${n.replace(/[^A-Za-zÀ-ÿ]/g,'').slice(0,3).toUpperCase()}</span>`};
 const tb=n=>{const u=ESC[n]||ESCN[nk(n)];return u?`<img class="tb" src="${u}" alt="${n.replace(/"/g,'&quot;')}" loading="lazy" onerror="this.outerHTML=tbi(this.alt)">`:tbi(n)};
@@ -180,7 +182,7 @@ cnt[ord[0]][0]++;for(let k=0;k<4;k++)cnt[ord[k]][1]++;for(let k=n-4;k<n;k++)cnt[
 const d={};names.forEach((q,k)=>d[q]={c:cnt[k][0],g:cnt[k][1],r:cnt[k][2]});return{N,d}}
 function draw(){const t=st.t,c=st.cmp&&(t=='c'||t=='e'),s=t=='s';
 $('#la').classList.toggle('hide',c||s);$('#lb').classList.toggle('hide',!c);$('#le').classList.toggle('hide',t!='e');$('#lk').classList.toggle('hide',t!='e');
-$('#lx').classList.toggle('hide',t!='c');$('#lm').classList.toggle('hide',t!='c'&&t!='e');
+$('#lx').classList.toggle('hide',t!='c');$('#lm').classList.toggle('hide',t!='c'&&t!='e');$('#ln').classList.toggle('hide',t!='c');
 $('#cmp').classList.toggle('on',st.cmp);$('#cmp').classList.toggle('hide',t=='j'||s);
 $('#vc').classList.toggle('hide',t=='j'||s);$('#vj').classList.toggle('hide',t!='j');$('#vs').classList.toggle('hide',!s);
 $('#vc').style.gridTemplateColumns=t=='e'?'1fr':'';
@@ -196,7 +198,7 @@ $('#sg').onclick=e=>{const b=e.target.closest('button[data-d]');if(!b)return;con
 $('#sg').onchange=e=>{if(e.target.id=='rs'){st.rd=+e.target.value;sim()}};
 $('#sg').oninput=e=>{const i=e.target.dataset.i;if(i==null)return;const [a,b]=e.target.closest('tr').querySelectorAll('input');
 if(a.value!==''&&b.value!==''&&+a.value>=0&&+b.value>=0)st.sim[i]={h:Math.floor(+a.value),a:Math.floor(+b.value)};else delete st.sim[i];st.mc=null;simTable();$('#rs').innerHTML=optHtml()};
-seg('#modo','m','m');seg('#ord','o','o');
+seg('#modo','m','m');seg('#turno','n','tn');seg('#ord','o','o');
 $('#cmp').onclick=()=>{st.cmp=!st.cmp;draw()};
 $('#sa').onchange=()=>{fillTeams();draw()};$('#chk').onchange=draw;$('#mt').onchange=draw;$('#et').onchange=draw;$('#x').oninput=draw;$('#ft').onchange=draw;
 $('#file').onchange=async e=>{const f=e.target.files[0];if(!f)return;try{G=load(await f.text());save();init()}catch(err){$('#msg').textContent='Erro: '+err.message}}
