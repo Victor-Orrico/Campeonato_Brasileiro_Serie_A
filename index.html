@@ -90,19 +90,27 @@ function fillTeams(){const y=+$('#sa').value,t=[...new Set(G.filter(g=>g.y==y).f
 function table(y,X,m){const T={};const get=n=>T[n]||(T[n]={n,P:0,J:0,V:0,E:0,D:0,GP:0,GC:0});
 for(const g of G){if(g.y!=y||g.hg==null||g.ag==null||(X&&g.r>X))continue;
 const sides=[[g.h,g.hg,g.ag,'h'],[g.a,g.ag,g.hg,'a']];for(const[n,f,c,s]of sides){if(m!='t'&&m!=s)continue;const t=get(n);t.J++;t.GP+=f;t.GC+=c;if(f>c){t.V++;t.P+=3}else if(f==c){t.E++;t.P++}else t.D++}}
-return Object.values(T).map(t=>(t.SG=t.GP-t.GC,t)).sort((a,b)=>b.P-a.P||b.V-a.V||b.SG-a.SG||b.GP-a.GP||a.n.localeCompare(b.n))}
+const pn=penOn(y,X,m);
+return Object.values(T).map(t=>{t.SG=t.GP-t.GC;for(const p of pn)if(nk(p.t)==nk(t.n)){t.P-=p.p;t.pen=(t.pen||0)+p.p}return t}).sort((a,b)=>b.P-a.P||b.V-a.V||b.SG-a.SG||b.GP-a.GP||a.n.localeCompare(b.n))}
 function panel(y){const X=+$('#x').value||0,m=st.m,rows=table(y,X,m),n=rows.length;
 const mt={t:'Geral',h:'Só em casa',a:'Só fora'}[m];
 return`<div class="card"><h2>${y} <span class="mut">${mt} • ${X?'após '+X+' rodadas':'todas as rodadas'}</span></h2><div class="sc"><table><tr><th>#</th><th class="t">Time</th><th>P</th><th>J</th><th>V</th><th>E</th><th>D</th><th>GP</th><th>GC</th><th>SG</th></tr>`+
-rows.map((t,i)=>`<tr class="${i<4?'up':i>=n-4&&n>=16?'dn':''}"><td>${i+1}</td><td class="t">${tb(t.n)}${t.n}</td><td class="p">${t.P}</td><td>${t.J}</td><td>${t.V}</td><td>${t.E}</td><td>${t.D}</td><td>${t.GP}</td><td>${t.GC}</td><td class="${sgc(t.SG)}">${t.SG>0?'+':''}${t.SG}</td></tr>`).join('')+`</table></div><div class="mut" style="margin-top:6px">Critérios: pontos, vitórias, saldo, gols pró. Verde: 4 primeiros; vermelho: 4 últimos.</div></div>`}
+rows.map((t,i)=>`<tr class="${i<4?'up':i>=n-4&&n>=16?'dn':''}"><td>${i+1}</td><td class="t">${tb(t.n)}${t.n}</td><td class="p">${t.P}${t.pen?'<sup title="Perdeu '+t.pen+' pts por punição">*</sup>':''}</td><td>${t.J}</td><td>${t.V}</td><td>${t.E}</td><td>${t.D}</td><td>${t.GP}</td><td>${t.GC}</td><td class="${sgc(t.SG)}">${t.SG>0?'+':''}${t.SG}</td></tr>`).join('')+`</table></div><div class="mut" style="margin-top:6px">Critérios: pontos, vitórias, saldo, gols pró. Verde: 4 primeiros; vermelho: 4 últimos.</div>${penOn(y,X,m).length?`<div class="mut" style="margin-top:4px">* Punições: ${penOn(y,X,m).map(p=>`${p.t} −${p.p} pts (${p.m})`).join('; ')}.</div>`:''}</div>`}
 function games(){const y=+$('#sa').value,f=$('#ft').value;let l=G.filter(g=>g.y==y&&(!f||g.h==f||g.a==f));
 l.sort(st.o=='r'?(a,b)=>a.r-b.r||a.d.localeCompare(b.d):(a,b)=>a.d.localeCompare(b.d)||a.r-b.r);
 const fd=d=>d.split('-').reverse().join('/');
 $('#jl').innerHTML=`<div class="mut">${l.length} jogos – ${y}</div><table class="g"><tr><th>Rod.</th><th>Data</th><th class="h" style="text-align:right">Mandante</th><th>Placar</th><th class="a" style="text-align:left">Visitante</th></tr>`+
 l.map(g=>`<tr><td>${g.r}</td><td>${fd(g.d)}</td><td class="h">${g.h}${tb(g.h)}</td><td><b>${g.hg==null?'–':g.hg+' x '+g.ag}</b></td><td class="a">${tb(g.a)}${g.a}</td></tr>`).join('')+'</table>'}
-const ESC={};
+// Punições decididas na justiça desportiva (alteram a pontuação, não os placares).
+// y = temporada, t = time, p = pontos retirados, r = rodada a partir da qual vale, m = motivo.
+const PEN=[
+ {y:2013,t:'Portuguesa',p:4,r:38,m:'escalação irregular de Héverton'},
+ {y:2013,t:'Flamengo',p:4,r:38,m:'escalação irregular de André Santos'}
+];
+const penOn=(y,X,m)=>m=='t'?PEN.filter(p=>p.y==y&&(!X||X>=p.r)):[];
+const ESC={},ESCN={},nk=s=>norm(s).replace(/[^a-z0-9]/g,'');
 const tbi=n=>{let h=0;for(const c of n)h=(h*31+c.charCodeAt(0))%360;return`<span class="tb" style="background:hsl(${h},50%,42%)">${n.replace(/[^A-Za-zÀ-ÿ]/g,'').slice(0,3).toUpperCase()}</span>`};
-const tb=n=>ESC[n]?`<img class="tb" src="${ESC[n]}" alt="${n.replace(/"/g,'&quot;')}" loading="lazy" onerror="this.outerHTML=tbi(this.alt)">`:tbi(n);
+const tb=n=>{const u=ESC[n]||ESCN[nk(n)];return u?`<img class="tb" src="${u}" alt="${n.replace(/"/g,'&quot;')}" loading="lazy" onerror="this.outerHTML=tbi(this.alt)">`:tbi(n)};
 const sgc=v=>v>0?'pos':v<0?'neg':'';
 const sel=()=>st.cmp?[...$$('#chk input:checked')].map(i=>+i.value).sort((a,b)=>b-a):[+$('#sa').value];
 const fdt=d=>d.split('-').reverse().join('/');
@@ -158,7 +166,7 @@ const n=prj.length,mc=st.mc,ex=mc?'<th>Título</th><th>G4</th><th>Z4</th>':'';
 const pc=v=>(v/mc.N*100).toFixed(1)+'%';
 $('#ss').innerHTML=`<div class="card"><h2>${y} <span class="mut">classificação projetada • ${fixed.length} de ${np} jogos definidos</span></h2><div class="sc"><table><tr><th>#</th><th class="t">Time</th><th>P</th><th>J</th><th>V</th><th>SG</th><th>Δ</th>${ex}</tr>`+
 prj.map((t,i)=>{const d=(p0[t.n]||i+1)-(i+1),dd=d>0?'▲'+d:d<0?'▼'+(-d):'=';const e=mc?`<td>${pc(mc.d[t.n].c)}</td><td>${pc(mc.d[t.n].g)}</td><td>${pc(mc.d[t.n].r)}</td>`:'';
-return`<tr class="${i<4?'up':i>=n-4&&n>=16?'dn':''}"><td>${i+1}</td><td class="t">${tb(t.n)}${t.n}</td><td class="p">${t.P}</td><td>${t.J}</td><td>${t.V}</td><td class="${sgc(t.SG)}">${t.SG>0?'+':''}${t.SG}</td><td>${dd}</td>${e}</tr>`}).join('')+
+return`<tr class="${i<4?'up':i>=n-4&&n>=16?'dn':''}"><td>${i+1}</td><td class="t">${tb(t.n)}${t.n}</td><td class="p">${t.P}${t.pen?'<sup title="Perdeu '+t.pen+' pts por punição">*</sup>':''}</td><td>${t.J}</td><td>${t.V}</td><td class="${sgc(t.SG)}">${t.SG>0?'+':''}${t.SG}</td><td>${dd}</td>${e}</tr>`}).join('')+
 `</table></div><div class="mut" style="margin-top:6px">Δ: variação frente à tabela atual. Preencha os dois campos do placar para definir um jogo. Chances: jogos não definidos são sorteados com 45% mandante, 27% empate e 28% visitante (placares 1x0, 0x0 ou 0x1), igual para todos os times; G4 = 4 primeiros, Z4 = 4 últimos.</div></div>`}
 function monte(){const y=simY(),N=10000,all=G.filter(g=>g.y==y),names=[...new Set(all.flatMap(g=>[g.h,g.a]))].sort(),ix={};names.forEach((q,k)=>ix[q]=k);
 const base=names.map(()=>[0,0,0,0]),free=[];
@@ -193,6 +201,6 @@ $('#cmp').onclick=()=>{st.cmp=!st.cmp;draw()};
 $('#sa').onchange=()=>{fillTeams();draw()};$('#chk').onchange=draw;$('#mt').onchange=draw;$('#et').onchange=draw;$('#x').oninput=draw;$('#ft').onchange=draw;
 $('#file').onchange=async e=>{const f=e.target.files[0];if(!f)return;try{G=load(await f.text());save();init()}catch(err){$('#msg').textContent='Erro: '+err.message}}
 $('#clr').onclick=()=>{try{localStorage.removeItem('bra_g')}catch(e){}G=[];location.reload()}
-fetch('data/escudos.json').then(r=>r.ok?r.json():{}).then(j=>{Object.assign(ESC,j);if(G.length)draw()}).catch(()=>{});
+fetch('data/escudos.json').then(r=>r.ok?r.json():{}).then(j=>{Object.assign(ESC,j);for(const k in ESC)ESCN[nk(k)]=ESC[k];if(G.length)draw()}).catch(()=>{});
 fetch('data/jogos.csv',{cache:'no-cache'}).then(r=>{if(!r.ok)throw 0;return r.text()}).then(t=>{G=load(t);save();$('#imp').classList.add('hide');init()}).catch(()=>{try{const s=localStorage.getItem('bra_g');if(s){G=JSON.parse(s);init()}}catch(e){}if(!G.length){$('#ld').classList.add('hide');$('#imp').classList.remove('hide')}})
 </script></body></html>
