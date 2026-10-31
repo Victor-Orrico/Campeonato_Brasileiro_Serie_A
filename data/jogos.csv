@@ -7220,7 +7220,7 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 8785,38,08/12/2024,16:05,Gremio,Corinthians,4-4-2,4-3-1-2,Renato Gaúcho,R. Díaz,Corinthians,Arena do Grêmio,0,3,RS,SP,,
 ,1,29/03/2025,18:30,Sao Paulo,Sport,,,,,,,0,0,,,,2025
 ,1,29/03/2025,18:30,Cruzeiro,Mirassol,,,,,,,2,1,,,,2025
-,1,29/03/2025,18:30,Gremio,Mineiro,,,,,,,2,1,,,,2025
+,1,29/03/2025,18:30,Gremio,Atletico-MG,,,,,,,2,1,,,,2025
 ,1,29/03/2025,18:30,Fortaleza,Fluminense,,,,,,,2,0,,,,2025
 ,1,29/03/2025,18:30,Juventude,Vitoria,,,,,,,2,0,,,,2025
 ,1,29/03/2025,21:00,Flamengo,Internacional,,,,,,,1,1,,,,2025
@@ -7232,7 +7232,7 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,2,05/04/2025,18:30,Ceara,Gremio,,,,,,,2,0,,,,2025
 ,2,05/04/2025,21:00,Botafogo,Juventude,,,,,,,2,0,,,,2025
 ,2,06/04/2025,16:00,Fluminense,Bragantino,,,,,,,2,1,,,,2025
-,2,06/04/2025,16:00,Mineiro,Sao Paulo,,,,,,,0,0,,,,2025
+,2,06/04/2025,16:00,Atletico-MG,Sao Paulo,,,,,,,0,0,,,,2025
 ,2,06/04/2025,18:30,Mirassol,Fortaleza,,,,,,,1,1,,,,2025
 ,2,06/04/2025,18:30,Internacional,Cruzeiro,,,,,,,3,0,,,,2025
 ,2,06/04/2025,18:30,Vitoria,Flamengo,,,,,,,1,2,,,,2025
@@ -7247,7 +7247,7 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,3,13/04/2025,17:30,Gremio,Flamengo,,,,,,,0,2,,,,2025
 ,3,13/04/2025,19:30,Fluminense,Santos,,,,,,,1,0,,,,2025
 ,3,13/04/2025,20:00,Fortaleza,Internacional,,,,,,,0,0,,,,2025
-,3,13/04/2025,20:30,Mineiro,Vitoria,,,,,,,2,2,,,,2025
+,3,13/04/2025,20:30,Atletico-MG,Vitoria,,,,,,,2,2,,,,2025
 ,4,15/04/2025,21:30,Ceara,Vasco,,,,,,,2,1,,,,2025
 ,4,16/04/2025,18:30,Botafogo,Sao Paulo,,,,,,,2,2,,,,2025
 ,4,16/04/2025,19:00,Mirassol,Gremio,,,,,,,4,1,,,,2025
@@ -7255,7 +7255,7 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,4,16/04/2025,19:30,Corinthians,Fluminense,,,,,,,0,2,,,,2025
 ,4,16/04/2025,19:30,Internacional,Palmeiras,,,,,,,0,1,,,,2025
 ,4,16/04/2025,21:30,Flamengo,Juventude,,,,,,,6,0,,,,2025
-,4,16/04/2025,21:30,Santos,Mineiro,,,,,,,2,0,,,,2025
+,4,16/04/2025,21:30,Santos,Atletico-MG,,,,,,,2,0,,,,2025
 ,4,16/04/2025,21:30,Vitoria,Fortaleza,,,,,,,2,1,,,,2025
 ,4,17/04/2025,21:30,Cruzeiro,Bahia,,,,,,,3,0,,,,2025
 ,5,19/04/2025,16:00,Corinthians,Sport,,,,,,,2,1,,,,2025
@@ -7263,13 +7263,13 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,5,19/04/2025,21:00,Gremio,Internacional,,,,,,,1,1,,,,2025
 ,5,20/04/2025,11:00,Juventude,Mirassol,,,,,,,2,2,,,,2025
 ,5,20/04/2025,16:00,Sao Paulo,Santos,,,,,,,2,1,,,,2025
-,5,20/04/2025,16:00,Mineiro,Botafogo,,,,,,,1,0,,,,2025
+,5,20/04/2025,16:00,Atletico-MG,Botafogo,,,,,,,1,0,,,,2025
 ,5,20/04/2025,18:30,Fluminense,Vitoria,,,,,,,1,1,,,,2025
 ,5,20/04/2025,18:30,Fortaleza,Palmeiras,,,,,,,1,2,,,,2025
 ,5,20/04/2025,20:30,Bragantino,Cruzeiro,,,,,,,1,0,,,,2025
 ,5,21/04/2025,20:00,Bahia,Ceara,,,,,,,1,0,,,,2025
 ,6,26/04/2025,16:00,Internacional,Juventude,,,,,,,3,1,,,,2025
-,6,26/04/2025,18:30,Mirassol,Mineiro,,,,,,,2,2,,,,2025
+,6,26/04/2025,18:30,Mirassol,Atletico-MG,,,,,,,2,2,,,,2025
 ,6,26/04/2025,18:30,Ceara,Sao Paulo,,,,,,,1,1,,,,2025
 ,6,26/04/2025,20:00,Sport,Fortaleza,,,,,,,0,0,,,,2025
 ,6,26/04/2025,21:00,Botafogo,Fluminense,,,,,,,2,0,,,,2025
@@ -7287,7 +7287,7 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,7,04/05/2025,16:00,Gremio,Santos,,,,,,,1,0,,,,2025
 ,7,04/05/2025,18:30,Cruzeiro,Flamengo,,,,,,,2,1,,,,2025
 ,7,05/05/2025,19:00,Bragantino,Mirassol,,,,,,,1,0,,,,2025
-,7,05/05/2025,20:00,Juventude,Mineiro,,,,,,,0,1,,,,2025
+,7,05/05/2025,20:00,Juventude,Atletico-MG,,,,,,,0,1,,,,2025
 ,8,10/05/2025,16:00,Fortaleza,Juventude,,,,,,,5,0,,,,2025
 ,8,10/05/2025,18:30,Mirassol,Corinthians,,,,,,,2,1,,,,2025
 ,8,10/05/2025,18:30,Gremio,Bragantino,,,,,,,1,1,,,,2025
@@ -7295,7 +7295,7 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,8,10/05/2025,21:00,Flamengo,Bahia,,,,,,,1,0,,,,2025
 ,8,11/05/2025,16:00,Sport,Cruzeiro,,,,,,,0,4,,,,2025
 ,8,11/05/2025,17:30,Palmeiras,Sao Paulo,,,,,,,1,0,,,,2025
-,8,11/05/2025,17:30,Mineiro,Fluminense,,,,,,,3,2,,,,2025
+,8,11/05/2025,17:30,Atletico-MG,Fluminense,,,,,,,3,2,,,,2025
 ,8,11/05/2025,20:00,Botafogo,Internacional,,,,,,,4,0,,,,2025
 ,8,12/05/2025,20:00,Santos,Ceara,,,,,,,0,0,,,,2025
 ,9,17/05/2025,16:00,Ceara,Sport,,,,,,,2,0,,,,2025
@@ -7306,11 +7306,11 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,9,18/05/2025,16:00,Juventude,Fluminense,,,,,,,1,1,,,,2025
 ,9,18/05/2025,18:30,Flamengo,Botafogo,,,,,,,0,0,,,,2025
 ,9,18/05/2025,18:30,Bragantino,Palmeiras,,,,,,,1,2,,,,2025
-,9,18/05/2025,20:30,Cruzeiro,Mineiro,,,,,,,0,0,,,,2025
+,9,18/05/2025,20:30,Cruzeiro,Atletico-MG,,,,,,,0,0,,,,2025
 ,9,18/05/2025,20:30,Internacional,Mirassol,,,,,,,1,1,,,,2025
 ,10,24/05/2025,18:30,Fluminense,Vasco,,,,,,,2,1,,,,2025
 ,10,24/05/2025,18:30,Sao Paulo,Mirassol,,,,,,,0,2,,,,2025
-,10,24/05/2025,21:00,Mineiro,Corinthians,,,,,,,0,0,,,,2025
+,10,24/05/2025,21:00,Atletico-MG,Corinthians,,,,,,,0,0,,,,2025
 ,10,25/05/2025,11:00,Gremio,Bahia,,,,,,,1,0,,,,2025
 ,10,25/05/2025,16:00,Palmeiras,Flamengo,,,,,,,0,2,,,,2025
 ,10,25/05/2025,16:00,Sport,Internacional,,,,,,,1,1,,,,2025
@@ -7322,7 +7322,7 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,11,01/06/2025,11:00,Mirassol,Sport,,,,,,,1,0,,,,2025
 ,11,01/06/2025,16:00,Juventude,Gremio,,,,,,,0,2,,,,2025
 ,11,01/06/2025,16:00,Santos,Botafogo,,,,,,,0,1,,,,2025
-,11,01/06/2025,18:30,Ceara,Mineiro,,,,,,,0,1,,,,2025
+,11,01/06/2025,18:30,Ceara,Atletico-MG,,,,,,,0,1,,,,2025
 ,11,01/06/2025,18:30,Flamengo,Fortaleza,,,,,,,5,0,,,,2025
 ,11,01/06/2025,18:30,Corinthians,Vitoria,,,,,,,0,0,,,,2025
 ,11,01/06/2025,19:30,Cruzeiro,Palmeiras,,,,,,,2,1,,,,2025
@@ -7333,11 +7333,11 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,12,12/06/2025,19:30,Fortaleza,Santos,,,,,,,2,3,,,,2025
 ,12,12/06/2025,20:00,Gremio,Corinthians,,,,,,,1,1,,,,2025
 ,12,12/06/2025,21:30,Sao Paulo,Vasco,,,,,,,1,3,,,,2025
-,12,12/06/2025,21:30,Mineiro,Internacional,,,,,,,2,0,,,,2025
+,12,12/06/2025,21:30,Atletico-MG,Internacional,,,,,,,2,0,,,,2025
 ,13,12/07/2025,16:30,Flamengo,Sao Paulo,,,,,,,2,0,,,,2025
 ,13,12/07/2025,16:30,Internacional,Vitoria,,,,,,,1,0,,,,2025
 ,13,12/07/2025,18:30,Vasco,Botafogo,,,,,,,0,2,,,,2025
-,13,12/07/2025,21:00,Bahia,Mineiro,,,,,,,2,1,,,,2025
+,13,12/07/2025,21:00,Bahia,Atletico-MG,,,,,,,2,1,,,,2025
 ,13,13/07/2025,19:00,Corinthians,Bragantino,,,,,,,1,2,,,,2025
 ,13,13/07/2025,20:30,Cruzeiro,Gremio,,,,,,,4,1,,,,2025
 ,13,13/07/2025,20:30,Fortaleza,Ceara,,,,,,,0,1,,,,2025
@@ -7355,7 +7355,7 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,15,20/07/2025,11:00,Internacional,Ceara,,,,,,,1,0,,,,2025
 ,15,20/07/2025,16:00,Cruzeiro,Juventude,,,,,,,4,0,,,,2025
 ,15,20/07/2025,16:00,Vitoria,Bragantino,,,,,,,1,0,,,,2025
-,15,20/07/2025,17:30,Palmeiras,Mineiro,,,,,,,3,2,,,,2025
+,15,20/07/2025,17:30,Palmeiras,Atletico-MG,,,,,,,3,2,,,,2025
 ,15,20/07/2025,17:30,Sport,Botafogo,,,,,,,0,1,,,,2025
 ,15,20/07/2025,19:30,Flamengo,Fluminense,,,,,,,1,0,,,,2025
 ,16,23/07/2025,19:00,Fluminense,Palmeiras,,,,,,,1,2,,,,2025
@@ -7374,14 +7374,14 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,17,27/07/2025,16:00,Cruzeiro,Ceara,,,,,,,1,2,,,,2025
 ,17,27/07/2025,18:30,Internacional,Vasco,,,,,,,1,1,,,,2025
 ,17,27/07/2025,18:30,Bahia,Juventude,,,,,,,3,0,,,,2025
-,17,27/07/2025,20:30,Flamengo,Mineiro,,,,,,,1,0,,,,2025
+,17,27/07/2025,20:30,Flamengo,Atletico-MG,,,,,,,1,0,,,,2025
 ,14,29/07/2025,20:30,Gremio,Fortaleza,,,,,,,2,1,,,,2025
 ,18,02/08/2025,16:00,Sport,Bahia,,,,,,,0,0,,,,2025
 ,18,02/08/2025,18:30,Mirassol,Vasco,,,,,,,3,2,,,,2025
 ,18,02/08/2025,21:00,Fluminense,Gremio,,,,,,,1,0,,,,2025
 ,18,03/08/2025,16:00,Botafogo,Cruzeiro,,,,,,,0,2,,,,2025
 ,18,03/08/2025,16:00,Corinthians,Fortaleza,,,,,,,1,1,,,,2025
-,18,03/08/2025,18:30,Mineiro,Bragantino,,,,,,,2,1,,,,2025
+,18,03/08/2025,18:30,Atletico-MG,Bragantino,,,,,,,2,1,,,,2025
 ,18,03/08/2025,18:30,Ceara,Flamengo,,,,,,,1,1,,,,2025
 ,18,03/08/2025,19:30,Vitoria,Palmeiras,,,,,,,2,2,,,,2025
 ,18,03/08/2025,20:30,Internacional,Sao Paulo,,,,,,,1,2,,,,2025
@@ -7391,7 +7391,7 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,19,09/08/2025,18:30,Bragantino,Internacional,,,,,,,1,3,,,,2025
 ,19,09/08/2025,20:30,Fortaleza,Botafogo,,,,,,,0,5,,,,2025
 ,19,09/08/2025,21:00,Bahia,Fluminense,,,,,,,3,3,,,,2025
-,19,10/08/2025,16:00,Vasco,Mineiro,,,,,,,1,1,,,,2025
+,19,10/08/2025,16:00,Vasco,Atletico-MG,,,,,,,1,1,,,,2025
 ,19,10/08/2025,16:00,Palmeiras,Ceara,,,,,,,2,1,,,,2025
 ,19,10/08/2025,18:30,Cruzeiro,Santos,,,,,,,1,2,,,,2025
 ,19,10/08/2025,20:30,Gremio,Sport,,,,,,,0,1,,,,2025
@@ -7402,7 +7402,7 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,20,16/08/2025,18:30,Sport,Sao Paulo,,,,,,,2,2,,,,2025
 ,20,16/08/2025,21:00,Corinthians,Bahia,,,,,,,1,2,,,,2025
 ,20,17/08/2025,16:00,Santos,Vasco,,,,,,,0,6,,,,2025
-,20,17/08/2025,16:00,Mineiro,Gremio,,,,,,,1,3,,,,2025
+,20,17/08/2025,16:00,Atletico-MG,Gremio,,,,,,,1,3,,,,2025
 ,20,17/08/2025,18:30,Internacional,Flamengo,,,,,,,1,3,,,,2025
 ,20,17/08/2025,20:30,Botafogo,Palmeiras,,,,,,,0,1,,,,2025
 ,20,18/08/2025,20:00,Mirassol,Cruzeiro,,,,,,,1,1,,,,2025
@@ -7414,7 +7414,7 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,21,24/08/2025,16:00,Bahia,Santos,,,,,,,2,0,,,,2025
 ,21,24/08/2025,18:30,Fortaleza,Mirassol,,,,,,,0,1,,,,2025
 ,21,24/08/2025,18:30,Juventude,Botafogo,,,,,,,1,3,,,,2025
-,21,24/08/2025,20:30,Sao Paulo,Mineiro,,,,,,,2,0,,,,2025
+,21,24/08/2025,20:30,Sao Paulo,Atletico-MG,,,,,,,2,0,,,,2025
 ,21,25/08/2025,19:00,Palmeiras,Sport,,,,,,,3,0,,,,2025
 ,21,25/08/2025,21:00,Flamengo,Vitoria,,,,,,,8,0,,,,2025
 ,22,30/08/2025,16:00,Ceara,Juventude,,,,,,,0,1,,,,2025
@@ -7424,7 +7424,7 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,22,31/08/2025,16:00,Santos,Fluminense,,,,,,,0,0,,,,2025
 ,22,31/08/2025,18:30,Corinthians,Palmeiras,,,,,,,1,1,,,,2025
 ,22,31/08/2025,18:30,Mirassol,Bahia,,,,,,,5,1,,,,2025
-,22,31/08/2025,18:30,Vitoria,Mineiro,,,,,,,1,0,,,,2025
+,22,31/08/2025,18:30,Vitoria,Atletico-MG,,,,,,,1,0,,,,2025
 ,22,31/08/2025,20:30,Internacional,Fortaleza,,,,,,,2,1,,,,2025
 ,22,31/08/2025,20:30,Sport,Vasco,,,,,,,2,3,,,,2025
 ,23,13/09/2025,16:00,Gremio,Mirassol,,,,,,,0,1,,,,2025
@@ -7432,14 +7432,14 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,23,13/09/2025,18:30,Palmeiras,Internacional,,,,,,,4,1,,,,2025
 ,23,13/09/2025,21:00,Fluminense,Corinthians,,,,,,,0,1,,,,2025
 ,23,14/09/2025,11:00,Bragantino,Sport,,,,,,,1,1,,,,2025
-,23,14/09/2025,16:00,Mineiro,Santos,,,,,,,1,1,,,,2025
+,23,14/09/2025,16:00,Atletico-MG,Santos,,,,,,,1,1,,,,2025
 ,23,14/09/2025,16:00,Juventude,Flamengo,,,,,,,0,2,,,,2025
 ,23,14/09/2025,17:30,Sao Paulo,Botafogo,,,,,,,1,0,,,,2025
 ,23,14/09/2025,20:30,Vasco,Ceara,,,,,,,2,2,,,,2025
 ,23,15/09/2025,20:00,Bahia,Cruzeiro,,,,,,,1,2,,,,2025
 ,12,17/09/2025,19:30,Botafogo,Mirassol,,,,,,,3,3,,,,2025
 ,24,20/09/2025,16:00,Vitoria,Fluminense,,,,,,,0,1,,,,2025
-,24,20/09/2025,18:30,Botafogo,Mineiro,,,,,,,1,0,,,,2025
+,24,20/09/2025,18:30,Botafogo,Atletico-MG,,,,,,,1,0,,,,2025
 ,24,20/09/2025,18:30,Ceara,Bahia,,,,,,,1,1,,,,2025
 ,24,20/09/2025,21:00,Palmeiras,Fortaleza,,,,,,,4,1,,,,2025
 ,24,21/09/2025,16:00,Mirassol,Juventude,,,,,,,2,0,,,,2025
@@ -7453,14 +7453,14 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,25,27/09/2025,16:00,Fortaleza,Sport,,,,,,,1,0,,,,2025
 ,25,27/09/2025,18:30,Vasco,Cruzeiro,,,,,,,2,0,,,,2025
 ,25,27/09/2025,18:30,Juventude,Internacional,,,,,,,1,1,,,,2025
-,25,27/09/2025,21:00,Mineiro,Mirassol,,,,,,,1,0,,,,2025
+,25,27/09/2025,21:00,Atletico-MG,Mirassol,,,,,,,1,0,,,,2025
 ,25,28/09/2025,11:00,Gremio,Vitoria,,,,,,,3,1,,,,2025
 ,25,28/09/2025,16:00,Fluminense,Botafogo,,,,,,,2,0,,,,2025
 ,25,28/09/2025,16:00,Bahia,Palmeiras,,,,,,,1,0,,,,2025
 ,25,28/09/2025,18:30,Bragantino,Santos,,,,,,,2,2,,,,2025
 ,25,28/09/2025,20:30,Corinthians,Flamengo,,,,,,,1,2,,,,2025
 ,25,29/09/2025,20:00,Sao Paulo,Ceara,,,,,,,0,1,,,,2025
-,26,30/09/2025,21:30,Mineiro,Juventude,,,,,,,0,0,,,,2025
+,26,30/09/2025,21:30,Atletico-MG,Juventude,,,,,,,0,0,,,,2025
 ,26,01/10/2025,19:00,Palmeiras,Vasco,,,,,,,3,0,,,,2025
 ,26,01/10/2025,19:00,Mirassol,Bragantino,,,,,,,1,1,,,,2025
 ,26,01/10/2025,19:00,Sport,Fluminense,,,,,,,2,2,,,,2025
@@ -7470,7 +7470,7 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,26,02/10/2025,19:00,Vitoria,Ceara,,,,,,,1,0,,,,2025
 ,26,02/10/2025,19:30,Fortaleza,Sao Paulo,,,,,,,0,2,,,,2025
 ,26,02/10/2025,20:30,Flamengo,Cruzeiro,,,,,,,0,0,,,,2025
-,27,04/10/2025,18:30,Fluminense,Mineiro,,,,,,,3,0,,,,2025
+,27,04/10/2025,18:30,Fluminense,Atletico-MG,,,,,,,3,0,,,,2025
 ,27,04/10/2025,18:30,Bragantino,Gremio,,,,,,,1,0,,,,2025
 ,27,04/10/2025,18:30,Internacional,Botafogo,,,,,,,2,0,,,,2025
 ,27,04/10/2025,21:00,Corinthians,Mirassol,,,,,,,3,0,,,,2025
@@ -7480,7 +7480,7 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,27,05/10/2025,18:30,Juventude,Fortaleza,,,,,,,1,2,,,,2025
 ,27,05/10/2025,20:30,Cruzeiro,Sport,,,,,,,1,1,,,,2025
 ,27,05/10/2025,20:30,Ceara,Santos,,,,,,,3,0,,,,2025
-,14,08/10/2025,19:00,Mineiro,Sport,,,,,,,3,1,,,,2025
+,14,08/10/2025,19:00,Atletico-MG,Sport,,,,,,,3,1,,,,2025
 ,13,08/10/2025,21:00,Mirassol,Fluminense,,,,,,,2,1,,,,2025
 ,12,11/10/2025,19:00,Palmeiras,Juventude,,,,,,,4,1,,,,2025
 ,28,15/10/2025,19:00,Palmeiras,Bragantino,,,,,,,5,1,,,,2025
@@ -7488,12 +7488,12 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,28,15/10/2025,20:00,Mirassol,Internacional,,,,,,,3,1,,,,2025
 ,28,15/10/2025,20:00,Sport,Ceara,,,,,,,1,1,,,,2025
 ,28,15/10/2025,21:30,Santos,Corinthians,,,,,,,3,1,,,,2025
-,28,15/10/2025,21:30,Mineiro,Cruzeiro,,,,,,,1,1,,,,2025
+,28,15/10/2025,21:30,Atletico-MG,Cruzeiro,,,,,,,1,1,,,,2025
 ,28,15/10/2025,21:30,Fortaleza,Vasco,,,,,,,0,2,,,,2025
 ,28,16/10/2025,19:00,Gremio,Sao Paulo,,,,,,,2,0,,,,2025
 ,28,16/10/2025,21:30,Fluminense,Juventude,,,,,,,1,0,,,,2025
 ,28,16/10/2025,21:30,Vitoria,Bahia,,,,,,,2,1,,,,2025
-,29,18/10/2025,18:30,Corinthians,Mineiro,,,,,,,1,0,,,,2025
+,29,18/10/2025,18:30,Corinthians,Atletico-MG,,,,,,,1,0,,,,2025
 ,29,18/10/2025,21:00,Cruzeiro,Fortaleza,,,,,,,1,0,,,,2025
 ,29,19/10/2025,16:00,Flamengo,Palmeiras,,,,,,,3,2,,,,2025
 ,29,19/10/2025,18:30,Mirassol,Sao Paulo,,,,,,,3,0,,,,2025
@@ -7504,7 +7504,7 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,29,20/10/2025,19:30,Vasco,Fluminense,,,,,,,2,0,,,,2025
 ,29,20/10/2025,21:30,Santos,Vitoria,,,,,,,0,1,,,,2025
 ,14,22/10/2025,19:00,Bahia,Internacional,,,,,,,1,0,,,,2025
-,30,25/10/2025,16:00,Mineiro,Ceara,,,,,,,1,0,,,,2025
+,30,25/10/2025,16:00,Atletico-MG,Ceara,,,,,,,1,0,,,,2025
 ,30,25/10/2025,16:00,Vitoria,Corinthians,,,,,,,0,1,,,,2025
 ,30,25/10/2025,17:30,Fluminense,Internacional,,,,,,,1,0,,,,2025
 ,30,25/10/2025,18:30,Sport,Mirassol,,,,,,,1,2,,,,2025
@@ -7522,20 +7522,20 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,31,02/11/2025,16:00,Corinthians,Gremio,,,,,,,2,0,,,,2025
 ,31,02/11/2025,16:00,Bahia,Bragantino,,,,,,,2,1,,,,2025
 ,31,02/11/2025,16:00,Ceara,Fluminense,,,,,,,2,0,,,,2025
-,31,02/11/2025,18:30,Internacional,Mineiro,,,,,,,0,0,,,,2025
+,31,02/11/2025,18:30,Internacional,Atletico-MG,,,,,,,0,0,,,,2025
 ,31,02/11/2025,18:30,Juventude,Palmeiras,,,,,,,0,2,,,,2025
 ,31,02/11/2025,20:30,Vasco,Sao Paulo,,,,,,,0,2,,,,2025
 ,32,05/11/2025,19:00,Bragantino,Corinthians,,,,,,,2,1,,,,2025
 ,32,05/11/2025,19:00,Vitoria,Internacional,,,,,,,1,0,,,,2025
 ,32,05/11/2025,19:00,Sport,Juventude,,,,,,,0,2,,,,2025
 ,32,05/11/2025,19:30,Botafogo,Vasco,,,,,,,3,0,,,,2025
-,32,05/11/2025,20:00,Mineiro,Bahia,,,,,,,3,0,,,,2025
+,32,05/11/2025,20:00,Atletico-MG,Bahia,,,,,,,3,0,,,,2025
 ,32,05/11/2025,20:00,Gremio,Cruzeiro,,,,,,,0,1,,,,2025
 ,32,05/11/2025,21:30,Sao Paulo,Flamengo,,,,,,,2,2,,,,2025
 ,32,06/11/2025,19:30,Fluminense,Mirassol,,,,,,,1,0,,,,2025
 ,32,06/11/2025,20:00,Ceara,Fortaleza,,,,,,,1,1,,,,2025
 ,32,06/11/2025,21:30,Palmeiras,Santos,,,,,,,2,0,,,,2025
-,33,08/11/2025,16:00,Sport,Mineiro,,,,,,,2,4,,,,2025
+,33,08/11/2025,16:00,Sport,Atletico-MG,,,,,,,2,4,,,,2025
 ,33,08/11/2025,18:00,Vasco,Juventude,,,,,,,1,3,,,,2025
 ,33,08/11/2025,18:30,Internacional,Bahia,,,,,,,2,2,,,,2025
 ,33,08/11/2025,21:00,Sao Paulo,Bragantino,,,,,,,0,1,,,,2025
@@ -7545,10 +7545,10 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,33,09/11/2025,18:30,Flamengo,Santos,,,,,,,3,2,,,,2025
 ,33,09/11/2025,20:30,Mirassol,Palmeiras,,,,,,,2,1,,,,2025
 ,33,09/11/2025,20:30,Fortaleza,Gremio,,,,,,,2,2,,,,2025
-,16,12/11/2025,20:30,Mineiro,Fortaleza,,,,,,,3,3,,,,2025
+,16,12/11/2025,20:30,Atletico-MG,Fortaleza,,,,,,,3,3,,,,2025
 ,12,15/11/2025,18:30,Sport,Flamengo,,,,,,,1,5,,,,2025
 ,13,15/11/2025,21:00,Santos,Palmeiras,,,,,,,1,0,,,,2025
-,37,16/11/2025,19:00,Bragantino,Mineiro,,,,,,,2,0,,,,2025
+,37,16/11/2025,19:00,Bragantino,Atletico-MG,,,,,,,2,0,,,,2025
 ,34,18/11/2025,20:30,Botafogo,Sport,,,,,,,3,2,,,,2025
 ,37,19/11/2025,19:30,Palmeiras,Vitoria,,,,,,,0,0,,,,2025
 ,34,19/11/2025,21:30,Fluminense,Flamengo,,,,,,,2,1,,,,2025
@@ -7567,7 +7567,7 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,35,23/11/2025,20:30,Cruzeiro,Corinthians,,,,,,,3,0,,,,2025
 ,35,24/11/2025,19:00,Mirassol,Ceara,,,,,,,3,0,,,,2025
 ,35,24/11/2025,21:00,Internacional,Santos,,,,,,,1,1,,,,2025
-,36,25/11/2025,21:30,Mineiro,Flamengo,,,,,,,1,1,,,,2025
+,36,25/11/2025,21:30,Atletico-MG,Flamengo,,,,,,,1,1,,,,2025
 ,36,25/11/2025,21:30,Gremio,Palmeiras,,,,,,,3,2,,,,2025
 ,36,26/11/2025,19:00,Bragantino,Fortaleza,,,,,,,0,1,,,,2025
 ,36,27/11/2025,20:30,Fluminense,Sao Paulo,,,,,,,6,0,,,,2025
@@ -7577,7 +7577,7 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,36,29/11/2025,16:00,Vitoria,Mirassol,,,,,,,2,0,,,,2025
 ,36,29/11/2025,21:00,Ceara,Cruzeiro,,,,,,,1,1,,,,2025
 ,36,30/11/2025,16:00,Corinthians,Botafogo,,,,,,,2,2,,,,2025
-,35,30/11/2025,18:30,Fortaleza,Mineiro,,,,,,,1,0,,,,2025
+,35,30/11/2025,18:30,Fortaleza,Atletico-MG,,,,,,,1,0,,,,2025
 ,37,02/12/2025,19:00,Vasco,Mirassol,,,,,,,0,2,,,,2025
 ,37,02/12/2025,21:30,Gremio,Fluminense,,,,,,,1,2,,,,2025
 ,37,03/12/2025,19:00,Fortaleza,Corinthians,,,,,,,2,1,,,,2025
@@ -7585,7 +7585,7 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,37,03/12/2025,19:30,Juventude,Santos,,,,,,,0,3,,,,2025
 ,37,03/12/2025,20:00,Sao Paulo,Internacional,,,,,,,3,0,,,,2025
 ,37,03/12/2025,20:00,Bahia,Sport,,,,,,,2,0,,,,2025
-,34,03/12/2025,21:30,Mineiro,Palmeiras,,,,,,,0,3,,,,2025
+,34,03/12/2025,21:30,Atletico-MG,Palmeiras,,,,,,,0,3,,,,2025
 ,37,03/12/2025,21:30,Flamengo,Ceara,,,,,,,1,0,,,,2025
 ,37,04/12/2025,19:30,Cruzeiro,Botafogo,,,,,,,2,2,,,,2025
 ,38,06/12/2025,18:30,Mirassol,Flamengo,,,,,,,3,3,,,,2025
@@ -7593,14 +7593,14 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,38,07/12/2025,16:00,Botafogo,Fortaleza,,,,,,,4,2,,,,2025
 ,38,07/12/2025,16:00,Corinthians,Juventude,,,,,,,1,1,,,,2025
 ,38,07/12/2025,16:00,Santos,Cruzeiro,,,,,,,3,0,,,,2025
-,38,07/12/2025,16:00,Mineiro,Vasco,,,,,,,5,0,,,,2025
+,38,07/12/2025,16:00,Atletico-MG,Vasco,,,,,,,5,0,,,,2025
 ,38,07/12/2025,16:00,Internacional,Bragantino,,,,,,,3,1,,,,2025
 ,38,07/12/2025,16:00,Vitoria,Sao Paulo,,,,,,,1,0,,,,2025
 ,38,07/12/2025,16:00,Ceara,Palmeiras,,,,,,,1,3,,,,2025
 ,38,07/12/2025,16:00,Sport,Gremio,,,,,,,0,4,,,,2025
-,1,28/01/2026,19:00,Mineiro,Palmeiras,,,,,,,2,2,,,,2026
+,1,28/01/2026,19:00,Atletico-MG,Palmeiras,,,,,,,2,2,,,,2026
 ,1,28/01/2026,19:00,Coritiba,Bragantino,,,,,,,0,1,,,,2026
-,1,28/01/2026,19:00,Internacional,Paranaense,,,,,,,0,1,,,,2026
+,1,28/01/2026,19:00,Internacional,Athletico-PR,,,,,,,0,1,,,,2026
 ,1,28/01/2026,19:00,Vitoria,Clube do Remo,,,,,,,2,0,,,,2026
 ,1,28/01/2026,19:30,Fluminense,Gremio,,,,,,,2,1,,,,2026
 ,1,28/01/2026,20:00,Chapecoense,Santos,,,,,,,4,2,,,,2026
@@ -7608,7 +7608,7 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,1,28/01/2026,21:30,Sao Paulo,Flamengo,,,,,,,2,1,,,,2026
 ,1,29/01/2026,20:00,Mirassol,Vasco,,,,,,,2,1,,,,2026
 ,1,29/01/2026,21:30,Botafogo,Cruzeiro,,,,,,,4,0,,,,2026
-,2,04/02/2026,19:00,Bragantino,Mineiro,,,,,,,1,0,,,,2026
+,2,04/02/2026,19:00,Bragantino,Atletico-MG,,,,,,,1,0,,,,2026
 ,2,04/02/2026,19:00,Flamengo,Internacional,,,,,,,1,1,,,,2026
 ,2,04/02/2026,20:00,Clube do Remo,Mirassol,,,,,,,2,2,,,,2026
 ,2,04/02/2026,20:00,Santos,Sao Paulo,,,,,,,1,1,,,,2026
@@ -7620,23 +7620,23 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,3,10/02/2026,21:30,Vitoria,Flamengo,,,,,,,1,2,,,,2026
 ,3,11/02/2026,19:00,Chapecoense,Coritiba,,,,,,,3,3,,,,2026
 ,3,11/02/2026,19:00,Mirassol,Cruzeiro,,,,,,,2,2,,,,2026
-,3,11/02/2026,20:00,Mineiro,Clube do Remo,,,,,,,3,3,,,,2026
+,3,11/02/2026,20:00,Atletico-MG,Clube do Remo,,,,,,,3,3,,,,2026
 ,3,11/02/2026,21:30,Sao Paulo,Gremio,,,,,,,2,0,,,,2026
 ,3,11/02/2026,21:30,Vasco,Bahia,,,,,,,0,1,,,,2026
-,3,12/02/2026,19:00,Paranaense,Santos,,,,,,,2,1,,,,2026
+,3,12/02/2026,19:00,Athletico-PR,Santos,,,,,,,2,1,,,,2026
 ,3,12/02/2026,19:30,Fluminense,Botafogo,,,,,,,1,0,,,,2026
 ,3,12/02/2026,20:00,Corinthians,Bragantino,,,,,,,2,0,,,,2026
 ,3,12/02/2026,21:30,Internacional,Palmeiras,,,,,,,1,3,,,,2026
-,2,19/02/2026,19:30,Paranaense,Corinthians,,,,,,,0,1,,,,2026
-,4,25/02/2026,19:00,Bragantino,Paranaense,,,,,,,1,1,,,,2026
+,2,19/02/2026,19:30,Athletico-PR,Corinthians,,,,,,,0,1,,,,2026
+,4,25/02/2026,19:00,Bragantino,Athletico-PR,,,,,,,1,1,,,,2026
 ,4,25/02/2026,19:00,Clube do Remo,Internacional,,,,,,,1,1,,,,2026
 ,4,25/02/2026,19:30,Coritiba,Sao Paulo,,,,,,,0,1,,,,2026
 ,4,25/02/2026,20:00,Cruzeiro,Corinthians,,,,,,,1,1,,,,2026
-,4,25/02/2026,21:30,Gremio,Mineiro,,,,,,,2,1,,,,2026
+,4,25/02/2026,21:30,Gremio,Atletico-MG,,,,,,,2,1,,,,2026
 ,4,25/02/2026,21:30,Palmeiras,Fluminense,,,,,,,2,1,,,,2026
 ,4,26/02/2026,19:00,Santos,Vasco,,,,,,,2,1,,,,2026
 ,5,10/03/2026,21:30,Mirassol,Santos,,,,,,,2,2,,,,2026
-,5,11/03/2026,19:00,Mineiro,Internacional,,,,,,,1,0,,,,2026
+,5,11/03/2026,19:00,Atletico-MG,Internacional,,,,,,,1,0,,,,2026
 ,5,11/03/2026,20:00,Bahia,Vitoria,,,,,,,1,1,,,,2026
 ,5,11/03/2026,21:30,Corinthians,Coritiba,,,,,,,0,2,,,,2026
 ,5,11/03/2026,21:30,Flamengo,Cruzeiro,,,,,,,2,0,,,,2026
@@ -7644,9 +7644,9 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,5,12/03/2026,19:30,Vasco,Palmeiras,,,,,,,2,1,,,,2026
 ,5,12/03/2026,20:00,Sao Paulo,Chapecoense,,,,,,,2,0,,,,2026
 ,5,12/03/2026,21:30,Gremio,Bragantino,,,,,,,1,1,,,,2026
-,6,14/03/2026,18:30,Vitoria,Mineiro,,,,,,,2,0,,,,2026
+,6,14/03/2026,18:30,Vitoria,Atletico-MG,,,,,,,2,0,,,,2026
 ,6,14/03/2026,20:30,Botafogo,Flamengo,,,,,,,0,3,,,,2026
-,6,15/03/2026,16:00,Fluminense,Paranaense,,,,,,,3,2,,,,2026
+,6,15/03/2026,16:00,Fluminense,Athletico-PR,,,,,,,3,2,,,,2026
 ,6,15/03/2026,16:00,Internacional,Bahia,,,,,,,0,1,,,,2026
 ,6,15/03/2026,16:00,Santos,Corinthians,,,,,,,1,1,,,,2026
 ,6,15/03/2026,18:30,Coritiba,Clube do Remo,,,,,,,1,0,,,,2026
@@ -7656,8 +7656,8 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,6,16/03/2026,20:00,Chapecoense,Gremio,,,,,,,1,1,,,,2026
 ,7,18/03/2026,19:00,Bahia,Bragantino,,,,,,,2,0,,,,2026
 ,7,18/03/2026,19:00,Palmeiras,Botafogo,,,,,,,2,1,,,,2026
-,7,18/03/2026,19:30,Paranaense,Cruzeiro,,,,,,,2,1,,,,2026
-,7,18/03/2026,20:00,Mineiro,Sao Paulo,,,,,,,1,0,,,,2026
+,7,18/03/2026,19:30,Athletico-PR,Cruzeiro,,,,,,,2,1,,,,2026
+,7,18/03/2026,20:00,Atletico-MG,Sao Paulo,,,,,,,1,0,,,,2026
 ,7,18/03/2026,20:00,Mirassol,Coritiba,,,,,,,0,1,,,,2026
 ,7,18/03/2026,21:30,Santos,Internacional,,,,,,,1,2,,,,2026
 ,7,18/03/2026,21:30,Vasco,Fluminense,,,,,,,3,2,,,,2026
@@ -7665,23 +7665,23 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,7,19/03/2026,20:00,Flamengo,Clube do Remo,,,,,,,3,0,,,,2026
 ,7,19/03/2026,21:30,Chapecoense,Corinthians,,,,,,,0,0,,,,2026
 ,8,21/03/2026,16:00,Bragantino,Botafogo,,,,,,,1,2,,,,2026
-,8,21/03/2026,18:30,Fluminense,Mineiro,,,,,,,1,0,,,,2026
+,8,21/03/2026,18:30,Fluminense,Atletico-MG,,,,,,,1,0,,,,2026
 ,8,21/03/2026,21:00,Sao Paulo,Palmeiras,,,,,,,0,1,,,,2026
-,8,22/03/2026,16:00,Paranaense,Coritiba,,,,,,,2,0,,,,2026
+,8,22/03/2026,16:00,Athletico-PR,Coritiba,,,,,,,2,0,,,,2026
 ,8,22/03/2026,16:00,Cruzeiro,Santos,,,,,,,0,0,,,,2026
 ,8,22/03/2026,16:00,Clube do Remo,Bahia,,,,,,,4,1,,,,2026
 ,8,22/03/2026,16:00,Vasco,Gremio,,,,,,,2,1,,,,2026
 ,8,22/03/2026,18:30,Internacional,Chapecoense,,,,,,,2,0,,,,2026
 ,8,22/03/2026,18:30,Vitoria,Mirassol,,,,,,,1,0,,,,2026
 ,8,22/03/2026,20:30,Corinthians,Flamengo,,,,,,,1,1,,,,2026
-,5,29/03/2026,19:30,Paranaense,Botafogo,,,,,,,4,1,,,,2026
+,5,29/03/2026,19:30,Athletico-PR,Botafogo,,,,,,,4,1,,,,2026
 ,9,01/04/2026,19:30,Botafogo,Mirassol,,,,,,,3,2,,,,2026
 ,9,01/04/2026,19:30,Internacional,Sao Paulo,,,,,,,1,1,,,,2026
-,9,01/04/2026,20:00,Bahia,Paranaense,,,,,,,3,0,,,,2026
+,9,01/04/2026,20:00,Bahia,Athletico-PR,,,,,,,3,0,,,,2026
 ,9,01/04/2026,20:00,Cruzeiro,Vitoria,,,,,,,3,0,,,,2026
 ,9,01/04/2026,20:30,Coritiba,Vasco,,,,,,,1,1,,,,2026
 ,9,01/04/2026,21:30,Fluminense,Corinthians,,,,,,,3,1,,,,2026
-,9,02/04/2026,19:00,Chapecoense,Mineiro,,,,,,,0,4,,,,2026
+,9,02/04/2026,19:00,Chapecoense,Atletico-MG,,,,,,,0,4,,,,2026
 ,9,02/04/2026,19:00,Santos,Clube do Remo,,,,,,,2,0,,,,2026
 ,9,02/04/2026,21:30,Bragantino,Flamengo,,,,,,,3,0,,,,2026
 ,9,02/04/2026,21:30,Palmeiras,Gremio,,,,,,,2,1,,,,2026
@@ -7689,7 +7689,7 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,10,04/04/2026,20:30,Coritiba,Fluminense,,,,,,,1,1,,,,2026
 ,10,04/04/2026,21:00,Vasco,Botafogo,,,,,,,1,2,,,,2026
 ,10,05/04/2026,16:00,Chapecoense,Vitoria,,,,,,,1,1,,,,2026
-,10,05/04/2026,17:30,Mineiro,Paranaense,,,,,,,2,1,,,,2026
+,10,05/04/2026,17:30,Atletico-MG,Athletico-PR,,,,,,,2,1,,,,2026
 ,10,05/04/2026,17:30,Flamengo,Santos,,,,,,,3,1,,,,2026
 ,10,05/04/2026,19:30,Bahia,Palmeiras,,,,,,,1,2,,,,2026
 ,10,05/04/2026,19:30,Corinthians,Internacional,,,,,,,0,1,,,,2026
@@ -7698,9 +7698,9 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,11,11/04/2026,16:30,Clube do Remo,Vasco,,,,,,,1,1,,,,2026
 ,11,11/04/2026,16:30,Vitoria,Sao Paulo,,,,,,,2,0,,,,2026
 ,11,11/04/2026,18:30,Mirassol,Bahia,,,,,,,1,2,,,,2026
-,11,11/04/2026,20:00,Santos,Mineiro,,,,,,,1,0,,,,2026
+,11,11/04/2026,20:00,Santos,Atletico-MG,,,,,,,1,0,,,,2026
 ,11,11/04/2026,20:30,Internacional,Gremio,,,,,,,0,0,,,,2026
-,11,12/04/2026,11:00,Paranaense,Chapecoense,,,,,,,2,0,,,,2026
+,11,12/04/2026,11:00,Athletico-PR,Chapecoense,,,,,,,2,0,,,,2026
 ,11,12/04/2026,16:00,Botafogo,Coritiba,,,,,,,2,2,,,,2026
 ,11,12/04/2026,18:00,Fluminense,Flamengo,,,,,,,1,2,,,,2026
 ,11,12/04/2026,18:30,Corinthians,Palmeiras,,,,,,,0,0,,,,2026
@@ -7710,10 +7710,10 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,12,18/04/2026,20:00,Vitoria,Corinthians,,,,,,,0,0,,,,2026
 ,12,18/04/2026,20:30,Cruzeiro,Gremio,,,,,,,2,0,,,,2026
 ,12,19/04/2026,11:00,Internacional,Mirassol,,,,,,,1,2,,,,2026
-,12,19/04/2026,16:00,Coritiba,Mineiro,,,,,,,2,0,,,,2026
+,12,19/04/2026,16:00,Coritiba,Atletico-MG,,,,,,,2,0,,,,2026
 ,12,19/04/2026,16:00,Santos,Fluminense,,,,,,,2,3,,,,2026
 ,12,19/04/2026,18:30,Bragantino,Clube do Remo,,,,,,,4,2,,,,2026
-,12,19/04/2026,18:30,Palmeiras,Paranaense,,,,,,,1,0,,,,2026
+,12,19/04/2026,18:30,Palmeiras,Athletico-PR,,,,,,,1,0,,,,2026
 ,12,19/04/2026,19:30,Flamengo,Bahia,,,,,,,2,0,,,,2026
 ,13,25/04/2026,18:30,Bahia,Santos,,,,,,,2,2,,,,2026
 ,13,25/04/2026,18:30,Botafogo,Internacional,,,,,,,2,2,,,,2026
@@ -7721,15 +7721,15 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,13,25/04/2026,21:00,Sao Paulo,Mirassol,,,,,,,1,0,,,,2026
 ,13,26/04/2026,16:00,Corinthians,Vasco,,,,,,,1,0,,,,2026
 ,13,26/04/2026,16:00,Gremio,Coritiba,,,,,,,1,0,,,,2026
-,13,26/04/2026,18:30,Paranaense,Vitoria,,,,,,,3,1,,,,2026
+,13,26/04/2026,18:30,Athletico-PR,Vitoria,,,,,,,3,1,,,,2026
 ,13,26/04/2026,18:30,Bragantino,Palmeiras,,,,,,,0,1,,,,2026
-,13,26/04/2026,20:30,Mineiro,Flamengo,,,,,,,0,4,,,,2026
+,13,26/04/2026,20:30,Atletico-MG,Flamengo,,,,,,,0,4,,,,2026
 ,13,26/04/2026,20:30,Fluminense,Chapecoense,,,,,,,2,1,,,,2026
 ,14,02/05/2026,16:00,Botafogo,Clube do Remo,,,,,,,1,2,,,,2026
 ,14,02/05/2026,18:30,Palmeiras,Santos,,,,,,,1,1,,,,2026
 ,14,02/05/2026,18:30,Vitoria,Coritiba,,,,,,,4,1,,,,2026
-,14,02/05/2026,20:30,Paranaense,Gremio,,,,,,,0,0,,,,2026
-,14,02/05/2026,21:00,Cruzeiro,Mineiro,,,,,,,1,3,,,,2026
+,14,02/05/2026,20:30,Athletico-PR,Gremio,,,,,,,0,0,,,,2026
+,14,02/05/2026,21:00,Cruzeiro,Atletico-MG,,,,,,,1,3,,,,2026
 ,14,03/05/2026,16:00,Flamengo,Vasco,,,,,,,2,2,,,,2026
 ,14,03/05/2026,16:00,Sao Paulo,Bahia,,,,,,,2,2,,,,2026
 ,14,03/05/2026,18:30,Chapecoense,Bragantino,,,,,,,1,2,,,,2026
@@ -7738,14 +7738,14 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,15,09/05/2026,16:00,Coritiba,Internacional,,,,,,,2,2,,,,2026
 ,15,09/05/2026,18:00,Fluminense,Vitoria,,,,,,,2,2,,,,2026
 ,15,09/05/2026,21:00,Bahia,Cruzeiro,,,,,,,1,2,,,,2026
-,15,10/05/2026,16:00,Mineiro,Botafogo,,,,,,,1,1,,,,2026
+,15,10/05/2026,16:00,Atletico-MG,Botafogo,,,,,,,1,1,,,,2026
 ,15,10/05/2026,17:40,Clube do Remo,Palmeiras,,,,,,,1,1,,,,2026
 ,15,10/05/2026,18:30,Corinthians,Sao Paulo,,,,,,,3,2,,,,2026
 ,15,10/05/2026,18:30,Mirassol,Chapecoense,,,,,,,1,1,,,,2026
 ,15,10/05/2026,18:30,Santos,Bragantino,,,,,,,2,0,,,,2026
 ,15,10/05/2026,19:30,Gremio,Flamengo,,,,,,,0,1,,,,2026
-,15,10/05/2026,20:30,Vasco,Paranaense,,,,,,,1,0,,,,2026
-,16,16/05/2026,18:30,Mineiro,Mirassol,,,,,,,3,1,,,,2026
+,15,10/05/2026,20:30,Vasco,Athletico-PR,,,,,,,1,0,,,,2026
+,16,16/05/2026,18:30,Atletico-MG,Mirassol,,,,,,,3,1,,,,2026
 ,16,16/05/2026,18:30,Internacional,Vasco,,,,,,,4,1,,,,2026
 ,16,16/05/2026,19:00,Fluminense,Sao Paulo,,,,,,,2,1,,,,2026
 ,16,16/05/2026,21:00,Palmeiras,Cruzeiro,,,,,,,1,1,,,,2026
@@ -7754,25 +7754,25 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,16,17/05/2026,16:00,Botafogo,Corinthians,,,,,,,3,1,,,,2026
 ,16,17/05/2026,18:30,Bragantino,Vitoria,,,,,,,2,0,,,,2026
 ,16,17/05/2026,18:30,Chapecoense,Clube do Remo,,,,,,,2,3,,,,2026
-,16,17/05/2026,19:30,Paranaense,Flamengo,,,,,,,1,1,,,,2026
+,16,17/05/2026,19:30,Athletico-PR,Flamengo,,,,,,,1,1,,,,2026
 ,17,23/05/2026,17:00,Sao Paulo,Botafogo,,,,,,,1,1,,,,2026
 ,17,23/05/2026,17:00,Vitoria,Internacional,,,,,,,2,0,,,,2026
 ,17,23/05/2026,19:00,Gremio,Santos,,,,,,,3,2,,,,2026
 ,17,23/05/2026,19:00,Mirassol,Fluminense,,,,,,,1,0,,,,2026
 ,17,23/05/2026,21:00,Flamengo,Palmeiras,,,,,,,0,3,,,,2026
 ,17,24/05/2026,16:00,Cruzeiro,Chapecoense,,,,,,,2,1,,,,2026
-,17,24/05/2026,16:00,Clube do Remo,Paranaense,,,,,,,1,2,,,,2026
-,17,24/05/2026,18:30,Corinthians,Mineiro,,,,,,,1,0,,,,2026
+,17,24/05/2026,16:00,Clube do Remo,Athletico-PR,,,,,,,1,2,,,,2026
+,17,24/05/2026,18:30,Corinthians,Atletico-MG,,,,,,,1,0,,,,2026
 ,17,24/05/2026,20:30,Vasco,Bragantino,,,,,,,0,3,,,,2026
 ,17,25/05/2026,20:00,Coritiba,Bahia,,,,,,,3,2,,,,2026
-,18,30/05/2026,16:00,Paranaense,Mirassol,,,,,,,1,0,,,,2026
+,18,30/05/2026,16:00,Athletico-PR,Mirassol,,,,,,,1,0,,,,2026
 ,18,30/05/2026,16:00,Flamengo,Coritiba,,,,,,,3,0,,,,2026
 ,18,30/05/2026,17:30,Bahia,Botafogo,,,,,,,2,1,,,,2026
 ,18,30/05/2026,17:30,Gremio,Corinthians,,,,,,,1,3,,,,2026
 ,18,30/05/2026,20:00,Santos,Vitoria,,,,,,,3,1,,,,2026
 ,18,31/05/2026,11:00,Bragantino,Internacional,,,,,,,3,1,,,,2026
 ,18,31/05/2026,16:00,Palmeiras,Chapecoense,,,,,,,1,0,,,,2026
-,18,31/05/2026,16:00,Vasco,Mineiro,,,,,,,0,1,,,,2026
+,18,31/05/2026,16:00,Vasco,Atletico-MG,,,,,,,0,1,,,,2026
 ,18,31/05/2026,20:30,Cruzeiro,Fluminense,,,,,,,1,1,,,,2026
 ,18,31/05/2026,20:30,Clube do Remo,Sao Paulo,,,,,,,1,0,,,,2026
 ,19,16/07/2026,19:30,Botafogo,Santos,,,,,,,2,1,,,,2026
@@ -7780,14 +7780,14 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,4,17/07/2026,19:30,Bahia,Chapecoense,,,,,,,2,0,,,,2026
 ,19,17/07/2026,20:00,Fluminense,Bragantino,,,,,,,1,1,,,,2026
 ,19,17/07/2026,20:00,Mirassol,Gremio,,,,,,,2,1,,,,2026
-,19,21/07/2026,19:30,Mineiro,Bahia,,,,,,,1,1,,,,2026
+,19,21/07/2026,19:30,Atletico-MG,Bahia,,,,,,,1,1,,,,2026
 ,19,22/07/2026,19:30,Coritiba,Palmeiras,,,,,,,1,3,,,,2026
 ,19,22/07/2026,21:30,Chapecoense,Flamengo,,,,,,,0,4,,,,2026
 ,19,22/07/2026,21:30,Internacional,Cruzeiro,,,,,,,1,2,,,,2026
-,19,22/07/2026,21:30,Sao Paulo,Paranaense,,,,,,,1,2,,,,2026
+,19,22/07/2026,21:30,Sao Paulo,Athletico-PR,,,,,,,1,2,,,,2026
 ,4,23/07/2026,19:30,Botafogo,Vitoria,,,,,,,0,0,,,,2026
 ,19,23/07/2026,19:30,Corinthians,Clube do Remo,,,,,,,3,0,,,,2026
-,20,25/07/2026,18:30,Paranaense,Internacional,,,,,,,2,0,,,,2026
+,20,25/07/2026,18:30,Athletico-PR,Internacional,,,,,,,2,0,,,,2026
 ,20,25/07/2026,18:30,Santos,Chapecoense,,,,,,,2,2,,,,2026
 ,20,25/07/2026,20:30,Vasco,Mirassol,,,,,,,1,1,,,,2026
 ,20,26/07/2026,16:00,Bahia,Corinthians,,,,,,,1,1,,,,2026
@@ -7795,37 +7795,37 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,20,26/07/2026,18:30,Bragantino,Coritiba,,,,,,,0,0,,,,2026
 ,20,26/07/2026,18:30,Flamengo,Sao Paulo,,,,,,,1,1,,,,2026
 ,20,26/07/2026,18:30,Gremio,Fluminense,,,,,,,1,1,,,,2026
-,20,26/07/2026,19:30,Palmeiras,Mineiro,,,,,,,1,2,,,,2026
+,20,26/07/2026,19:30,Palmeiras,Atletico-MG,,,,,,,1,2,,,,2026
 ,20,26/07/2026,19:30,Clube do Remo,Vitoria,,,,,,,2,0,,,,2026
 ,21,28/07/2026,21:00,Chapecoense,Vasco,,,,,,,,,,,,2026
 ,21,29/07/2026,19:30,Internacional,Flamengo,,,,,,,1,1,,,,2026
 ,21,29/07/2026,19:30,Mirassol,Clube do Remo,,,,,,,2,1,,,,2026
 ,21,29/07/2026,21:30,Fluminense,Bahia,,,,,,,0,0,,,,2026
 ,21,29/07/2026,21:30,Vitoria,Palmeiras,,,,,,,0,4,,,,2026
-,21,30/07/2026,19:30,Corinthians,Paranaense,,,,,,,0,0,,,,2026
+,21,30/07/2026,19:30,Corinthians,Athletico-PR,,,,,,,0,0,,,,2026
 ,21,30/07/2026,21:30,Coritiba,Cruzeiro,,,,,,,0,1,,,,2026
 ,22,08/08/2026,16:00,Gremio,Sao Paulo,,,,,,,2,1,,,,2026
-,22,08/08/2026,18:30,Clube do Remo,Mineiro,,,,,,,2,2,,,,2026
+,22,08/08/2026,18:30,Clube do Remo,Atletico-MG,,,,,,,2,2,,,,2026
 ,22,08/08/2026,20:30,Coritiba,Chapecoense,,,,,,,2,1,,,,2026
 ,22,08/08/2026,21:00,Botafogo,Fluminense,,,,,,,1,1,,,,2026
 ,22,09/08/2026,11:00,Cruzeiro,Mirassol,,,,,,,3,1,,,,2026
 ,22,09/08/2026,16:00,Bahia,Vasco,,,,,,,0,0,,,,2026
 ,22,09/08/2026,16:00,Palmeiras,Internacional,,,,,,,0,0,,,,2026
 ,22,09/08/2026,18:30,Bragantino,Corinthians,,,,,,,0,2,,,,2026
-,22,09/08/2026,18:30,Santos,Paranaense,,,,,,,0,2,,,,2026
+,22,09/08/2026,18:30,Santos,Athletico-PR,,,,,,,0,2,,,,2026
 ,22,09/08/2026,19:30,Flamengo,Vitoria,,,,,,,2,0,,,,2026
 ,23,15/08/2026,16:30,Fluminense,Palmeiras,,,,,,,3,2,,,,2026
-,23,15/08/2026,18:30,Paranaense,Bragantino,,,,,,,1,1,,,,2026
+,23,15/08/2026,18:30,Athletico-PR,Bragantino,,,,,,,1,1,,,,2026
 ,23,15/08/2026,21:00,Sao Paulo,Coritiba,,,,,,,1,1,,,,2026
 ,23,16/08/2026,11:00,Chapecoense,Bahia,,,,,,,3,3,,,,2026
-,23,16/08/2026,16:00,Mineiro,Gremio,,,,,,,3,0,,,,2026
+,23,16/08/2026,16:00,Atletico-MG,Gremio,,,,,,,3,0,,,,2026
 ,23,16/08/2026,16:00,Vasco,Santos,,,,,,,0,3,,,,2026
 ,23,16/08/2026,18:30,Mirassol,Flamengo,,,,,,,1,5,,,,2026
 ,23,16/08/2026,18:30,Vitoria,Botafogo,,,,,,,1,0,,,,2026
 ,23,16/08/2026,19:30,Corinthians,Cruzeiro,,,,,,,1,2,,,,2026
 ,23,17/08/2026,20:00,Internacional,Clube do Remo,,,,,,,1,1,,,,2026
 ,24,22/08/2026,16:00,Fluminense,Clube do Remo,,,,,,,2,1,,,,2026
-,24,22/08/2026,18:30,Internacional,Mineiro,,,,,,,0,0,,,,2026
+,24,22/08/2026,18:30,Internacional,Atletico-MG,,,,,,,0,0,,,,2026
 ,24,22/08/2026,20:30,Cruzeiro,Flamengo,,,,,,,2,1,,,,2026
 ,24,23/08/2026,16:00,Bragantino,Gremio,,,,,,,1,0,,,,2026
 ,24,23/08/2026,16:00,Palmeiras,Vasco,,,,,,,4,1,,,,2026
@@ -7833,11 +7833,11 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,24,23/08/2026,18:30,Chapecoense,Sao Paulo,,,,,,,1,0,,,,2026
 ,24,23/08/2026,18:30,Santos,Mirassol,,,,,,,1,1,,,,2026
 ,24,23/08/2026,19:30,Coritiba,Corinthians,,,,,,,2,1,,,,2026
-,24,24/08/2026,20:00,Botafogo,Paranaense,,,,,,,2,3,,,,2026
-,25,29/08/2026,18:30,Mineiro,Vitoria,,,,,,,2,1,,,,2026
+,24,24/08/2026,20:00,Botafogo,Athletico-PR,,,,,,,2,3,,,,2026
+,25,29/08/2026,18:30,Atletico-MG,Vitoria,,,,,,,2,1,,,,2026
 ,25,29/08/2026,20:00,Sao Paulo,Bragantino,,,,,,,2,1,,,,2026
 ,25,29/08/2026,21:20,Vasco,Cruzeiro,,,,,,,3,1,,,,2026
-,25,30/08/2026,11:00,Paranaense,Fluminense,,,,,,,3,3,,,,2026
+,25,30/08/2026,11:00,Athletico-PR,Fluminense,,,,,,,3,3,,,,2026
 ,25,30/08/2026,16:00,Corinthians,Santos,,,,,,,0,1,,,,2026
 ,25,30/08/2026,16:00,Flamengo,Botafogo,,,,,,,3,0,,,,2026
 ,25,30/08/2026,18:30,Gremio,Chapecoense,,,,,,,3,1,,,,2026
@@ -7846,17 +7846,17 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,25,31/08/2026,20:00,Clube do Remo,Coritiba,,,,,,,2,3,,,,2026
 ,4,02/09/2026,19:30,Flamengo,Mirassol,,,,,,,2,0,,,,2026
 ,26,05/09/2026,16:00,Bragantino,Bahia,,,,,,,2,3,,,,2026
-,26,05/09/2026,18:30,Sao Paulo,Mineiro,,,,,,,2,0,,,,2026
+,26,05/09/2026,18:30,Sao Paulo,Atletico-MG,,,,,,,2,0,,,,2026
 ,26,05/09/2026,21:00,Fluminense,Vasco,,,,,,,1,0,,,,2026
 ,26,06/09/2026,11:00,Coritiba,Mirassol,,,,,,,1,2,,,,2026
-,26,06/09/2026,16:00,Cruzeiro,Paranaense,,,,,,,3,1,,,,2026
+,26,06/09/2026,16:00,Cruzeiro,Athletico-PR,,,,,,,3,1,,,,2026
 ,26,06/09/2026,16:00,Internacional,Santos,,,,,,,2,3,,,,2026
 ,26,06/09/2026,16:00,Clube do Remo,Flamengo,,,,,,,0,1,,,,2026
 ,26,06/09/2026,18:30,Botafogo,Palmeiras,,,,,,,0,0,,,,2026
 ,26,06/09/2026,19:30,Corinthians,Chapecoense,,,,,,,1,2,,,,2026
 ,26,07/09/2026,20:00,Vitoria,Gremio,,,,,,,1,0,,,,2026
-,27,11/09/2026,21:00,Coritiba,Paranaense,,,,,,,3,3,,,,2026
-,27,12/09/2026,16:00,Mineiro,Fluminense,,,,,,,3,1,,,,2026
+,27,11/09/2026,21:00,Coritiba,Athletico-PR,,,,,,,3,3,,,,2026
+,27,12/09/2026,16:00,Atletico-MG,Fluminense,,,,,,,3,1,,,,2026
 ,27,12/09/2026,16:00,Gremio,Vasco,,,,,,,1,2,,,,2026
 ,27,12/09/2026,17:00,Chapecoense,Internacional,,,,,,,1,2,,,,2026
 ,27,12/09/2026,18:30,Palmeiras,Sao Paulo,,,,,,,2,0,,,,2026
@@ -7866,7 +7866,7 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,27,13/09/2026,17:30,Flamengo,Corinthians,,,,,,,2,1,,,,2026
 ,27,14/09/2026,20:00,Bahia,Clube do Remo,,,,,,,2,1,,,,2026
 ,21,16/09/2026,19:30,Botafogo,Gremio,,,,,,,3,2,,,,2026
-,28,19/09/2026,16:00,Mineiro,Chapecoense,,,,,,,1,1,,,,2026
+,28,19/09/2026,16:00,Atletico-MG,Chapecoense,,,,,,,1,1,,,,2026
 ,28,19/09/2026,17:00,Mirassol,Botafogo,,,,,,,2,0,,,,2026
 ,28,19/09/2026,18:30,Clube do Remo,Santos,,,,,,,1,2,,,,2026
 ,28,19/09/2026,20:30,Vasco,Coritiba,,,,,,,5,0,,,,2026
@@ -7875,9 +7875,9 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,28,20/09/2026,16:00,Corinthians,Fluminense,,,,,,,1,3,,,,2026
 ,28,20/09/2026,16:00,Vitoria,Cruzeiro,,,,,,,1,3,,,,2026
 ,28,20/09/2026,18:30,Flamengo,Bragantino,,,,,,,2,1,,,,2026
-,28,20/09/2026,19:30,Paranaense,Bahia,,,,,,,2,1,,,,2026
+,28,20/09/2026,19:30,Athletico-PR,Bahia,,,,,,,2,1,,,,2026
 ,21,02/10/2026,20:00,Sao Paulo,Santos,,,,,,,1,2,,,,2026
-,21,03/10/2026,18:30,Mineiro,Bragantino,,,,,,,1,0,,,,2026
+,21,03/10/2026,18:30,Atletico-MG,Bragantino,,,,,,,1,0,,,,2026
 ,29,07/10/2026,19:30,Bragantino,Mirassol,,,,,,,1,1,,,,2026
 ,29,07/10/2026,19:30,Internacional,Corinthians,,,,,,,2,1,,,,2026
 ,29,07/10/2026,19:30,Clube do Remo,Gremio,,,,,,,1,1,,,,2026
@@ -7885,23 +7885,23 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,29,07/10/2026,20:30,Botafogo,Vasco,,,,,,,1,2,,,,2026
 ,29,07/10/2026,21:30,Cruzeiro,Sao Paulo,,,,,,,2,0,,,,2026
 ,29,08/10/2026,19:30,Santos,Flamengo,,,,,,,2,2,,,,2026
-,29,08/10/2026,20:00,Paranaense,Mineiro,,,,,,,2,2,,,,2026
+,29,08/10/2026,20:00,Athletico-PR,Atletico-MG,,,,,,,2,2,,,,2026
 ,29,08/10/2026,21:30,Fluminense,Coritiba,,,,,,,4,0,,,,2026
 ,29,08/10/2026,21:30,Palmeiras,Bahia,,,,,,,1,0,,,,2026
 ,30,10/10/2026,18:00,Vasco,Clube do Remo,,,,,,,0,0,,,,2026
 ,30,10/10/2026,21:00,Sao Paulo,Vitoria,,,,,,,2,1,,,,2026
-,30,11/10/2026,16:00,Mineiro,Santos,,,,,,,2,1,,,,2026
+,30,11/10/2026,16:00,Atletico-MG,Santos,,,,,,,2,1,,,,2026
 ,30,11/10/2026,17:30,Flamengo,Fluminense,,,,,,,1,0,,,,2026
 ,30,11/10/2026,17:30,Gremio,Internacional,,,,,,,1,1,,,,2026
 ,30,11/10/2026,17:30,Palmeiras,Corinthians,,,,,,,4,1,,,,2026
 ,30,11/10/2026,19:30,Bahia,Mirassol,,,,,,,1,0,,,,2026
 ,30,12/10/2026,16:00,Coritiba,Botafogo,,,,,,,1,1,,,,2026
-,30,12/10/2026,19:30,Chapecoense,Paranaense,,,,,,,1,4,,,,2026
+,30,12/10/2026,19:30,Chapecoense,Athletico-PR,,,,,,,1,4,,,,2026
 ,30,12/10/2026,21:00,Bragantino,Cruzeiro,,,,,,,4,2,,,,2026
 ,31,16/10/2026,20:00,Mirassol,Internacional,,,,,,,2,0,,,,2026
 ,31,17/10/2026,18:00,Botafogo,Chapecoense,,,,,,,1,0,,,,2026
-,31,17/10/2026,18:30,Mineiro,Coritiba,,,,,,,1,0,,,,2026
-,31,17/10/2026,19:30,Paranaense,Palmeiras,,,,,,,0,2,,,,2026
+,31,17/10/2026,18:30,Atletico-MG,Coritiba,,,,,,,1,0,,,,2026
+,31,17/10/2026,19:30,Athletico-PR,Palmeiras,,,,,,,0,2,,,,2026
 ,31,17/10/2026,21:00,Sao Paulo,Vasco,,,,,,,1,0,,,,2026
 ,31,18/10/2026,16:00,Fluminense,Santos,,,,,,,1,2,,,,2026
 ,31,18/10/2026,16:00,Gremio,Cruzeiro,,,,,,,2,4,,,,2026
@@ -7911,38 +7911,38 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,32,23/10/2026,20:00,Cruzeiro,Clube do Remo,,,,,,,1,0,,,,2026
 ,32,24/10/2026,16:30,Internacional,Botafogo,,,,,,,3,0,,,,2026
 ,32,24/10/2026,16:30,Mirassol,Sao Paulo,,,,,,,1,1,,,,2026
-,32,24/10/2026,16:30,Vitoria,Paranaense,,,,,,,1,1,,,,2026
+,32,24/10/2026,16:30,Vitoria,Athletico-PR,,,,,,,1,1,,,,2026
 ,32,24/10/2026,18:30,Palmeiras,Bragantino,,,,,,,2,0,,,,2026
 ,32,24/10/2026,18:30,Vasco,Corinthians,,,,,,,3,2,,,,2026
 ,32,24/10/2026,19:30,Chapecoense,Fluminense,,,,,,,2,1,,,,2026
 ,32,24/10/2026,22:00,Santos,Bahia,,,,,,,1,1,,,,2026
 ,32,26/10/2026,19:30,Coritiba,Gremio,,,,,,,0,1,,,,2026
-,32,26/10/2026,20:00,Flamengo,Mineiro,,,,,,,3,2,,,,2026
+,32,26/10/2026,20:00,Flamengo,Atletico-MG,,,,,,,3,2,,,,2026
 ,33,28/10/2026,19:30,Bragantino,Chapecoense,,,,,,,3,0,,,,2026
 ,33,28/10/2026,19:30,Fluminense,Internacional,,,,,,,2,1,,,,2026
 ,33,28/10/2026,19:30,Santos,Palmeiras,,,,,,,0,0,,,,2026
 ,33,28/10/2026,21:30,Bahia,Sao Paulo,,,,,,,3,2,,,,2026
 ,33,28/10/2026,21:30,Clube do Remo,Botafogo,,,,,,,2,1,,,,2026
-,33,29/10/2026,19:30,Mineiro,Cruzeiro,,,,,,,0,1,,,,2026
+,33,29/10/2026,19:30,Atletico-MG,Cruzeiro,,,,,,,0,1,,,,2026
 ,33,29/10/2026,20:00,Vasco,Flamengo,,,,,,,1,4,,,,2026
-,33,29/10/2026,21:30,Gremio,Paranaense,,,,,,,2,0,,,,2026
-,33,30/10/2026,20:00,Corinthians,Mirassol,,,,,,,,,,,,2026
+,33,29/10/2026,21:30,Gremio,Athletico-PR,,,,,,,2,0,,,,2026
+,33,30/10/2026,20:00,Corinthians,Mirassol,,,,,,,2,0,,,,2026
 ,33,31/10/2026,16:00,Coritiba,Vitoria,,,,,,,,,,,,2026
 ,34,02/11/2026,20:00,Bragantino,Santos,,,,,,,,,,,,2026
 ,34,03/11/2026,19:30,Chapecoense,Mirassol,,,,,,,,,,,,2026
 ,34,03/11/2026,21:30,Internacional,Coritiba,,,,,,,,,,,,2026
-,34,04/11/2026,19:30,Paranaense,Vasco,,,,,,,,,,,,2026
+,34,04/11/2026,19:30,Athletico-PR,Vasco,,,,,,,,,,,,2026
 ,34,04/11/2026,19:30,Flamengo,Gremio,,,,,,,,,,,,2026
-,34,04/11/2026,21:30,Botafogo,Mineiro,,,,,,,,,,,,2026
+,34,04/11/2026,21:30,Botafogo,Atletico-MG,,,,,,,,,,,,2026
 ,34,04/11/2026,21:30,Sao Paulo,Corinthians,,,,,,,,,,,,2026
 ,34,05/11/2026,19:30,Palmeiras,Clube do Remo,,,,,,,,,,,,2026
 ,34,05/11/2026,21:30,Cruzeiro,Bahia,,,,,,,,,,,,2026
 ,34,06/11/2026,20:00,Vitoria,Fluminense,,,,,,,,,,,,2026
-,35,14/11/2026,18:30,Mirassol,Mineiro,,,,,,,,,,,,2026
+,35,14/11/2026,18:30,Mirassol,Atletico-MG,,,,,,,,,,,,2026
 ,35,18/11/2026,19:30,Coritiba,Santos,,,,,,,,,,,,2026
 ,35,18/11/2026,20:00,Clube do Remo,Chapecoense,,,,,,,,,,,,2026
 ,35,18/11/2026,20:30,Cruzeiro,Palmeiras,,,,,,,,,,,,2026
-,35,18/11/2026,20:30,Flamengo,Paranaense,,,,,,,,,,,,2026
+,35,18/11/2026,20:30,Flamengo,Athletico-PR,,,,,,,,,,,,2026
 ,35,18/11/2026,21:30,Corinthians,Botafogo,,,,,,,,,,,,2026
 ,35,18/11/2026,21:30,Gremio,Bahia,,,,,,,,,,,,2026
 ,35,19/11/2026,19:30,Vasco,Internacional,,,,,,,,,,,,2026
@@ -7951,25 +7951,25 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,36,21/11/2026,16:30,Palmeiras,Flamengo,,,,,,,,,,,,2026
 ,36,21/11/2026,17:30,Bahia,Coritiba,,,,,,,,,,,,2026
 ,36,21/11/2026,21:00,Chapecoense,Cruzeiro,,,,,,,,,,,,2026
-,36,22/11/2026,16:00,Paranaense,Clube do Remo,,,,,,,,,,,,2026
+,36,22/11/2026,16:00,Athletico-PR,Clube do Remo,,,,,,,,,,,,2026
 ,36,22/11/2026,18:30,Fluminense,Mirassol,,,,,,,,,,,,2026
 ,36,22/11/2026,19:30,Bragantino,Vasco,,,,,,,,,,,,2026
 ,36,23/11/2026,19:30,Internacional,Vitoria,,,,,,,,,,,,2026
 ,36,23/11/2026,20:00,Botafogo,Sao Paulo,,,,,,,,,,,,2026
 ,36,23/11/2026,21:00,Santos,Gremio,,,,,,,,,,,,2026
-,36,25/11/2026,20:00,Mineiro,Corinthians,,,,,,,,,,,,2026
-,37,27/11/2026,21:00,Mineiro,Vasco,,,,,,,,,,,,2026
+,36,25/11/2026,20:00,Atletico-MG,Corinthians,,,,,,,,,,,,2026
+,37,27/11/2026,21:00,Atletico-MG,Vasco,,,,,,,,,,,,2026
 ,37,27/11/2026,21:00,Botafogo,Bahia,,,,,,,,,,,,2026
 ,37,27/11/2026,21:00,Chapecoense,Palmeiras,,,,,,,,,,,,2026
 ,37,27/11/2026,21:00,Corinthians,Gremio,,,,,,,,,,,,2026
 ,37,27/11/2026,21:00,Coritiba,Flamengo,,,,,,,,,,,,2026
 ,37,27/11/2026,21:00,Fluminense,Cruzeiro,,,,,,,,,,,,2026
 ,37,27/11/2026,21:00,Internacional,Bragantino,,,,,,,,,,,,2026
-,37,27/11/2026,21:00,Mirassol,Paranaense,,,,,,,,,,,,2026
+,37,27/11/2026,21:00,Mirassol,Athletico-PR,,,,,,,,,,,,2026
 ,37,27/11/2026,21:00,Sao Paulo,Clube do Remo,,,,,,,,,,,,2026
 ,37,27/11/2026,21:00,Vitoria,Santos,,,,,,,,,,,,2026
-,38,01/12/2026,21:00,Paranaense,Sao Paulo,,,,,,,,,,,,2026
-,38,01/12/2026,21:00,Bahia,Mineiro,,,,,,,,,,,,2026
+,38,01/12/2026,21:00,Athletico-PR,Sao Paulo,,,,,,,,,,,,2026
+,38,01/12/2026,21:00,Bahia,Atletico-MG,,,,,,,,,,,,2026
 ,38,01/12/2026,21:00,Bragantino,Fluminense,,,,,,,,,,,,2026
 ,38,01/12/2026,21:00,Cruzeiro,Internacional,,,,,,,,,,,,2026
 ,38,01/12/2026,21:00,Flamengo,Chapecoense,,,,,,,,,,,,2026
