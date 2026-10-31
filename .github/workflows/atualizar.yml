@@ -16,7 +16,7 @@ jobs:
       - name: Buscar resultados
         env:
           FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
-          TEMPORADAS: "2021"
+          TEMPORADAS: "2026"
         run: python scripts/atualizar_jogos.py
       - name: Commit se houve mudança
         run: |
