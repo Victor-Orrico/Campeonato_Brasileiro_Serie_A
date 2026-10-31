@@ -7218,387 +7218,387 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 8776,38,08/12/2024,16:05,Fortaleza,Internacional,4-2-3-1,4-1-2-1-2,J. Vojvoda,R. Machado Marques,Fortaleza,Arena Castelão,3,0,CE,RS,,
 8780,38,08/12/2024,16:05,Bragantino,Criciuma,4-2-3-1,4-1-2-1-2,F. Seabra,C. Tencati,Bragantino,Nabizão,5,1,SP,SC,,
 8785,38,08/12/2024,16:05,Gremio,Corinthians,4-4-2,4-3-1-2,Renato Gaúcho,R. Díaz,Corinthians,Arena do Grêmio,0,3,RS,SP,,
-8786,1,29/03/2025,18:30,Juventude,Vitoria,4-2-3-1,4-2-3-1,M. Barbieri,J. Ventura,Juventude,"Alfredo Jaconi, Caxias do Sul",2,0,RS,BA,220000,
-8787,1,29/03/2025,18:30,Fortaleza,Fluminense,3-4-3,4-3-3,T. Carpini,L. Luis Zubeldia,Fortaleza,"Arena Castelão, Fortaleza",2,0,CE,RJ,267643,
-8790,1,29/03/2025,18:31,Cruzeiro,Mirassol,4-2-2-2,4-2-3-1,T. Tite,R. Guanaes,Cruzeiro,"Mineirão, Belo Horizonte",2,1,MG,SP,2089452,
-8788,1,29/03/2025,18:32,Gremio,Atletico-MG,4-2-3-1,4-4-2,L. Castro,J. Sampaoli,Gremio,"Arena do Grêmio, Porto Alegre",2,1,RS,MG,1175509,
-8789,1,29/03/2025,18:32,Sao Paulo,Sport,3-4-1-2,4-3-1-2,H. Crespo,C. de Lucena,-,"MorumBIS, São Paulo",0,0,SP,PE,2144747,
-8791,1,29/03/2025,21:00,Flamengo,Internacional,4-4-2,4-2-3-1,F. Luís,R. Díaz,-,"Maracanã, Rio de Janeiro",1,1,RJ,RS,3150315,
-8792,1,30/03/2025,16:01,Palmeiras,Botafogo-RJ,4-2-3-1,4-3-3,A. Ferreira,Renato Manuel Alves Paiva,-,"Allianz Parque, São Paulo",0,0,SP,RJ,2802427.7,
-8793,1,30/03/2025,18:32,Vasco,Santos,4-2-3-1,4-2-3-1,F. Diniz,J. Vojvoda,Vasco,"Estádio São Januário, Rio de Janeiro",2,1,RJ,SP,1415049,
-8794,1,30/03/2025,20:01,Bahia,Corinthians,4-2-3-1,4-3-3,R. Ceni,D. Junior,-,"Arena Fonte Nova, Salvador",1,1,BA,SP,1752529,
-8795,1,31/03/2025,20:01,Bragantino,Ceara,4-2-3-1,4-2-3-1,V. Mancini,M. Mozart,-,"Nabizão, Bragança Paulista",2,2,SP,CE,61875,
-8796,2,05/04/2025,18:31,Ceara,Gremio,4-2-3-1,4-2-3-1,M. Mozart,L. Castro,Ceara,"Arena Castelão, Fortaleza",2,0,CE,RS,472985,
-8797,2,05/04/2025,18:31,Corinthians,Vasco,4-3-1-2,4-2-3-1,D. Junior,F. Diniz,Corinthians,"Neo Química Arena, São Paulo",3,0,SP,RJ,2958819.7,
-8798,2,05/04/2025,21:01,Botafogo-RJ,Juventude,4-1-4-1,4-4-2,Renato Manuel Alves Paiva,Fabio Henrique Matias,Botafogo-RJ,"Estádio Nilton Santos, Rio de Janeiro",2,0,RJ,RS,555450,
-8800,2,06/04/2025,16:00,Fluminense,Bragantino,4-2-3-1,4-2-3-1,L. Luis Zubeldia,V. Mancini,Fluminense,"Maracanã, Rio de Janeiro",2,1,RJ,SP,866231.5,
-8799,2,06/04/2025,16:01,Atletico-MG,Sao Paulo,4-3-3,4-2-3-1,J. Sampaoli,H. Crespo,-,"Arena MRV, Belo Horizonte",0,0,MG,SP,1507606.5,
-8802,2,06/04/2025,18:30,Mirassol,Fortaleza,4-2-3-1,4-2-3-1,R. Guanaes,T. Carpini,-,"Campos Maia, Mirassol",1,1,SP,CE,113360,
-8803,2,06/04/2025,18:31,Vitoria,Flamengo,4-2-3-1,4-2-3-1,J. Ventura,F. Luís,Flamengo,"Barradão, Salvador",1,2,BA,RJ,1117870,
-8804,2,06/04/2025,18:31,Sport,Palmeiras,4-5-1,3-4-2-1,C. de Lucena,A. Ferreira,Palmeiras,"Adelmar da Costa Carvalho, Recife",1,2,PE,SP,1577490,
-8801,2,06/04/2025,18:32,Internacional,Cruzeiro,4-2-3-1,4-3-3,R. Díaz,T. Tite,Internacional,"Estádio Beira-Rio, Porto Alegre",3,0,RS,MG,1628212,
-8805,2,06/04/2025,20:32,Santos,Bahia,4-2-3-1,4-3-3,J. Vojvoda,R. Ceni,-,"Estádio Urbano Caldeira, Santos",2,2,SP,BA,499201.25,
-8807,3,12/04/2025,16:00,Bragantino,Botafogo-RJ,4-3-3,4-3-3,Fernando Seabra,Renato Manuel Alves Paiva,Bragantino,"Nabizão, Bragança Paulista",1,0,SP,RJ,197980,
-8806,3,12/04/2025,16:03,Juventude,Ceara,4-4-2,4-3-3,M. Barbieri,M. Mozart,Juventude,"Alfredo Jaconi, Caxias do Sul",2,1,RS,CE,351700,
-8808,3,12/04/2025,18:31,Palmeiras,Corinthians,3-4-2-1,4-3-1-2,A. Ferreira,D. Junior,Palmeiras,"Allianz Parque, São Paulo",2,0,SP,SP,1172275,
-8809,3,12/04/2025,21:00,Vasco,Sport,4-2-3-1,4-5-1,F. Diniz,C. de Lucena,Vasco,"Estádio São Januário, Rio de Janeiro",3,1,RJ,PE,1091256,
-8810,3,13/04/2025,16:02,Bahia,Mirassol,4-3-3,4-2-3-1,R. Ceni,R. Guanaes,-,"Arena Fonte Nova, Salvador",1,1,BA,SP,1323694,
-8811,3,13/04/2025,17:30,Gremio,Flamengo,4-2-3-1,4-2-3-1,L. Castro,F. Luís,Flamengo,"Arena do Grêmio, Porto Alegre",0,2,RS,RJ,1434289,
-8812,3,13/04/2025,17:33,Sao Paulo,Cruzeiro,4-2-3-1,4-2-3-1,H. Crespo,T. Tite,-,"MorumBIS, São Paulo",1,1,SP,MG,1834528,
-8813,3,13/04/2025,19:32,Fluminense,Santos,4-2-3-1,4-2-3-1,L. Luis Zubeldia,J. Vojvoda,Fluminense,"Maracanã, Rio de Janeiro",1,0,RJ,SP,2031750,
-8814,3,13/04/2025,20:01,Fortaleza,Internacional,4-2-3-1,4-2-3-1,T. Carpini,R. Díaz,-,"Arena Castelão, Fortaleza",0,0,CE,RS,169233,
-8815,3,13/04/2025,20:30,Atletico-MG,Vitoria,3-4-3,4-3-3,J. Sampaoli,J. Ventura,-,"Arena MRV, Belo Horizonte",2,2,MG,BA,603066.13,
-8816,4,15/04/2025,21:31,Ceara,Vasco,4-3-3,4-3-3,M. Mozart,F. Diniz,Ceara,"Arena Castelão, Fortaleza",2,1,CE,RJ,479424,
-8817,4,16/04/2025,18:31,Botafogo-RJ,Sao Paulo,4-2-3-1,3-4-2-1,Renato Manuel Alves Paiva,Luis Francisco ZubeldÃ­a,-,"Estádio Nilton Santos, Rio de Janeiro",2,2,RJ,SP,696360,
-8818,4,16/04/2025,19:00,Sport,Bragantino,4-4-2,4-3-3,C. de Lucena,V. Mancini,Bragantino,"Adelmar da Costa Carvalho, Recife",0,1,PE,SP,457205,
-8819,4,16/04/2025,19:00,Mirassol,Gremio,4-2-3-1,4-2-3-1,R. Guanaes,L. Castro,Mirassol,"Campos Maia, Mirassol",4,1,SP,RS,124740,
-8821,4,16/04/2025,19:31,Corinthians,Fluminense,4-3-3,4-2-3-1,D. Junior,L. Luis Zubeldia,Fluminense,"Neo Química Arena, São Paulo",0,2,SP,RJ,2838164.2,
-8820,4,16/04/2025,19:32,Internacional,Palmeiras,4-2-3-1,3-4-2-1,R. Díaz,A. Ferreira,Palmeiras,"Estádio Beira-Rio, Porto Alegre",0,1,RS,SP,1602735.5,
-8822,4,16/04/2025,21:29,Flamengo,Juventude,4-2-3-1,4-3-3,F. Luís,M. Barbieri,Flamengo,"Maracanã, Rio de Janeiro",6,0,RJ,RS,2296245,
-8823,4,16/04/2025,21:31,Vitoria,Fortaleza,4-2-3-1,3-4-1-2,J. Ventura,T. Carpini,Vitoria,"Barradão, Salvador",2,1,BA,CE,328212,
-8824,4,16/04/2025,21:31,Santos,Atletico-MG,4-2-3-1,4-2-3-1,J. Vojvoda,J. Sampaoli,Santos,"Estádio Urbano Caldeira, Santos",2,0,SP,MG,712568.75,
-8825,4,17/04/2025,21:30,Cruzeiro,Bahia,4-2-3-1,4-3-3,T. Tite,R. Ceni,Cruzeiro,"Mineirão, Belo Horizonte",3,0,MG,BA,1075658,
-8826,5,19/04/2025,16:00,Corinthians,Sport,4-3-3,4-5-1,D. Junior,C. de Lucena,Corinthians,"Neo Química Arena, São Paulo",2,1,SP,PE,3041600.7,
-8827,5,19/04/2025,18:31,Vasco,Flamengo,4-2-3-1,4-2-3-1,F. Diniz,F. Luís,-,"Estádio São Januário, Rio de Janeiro",0,0,RJ,RJ,3306747,
-8828,5,19/04/2025,20:59,Gremio,Internacional,4-2-3-1,4-2-3-1,L. Castro,R. Díaz,-,"Arena do Grêmio, Porto Alegre",1,1,RS,RS,1862340,
-8829,5,20/04/2025,11:04,Juventude,Mirassol,4-3-3,4-3-3,M. Barbieri,R. Guanaes,-,"Alfredo Jaconi, Caxias do Sul",2,2,RS,SP,175570,
-8830,5,20/04/2025,16:00,Sao Paulo,Santos,4-2-3-1,4-2-3-1,H. Crespo,J. Vojvoda,Sao Paulo,"MorumBIS, São Paulo",2,1,SP,SP,3157886,
-8831,5,20/04/2025,16:00,Atletico-MG,Botafogo-RJ,4-2-3-1,4-2-3-1,Alexi Stival,Renato Manuel Alves Paiva,Atletico-MG,"Arena MRV, Belo Horizonte",1,0,MG,RJ,889771.68,
-8832,5,20/04/2025,18:29,Fluminense,Vitoria,4-2-3-1,4-2-3-1,L. Luis Zubeldia,J. Ventura,-,"Maracanã, Rio de Janeiro",1,1,RJ,BA,1280457,
-8833,5,20/04/2025,18:32,Fortaleza,Palmeiras,3-4-2-1,3-4-2-1,T. Carpini,A. Ferreira,Palmeiras,"Arena Castelão, Fortaleza",1,2,CE,SP,683733,
-8834,5,20/04/2025,20:31,Bragantino,Cruzeiro,4-2-3-1,4-2-3-1,V. Mancini,T. Tite,Bragantino,"Nabizão, Bragança Paulista",1,0,SP,MG,272765,
-8835,5,21/04/2025,20:00,Bahia,Ceara,4-3-3,4-3-3,R. Ceni,M. Mozart,Bahia,"Arena Fonte Nova, Salvador",1,0,BA,CE,787101,
-8836,6,26/04/2025,16:01,Internacional,Juventude,4-1-3-2,5-4-1,R. Díaz,M. Barbieri,Internacional,"Estádio Beira-Rio, Porto Alegre",3,1,RS,RS,1735379,
-8837,6,26/04/2025,18:31,Mirassol,Atletico-MG,4-3-3,4-4-2,R. Guanaes,J. Sampaoli,-,"Campos Maia, Mirassol",2,2,SP,MG,205180,
-8838,6,26/04/2025,18:31,Ceara,Sao Paulo,4-2-3-1,4-2-3-1,M. Mozart,H. Crespo,-,"Arena Castelão, Fortaleza",1,1,CE,SP,973517,
-8839,6,26/04/2025,19:59,Sport,Fortaleza,4-2-3-1,3-4-2-1,C. de Lucena,T. Carpini,-,"Adelmar da Costa Carvalho, Recife",0,0,PE,CE,455975,
-8840,6,26/04/2025,21:00,Botafogo-RJ,Fluminense,4-4-2,4-2-3-1,Renato Manuel Alves Paiva,Renato Portaluppi,Botafogo-RJ,"Estádio Nilton Santos, Rio de Janeiro",2,0,RJ,RJ,656240,
-8841,6,27/04/2025,16:00,Flamengo,Corinthians,4-2-3-1,4-3-3,F. Luís,D. Junior,Flamengo,"Maracanã, Rio de Janeiro",4,0,RJ,SP,4472050,
-8842,6,27/04/2025,18:30,Vitoria,Gremio,4-2-3-1,4-2-3-1,J. Ventura,L. Castro,-,"Barradão, Salvador",1,1,BA,RS,437765,
-8844,6,27/04/2025,18:30,Cruzeiro,Vasco,4-2-3-1,4-2-3-1,T. Tite,F. Diniz,Cruzeiro,"Estádio Parque do Sabiá, Uberlândia",1,0,MG,RJ,1315918,
-8843,6,27/04/2025,18:31,Palmeiras,Bahia,3-4-2-1,4-2-3-1,A. Ferreira,R. Ceni,Bahia,"Allianz Parque, São Paulo",0,1,SP,BA,2611886.9,
-8845,6,27/04/2025,20:30,Santos,Bragantino,4-2-3-1,4-2-3-1,J. Vojvoda,V. Mancini,Bragantino,"Estádio Urbano Caldeira, Santos",1,2,SP,SP,348835,
-8846,7,02/05/2025,21:31,Sao Paulo,Fortaleza,4-2-3-1,4-3-3,H. Crespo,T. Carpini,-,"MorumBIS, São Paulo",0,0,SP,CE,2015029,
-8847,7,03/05/2025,18:30,Ceara,Vitoria,4-2-3-1,4-3-3,M. Mozart,J. Ventura,Ceara,"Arena Castelão, Fortaleza",1,0,CE,BA,137116,
-8849,7,03/05/2025,18:30,Fluminense,Sport,4-2-3-1,4-2-3-1,L. Luis Zubeldia,C. de Lucena,Fluminense,"Maracanã, Rio de Janeiro",2,1,RJ,PE,770363,
-8848,7,03/05/2025,18:31,Corinthians,Internacional,4-3-1-2,4-2-3-1,D. Junior,R. Díaz,Corinthians,"Neo Química Arena, São Paulo",4,2,SP,RS,3041403,
-8850,7,03/05/2025,21:02,Bahia,Botafogo-RJ,3-4-3,4-1-2-1-2,Rogerio Ceni,Renato Manuel Alves Paiva,Bahia,"Arena Fonte Nova, Salvador",1,0,BA,RJ,1219691,
-8851,7,04/05/2025,15:59,Gremio,Santos,4-2-3-1,4-2-3-1,L. Castro,J. Vojvoda,Gremio,"Arena do Grêmio, Porto Alegre",1,0,RS,SP,1652894,
-8852,7,04/05/2025,16:00,Vasco,Palmeiras,4-3-3,3-4-2-1,F. Diniz,A. Ferreira,Palmeiras,"Mané Garrincha, Brasília",0,1,RJ,SP,2974477,
-8853,7,04/05/2025,18:31,Cruzeiro,Flamengo,4-2-3-1,4-2-3-1,T. Tite,F. Luís,Cruzeiro,"Mineirão, Belo Horizonte",2,1,MG,RJ,3079743,
-8854,7,05/05/2025,19:01,Bragantino,Mirassol,4-2-3-1,4-3-3,V. Mancini,R. Guanaes,Bragantino,"Estádio Municipal Cicero De Souza Marques, Bragança Paulista",1,0,SP,SP,173040,
-8855,7,05/05/2025,19:59,Juventude,Atletico-MG,4-2-3-1,4-4-2,M. Barbieri,J. Sampaoli,Atletico-MG,"Alfredo Jaconi, Caxias do Sul",0,1,RS,MG,291430,
-8856,8,10/05/2025,16:00,Fortaleza,Juventude,4-3-3,4-2-3-1,T. Carpini,M. Barbieri,Fortaleza,"Estádio Presidente Vargas, Fortaleza",5,0,CE,RS,151633,
-8857,8,10/05/2025,18:30,Vitoria,Vasco,4-2-3-1,4-3-3,J. Ventura,F. Diniz,Vitoria,"Barradão, Salvador",2,1,BA,RJ,446300,
-8858,8,10/05/2025,18:30,Gremio,Bragantino,4-2-3-1,4-2-3-1,L. Castro,V. Mancini,-,"Arena do Grêmio, Porto Alegre",1,1,RS,SP,853857,
-8859,8,10/05/2025,18:31,Mirassol,Corinthians,4-2-3-1,4-4-2,R. Guanaes,D. Junior,Mirassol,"Campos Maia, Mirassol",2,1,SP,SP,1170660,
-8860,8,10/05/2025,21:00,Flamengo,Bahia,4-2-3-1,4-3-3,F. Luís,R. Ceni,Flamengo,"Maracanã, Rio de Janeiro",1,0,RJ,BA,3504542.5,
-8861,8,11/05/2025,16:01,Sport,Cruzeiro,4-2-3-1,4-2-3-1,C. de Lucena,T. Tite,Cruzeiro,"Adelmar da Costa Carvalho, Recife",0,4,PE,MG,485140,
-8862,8,11/05/2025,17:30,Palmeiras,Sao Paulo,3-4-2-1,4-2-3-1,A. Ferreira,H. Crespo,Palmeiras,"Arena Barueri, Barueri",1,0,SP,SP,990708,
-8863,8,11/05/2025,17:31,Atletico-MG,Fluminense,4-2-3-1,4-2-3-1,J. Sampaoli,L. Luis Zubeldia,Atletico-MG,"Arena MRV, Belo Horizonte",3,2,MG,RJ,1525627.63,
-8864,8,11/05/2025,20:00,Botafogo-RJ,Internacional,4-4-2,4-2-3-1,Renato Manuel Alves Paiva,Roger Machado Marques,Botafogo-RJ,"Estádio Nilton Santos, Rio de Janeiro",4,0,RJ,RS,426700,
-8865,8,12/05/2025,19:59,Santos,Ceara,4-2-3-1,4-2-3-1,J. Vojvoda,M. Mozart,-,"Allianz Parque, São Paulo",0,0,SP,CE,2812198.5,
-8866,9,17/05/2025,16:00,Ceara,Sport,4-2-3-1,4-2-3-1,M. Mozart,C. de Lucena,Ceara,"Arena Castelão, Fortaleza",2,0,CE,PE,501248,
-8867,9,17/05/2025,18:31,Vasco,Fortaleza,4-2-3-1,4-2-3-1,F. Diniz,T. Carpini,Vasco,"Estádio São Januário, Rio de Janeiro",3,0,RJ,CE,891525,
-8868,9,17/05/2025,21:01,Sao Paulo,Gremio,4-2-3-1,4-2-3-1,H. Crespo,L. Castro,Sao Paulo,"MorumBIS, São Paulo",2,1,SP,RS,1713422,
-8869,9,18/05/2025,16:00,Corinthians,Santos,3-5-1-1,4-2-3-1,D. Junior,J. Vojvoda,Corinthians,"Neo Química Arena, São Paulo",1,0,SP,SP,3429158,
-8871,9,18/05/2025,16:00,Bahia,Vitoria,4-3-2-1,4-3-3,R. Ceni,J. Ventura,Bahia,"Arena Fonte Nova, Salvador",2,1,BA,BA,1772206,
-8870,9,18/05/2025,16:01,Juventude,Fluminense,4-2-3-1,4-2-3-1,M. Barbieri,L. Luis Zubeldia,-,"Alfredo Jaconi, Caxias do Sul",1,1,RS,RJ,314720,
-8873,9,18/05/2025,18:30,Flamengo,Botafogo-RJ,4-4-2,4-4-2,Filipe Luis Kasmirski,Renato Manuel Alves Paiva,-,"Maracanã, Rio de Janeiro",0,0,RJ,RJ,3874750,
-8872,9,18/05/2025,18:32,Bragantino,Palmeiras,4-2-3-1,3-4-2-1,V. Mancini,A. Ferreira,Palmeiras,"Estádio Municipal Cicero De Souza Marques, Bragança Paulista",1,2,SP,SP,290565,
-8874,9,18/05/2025,20:30,Internacional,Mirassol,4-3-2-1,4-3-3,R. Díaz,R. Guanaes,-,"Estádio Beira-Rio, Porto Alegre",1,1,RS,SP,596180,
-8875,9,18/05/2025,20:31,Cruzeiro,Atletico-MG,4-2-3-1,4-2-3-1,T. Tite,J. Sampaoli,-,"Mineirão, Belo Horizonte",0,0,MG,MG,3401335.5,
-8876,10,24/05/2025,18:30,Fluminense,Vasco,4-2-3-1,4-3-3,L. Luis Zubeldia,F. Diniz,Fluminense,"Maracanã, Rio de Janeiro",2,1,RJ,RJ,2576612.5,
-8877,10,24/05/2025,18:31,Sao Paulo,Mirassol,4-2-3-1,4-2-3-1,H. Crespo,R. Guanaes,Mirassol,"MorumBIS, São Paulo",0,2,SP,SP,1831001,
-8878,10,24/05/2025,21:00,Atletico-MG,Corinthians,4-2-3-1,4-1-4-1,J. Sampaoli,D. Junior,-,"Arena MRV, Belo Horizonte",0,0,MG,SP,2045080.18,
-8879,10,25/05/2025,10:59,Gremio,Bahia,4-2-3-1,4-3-3,L. Castro,R. Ceni,Gremio,"Arena do Grêmio, Porto Alegre",1,0,RS,BA,883424,
-8881,10,25/05/2025,16:00,Sport,Internacional,4-2-3-1,4-2-3-1,C. de Lucena,R. Díaz,-,"Adelmar da Costa Carvalho, Recife",1,1,PE,RS,545540,
-8880,10,25/05/2025,16:01,Palmeiras,Flamengo,3-4-3,4-2-3-1,A. Ferreira,F. Luís,Flamengo,"Allianz Parque, São Paulo",0,2,SP,RJ,3076732.1,
-8882,10,25/05/2025,18:30,Vitoria,Santos,4-2-3-1,4-2-3-1,J. Ventura,J. Vojvoda,Santos,"Barradão, Salvador",0,1,BA,SP,888117,
-8883,10,25/05/2025,20:31,Fortaleza,Cruzeiro,4-3-3,4-2-3-1,T. Carpini,T. Tite,Cruzeiro,"Arena Castelão, Fortaleza",0,2,CE,MG,159553,
-8884,10,26/05/2025,20:01,Bragantino,Juventude,4-2-3-1,4-4-2,V. Mancini,M. Barbieri,Bragantino,"Estádio Municipal Cicero De Souza Marques, Bragança Paulista",1,0,SP,RS,104765,
-8886,11,31/05/2025,18:30,Bahia,Sao Paulo,4-3-3,4-5-1,R. Ceni,H. Crespo,Bahia,"Arena Fonte Nova, Salvador",2,1,BA,SP,1512747,
-8887,11,31/05/2025,21:01,Vasco,Bragantino,4-2-3-1,4-2-3-1,F. Diniz,V. Mancini,Bragantino,"Estádio São Januário, Rio de Janeiro",0,2,RJ,SP,1046382,
-8888,11,01/06/2025,11:00,Mirassol,Sport,4-2-3-1,3-4-2-1,R. Guanaes,C. de Lucena,Mirassol,"Campos Maia, Mirassol",1,0,SP,PE,112680,
-8889,11,01/06/2025,16:00,Juventude,Gremio,4-2-3-1,4-2-3-1,M. Barbieri,L. Castro,Gremio,"Alfredo Jaconi, Caxias do Sul",0,2,RS,RS,1076710,
-8890,11,01/06/2025,16:03,Santos,Botafogo-RJ,4-2-3-1,4-2-3-1,Cleber Marcio Serpa Xavier,Renato Manuel Alves Paiva,Botafogo-RJ,"Estádio Urbano Caldeira, Santos",0,1,SP,RJ,846666.25,
-8893,11,01/06/2025,18:29,Corinthians,Vitoria,4-3-3,3-4-2-1,D. Junior,J. Ventura,-,"Neo Química Arena, São Paulo",0,0,SP,BA,3062595.7,
-8891,11,01/06/2025,18:30,Flamengo,Fortaleza,4-2-3-1,4-3-3,F. Luís,T. Carpini,Flamengo,"Maracanã, Rio de Janeiro",5,0,RJ,CE,3821110,
-8892,11,01/06/2025,18:31,Ceara,Atletico-MG,4-2-3-1,3-4-2-1,M. Mozart,J. Sampaoli,Atletico-MG,"Arena Castelão, Fortaleza",0,1,CE,MG,765662,
-8894,11,01/06/2025,19:31,Cruzeiro,Palmeiras,4-2-3-1,4-2-3-1,T. Tite,A. Ferreira,Cruzeiro,"Mineirão, Belo Horizonte",2,1,MG,SP,3230728.5,
-8895,11,01/06/2025,20:32,Internacional,Fluminense,4-2-3-1,4-2-3-1,R. Díaz,L. Luis Zubeldia,Fluminense,"Estádio Beira-Rio, Porto Alegre",0,2,RS,RJ,701434,
-8885,10,04/06/2025,20:01,Botafogo-RJ,Ceara,4-2-3-1,4-2-3-1,Renato Manuel Alves Paiva,Leonardo Rodrigues Conde,Botafogo-RJ,"Estádio Nilton Santos, Rio de Janeiro",3,2,RJ,CE,1188650,
-8896,12,12/06/2025,19:01,Bragantino,Bahia,4-2-3-1,4-3-3,V. Mancini,R. Ceni,Bahia,"Estádio Municipal Cicero De Souza Marques, Bragança Paulista",0,3,SP,BA,76540,
-8897,12,12/06/2025,19:01,Vitoria,Cruzeiro,4-2-3-1,4-2-3-1,J. Ventura,T. Tite,-,"Barradão, Salvador",0,0,BA,MG,160659,
-8898,12,12/06/2025,19:30,Fortaleza,Santos,4-3-3,4-2-3-1,T. Carpini,J. Vojvoda,Santos,"Arena Castelão, Fortaleza",2,3,CE,SP,294783,
-8899,12,12/06/2025,20:00,Gremio,Corinthians,4-2-3-1,4-2-3-1,L. Castro,D. Junior,-,"Arena do Grêmio, Porto Alegre",1,1,RS,SP,1261576,
-8900,12,12/06/2025,21:30,Atletico-MG,Internacional,4-3-3,4-3-3,J. Sampaoli,R. Díaz,Atletico-MG,"Arena MRV, Belo Horizonte",2,0,MG,RS,1126472.86,
-8901,12,12/06/2025,21:32,Sao Paulo,Vasco,4-2-3-1,4-2-3-1,H. Crespo,F. Diniz,Vasco,"MorumBIS, São Paulo",1,3,SP,RJ,966013,
-8906,13,12/07/2025,16:30,Flamengo,Sao Paulo,4-2-3-1,5-3-2,F. Luís,H. Crespo,Flamengo,"Maracanã, Rio de Janeiro",2,0,RJ,SP,4693377.5,
-8907,13,12/07/2025,16:30,Internacional,Vitoria,4-2-3-1,4-3-3,R. Díaz,J. Ventura,Internacional,"Estádio Beira-Rio, Porto Alegre",1,0,RS,BA,1151949.5,
-8908,13,12/07/2025,18:33,Vasco,Botafogo-RJ,4-2-3-1,4-2-3-1,Fernando Diniz Silva,Claudio Roberto Da Silva,Botafogo-RJ,"Mané Garrincha, Brasília",0,2,RJ,RJ,2707814,
-8909,13,12/07/2025,21:02,Bahia,Atletico-MG,4-3-3,4-2-2-2,R. Ceni,J. Sampaoli,Bahia,"Arena Fonte Nova, Salvador",2,1,BA,MG,980191,
-8910,13,13/07/2025,19:00,Corinthians,Bragantino,4-1-2-1-2,4-2-3-1,D. Junior,V. Mancini,Bragantino,"Neo Química Arena, São Paulo",1,2,SP,SP,2356795.3,
-8911,13,13/07/2025,20:32,Cruzeiro,Gremio,4-2-3-1,4-2-3-1,T. Tite,L. Castro,Cruzeiro,"Mineirão, Belo Horizonte",4,1,MG,RS,1777275,
-8912,13,13/07/2025,20:32,Fortaleza,Ceara,4-4-2,4-3-3,T. Carpini,M. Mozart,Ceara,"Arena Castelão, Fortaleza",0,1,CE,CE,1000035,
-8913,13,14/07/2025,20:04,Juventude,Sport,4-2-3-1,4-1-4-1,M. Barbieri,C. de Lucena,Juventude,"Alfredo Jaconi, Caxias do Sul",2,0,RS,PE,234920,
-8916,14,16/07/2025,19:01,Palmeiras,Mirassol,4-2-3-1,4-2-3-1,A. Ferreira,R. Guanaes,-,"Allianz Parque, São Paulo",1,1,SP,SP,2115948.15,
-8917,14,16/07/2025,19:30,Ceara,Corinthians,4-2-3-1,4-2-3-1,M. Mozart,D. Junior,Corinthians,"Arena Castelão, Fortaleza",0,1,CE,SP,985005,
-8918,14,16/07/2025,20:01,Santos,Flamengo,4-2-3-1,4-2-3-1,J. Vojvoda,F. Luís,Santos,"Estádio Urbano Caldeira, Santos",1,0,SP,RJ,1270130,
-8919,14,16/07/2025,21:32,Botafogo-RJ,Vitoria,4-2-3-1,4-3-3,Davide Ancelotti,Fabio Luiz Carille De Araujo,-,"Estádio Nilton Santos, Rio de Janeiro",0,0,RJ,BA,1098050,
-8920,14,16/07/2025,21:33,Bragantino,Sao Paulo,4-2-3-1,5-3-2,V. Mancini,H. Crespo,-,"Estádio Municipal Cicero De Souza Marques, Bragança Paulista",2,2,SP,SP,236340,
-8921,14,17/07/2025,19:33,Fluminense,Cruzeiro,4-2-3-1,4-2-3-1,L. Luis Zubeldia,T. Tite,Cruzeiro,"Maracanã, Rio de Janeiro",0,2,RJ,MG,1781172,
-8926,15,19/07/2025,16:00,Fortaleza,Bahia,4-3-3,4-2-3-1,T. Carpini,R. Ceni,-,"Arena Castelão, Fortaleza",1,1,CE,BA,239349,
-8927,15,19/07/2025,17:31,Vasco,Gremio,4-2-3-1,4-2-3-1,F. Diniz,L. Castro,-,"Estádio São Januário, Rio de Janeiro",1,1,RJ,RS,1089963,
-8928,15,19/07/2025,18:32,Mirassol,Santos,4-3-3,4-2-3-1,R. Guanaes,J. Vojvoda,Mirassol,"Campos Maia, Mirassol",3,0,SP,SP,1087280,
-8929,15,19/07/2025,21:00,Sao Paulo,Corinthians,3-5-2,4-3-1-2,H. Crespo,D. Junior,Sao Paulo,"MorumBIS, São Paulo",2,0,SP,SP,2667868,
-8930,15,20/07/2025,11:00,Internacional,Ceara,4-2-3-1,4-2-3-1,R. Díaz,M. Mozart,Internacional,"Estádio Beira-Rio, Porto Alegre",1,0,RS,CE,1728960,
-8931,15,20/07/2025,16:00,Vitoria,Bragantino,4-2-3-1,4-2-3-1,J. Ventura,V. Mancini,Vitoria,"Barradão, Salvador",1,0,BA,SP,426340,
-8932,15,20/07/2025,16:01,Cruzeiro,Juventude,4-2-3-1,4-2-3-1,T. Tite,M. Barbieri,Cruzeiro,"Mineirão, Belo Horizonte",4,0,MG,RS,3567004.98,
-8933,15,20/07/2025,17:30,Sport,Botafogo-RJ,4-1-4-1,4-2-3-1,Daniel Pollo Barioni,Davide Ancelotti,Botafogo-RJ,"Adelmar da Costa Carvalho, Recife",0,1,PE,RJ,408735,
-8934,15,20/07/2025,17:31,Palmeiras,Atletico-MG,4-3-3,4-3-3,A. Ferreira,J. Sampaoli,Palmeiras,"Allianz Parque, São Paulo",3,2,SP,MG,2995507,
-8935,15,20/07/2025,19:30,Flamengo,Fluminense,4-2-3-1,3-4-1-2,F. Luís,L. Luis Zubeldia,Flamengo,"Maracanã, Rio de Janeiro",1,0,RJ,RJ,4386336.5,
-8936,16,23/07/2025,19:00,Fluminense,Palmeiras,4-3-3,4-2-3-1,L. Luis Zubeldia,A. Ferreira,Palmeiras,"Maracanã, Rio de Janeiro",1,2,RJ,SP,905733,
-8937,16,23/07/2025,19:01,Ceara,Mirassol,4-2-3-1,4-3-3,M. Mozart,R. Guanaes,Mirassol,"Arena Castelão, Fortaleza",0,2,CE,SP,238353,
-8938,16,23/07/2025,19:31,Corinthians,Cruzeiro,4-1-2-1-2,4-2-3-1,D. Junior,T. Tite,-,"Neo Química Arena, São Paulo",0,0,SP,MG,2289651.4,
-8939,16,23/07/2025,21:30,Vitoria,Sport,4-2-3-1,4-2-3-1,J. Ventura,C. de Lucena,-,"Barradão, Salvador",2,2,BA,PE,291614,
-8940,16,23/07/2025,21:32,Santos,Internacional,4-4-2,4-2-3-1,J. Vojvoda,R. Díaz,Internacional,"Estádio Urbano Caldeira, Santos",1,2,SP,RS,829975,
-8941,16,23/07/2025,21:32,Bragantino,Flamengo,4-3-3,4-3-3,V. Mancini,F. Luís,Flamengo,"Estádio Municipal Cicero De Souza Marques, Bragança Paulista",1,2,SP,RJ,391640,
-8942,16,24/07/2025,19:01,Juventude,Sao Paulo,4-3-3,3-5-2,M. Barbieri,H. Crespo,Sao Paulo,"Alfredo Jaconi, Caxias do Sul",0,1,RS,SP,219220,
-8946,17,26/07/2025,18:30,Sport,Santos,4-2-3-1,4-4-2,C. de Lucena,J. Vojvoda,-,"Adelmar da Costa Carvalho, Recife",2,2,PE,SP,971720,
-8947,17,26/07/2025,18:30,Botafogo-RJ,Corinthians,4-2-3-1,4-3-1-2,Davide Ancelotti,Dorival Silvestre Junior,-,"Estádio Nilton Santos, Rio de Janeiro",1,1,RJ,SP,1807000,
-8949,17,26/07/2025,18:30,Mirassol,Vitoria,4-2-3-1,4-2-3-1,R. Guanaes,J. Ventura,-,"Campos Maia, Mirassol",1,1,SP,BA,92940,
-8948,17,26/07/2025,18:32,Fortaleza,Bragantino,4-3-3,4-2-3-1,T. Carpini,V. Mancini,Fortaleza,"Arena Castelão, Fortaleza",3,1,CE,SP,346249,
-8950,17,26/07/2025,21:00,Palmeiras,Gremio,4-2-3-1,4-2-3-1,A. Ferreira,L. Castro,Palmeiras,"Allianz Parque, São Paulo",1,0,SP,RS,2985573.2,
-8951,17,27/07/2025,16:01,Cruzeiro,Ceara,4-2-3-1,4-2-3-1,T. Tite,M. Mozart,Ceara,"Mineirão, Belo Horizonte",1,2,MG,CE,3286100.58,
-8952,17,27/07/2025,16:02,Sao Paulo,Fluminense,3-5-2,3-5-2,H. Crespo,L. Luis Zubeldia,Sao Paulo,"MorumBIS, São Paulo",3,1,SP,RJ,2192997,
-8954,17,27/07/2025,18:30,Internacional,Vasco,4-2-3-1,4-2-3-1,R. Díaz,F. Diniz,-,"Estádio Beira-Rio, Porto Alegre",1,1,RS,RJ,755902,
-8953,17,27/07/2025,18:32,Bahia,Juventude,4-2-3-1,4-3-3,R. Ceni,M. Barbieri,Bahia,"Arena Fonte Nova, Salvador",3,0,BA,RS,1028055,
-8955,17,27/07/2025,20:30,Flamengo,Atletico-MG,4-2-3-1,3-4-2-1,F. Luís,J. Sampaoli,Flamengo,"Maracanã, Rio de Janeiro",1,0,RJ,MG,3222755,
-8922,14,29/07/2025,20:30,Gremio,Fortaleza,4-2-3-1,4-3-3,L. Castro,T. Carpini,Gremio,"Arena do Grêmio, Porto Alegre",2,1,RS,CE,802906,
-8956,18,02/08/2025,16:01,Sport,Bahia,4-2-3-1,4-2-3-1,C. de Lucena,R. Ceni,-,"Adelmar da Costa Carvalho, Recife",0,0,PE,BA,488780,
-8957,18,02/08/2025,18:30,Mirassol,Vasco,4-3-3,4-2-3-1,R. Guanaes,F. Diniz,Mirassol,"Campos Maia, Mirassol",3,2,SP,RJ,202180,
-8958,18,02/08/2025,21:00,Fluminense,Gremio,4-2-3-1,4-2-3-1,L. Luis Zubeldia,L. Castro,Fluminense,"Maracanã, Rio de Janeiro",1,0,RJ,RS,692951.5,
-8959,18,03/08/2025,15:59,Corinthians,Fortaleza,4-2-3-1,4-2-3-1,D. Junior,T. Carpini,-,"Neo Química Arena, São Paulo",1,1,SP,CE,2390031.8,
-8960,18,03/08/2025,16:02,Botafogo-RJ,Cruzeiro,4-2-3-1,4-2-3-1,Davide Ancelotti,Jose Leonardo Nunes Alves Sousa Jardim,Cruzeiro,"Estádio Nilton Santos, Rio de Janeiro",0,2,RJ,MG,2045450,
-8961,18,03/08/2025,18:31,Ceara,Flamengo,4-2-3-1,4-2-3-1,M. Mozart,F. Luís,-,"Arena Castelão, Fortaleza",1,1,CE,RJ,2795442,
-8962,18,03/08/2025,18:31,Atletico-MG,Bragantino,4-3-3,4-2-3-1,J. Sampaoli,V. Mancini,Atletico-MG,"Arena MRV, Belo Horizonte",2,1,MG,SP,1012719.06,
-8963,18,03/08/2025,19:30,Vitoria,Palmeiras,4-3-3,4-2-3-1,J. Ventura,A. Ferreira,-,"Barradão, Salvador",2,2,BA,SP,573808,
-8964,18,03/08/2025,20:29,Internacional,Sao Paulo,3-4-1-2,3-5-2,R. Díaz,H. Crespo,Sao Paulo,"Estádio Beira-Rio, Porto Alegre",1,2,RS,SP,603086,
-8965,18,04/08/2025,20:04,Santos,Juventude,4-2-3-1,4-3-3,J. Vojvoda,M. Barbieri,Santos,"Estádio Urbano Caldeira, Santos",3,1,SP,RS,2853811.25,
-8966,19,09/08/2025,18:30,Bragantino,Internacional,4-2-3-1,4-3-3,V. Mancini,R. Díaz,Internacional,"Estádio Municipal Cicero De Souza Marques, Bragança Paulista",1,3,SP,RS,106080,
-8968,19,09/08/2025,18:30,Flamengo,Mirassol,4-2-3-1,4-2-3-1,F. Luís,R. Guanaes,Flamengo,"Maracanã, Rio de Janeiro",2,1,RJ,SP,4289937.5,
-8967,19,09/08/2025,18:31,Sao Paulo,Vitoria,3-5-2,4-2-3-1,H. Crespo,J. Ventura,Sao Paulo,"MorumBIS, São Paulo",2,0,SP,BA,2016146,
-8969,19,09/08/2025,20:30,Fortaleza,Botafogo-RJ,4-2-3-1,4-2-3-1,Renato Manuel Alves Paiva,Davide Ancelotti,Botafogo-RJ,"Arena Castelão, Fortaleza",0,5,CE,RJ,577377,
-8970,19,09/08/2025,21:01,Bahia,Fluminense,4-3-3,4-2-3-1,R. Ceni,L. Luis Zubeldia,-,"Arena Fonte Nova, Salvador",3,3,BA,RJ,1298824,
-8971,19,10/08/2025,16:00,Palmeiras,Ceara,4-2-3-1,4-2-3-1,A. Ferreira,M. Mozart,Palmeiras,"Allianz Parque, São Paulo",2,1,SP,CE,2109669.2,
-8972,19,10/08/2025,16:00,Vasco,Atletico-MG,4-2-3-1,4-2-3-1,F. Diniz,J. Sampaoli,-,"Estádio São Januário, Rio de Janeiro",1,1,RJ,MG,1128000,
-8973,19,10/08/2025,18:34,Cruzeiro,Santos,4-2-3-1,4-2-3-1,T. Tite,J. Vojvoda,Santos,"Mineirão, Belo Horizonte",1,2,MG,SP,4144274.6,
-8974,19,10/08/2025,20:36,Gremio,Sport,4-2-3-1,4-3-3,L. Castro,C. de Lucena,Sport,"Arena do Grêmio, Porto Alegre",0,1,RS,PE,1610322,
-8975,19,11/08/2025,20:01,Juventude,Corinthians,4-2-3-1,4-3-1-2,M. Barbieri,D. Junior,Juventude,"Alfredo Jaconi, Caxias do Sul",2,1,RS,SP,609810,
-8976,20,16/08/2025,16:00,Fluminense,Fortaleza,4-2-3-1,4-2-3-1,L. Luis Zubeldia,T. Carpini,Fluminense,"Maracanã, Rio de Janeiro",2,1,RJ,CE,1287034,
-8977,20,16/08/2025,16:01,Ceara,Bragantino,4-3-3,4-2-3-1,M. Mozart,V. Mancini,Ceara,"Arena Castelão, Fortaleza",1,0,CE,SP,425329,
-8979,20,16/08/2025,18:30,Sport,Sao Paulo,4-2-3-1,4-2-3-1,C. de Lucena,H. Crespo,-,"Adelmar da Costa Carvalho, Recife",2,2,PE,SP,1329260,
-8978,20,16/08/2025,18:31,Vitoria,Juventude,4-2-3-1,4-2-3-1,J. Ventura,M. Barbieri,-,"Barradão, Salvador",2,2,BA,RS,668677,
-8980,20,16/08/2025,21:01,Corinthians,Bahia,4-3-1-2,4-3-3,D. Junior,R. Ceni,Bahia,"Neo Química Arena, São Paulo",1,2,SP,BA,2823725,
-8981,20,17/08/2025,16:01,Atletico-MG,Gremio,4-2-3-1,4-3-3,J. Sampaoli,L. Castro,Gremio,"Arena MRV, Belo Horizonte",1,3,MG,RS,1942092.93,
-8982,20,17/08/2025,16:05,Santos,Vasco,4-2-3-1,4-2-3-1,J. Vojvoda,F. Diniz,Vasco,"Estádio Urbano Caldeira, Santos",0,6,SP,RJ,4344635,
-8983,20,17/08/2025,18:29,Internacional,Flamengo,4-2-3-1,4-2-3-1,R. Díaz,F. Luís,Flamengo,"Estádio Beira-Rio, Porto Alegre",1,3,RS,RJ,1335293.5,
-8984,20,17/08/2025,20:31,Botafogo-RJ,Palmeiras,4-2-3-1,4-2-3-1,Davide Ancelotti,Abel Fernando Moreira Ferreira,Palmeiras,"Estádio Nilton Santos, Rio de Janeiro",0,1,RJ,SP,1052565,
-8985,20,18/08/2025,20:02,Mirassol,Cruzeiro,4-2-3-1,4-2-3-1,R. Guanaes,T. Tite,-,"Campos Maia, Mirassol",1,1,SP,MG,247960,
-8923,14,20/08/2025,19:01,Juventude,Vasco,4-2-3-1,4-2-3-1,M. Barbieri,F. Diniz,Juventude,"Alfredo Jaconi, Caxias do Sul",2,0,RS,RJ,413020,
-8986,21,23/08/2025,16:00,Bragantino,Fluminense,4-2-3-1,4-2-3-1,V. Mancini,L. Luis Zubeldia,Bragantino,"Estádio Municipal Cicero De Souza Marques, Bragança Paulista",4,2,SP,RJ,158295,
-8987,21,23/08/2025,18:31,Cruzeiro,Internacional,4-2-3-1,4-2-3-1,T. Tite,R. Díaz,Cruzeiro,"Mineirão, Belo Horizonte",2,1,MG,RS,2711399.7,
-8988,21,23/08/2025,20:59,Gremio,Ceara,4-3-3,4-2-3-1,L. Castro,M. Mozart,-,"Arena do Grêmio, Porto Alegre",0,0,RS,CE,1146324,
-8989,21,24/08/2025,16:00,Bahia,Santos,4-2-3-1,4-3-3,R. Ceni,J. Vojvoda,Bahia,"Arena Fonte Nova, Salvador",2,0,BA,SP,1912336,
-8990,21,24/08/2025,16:00,Vasco,Corinthians,4-2-3-1,4-1-3-2,F. Diniz,D. Junior,Corinthians,"Estádio São Januário, Rio de Janeiro",2,3,RJ,SP,1453977,
-8991,21,24/08/2025,18:31,Juventude,Botafogo-RJ,4-4-2,4-2-3-1,Thiago Carpini Barbosa,Davide Ancelotti,Botafogo-RJ,"Alfredo Jaconi, Caxias do Sul",1,3,RS,RJ,429260,
-8992,21,24/08/2025,18:31,Fortaleza,Mirassol,4-4-2,4-3-3,T. Carpini,R. Guanaes,Mirassol,"Arena Castelão, Fortaleza",0,1,CE,SP,176594,
-8993,21,24/08/2025,20:31,Sao Paulo,Atletico-MG,3-5-2,4-3-2-1,H. Crespo,J. Sampaoli,Sao Paulo,"MorumBIS, São Paulo",2,0,SP,MG,1184976,
-8994,21,25/08/2025,19:00,Palmeiras,Sport,4-2-3-1,4-2-3-1,A. Ferreira,C. de Lucena,Palmeiras,"Allianz Parque, São Paulo",3,0,SP,PE,2037867.35,
-8995,21,25/08/2025,21:00,Flamengo,Vitoria,4-2-3-1,4-2-3-1,F. Luís,J. Ventura,Flamengo,"Maracanã, Rio de Janeiro",8,0,RJ,BA,3099165,
-8996,22,30/08/2025,16:00,Ceara,Juventude,4-2-3-1,4-2-3-1,M. Mozart,M. Barbieri,Juventude,"Arena Castelão, Fortaleza",0,1,CE,RS,573516,
-8997,22,30/08/2025,18:30,Botafogo-RJ,Bragantino,4-2-3-1,4-2-3-1,Davide Ancelotti,Fernando Seabra,Botafogo-RJ,"Estádio Nilton Santos, Rio de Janeiro",4,1,RJ,SP,711675,
-8998,22,30/08/2025,21:02,Cruzeiro,Sao Paulo,4-2-2-2,3-5-2,T. Tite,H. Crespo,Cruzeiro,"Mineirão, Belo Horizonte",1,0,MG,SP,2175177.3,
-9000,22,31/08/2025,16:00,Flamengo,Gremio,4-2-3-1,4-2-3-1,F. Luís,L. Castro,-,"Maracanã, Rio de Janeiro",1,1,RJ,RS,4995950,
-8999,22,31/08/2025,16:01,Santos,Fluminense,4-2-3-1,4-2-3-1,J. Vojvoda,L. Luis Zubeldia,-,"Estádio Urbano Caldeira, Santos",0,0,SP,RJ,738351.62,
-9001,22,31/08/2025,18:30,Corinthians,Palmeiras,3-4-1-2,4-4-2,D. Junior,A. Ferreira,-,"Neo Química Arena, São Paulo",1,1,SP,SP,3208887.3,
-9002,22,31/08/2025,18:30,Mirassol,Bahia,4-3-3,4-2-3-1,R. Guanaes,R. Ceni,Mirassol,"Campos Maia, Mirassol",5,1,SP,BA,140580,
-9003,22,31/08/2025,18:30,Vitoria,Atletico-MG,4-3-3,4-4-2,J. Ventura,J. Sampaoli,Vitoria,"Barradão, Salvador",1,0,BA,MG,528283,
-9004,22,31/08/2025,20:29,Sport,Vasco,4-2-3-1,4-2-3-1,C. de Lucena,F. Diniz,Vasco,"Adelmar da Costa Carvalho, Recife",2,3,PE,RJ,601680,
-9005,22,31/08/2025,20:31,Internacional,Fortaleza,4-4-1-1,4-2-3-1,R. Díaz,T. Carpini,Internacional,"Estádio Beira-Rio, Porto Alegre",2,1,RS,CE,436123,
-9007,23,13/09/2025,16:00,Gremio,Mirassol,4-3-1-2,4-3-3,L. Castro,R. Guanaes,Mirassol,"Arena do Grêmio, Porto Alegre",0,1,RS,SP,2675320,
-9006,23,13/09/2025,16:01,Fortaleza,Vitoria,4-4-2,4-2-3-1,T. Carpini,J. Ventura,Fortaleza,"Arena Castelão, Fortaleza",2,0,CE,BA,335868,
-9008,23,13/09/2025,18:31,Palmeiras,Internacional,4-2-3-1,4-2-3-1,A. Ferreira,R. Díaz,Palmeiras,"Allianz Parque, São Paulo",4,1,SP,RS,2976130.6,
-9009,23,13/09/2025,21:00,Fluminense,Corinthians,4-2-3-1,3-4-2-1,L. Luis Zubeldia,D. Junior,Corinthians,"Maracanã, Rio de Janeiro",0,1,RJ,SP,965207.5,
-9010,23,14/09/2025,11:00,Bragantino,Sport,4-3-3,4-1-2-1-2,V. Mancini,C. de Lucena,-,"Estádio Municipal Cicero De Souza Marques, Bragança Paulista",1,1,SP,PE,99520,
-9011,23,14/09/2025,16:01,Atletico-MG,Santos,4-3-3,4-2-3-1,J. Sampaoli,J. Vojvoda,-,"Arena MRV, Belo Horizonte",1,1,MG,SP,2039408.79,
-9012,23,14/09/2025,16:02,Juventude,Flamengo,4-4-1-1,4-2-3-1,M. Barbieri,F. Luís,Flamengo,"Alfredo Jaconi, Caxias do Sul",0,2,RS,RJ,1991410,
-9013,23,14/09/2025,17:31,Sao Paulo,Botafogo-RJ,3-4-1-2,4-2-3-1,Hernan Jorge Crespo,Davide Ancelotti,Sao Paulo,"MorumBIS, São Paulo",1,0,SP,RJ,1807524,
-9014,23,14/09/2025,20:29,Vasco,Ceara,4-2-3-1,4-2-3-1,F. Diniz,M. Mozart,-,"Estádio São Januário, Rio de Janeiro",2,2,RJ,CE,1213824,
-9015,23,15/09/2025,20:03,Bahia,Cruzeiro,4-2-3-1,4-2-3-1,R. Ceni,T. Tite,Cruzeiro,"Arena Fonte Nova, Salvador",1,2,BA,MG,908858,
-8902,12,17/09/2025,19:30,Botafogo-RJ,Mirassol,4-2-3-1,4-3-3,Davide Ancelotti,Rafael Silva Guanaes,-,"Estádio Nilton Santos, Rio de Janeiro",3,3,RJ,SP,381240,
-9016,24,20/09/2025,16:00,Vitoria,Fluminense,4-2-3-1,4-2-3-1,J. Ventura,L. Luis Zubeldia,Fluminense,"Barradão, Salvador",0,1,BA,RJ,608557,
-9017,24,20/09/2025,18:30,Ceara,Bahia,4-2-3-1,4-2-3-1,M. Mozart,R. Ceni,-,"Arena Castelão, Fortaleza",1,1,CE,BA,383002,
-9018,24,20/09/2025,18:31,Botafogo-RJ,Atletico-MG,4-2-3-1,5-4-1,Davide Ancelotti,Jorge Luis Sampaoli Moya,Botafogo-RJ,"Estádio Nilton Santos, Rio de Janeiro",1,0,RJ,MG,395180,
-9019,24,20/09/2025,21:00,Palmeiras,Fortaleza,4-2-3-1,4-2-3-1,A. Ferreira,T. Carpini,Palmeiras,"Allianz Parque, São Paulo",4,1,SP,CE,2678628,
-9020,24,21/09/2025,16:00,Mirassol,Juventude,4-3-3,4-4-2,R. Guanaes,M. Barbieri,Mirassol,"Campos Maia, Mirassol",2,0,SP,RS,112200,
-9022,24,21/09/2025,17:30,Sport,Corinthians,4-3-3,3-5-2,C. de Lucena,D. Junior,Sport,"Adelmar da Costa Carvalho, Recife",1,0,PE,SP,1776835,
-9023,24,21/09/2025,17:30,Flamengo,Vasco,4-2-3-1,4-2-3-1,F. Luís,F. Diniz,-,"Maracanã, Rio de Janeiro",1,1,RJ,RJ,4465857.5,
-9021,24,21/09/2025,17:33,Internacional,Gremio,4-2-3-1,4-3-1-2,R. Díaz,L. Castro,Gremio,"Estádio Beira-Rio, Porto Alegre",2,3,RS,RS,1715197.62,
-9025,24,21/09/2025,20:31,Santos,Sao Paulo,4-2-3-1,3-4-1-2,J. Vojvoda,H. Crespo,Santos,"Estádio Urbano Caldeira, Santos",1,0,SP,SP,707091.17,
-9024,24,21/09/2025,20:32,Cruzeiro,Bragantino,4-2-3-1,4-4-1-1,T. Tite,V. Mancini,Cruzeiro,"Mineirão, Belo Horizonte",2,1,MG,SP,1942715.3,
-8944,16,24/09/2025,19:30,Gremio,Botafogo-RJ,4-2-3-1,4-2-3-1,James Francisco Freitas Iahnke,Davide Ancelotti,-,"Arena do Grêmio, Porto Alegre",1,1,RS,RJ,895231,
-8943,16,24/09/2025,19:31,Vasco,Bahia,4-2-3-1,4-1-4-1,F. Diniz,R. Ceni,Vasco,"Estádio São Januário, Rio de Janeiro",3,1,RJ,BA,1091238,
-9026,25,27/09/2025,16:01,Fortaleza,Sport,4-2-3-1,4-2-3-1,T. Carpini,C. de Lucena,Fortaleza,"Arena Castelão, Fortaleza",1,0,CE,PE,322499,
-9027,25,27/09/2025,18:30,Vasco,Cruzeiro,4-2-3-1,4-5-1,F. Diniz,T. Tite,Vasco,"Estádio São Januário, Rio de Janeiro",2,0,RJ,MG,1561047,
-9028,25,27/09/2025,18:30,Juventude,Internacional,4-4-2,4-2-3-1,M. Barbieri,R. Díaz,-,"Alfredo Jaconi, Caxias do Sul",1,1,RS,RS,426222,
-9029,25,27/09/2025,21:00,Atletico-MG,Mirassol,3-4-1-2,4-3-3,J. Sampaoli,R. Guanaes,Atletico-MG,"Arena MRV, Belo Horizonte",1,0,MG,SP,885689.88,
-9030,25,28/09/2025,11:00,Gremio,Vitoria,4-2-3-1,3-4-2-1,L. Castro,J. Ventura,Gremio,"Arena do Grêmio, Porto Alegre",3,1,RS,BA,2386302,
-9032,25,28/09/2025,16:00,Fluminense,Botafogo-RJ,4-2-3-1,4-2-3-1,Luis Francisco ZubeldÃ­a,Davide Ancelotti,Fluminense,"Maracanã, Rio de Janeiro",2,0,RJ,RJ,942703.5,
-9031,25,28/09/2025,16:03,Bahia,Palmeiras,4-3-2-1,4-4-2,R. Ceni,A. Ferreira,Bahia,"Arena Fonte Nova, Salvador",1,0,BA,SP,1902564,
-9033,25,28/09/2025,18:30,Bragantino,Santos,4-2-3-1,4-2-3-1,V. Mancini,J. Vojvoda,-,"Estádio Municipal Cicero De Souza Marques, Bragança Paulista",2,2,SP,SP,242960,
-9034,25,28/09/2025,20:31,Corinthians,Flamengo,3-5-2,4-3-3,D. Junior,F. Luís,Flamengo,"Neo Química Arena, São Paulo",1,2,SP,RJ,3003306,
-9035,25,29/09/2025,20:01,Sao Paulo,Ceara,3-4-1-2,4-2-3-1,H. Crespo,M. Mozart,Ceara,"MorumBIS, São Paulo",0,1,SP,CE,480951,
-9036,26,30/09/2025,21:30,Atletico-MG,Juventude,3-4-1-2,4-4-2,J. Sampaoli,M. Barbieri,-,"Arena MRV, Belo Horizonte",0,0,MG,RS,808746.68,
-9037,26,01/10/2025,19:00,Palmeiras,Vasco,4-2-3-1,4-2-3-1,A. Ferreira,F. Diniz,Palmeiras,"Allianz Parque, São Paulo",3,0,SP,RJ,2836452.4,
-9038,26,01/10/2025,19:00,Mirassol,Bragantino,4-2-3-1,4-2-3-1,R. Guanaes,V. Mancini,-,"Campos Maia, Mirassol",1,1,SP,SP,104360,
-9039,26,01/10/2025,19:00,Sport,Fluminense,4-4-2,4-4-2,C. de Lucena,L. Luis Zubeldia,-,"Adelmar da Costa Carvalho, Recife",2,2,PE,RJ,407770,
-9040,26,01/10/2025,19:30,Internacional,Corinthians,4-2-3-1,3-5-2,R. Díaz,D. Junior,-,"Estádio Beira-Rio, Porto Alegre",1,1,RS,SP,709971,
-9042,26,01/10/2025,21:30,Botafogo-RJ,Bahia,4-2-3-1,4-3-2-1,Davide Ancelotti,Rogerio Ceni,Botafogo-RJ,"Estádio Nilton Santos, Rio de Janeiro",2,1,RJ,BA,303460,
-9041,26,01/10/2025,21:31,Santos,Gremio,4-2-3-1,4-2-3-1,J. Vojvoda,L. Castro,-,"Estádio Urbano Caldeira, Santos",1,1,SP,RS,439188,
-9043,26,02/10/2025,19:00,Vitoria,Ceara,3-4-2-1,4-2-3-1,J. Ventura,M. Mozart,Vitoria,"Barradão, Salvador",1,0,BA,CE,335173,
-9044,26,02/10/2025,19:31,Fortaleza,Sao Paulo,4-2-3-1,4-2-3-1,T. Carpini,H. Crespo,Sao Paulo,"Arena Castelão, Fortaleza",0,2,CE,SP,506094,
-9045,26,02/10/2025,20:30,Flamengo,Cruzeiro,4-3-3,4-2-3-1,F. Luís,T. Tite,-,"Maracanã, Rio de Janeiro",0,0,RJ,MG,5835870,
-9046,27,04/10/2025,18:30,Internacional,Botafogo-RJ,3-4-1-2,4-2-3-1,Ramon Angel Diaz,Davide Ancelotti,Internacional,"Estádio Beira-Rio, Porto Alegre",2,0,RS,RJ,992481.5,
-9047,27,04/10/2025,18:30,Fluminense,Atletico-MG,4-2-3-1,3-4-2-1,L. Luis Zubeldia,J. Sampaoli,Fluminense,"Maracanã, Rio de Janeiro",3,0,RJ,MG,801633.5,
-9048,27,04/10/2025,18:30,Bragantino,Gremio,4-2-3-1,4-2-3-1,V. Mancini,L. Castro,Bragantino,"Estádio Municipal Cicero De Souza Marques, Bragança Paulista",1,0,SP,RS,137070,
-9049,27,04/10/2025,21:00,Corinthians,Mirassol,4-3-1-2,4-3-3,D. Junior,R. Guanaes,Corinthians,"Neo Química Arena, São Paulo",3,0,SP,SP,2727985.4,
-9050,27,05/10/2025,16:00,Vasco,Vitoria,4-3-3,4-2-3-1,F. Diniz,J. Ventura,Vasco,"Estádio São Januário, Rio de Janeiro",4,3,RJ,BA,1405950,
-9051,27,05/10/2025,16:01,Sao Paulo,Palmeiras,3-5-2,4-4-2,H. Crespo,A. Ferreira,Palmeiras,"MorumBIS, São Paulo",2,3,SP,SP,1612461,
-9053,27,05/10/2025,18:30,Juventude,Fortaleza,4-4-2,4-2-3-1,M. Barbieri,T. Carpini,Fortaleza,"Alfredo Jaconi, Caxias do Sul",1,2,RS,CE,210680,
-9052,27,05/10/2025,18:32,Bahia,Flamengo,4-3-3,4-2-3-1,R. Ceni,F. Luís,Bahia,"Arena Fonte Nova, Salvador",1,0,BA,RJ,2599289,
-9054,27,05/10/2025,20:31,Ceara,Santos,4-2-3-1,4-2-3-1,M. Mozart,J. Vojvoda,Ceara,"Arena Castelão, Fortaleza",3,0,CE,SP,425775,
-9055,27,05/10/2025,20:32,Cruzeiro,Sport,4-2-3-1,4-2-3-1,T. Tite,C. de Lucena,-,"Mineirão, Belo Horizonte",1,1,MG,PE,1788327.5,
-8914,13,08/10/2025,21:00,Mirassol,Fluminense,4-1-2-1-2,4-2-3-1,R. Guanaes,L. Luis Zubeldia,Mirassol,"Campos Maia, Mirassol",2,1,SP,RJ,153760,
-8924,14,08/10/2025,19:00,Atletico-MG,Sport,4-4-2,4-2-3-1,J. Sampaoli,C. de Lucena,Atletico-MG,"Arena MRV, Belo Horizonte",3,1,MG,PE,904390.02,
-8903,12,11/10/2025,18:59,Palmeiras,Juventude,4-2-3-1,4-3-3,A. Ferreira,M. Barbieri,Palmeiras,"Allianz Parque, São Paulo",4,1,SP,RS,3022910,
-9056,28,15/10/2025,19:00,Palmeiras,Bragantino,3-4-2-1,4-2-3-1,A. Ferreira,V. Mancini,Palmeiras,"Allianz Parque, São Paulo",5,1,SP,SP,2235507.8,
-9057,28,15/10/2025,19:31,Botafogo-RJ,Flamengo,4-2-3-1,4-2-3-1,Davide Ancelotti,Filipe Luis Kasmirski,Flamengo,"Estádio Nilton Santos, Rio de Janeiro",0,3,RJ,RJ,888810,
-9058,28,15/10/2025,20:00,Mirassol,Internacional,4-2-3-1,3-4-2-1,R. Guanaes,R. Díaz,Mirassol,"Campos Maia, Mirassol",3,1,SP,RS,147920,
-9059,28,15/10/2025,20:01,Sport,Ceara,4-2-3-1,4-2-3-1,C. de Lucena,M. Mozart,-,"Adelmar da Costa Carvalho, Recife",1,1,PE,CE,321215,
-9061,28,15/10/2025,21:29,Fortaleza,Vasco,4-2-3-1,4-2-3-1,T. Carpini,F. Diniz,Vasco,"Arena Castelão, Fortaleza",0,2,CE,RJ,627131,
-9060,28,15/10/2025,21:30,Santos,Corinthians,4-2-3-1,3-4-1-2,J. Vojvoda,D. Junior,Santos,"Estádio Urbano Caldeira, Santos",3,1,SP,SP,665586,
-9062,28,15/10/2025,21:32,Atletico-MG,Cruzeiro,3-4-3,4-2-3-1,J. Sampaoli,T. Tite,-,"Arena MRV, Belo Horizonte",1,1,MG,MG,2061423.29,
-9063,28,16/10/2025,19:01,Gremio,Sao Paulo,4-2-3-1,3-4-1-2,L. Castro,H. Crespo,Gremio,"Arena do Grêmio, Porto Alegre",2,0,RS,SP,1067568,
-9064,28,16/10/2025,21:30,Vitoria,Bahia,4-4-2,4-4-2,J. Ventura,R. Ceni,Vitoria,"Barradão, Salvador",2,1,BA,BA,767530,
-9065,28,16/10/2025,21:30,Fluminense,Juventude,4-2-3-1,4-2-3-1,L. Luis Zubeldia,M. Barbieri,Fluminense,"Maracanã, Rio de Janeiro",1,0,RJ,RS,600676,
-9066,29,18/10/2025,18:30,Corinthians,Atletico-MG,3-4-1-2,3-4-2-1,D. Junior,J. Sampaoli,Corinthians,"Neo Química Arena, São Paulo",1,0,SP,MG,2871647.8,
-9067,29,18/10/2025,21:00,Cruzeiro,Fortaleza,4-2-3-1,4-2-3-1,T. Tite,T. Carpini,Cruzeiro,"Mineirão, Belo Horizonte",1,0,MG,CE,1441705,
-9068,29,19/10/2025,16:00,Flamengo,Palmeiras,4-2-3-1,4-1-3-2,F. Luís,A. Ferreira,Flamengo,"Maracanã, Rio de Janeiro",3,2,RJ,SP,5983920,
-9069,29,19/10/2025,18:31,Ceara,Botafogo-RJ,4-2-3-1,4-2-3-1,Leonardo Rodrigues Conde,Davide Ancelotti,Botafogo-RJ,"Arena Castelão, Fortaleza",0,2,CE,RJ,489615,
-9070,29,19/10/2025,18:31,Mirassol,Sao Paulo,4-3-3,3-4-1-2,R. Guanaes,H. Crespo,Mirassol,"Campos Maia, Mirassol",3,0,SP,SP,636980,
-9071,29,19/10/2025,18:31,Internacional,Sport,3-4-1-2,4-2-3-1,R. Díaz,C. de Lucena,Internacional,"Estádio Beira-Rio, Porto Alegre",2,0,RS,PE,956883,
-9072,29,19/10/2025,20:32,Bahia,Gremio,4-3-3,4-2-3-1,R. Ceni,L. Castro,Bahia,"Arena Fonte Nova, Salvador",4,0,BA,RS,806743,
-9073,29,20/10/2025,18:59,Juventude,Bragantino,4-4-2,4-2-3-1,M. Barbieri,V. Mancini,Juventude,"Alfredo Jaconi, Caxias do Sul",1,0,RS,SP,196070,
-9074,29,20/10/2025,19:30,Vasco,Fluminense,4-2-3-1,4-2-3-1,F. Diniz,L. Luis Zubeldia,Vasco,"Maracanã, Rio de Janeiro",2,0,RJ,RJ,3250944.5,
-9075,29,20/10/2025,21:31,Santos,Vitoria,4-2-3-1,5-4-1,J. Vojvoda,J. Ventura,Vitoria,"Estádio Urbano Caldeira, Santos",0,1,SP,BA,611353,
-8925,14,22/10/2025,19:02,Bahia,Internacional,4-2-3-1,3-4-2-1,R. Ceni,R. Díaz,Bahia,"Arena Fonte Nova, Salvador",1,0,BA,RS,660312,
-9077,30,25/10/2025,16:00,Atletico-MG,Ceara,3-4-2-1,4-2-3-1,J. Sampaoli,M. Mozart,Atletico-MG,"Arena MRV, Belo Horizonte",1,0,MG,CE,1576358.69,
-9076,30,25/10/2025,16:01,Vitoria,Corinthians,5-4-1,3-4-1-2,J. Ventura,D. Junior,Corinthians,"Barradão, Salvador",0,1,BA,SP,1044996,
-9078,30,25/10/2025,17:30,Fluminense,Internacional,4-2-3-1,4-3-1-2,L. Luis Zubeldia,R. Díaz,Fluminense,"Maracanã, Rio de Janeiro",1,0,RJ,RS,818342,
-9079,30,25/10/2025,18:30,Sport,Mirassol,4-2-3-1,4-3-3,C. de Lucena,R. Guanaes,Mirassol,"Adelmar da Costa Carvalho, Recife",1,2,PE,SP,216200,
-9080,30,25/10/2025,19:33,Fortaleza,Flamengo,4-2-3-1,4-2-3-1,T. Carpini,F. Luís,Fortaleza,"Arena Castelão, Fortaleza",1,0,CE,RJ,2717680,
-9081,30,25/10/2025,21:33,Sao Paulo,Bahia,3-4-1-2,4-2-3-1,H. Crespo,R. Ceni,Sao Paulo,"MorumBIS, São Paulo",2,0,SP,BA,686708,
-9082,30,26/10/2025,16:00,Gremio,Juventude,4-2-3-1,4-4-1-1,L. Castro,M. Barbieri,Gremio,"Arena do Grêmio, Porto Alegre",3,1,RS,RS,1681037,
-9083,30,26/10/2025,16:02,Botafogo-RJ,Santos,4-2-3-1,3-5-2,Davide Ancelotti,Juan Pablo Vojvoda,-,"Estádio Nilton Santos, Rio de Janeiro",2,2,RJ,SP,721830,
-9084,30,26/10/2025,18:30,Bragantino,Vasco,4-2-3-1,4-2-3-1,V. Mancini,F. Diniz,Vasco,"Estádio Municipal Cicero De Souza Marques, Bragança Paulista",0,3,SP,RJ,275160,
-9085,30,26/10/2025,20:31,Palmeiras,Cruzeiro,3-4-2-1,4-2-3-1,A. Ferreira,T. Tite,-,"Allianz Parque, São Paulo",0,0,SP,MG,2679848.8,
-8904,12,29/10/2025,19:00,Fluminense,Ceara,4-2-3-1,4-2-3-1,L. Luis Zubeldia,M. Mozart,Fluminense,"Maracanã, Rio de Janeiro",1,0,RJ,CE,473244,
-9087,31,01/11/2025,16:01,Santos,Fortaleza,4-2-3-1,4-2-3-1,J. Vojvoda,T. Carpini,-,"Estádio Urbano Caldeira, Santos",1,1,SP,CE,743510.5,
-9086,31,01/11/2025,16:02,Cruzeiro,Vitoria,4-2-3-1,5-4-1,T. Tite,J. Ventura,Cruzeiro,"Mineirão, Belo Horizonte",3,1,MG,BA,2315767.5,
-9088,31,01/11/2025,18:00,Mirassol,Botafogo-RJ,4-3-3,4-2-3-1,Rafael Silva Guanaes,Davide Ancelotti,-,"Campos Maia, Mirassol",0,0,SP,RJ,181320,
-9089,31,01/11/2025,21:00,Flamengo,Sport,4-2-3-1,4-3-3,F. Luís,C. de Lucena,Flamengo,"Maracanã, Rio de Janeiro",3,0,RJ,PE,4553955,
-9090,31,02/11/2025,16:01,Ceara,Fluminense,4-2-3-1,4-2-3-1,M. Mozart,L. Luis Zubeldia,Ceara,"Arena Castelão, Fortaleza",2,0,CE,RJ,372946,
-9091,31,02/11/2025,16:01,Bahia,Bragantino,4-2-3-1,4-2-3-1,R. Ceni,V. Mancini,Bahia,"Arena Fonte Nova, Salvador",2,1,BA,SP,1524916,
-9092,31,02/11/2025,16:01,Corinthians,Gremio,3-5-2,4-2-3-1,D. Junior,L. Castro,Corinthians,"Neo Química Arena, São Paulo",2,0,SP,RS,3030958.4,
-9094,31,02/11/2025,18:29,Internacional,Atletico-MG,4-4-2,3-4-2-1,R. Díaz,J. Sampaoli,-,"Estádio Beira-Rio, Porto Alegre",0,0,RS,MG,1457636,
-9093,31,02/11/2025,18:33,Juventude,Palmeiras,4-4-1-1,4-2-3-1,M. Barbieri,A. Ferreira,Palmeiras,"Alfredo Jaconi, Caxias do Sul",0,2,RS,SP,321230,
-9095,31,02/11/2025,20:32,Vasco,Sao Paulo,4-2-3-1,3-4-1-2,F. Diniz,H. Crespo,Sao Paulo,"Estádio São Januário, Rio de Janeiro",0,2,RJ,SP,1367955,
-9096,32,05/11/2025,19:00,Sport,Juventude,4-4-1-1,3-4-3,C. de Lucena,M. Barbieri,Juventude,"Adelmar da Costa Carvalho, Recife",0,2,PE,RS,97100,
-9097,32,05/11/2025,19:00,Vitoria,Internacional,4-2-3-1,3-4-2-1,J. Ventura,R. Díaz,Vitoria,"Barradão, Salvador",1,0,BA,RS,460497,
-9098,32,05/11/2025,19:01,Bragantino,Corinthians,4-2-3-1,3-4-1-2,V. Mancini,D. Junior,Bragantino,"Estádio Municipal Cicero De Souza Marques, Bragança Paulista",2,1,SP,SP,395515,
-9099,32,05/11/2025,19:31,Botafogo-RJ,Vasco,4-4-2,4-2-3-1,Davide Ancelotti,Fernando Diniz Silva,Botafogo-RJ,"Estádio Nilton Santos, Rio de Janeiro",3,0,RJ,RJ,736970,
-9101,32,05/11/2025,20:00,Atletico-MG,Bahia,3-4-2-1,4-3-3,J. Sampaoli,R. Ceni,Atletico-MG,"Arena MRV, Belo Horizonte",3,0,MG,BA,1102674.5,
-9100,32,05/11/2025,20:02,Gremio,Cruzeiro,4-2-3-1,4-2-3-1,L. Castro,T. Tite,Cruzeiro,"Arena do Grêmio, Porto Alegre",0,1,RS,MG,1059890,
-9102,32,05/11/2025,21:31,Sao Paulo,Flamengo,3-5-2,4-2-3-1,H. Crespo,F. Luís,-,"Estádio Urbano Caldeira, Santos",2,2,SP,RJ,884193.5,
-9103,32,06/11/2025,19:30,Fluminense,Mirassol,4-2-3-1,4-2-3-1,L. Luis Zubeldia,R. Guanaes,Fluminense,"Maracanã, Rio de Janeiro",1,0,RJ,SP,595653.5,
-9104,32,06/11/2025,20:02,Ceara,Fortaleza,4-2-3-1,4-2-3-1,M. Mozart,T. Carpini,-,"Arena Castelão, Fortaleza",1,1,CE,CE,1438982,
-9105,32,06/11/2025,21:30,Palmeiras,Santos,4-4-2,4-2-3-1,A. Ferreira,J. Vojvoda,Palmeiras,"Allianz Parque, São Paulo",2,0,SP,SP,2733570,
-9106,33,08/11/2025,15:58,Sport,Atletico-MG,4-2-3-1,3-4-2-1,C. de Lucena,J. Sampaoli,Atletico-MG,"Adelmar da Costa Carvalho, Recife",2,4,PE,MG,124805,
-9107,33,08/11/2025,18:00,Vasco,Juventude,4-2-3-1,3-4-1-2,F. Diniz,M. Barbieri,Juventude,"Estádio São Januário, Rio de Janeiro",1,3,RJ,RS,1385588,
-9108,33,08/11/2025,18:30,Internacional,Bahia,4-2-3-1,4-3-3,R. Díaz,R. Ceni,-,"Estádio Beira-Rio, Porto Alegre",2,2,RS,BA,824174,
-9109,33,08/11/2025,21:01,Sao Paulo,Bragantino,3-5-2,4-2-3-1,H. Crespo,V. Mancini,Bragantino,"Estádio Urbano Caldeira, Santos",0,1,SP,SP,645135,
-9111,33,09/11/2025,16:01,Cruzeiro,Fluminense,4-2-3-1,4-2-3-1,T. Tite,L. Luis Zubeldia,-,"Mineirão, Belo Horizonte",0,0,MG,RJ,2940491.5,
-9112,33,09/11/2025,16:01,Corinthians,Ceara,3-4-1-2,4-2-3-1,D. Junior,M. Mozart,Ceara,"Neo Química Arena, São Paulo",0,1,SP,CE,2881918,
-9110,33,09/11/2025,16:03,Vitoria,Botafogo-RJ,3-4-2-1,4-2-2-2,Jair Zaksauskas Ribeiro Ventura,Davide Ancelotti,-,"Barradão, Salvador",0,0,BA,RJ,664003,
-9113,33,09/11/2025,18:31,Flamengo,Santos,4-2-3-1,4-2-3-1,F. Luís,J. Vojvoda,Flamengo,"Maracanã, Rio de Janeiro",3,2,RJ,SP,5118212.5,
-9115,33,09/11/2025,20:30,Mirassol,Palmeiras,4-3-3,4-4-2,R. Guanaes,A. Ferreira,Mirassol,"Campos Maia, Mirassol",2,1,SP,SP,1207940,
-9114,33,09/11/2025,20:32,Fortaleza,Gremio,4-2-3-1,4-2-3-1,T. Carpini,L. Castro,-,"Arena Castelão, Fortaleza",2,2,CE,RS,186737,
-8945,16,12/11/2025,20:31,Atletico-MG,Fortaleza,3-4-2-1,4-2-3-1,J. Sampaoli,T. Carpini,-,"Arena MRV, Belo Horizonte",3,3,MG,CE,1765397.14,
-8905,12,15/11/2025,18:30,Sport,Flamengo,4-3-3,4-2-3-1,C. de Lucena,F. Luís,Flamengo,"Adelmar da Costa Carvalho, Recife",1,5,PE,RJ,2948180,
-8915,13,15/11/2025,21:03,Santos,Palmeiras,4-3-3,3-4-2-1,J. Vojvoda,A. Ferreira,Santos,"Estádio Urbano Caldeira, Santos",1,0,SP,SP,805116.25,
-9116,37,16/11/2025,19:00,Bragantino,Atletico-MG,4-2-3-1,3-4-2-1,V. Mancini,J. Sampaoli,Bragantino,"Estádio Municipal Cicero De Souza Marques, Bragança Paulista",2,0,SP,MG,135710,
-9126,34,18/11/2025,20:30,Botafogo-RJ,Sport,4-2-3-1,4-2-3-1,Davide Ancelotti,Cesar Ricardo De Lucena,Botafogo-RJ,"Estádio Nilton Santos, Rio de Janeiro",3,2,RJ,PE,397420,
-9129,34,19/11/2025,21:30,Gremio,Vasco,4-2-3-1,4-2-3-1,L. Castro,F. Diniz,Gremio,"Arena do Grêmio, Porto Alegre",2,0,RS,RJ,1857686,
-9128,34,19/11/2025,21:32,Santos,Mirassol,4-3-3,4-3-3,J. Vojvoda,R. Guanaes,-,"Estádio Urbano Caldeira, Santos",1,1,SP,SP,767026.25,
-9127,34,19/11/2025,21:35,Fluminense,Flamengo,4-2-3-1,4-2-3-1,L. Luis Zubeldia,F. Luís,Fluminense,"Maracanã, Rio de Janeiro",2,1,RJ,RJ,4117072.5,
-9117,37,19/11/2025,19:30,Palmeiras,Vitoria,4-2-3-1,3-4-2-1,A. Ferreira,J. Ventura,-,"Allianz Parque, São Paulo",0,0,SP,BA,2632317,
-9130,34,20/11/2025,16:01,Juventude,Cruzeiro,3-4-1-2,4-2-3-1,M. Barbieri,T. Tite,-,"Alfredo Jaconi, Caxias do Sul",3,3,RS,MG,375690,
-9131,34,20/11/2025,18:04,Bahia,Fortaleza,4-3-3,4-2-3-1,R. Ceni,T. Carpini,Fortaleza,"Arena Fonte Nova, Salvador",2,3,BA,CE,1343171,
-9132,34,20/11/2025,19:30,Corinthians,Sao Paulo,4-4-2,3-5-2,D. Junior,H. Crespo,Corinthians,"Neo Química Arena, São Paulo",3,1,SP,SP,3539617.2,
-9133,34,20/11/2025,21:31,Ceara,Internacional,4-2-3-1,4-2-3-1,M. Mozart,R. Díaz,Internacional,"Arena Castelão, Fortaleza",1,2,CE,RS,760740,
-9136,35,22/11/2025,19:32,Botafogo-RJ,Gremio,4-2-3-1,4-2-3-1,Davide Ancelotti,Luiz Antonio Venker Menezes,Botafogo-RJ,"Estádio Nilton Santos, Rio de Janeiro",3,2,RJ,RS,550830,
-9137,35,22/11/2025,21:30,Palmeiras,Fluminense,4-4-2,4-2-3-1,A. Ferreira,L. Luis Zubeldia,-,"Allianz Parque, São Paulo",0,0,SP,RJ,2986721.8,
-9138,35,22/11/2025,21:30,Flamengo,Bragantino,4-2-3-1,4-2-3-1,F. Luís,V. Mancini,Flamengo,"Maracanã, Rio de Janeiro",3,0,RJ,SP,5058865,
-9140,35,23/11/2025,16:00,Sao Paulo,Juventude,3-4-1-2,3-4-2-1,H. Crespo,M. Barbieri,Sao Paulo,"Estádio Urbano Caldeira, Santos",2,1,SP,RS,364679.5,
-9139,35,23/11/2025,16:02,Bahia,Vasco,4-2-3-1,4-2-3-1,R. Ceni,F. Diniz,Bahia,"Arena Fonte Nova, Salvador",1,0,BA,RJ,1771523,
-9141,35,23/11/2025,18:30,Sport,Vitoria,4-3-3,3-4-3,C. de Lucena,J. Ventura,Vitoria,"Adelmar da Costa Carvalho, Recife",1,3,PE,BA,104475,
-9142,35,23/11/2025,20:34,Cruzeiro,Corinthians,4-2-3-1,5-3-2,T. Tite,D. Junior,Cruzeiro,"Mineirão, Belo Horizonte",3,0,MG,SP,1637835.5,
-9143,35,24/11/2025,20:16,Mirassol,Ceara,4-3-3,4-2-3-1,R. Guanaes,M. Mozart,Mirassol,"Campos Maia, Mirassol",3,0,SP,CE,127820,
-9144,35,24/11/2025,21:00,Internacional,Santos,4-2-3-1,4-3-3,R. Díaz,J. Vojvoda,-,"Estádio Beira-Rio, Porto Alegre",1,1,RS,SP,1796000,
-9146,36,25/11/2025,21:30,Atletico-MG,Flamengo,3-4-2-1,4-2-3-1,J. Sampaoli,F. Luís,-,"Arena MRV, Belo Horizonte",1,1,MG,RJ,850004.51,
-9147,36,25/11/2025,21:30,Gremio,Palmeiras,4-2-3-1,4-2-3-1,L. Castro,A. Ferreira,Gremio,"Arena do Grêmio, Porto Alegre",3,2,RS,SP,1314249,
-9148,36,26/11/2025,19:00,Bragantino,Fortaleza,4-2-3-1,4-4-2,V. Mancini,T. Carpini,Fortaleza,"Estádio Municipal Cicero De Souza Marques, Bragança Paulista",0,1,SP,CE,76090,
-9149,36,27/11/2025,20:30,Fluminense,Sao Paulo,4-1-4-1,3-4-1-2,L. Luis Zubeldia,H. Crespo,Fluminense,"Maracanã, Rio de Janeiro",6,0,RJ,SP,1216940,
-9150,36,28/11/2025,19:00,Juventude,Bahia,3-4-2-1,4-1-4-1,M. Barbieri,R. Ceni,-,"Alfredo Jaconi, Caxias do Sul",1,1,RS,BA,143370,
-9151,36,28/11/2025,19:30,Vasco,Internacional,4-2-3-1,4-3-1-2,F. Diniz,R. Díaz,Vasco,"Estádio São Januário, Rio de Janeiro",5,1,RJ,RS,1313832,
-9152,36,28/11/2025,21:33,Santos,Sport,4-2-3-1,4-3-3,J. Vojvoda,C. de Lucena,Santos,"Estádio Urbano Caldeira, Santos",3,0,SP,PE,774742.5,
-9153,36,29/11/2025,16:01,Vitoria,Mirassol,3-4-3,4-2-3-1,J. Ventura,R. Guanaes,Vitoria,"Barradão, Salvador",2,0,BA,SP,678873,
-9154,36,29/11/2025,21:01,Ceara,Cruzeiro,4-2-3-1,4-2-3-1,M. Mozart,T. Tite,-,"Arena Castelão, Fortaleza",1,1,CE,MG,385906,
-9145,35,30/11/2025,18:33,Fortaleza,Atletico-MG,4-4-2,3-4-2-1,T. Carpini,J. Sampaoli,Fortaleza,"Arena Castelão, Fortaleza",1,0,CE,MG,886176,
-9155,36,30/11/2025,16:00,Corinthians,Botafogo-RJ,4-1-2-1-2,4-2-3-1,Dorival Silvestre Junior,Davide Ancelotti,-,"Neo Química Arena, São Paulo",2,2,SP,RJ,2694558.5,
-9118,37,02/12/2025,19:01,Vasco,Mirassol,4-2-3-1,4-2-3-1,F. Diniz,R. Guanaes,Mirassol,"Estádio São Januário, Rio de Janeiro",0,2,RJ,SP,1300947,
-9119,37,02/12/2025,21:31,Gremio,Fluminense,4-2-3-1,4-2-3-1,L. Castro,L. Luis Zubeldia,Fluminense,"Arena do Grêmio, Porto Alegre",1,2,RS,RJ,1339907,
-9134,34,03/12/2025,19:00,Bragantino,Vitoria,4-2-3-1,3-4-2-1,V. Mancini,J. Ventura,Bragantino,"Estádio Municipal Cicero De Souza Marques, Bragança Paulista",4,0,SP,BA,62435,
-9135,34,03/12/2025,21:30,Atletico-MG,Palmeiras,3-4-2-1,4-2-3-1,J. Sampaoli,A. Ferreira,Palmeiras,"Arena MRV, Belo Horizonte",0,3,MG,SP,535000.17,
-9120,37,03/12/2025,19:03,Fortaleza,Corinthians,4-2-3-1,4-3-3,T. Carpini,D. Junior,Fortaleza,"Arena Castelão, Fortaleza",2,1,CE,SP,1433088,
-9121,37,03/12/2025,19:33,Juventude,Santos,3-4-2-1,4-2-3-1,M. Barbieri,J. Vojvoda,Santos,"Alfredo Jaconi, Caxias do Sul",0,3,RS,SP,685680,
-9122,37,03/12/2025,20:00,Sao Paulo,Internacional,3-4-1-2,4-3-1-2,H. Crespo,R. Díaz,Sao Paulo,"Estádio Urbano Caldeira, Santos",3,0,SP,RS,392052.5,
-9123,37,03/12/2025,20:01,Bahia,Sport,4-3-3,4-3-3,R. Ceni,C. de Lucena,Bahia,"Arena Fonte Nova, Salvador",2,0,BA,PE,1400937,
-9124,37,03/12/2025,21:30,Flamengo,Ceara,4-2-3-1,4-2-3-1,F. Luís,M. Mozart,Flamengo,"Maracanã, Rio de Janeiro",1,0,RJ,CE,4950770,
-9125,37,04/12/2025,19:32,Cruzeiro,Botafogo-RJ,4-2-3-1,4-2-3-1,Jose Leonardo Nunes Alves Sousa Jardim,Davide Ancelotti,-,"Mineirão, Belo Horizonte",2,2,MG,RJ,1038832.5,
-9156,38,06/12/2025,18:32,Mirassol,Flamengo,4-4-2,4-2-3-1,R. Guanaes,F. Luís,-,"Campos Maia, Mirassol",3,3,SP,RJ,1258100,
-9162,38,07/12/2025,16:02,Vitoria,Sao Paulo,3-4-2-1,3-5-2,J. Ventura,H. Crespo,Vitoria,"Barradão, Salvador",1,0,BA,SP,689421,
-9157,38,07/12/2025,16:04,Fluminense,Bahia,4-2-3-1,4-3-3,L. Luis Zubeldia,R. Ceni,Fluminense,"Maracanã, Rio de Janeiro",2,0,RJ,BA,1927662.5,
-9158,38,07/12/2025,16:04,Ceara,Palmeiras,4-2-3-1,4-4-2,M. Mozart,A. Ferreira,Palmeiras,"Arena Castelão, Fortaleza",1,3,CE,SP,1088883,
-9159,38,07/12/2025,16:04,Corinthians,Juventude,3-4-3,4-2-3-1,D. Junior,M. Barbieri,-,"Neo Química Arena, São Paulo",1,1,SP,RS,1888899,
-9160,38,07/12/2025,16:04,Santos,Cruzeiro,4-2-3-1,4-2-3-1,J. Vojvoda,T. Tite,Santos,"Estádio Urbano Caldeira, Santos",3,0,SP,MG,743978.75,
-9161,38,07/12/2025,16:04,Sport,Gremio,5-4-1,4-2-3-1,C. de Lucena,L. Castro,Gremio,"Adelmar da Costa Carvalho, Recife",0,4,PE,RS,88755,
-9163,38,07/12/2025,16:04,Botafogo-RJ,Fortaleza,4-2-3-1,4-4-2,Davide Ancelotti,Martin Palermo,Botafogo-RJ,"Estádio Nilton Santos, Rio de Janeiro",4,2,RJ,CE,905640,
-9164,38,07/12/2025,16:04,Atletico-MG,Vasco,4-2-3-1,4-2-3-1,J. Sampaoli,F. Diniz,Atletico-MG,"Arena MRV, Belo Horizonte",5,0,MG,RJ,897255.52,
-9165,38,07/12/2025,16:04,Internacional,Bragantino,4-4-2,4-2-3-1,R. Díaz,V. Mancini,Internacional,"Estádio Beira-Rio, Porto Alegre",3,1,RS,SP,1111157,
-,1,28/01/2026,19:00,Atletico-MG,Palmeiras,,,,,,,2,2,,,,2026
+,1,29/03/2025,18:30,Sao Paulo,Sport,,,,,,,0,0,,,,2025
+,1,29/03/2025,18:30,Cruzeiro,Mirassol,,,,,,,2,1,,,,2025
+,1,29/03/2025,18:30,Gremio,Mineiro,,,,,,,2,1,,,,2025
+,1,29/03/2025,18:30,Fortaleza,Fluminense,,,,,,,2,0,,,,2025
+,1,29/03/2025,18:30,Juventude,Vitoria,,,,,,,2,0,,,,2025
+,1,29/03/2025,21:00,Flamengo,Internacional,,,,,,,1,1,,,,2025
+,1,30/03/2025,16:00,Palmeiras,Botafogo,,,,,,,0,0,,,,2025
+,1,30/03/2025,18:30,Vasco,Santos,,,,,,,2,1,,,,2025
+,1,30/03/2025,20:00,Bahia,Corinthians,,,,,,,1,1,,,,2025
+,1,31/03/2025,20:00,Bragantino,Ceara,,,,,,,2,2,,,,2025
+,2,05/04/2025,18:30,Corinthians,Vasco,,,,,,,3,0,,,,2025
+,2,05/04/2025,18:30,Ceara,Gremio,,,,,,,2,0,,,,2025
+,2,05/04/2025,21:00,Botafogo,Juventude,,,,,,,2,0,,,,2025
+,2,06/04/2025,16:00,Fluminense,Bragantino,,,,,,,2,1,,,,2025
+,2,06/04/2025,16:00,Mineiro,Sao Paulo,,,,,,,0,0,,,,2025
+,2,06/04/2025,18:30,Mirassol,Fortaleza,,,,,,,1,1,,,,2025
+,2,06/04/2025,18:30,Internacional,Cruzeiro,,,,,,,3,0,,,,2025
+,2,06/04/2025,18:30,Vitoria,Flamengo,,,,,,,1,2,,,,2025
+,2,06/04/2025,18:30,Sport,Palmeiras,,,,,,,1,2,,,,2025
+,2,06/04/2025,20:30,Santos,Bahia,,,,,,,2,2,,,,2025
+,3,12/04/2025,16:00,Bragantino,Botafogo,,,,,,,1,0,,,,2025
+,3,12/04/2025,16:00,Juventude,Ceara,,,,,,,2,1,,,,2025
+,3,12/04/2025,18:30,Palmeiras,Corinthians,,,,,,,2,0,,,,2025
+,3,12/04/2025,21:00,Vasco,Sport,,,,,,,3,1,,,,2025
+,3,13/04/2025,16:00,Bahia,Mirassol,,,,,,,1,1,,,,2025
+,3,13/04/2025,17:30,Sao Paulo,Cruzeiro,,,,,,,1,1,,,,2025
+,3,13/04/2025,17:30,Gremio,Flamengo,,,,,,,0,2,,,,2025
+,3,13/04/2025,19:30,Fluminense,Santos,,,,,,,1,0,,,,2025
+,3,13/04/2025,20:00,Fortaleza,Internacional,,,,,,,0,0,,,,2025
+,3,13/04/2025,20:30,Mineiro,Vitoria,,,,,,,2,2,,,,2025
+,4,15/04/2025,21:30,Ceara,Vasco,,,,,,,2,1,,,,2025
+,4,16/04/2025,18:30,Botafogo,Sao Paulo,,,,,,,2,2,,,,2025
+,4,16/04/2025,19:00,Mirassol,Gremio,,,,,,,4,1,,,,2025
+,4,16/04/2025,19:00,Sport,Bragantino,,,,,,,0,1,,,,2025
+,4,16/04/2025,19:30,Corinthians,Fluminense,,,,,,,0,2,,,,2025
+,4,16/04/2025,19:30,Internacional,Palmeiras,,,,,,,0,1,,,,2025
+,4,16/04/2025,21:30,Flamengo,Juventude,,,,,,,6,0,,,,2025
+,4,16/04/2025,21:30,Santos,Mineiro,,,,,,,2,0,,,,2025
+,4,16/04/2025,21:30,Vitoria,Fortaleza,,,,,,,2,1,,,,2025
+,4,17/04/2025,21:30,Cruzeiro,Bahia,,,,,,,3,0,,,,2025
+,5,19/04/2025,16:00,Corinthians,Sport,,,,,,,2,1,,,,2025
+,5,19/04/2025,18:30,Vasco,Flamengo,,,,,,,0,0,,,,2025
+,5,19/04/2025,21:00,Gremio,Internacional,,,,,,,1,1,,,,2025
+,5,20/04/2025,11:00,Juventude,Mirassol,,,,,,,2,2,,,,2025
+,5,20/04/2025,16:00,Sao Paulo,Santos,,,,,,,2,1,,,,2025
+,5,20/04/2025,16:00,Mineiro,Botafogo,,,,,,,1,0,,,,2025
+,5,20/04/2025,18:30,Fluminense,Vitoria,,,,,,,1,1,,,,2025
+,5,20/04/2025,18:30,Fortaleza,Palmeiras,,,,,,,1,2,,,,2025
+,5,20/04/2025,20:30,Bragantino,Cruzeiro,,,,,,,1,0,,,,2025
+,5,21/04/2025,20:00,Bahia,Ceara,,,,,,,1,0,,,,2025
+,6,26/04/2025,16:00,Internacional,Juventude,,,,,,,3,1,,,,2025
+,6,26/04/2025,18:30,Mirassol,Mineiro,,,,,,,2,2,,,,2025
+,6,26/04/2025,18:30,Ceara,Sao Paulo,,,,,,,1,1,,,,2025
+,6,26/04/2025,20:00,Sport,Fortaleza,,,,,,,0,0,,,,2025
+,6,26/04/2025,21:00,Botafogo,Fluminense,,,,,,,2,0,,,,2025
+,6,27/04/2025,16:00,Flamengo,Corinthians,,,,,,,4,0,,,,2025
+,6,27/04/2025,18:30,Palmeiras,Bahia,,,,,,,0,1,,,,2025
+,6,27/04/2025,18:30,Cruzeiro,Vasco,,,,,,,1,0,,,,2025
+,6,27/04/2025,18:30,Vitoria,Gremio,,,,,,,1,1,,,,2025
+,6,27/04/2025,20:30,Santos,Bragantino,,,,,,,1,2,,,,2025
+,7,02/05/2025,21:30,Sao Paulo,Fortaleza,,,,,,,0,0,,,,2025
+,7,03/05/2025,18:30,Fluminense,Sport,,,,,,,2,1,,,,2025
+,7,03/05/2025,18:30,Corinthians,Internacional,,,,,,,4,2,,,,2025
+,7,03/05/2025,18:30,Ceara,Vitoria,,,,,,,1,0,,,,2025
+,7,03/05/2025,21:00,Bahia,Botafogo,,,,,,,1,0,,,,2025
+,7,04/05/2025,16:00,Vasco,Palmeiras,,,,,,,0,1,,,,2025
+,7,04/05/2025,16:00,Gremio,Santos,,,,,,,1,0,,,,2025
+,7,04/05/2025,18:30,Cruzeiro,Flamengo,,,,,,,2,1,,,,2025
+,7,05/05/2025,19:00,Bragantino,Mirassol,,,,,,,1,0,,,,2025
+,7,05/05/2025,20:00,Juventude,Mineiro,,,,,,,0,1,,,,2025
+,8,10/05/2025,16:00,Fortaleza,Juventude,,,,,,,5,0,,,,2025
+,8,10/05/2025,18:30,Mirassol,Corinthians,,,,,,,2,1,,,,2025
+,8,10/05/2025,18:30,Gremio,Bragantino,,,,,,,1,1,,,,2025
+,8,10/05/2025,18:30,Vitoria,Vasco,,,,,,,2,1,,,,2025
+,8,10/05/2025,21:00,Flamengo,Bahia,,,,,,,1,0,,,,2025
+,8,11/05/2025,16:00,Sport,Cruzeiro,,,,,,,0,4,,,,2025
+,8,11/05/2025,17:30,Palmeiras,Sao Paulo,,,,,,,1,0,,,,2025
+,8,11/05/2025,17:30,Mineiro,Fluminense,,,,,,,3,2,,,,2025
+,8,11/05/2025,20:00,Botafogo,Internacional,,,,,,,4,0,,,,2025
+,8,12/05/2025,20:00,Santos,Ceara,,,,,,,0,0,,,,2025
+,9,17/05/2025,16:00,Ceara,Sport,,,,,,,2,0,,,,2025
+,9,17/05/2025,18:30,Vasco,Fortaleza,,,,,,,3,0,,,,2025
+,9,17/05/2025,21:00,Sao Paulo,Gremio,,,,,,,2,1,,,,2025
+,9,18/05/2025,16:00,Corinthians,Santos,,,,,,,1,0,,,,2025
+,9,18/05/2025,16:00,Bahia,Vitoria,,,,,,,2,1,,,,2025
+,9,18/05/2025,16:00,Juventude,Fluminense,,,,,,,1,1,,,,2025
+,9,18/05/2025,18:30,Flamengo,Botafogo,,,,,,,0,0,,,,2025
+,9,18/05/2025,18:30,Bragantino,Palmeiras,,,,,,,1,2,,,,2025
+,9,18/05/2025,20:30,Cruzeiro,Mineiro,,,,,,,0,0,,,,2025
+,9,18/05/2025,20:30,Internacional,Mirassol,,,,,,,1,1,,,,2025
+,10,24/05/2025,18:30,Fluminense,Vasco,,,,,,,2,1,,,,2025
+,10,24/05/2025,18:30,Sao Paulo,Mirassol,,,,,,,0,2,,,,2025
+,10,24/05/2025,21:00,Mineiro,Corinthians,,,,,,,0,0,,,,2025
+,10,25/05/2025,11:00,Gremio,Bahia,,,,,,,1,0,,,,2025
+,10,25/05/2025,16:00,Palmeiras,Flamengo,,,,,,,0,2,,,,2025
+,10,25/05/2025,16:00,Sport,Internacional,,,,,,,1,1,,,,2025
+,10,25/05/2025,18:30,Vitoria,Santos,,,,,,,0,1,,,,2025
+,10,25/05/2025,20:30,Fortaleza,Cruzeiro,,,,,,,0,2,,,,2025
+,10,26/05/2025,20:00,Bragantino,Juventude,,,,,,,1,0,,,,2025
+,11,31/05/2025,18:30,Bahia,Sao Paulo,,,,,,,2,1,,,,2025
+,11,31/05/2025,21:00,Vasco,Bragantino,,,,,,,0,2,,,,2025
+,11,01/06/2025,11:00,Mirassol,Sport,,,,,,,1,0,,,,2025
+,11,01/06/2025,16:00,Juventude,Gremio,,,,,,,0,2,,,,2025
+,11,01/06/2025,16:00,Santos,Botafogo,,,,,,,0,1,,,,2025
+,11,01/06/2025,18:30,Ceara,Mineiro,,,,,,,0,1,,,,2025
+,11,01/06/2025,18:30,Flamengo,Fortaleza,,,,,,,5,0,,,,2025
+,11,01/06/2025,18:30,Corinthians,Vitoria,,,,,,,0,0,,,,2025
+,11,01/06/2025,19:30,Cruzeiro,Palmeiras,,,,,,,2,1,,,,2025
+,11,01/06/2025,20:30,Internacional,Fluminense,,,,,,,0,2,,,,2025
+,10,04/06/2025,20:00,Botafogo,Ceara,,,,,,,3,2,,,,2025
+,12,12/06/2025,19:00,Bragantino,Bahia,,,,,,,0,3,,,,2025
+,12,12/06/2025,19:00,Vitoria,Cruzeiro,,,,,,,0,0,,,,2025
+,12,12/06/2025,19:30,Fortaleza,Santos,,,,,,,2,3,,,,2025
+,12,12/06/2025,20:00,Gremio,Corinthians,,,,,,,1,1,,,,2025
+,12,12/06/2025,21:30,Sao Paulo,Vasco,,,,,,,1,3,,,,2025
+,12,12/06/2025,21:30,Mineiro,Internacional,,,,,,,2,0,,,,2025
+,13,12/07/2025,16:30,Flamengo,Sao Paulo,,,,,,,2,0,,,,2025
+,13,12/07/2025,16:30,Internacional,Vitoria,,,,,,,1,0,,,,2025
+,13,12/07/2025,18:30,Vasco,Botafogo,,,,,,,0,2,,,,2025
+,13,12/07/2025,21:00,Bahia,Mineiro,,,,,,,2,1,,,,2025
+,13,13/07/2025,19:00,Corinthians,Bragantino,,,,,,,1,2,,,,2025
+,13,13/07/2025,20:30,Cruzeiro,Gremio,,,,,,,4,1,,,,2025
+,13,13/07/2025,20:30,Fortaleza,Ceara,,,,,,,0,1,,,,2025
+,13,14/07/2025,20:00,Juventude,Sport,,,,,,,2,0,,,,2025
+,14,16/07/2025,19:00,Palmeiras,Mirassol,,,,,,,1,1,,,,2025
+,14,16/07/2025,19:30,Ceara,Corinthians,,,,,,,0,1,,,,2025
+,14,16/07/2025,20:00,Santos,Flamengo,,,,,,,1,0,,,,2025
+,14,16/07/2025,21:30,Botafogo,Vitoria,,,,,,,0,0,,,,2025
+,14,16/07/2025,21:30,Bragantino,Sao Paulo,,,,,,,2,2,,,,2025
+,14,17/07/2025,19:30,Fluminense,Cruzeiro,,,,,,,0,2,,,,2025
+,15,19/07/2025,16:00,Fortaleza,Bahia,,,,,,,1,1,,,,2025
+,15,19/07/2025,17:30,Vasco,Gremio,,,,,,,1,1,,,,2025
+,15,19/07/2025,18:30,Mirassol,Santos,,,,,,,3,0,,,,2025
+,15,19/07/2025,21:00,Sao Paulo,Corinthians,,,,,,,2,0,,,,2025
+,15,20/07/2025,11:00,Internacional,Ceara,,,,,,,1,0,,,,2025
+,15,20/07/2025,16:00,Cruzeiro,Juventude,,,,,,,4,0,,,,2025
+,15,20/07/2025,16:00,Vitoria,Bragantino,,,,,,,1,0,,,,2025
+,15,20/07/2025,17:30,Palmeiras,Mineiro,,,,,,,3,2,,,,2025
+,15,20/07/2025,17:30,Sport,Botafogo,,,,,,,0,1,,,,2025
+,15,20/07/2025,19:30,Flamengo,Fluminense,,,,,,,1,0,,,,2025
+,16,23/07/2025,19:00,Fluminense,Palmeiras,,,,,,,1,2,,,,2025
+,16,23/07/2025,19:00,Ceara,Mirassol,,,,,,,0,2,,,,2025
+,16,23/07/2025,19:30,Corinthians,Cruzeiro,,,,,,,0,0,,,,2025
+,16,23/07/2025,21:30,Santos,Internacional,,,,,,,1,2,,,,2025
+,16,23/07/2025,21:30,Bragantino,Flamengo,,,,,,,1,2,,,,2025
+,16,23/07/2025,21:30,Vitoria,Sport,,,,,,,2,2,,,,2025
+,16,24/07/2025,19:00,Juventude,Sao Paulo,,,,,,,0,1,,,,2025
+,17,26/07/2025,18:30,Botafogo,Corinthians,,,,,,,1,1,,,,2025
+,17,26/07/2025,18:30,Mirassol,Vitoria,,,,,,,1,1,,,,2025
+,17,26/07/2025,18:30,Fortaleza,Bragantino,,,,,,,3,1,,,,2025
+,17,26/07/2025,18:30,Sport,Santos,,,,,,,2,2,,,,2025
+,17,26/07/2025,21:00,Palmeiras,Gremio,,,,,,,1,0,,,,2025
+,17,27/07/2025,16:00,Sao Paulo,Fluminense,,,,,,,3,1,,,,2025
+,17,27/07/2025,16:00,Cruzeiro,Ceara,,,,,,,1,2,,,,2025
+,17,27/07/2025,18:30,Internacional,Vasco,,,,,,,1,1,,,,2025
+,17,27/07/2025,18:30,Bahia,Juventude,,,,,,,3,0,,,,2025
+,17,27/07/2025,20:30,Flamengo,Mineiro,,,,,,,1,0,,,,2025
+,14,29/07/2025,20:30,Gremio,Fortaleza,,,,,,,2,1,,,,2025
+,18,02/08/2025,16:00,Sport,Bahia,,,,,,,0,0,,,,2025
+,18,02/08/2025,18:30,Mirassol,Vasco,,,,,,,3,2,,,,2025
+,18,02/08/2025,21:00,Fluminense,Gremio,,,,,,,1,0,,,,2025
+,18,03/08/2025,16:00,Botafogo,Cruzeiro,,,,,,,0,2,,,,2025
+,18,03/08/2025,16:00,Corinthians,Fortaleza,,,,,,,1,1,,,,2025
+,18,03/08/2025,18:30,Mineiro,Bragantino,,,,,,,2,1,,,,2025
+,18,03/08/2025,18:30,Ceara,Flamengo,,,,,,,1,1,,,,2025
+,18,03/08/2025,19:30,Vitoria,Palmeiras,,,,,,,2,2,,,,2025
+,18,03/08/2025,20:30,Internacional,Sao Paulo,,,,,,,1,2,,,,2025
+,18,04/08/2025,20:00,Santos,Juventude,,,,,,,3,1,,,,2025
+,19,09/08/2025,18:30,Flamengo,Mirassol,,,,,,,2,1,,,,2025
+,19,09/08/2025,18:30,Sao Paulo,Vitoria,,,,,,,2,0,,,,2025
+,19,09/08/2025,18:30,Bragantino,Internacional,,,,,,,1,3,,,,2025
+,19,09/08/2025,20:30,Fortaleza,Botafogo,,,,,,,0,5,,,,2025
+,19,09/08/2025,21:00,Bahia,Fluminense,,,,,,,3,3,,,,2025
+,19,10/08/2025,16:00,Vasco,Mineiro,,,,,,,1,1,,,,2025
+,19,10/08/2025,16:00,Palmeiras,Ceara,,,,,,,2,1,,,,2025
+,19,10/08/2025,18:30,Cruzeiro,Santos,,,,,,,1,2,,,,2025
+,19,10/08/2025,20:30,Gremio,Sport,,,,,,,0,1,,,,2025
+,19,11/08/2025,20:00,Juventude,Corinthians,,,,,,,2,1,,,,2025
+,20,16/08/2025,16:00,Fluminense,Fortaleza,,,,,,,2,1,,,,2025
+,20,16/08/2025,16:00,Ceara,Bragantino,,,,,,,1,0,,,,2025
+,20,16/08/2025,18:30,Vitoria,Juventude,,,,,,,2,2,,,,2025
+,20,16/08/2025,18:30,Sport,Sao Paulo,,,,,,,2,2,,,,2025
+,20,16/08/2025,21:00,Corinthians,Bahia,,,,,,,1,2,,,,2025
+,20,17/08/2025,16:00,Santos,Vasco,,,,,,,0,6,,,,2025
+,20,17/08/2025,16:00,Mineiro,Gremio,,,,,,,1,3,,,,2025
+,20,17/08/2025,18:30,Internacional,Flamengo,,,,,,,1,3,,,,2025
+,20,17/08/2025,20:30,Botafogo,Palmeiras,,,,,,,0,1,,,,2025
+,20,18/08/2025,20:00,Mirassol,Cruzeiro,,,,,,,1,1,,,,2025
+,14,20/08/2025,19:00,Juventude,Vasco,,,,,,,2,0,,,,2025
+,21,23/08/2025,16:00,Bragantino,Fluminense,,,,,,,4,2,,,,2025
+,21,23/08/2025,18:30,Cruzeiro,Internacional,,,,,,,2,1,,,,2025
+,21,23/08/2025,21:00,Gremio,Ceara,,,,,,,0,0,,,,2025
+,21,24/08/2025,16:00,Vasco,Corinthians,,,,,,,2,3,,,,2025
+,21,24/08/2025,16:00,Bahia,Santos,,,,,,,2,0,,,,2025
+,21,24/08/2025,18:30,Fortaleza,Mirassol,,,,,,,0,1,,,,2025
+,21,24/08/2025,18:30,Juventude,Botafogo,,,,,,,1,3,,,,2025
+,21,24/08/2025,20:30,Sao Paulo,Mineiro,,,,,,,2,0,,,,2025
+,21,25/08/2025,19:00,Palmeiras,Sport,,,,,,,3,0,,,,2025
+,21,25/08/2025,21:00,Flamengo,Vitoria,,,,,,,8,0,,,,2025
+,22,30/08/2025,16:00,Ceara,Juventude,,,,,,,0,1,,,,2025
+,22,30/08/2025,18:30,Botafogo,Bragantino,,,,,,,4,1,,,,2025
+,22,30/08/2025,21:00,Cruzeiro,Sao Paulo,,,,,,,1,0,,,,2025
+,22,31/08/2025,16:00,Flamengo,Gremio,,,,,,,1,1,,,,2025
+,22,31/08/2025,16:00,Santos,Fluminense,,,,,,,0,0,,,,2025
+,22,31/08/2025,18:30,Corinthians,Palmeiras,,,,,,,1,1,,,,2025
+,22,31/08/2025,18:30,Mirassol,Bahia,,,,,,,5,1,,,,2025
+,22,31/08/2025,18:30,Vitoria,Mineiro,,,,,,,1,0,,,,2025
+,22,31/08/2025,20:30,Internacional,Fortaleza,,,,,,,2,1,,,,2025
+,22,31/08/2025,20:30,Sport,Vasco,,,,,,,2,3,,,,2025
+,23,13/09/2025,16:00,Gremio,Mirassol,,,,,,,0,1,,,,2025
+,23,13/09/2025,16:00,Fortaleza,Vitoria,,,,,,,2,0,,,,2025
+,23,13/09/2025,18:30,Palmeiras,Internacional,,,,,,,4,1,,,,2025
+,23,13/09/2025,21:00,Fluminense,Corinthians,,,,,,,0,1,,,,2025
+,23,14/09/2025,11:00,Bragantino,Sport,,,,,,,1,1,,,,2025
+,23,14/09/2025,16:00,Mineiro,Santos,,,,,,,1,1,,,,2025
+,23,14/09/2025,16:00,Juventude,Flamengo,,,,,,,0,2,,,,2025
+,23,14/09/2025,17:30,Sao Paulo,Botafogo,,,,,,,1,0,,,,2025
+,23,14/09/2025,20:30,Vasco,Ceara,,,,,,,2,2,,,,2025
+,23,15/09/2025,20:00,Bahia,Cruzeiro,,,,,,,1,2,,,,2025
+,12,17/09/2025,19:30,Botafogo,Mirassol,,,,,,,3,3,,,,2025
+,24,20/09/2025,16:00,Vitoria,Fluminense,,,,,,,0,1,,,,2025
+,24,20/09/2025,18:30,Botafogo,Mineiro,,,,,,,1,0,,,,2025
+,24,20/09/2025,18:30,Ceara,Bahia,,,,,,,1,1,,,,2025
+,24,20/09/2025,21:00,Palmeiras,Fortaleza,,,,,,,4,1,,,,2025
+,24,21/09/2025,16:00,Mirassol,Juventude,,,,,,,2,0,,,,2025
+,24,21/09/2025,17:30,Flamengo,Vasco,,,,,,,1,1,,,,2025
+,24,21/09/2025,17:30,Internacional,Gremio,,,,,,,2,3,,,,2025
+,24,21/09/2025,17:30,Sport,Corinthians,,,,,,,1,0,,,,2025
+,24,21/09/2025,20:30,Santos,Sao Paulo,,,,,,,1,0,,,,2025
+,24,21/09/2025,20:30,Cruzeiro,Bragantino,,,,,,,2,1,,,,2025
+,16,24/09/2025,19:30,Vasco,Bahia,,,,,,,3,1,,,,2025
+,16,24/09/2025,19:30,Gremio,Botafogo,,,,,,,1,1,,,,2025
+,25,27/09/2025,16:00,Fortaleza,Sport,,,,,,,1,0,,,,2025
+,25,27/09/2025,18:30,Vasco,Cruzeiro,,,,,,,2,0,,,,2025
+,25,27/09/2025,18:30,Juventude,Internacional,,,,,,,1,1,,,,2025
+,25,27/09/2025,21:00,Mineiro,Mirassol,,,,,,,1,0,,,,2025
+,25,28/09/2025,11:00,Gremio,Vitoria,,,,,,,3,1,,,,2025
+,25,28/09/2025,16:00,Fluminense,Botafogo,,,,,,,2,0,,,,2025
+,25,28/09/2025,16:00,Bahia,Palmeiras,,,,,,,1,0,,,,2025
+,25,28/09/2025,18:30,Bragantino,Santos,,,,,,,2,2,,,,2025
+,25,28/09/2025,20:30,Corinthians,Flamengo,,,,,,,1,2,,,,2025
+,25,29/09/2025,20:00,Sao Paulo,Ceara,,,,,,,0,1,,,,2025
+,26,30/09/2025,21:30,Mineiro,Juventude,,,,,,,0,0,,,,2025
+,26,01/10/2025,19:00,Palmeiras,Vasco,,,,,,,3,0,,,,2025
+,26,01/10/2025,19:00,Mirassol,Bragantino,,,,,,,1,1,,,,2025
+,26,01/10/2025,19:00,Sport,Fluminense,,,,,,,2,2,,,,2025
+,26,01/10/2025,19:30,Internacional,Corinthians,,,,,,,1,1,,,,2025
+,26,01/10/2025,21:30,Botafogo,Bahia,,,,,,,2,1,,,,2025
+,26,01/10/2025,21:30,Santos,Gremio,,,,,,,1,1,,,,2025
+,26,02/10/2025,19:00,Vitoria,Ceara,,,,,,,1,0,,,,2025
+,26,02/10/2025,19:30,Fortaleza,Sao Paulo,,,,,,,0,2,,,,2025
+,26,02/10/2025,20:30,Flamengo,Cruzeiro,,,,,,,0,0,,,,2025
+,27,04/10/2025,18:30,Fluminense,Mineiro,,,,,,,3,0,,,,2025
+,27,04/10/2025,18:30,Bragantino,Gremio,,,,,,,1,0,,,,2025
+,27,04/10/2025,18:30,Internacional,Botafogo,,,,,,,2,0,,,,2025
+,27,04/10/2025,21:00,Corinthians,Mirassol,,,,,,,3,0,,,,2025
+,27,05/10/2025,16:00,Vasco,Vitoria,,,,,,,4,3,,,,2025
+,27,05/10/2025,16:00,Sao Paulo,Palmeiras,,,,,,,2,3,,,,2025
+,27,05/10/2025,18:30,Bahia,Flamengo,,,,,,,1,0,,,,2025
+,27,05/10/2025,18:30,Juventude,Fortaleza,,,,,,,1,2,,,,2025
+,27,05/10/2025,20:30,Cruzeiro,Sport,,,,,,,1,1,,,,2025
+,27,05/10/2025,20:30,Ceara,Santos,,,,,,,3,0,,,,2025
+,14,08/10/2025,19:00,Mineiro,Sport,,,,,,,3,1,,,,2025
+,13,08/10/2025,21:00,Mirassol,Fluminense,,,,,,,2,1,,,,2025
+,12,11/10/2025,19:00,Palmeiras,Juventude,,,,,,,4,1,,,,2025
+,28,15/10/2025,19:00,Palmeiras,Bragantino,,,,,,,5,1,,,,2025
+,28,15/10/2025,19:30,Botafogo,Flamengo,,,,,,,0,3,,,,2025
+,28,15/10/2025,20:00,Mirassol,Internacional,,,,,,,3,1,,,,2025
+,28,15/10/2025,20:00,Sport,Ceara,,,,,,,1,1,,,,2025
+,28,15/10/2025,21:30,Santos,Corinthians,,,,,,,3,1,,,,2025
+,28,15/10/2025,21:30,Mineiro,Cruzeiro,,,,,,,1,1,,,,2025
+,28,15/10/2025,21:30,Fortaleza,Vasco,,,,,,,0,2,,,,2025
+,28,16/10/2025,19:00,Gremio,Sao Paulo,,,,,,,2,0,,,,2025
+,28,16/10/2025,21:30,Fluminense,Juventude,,,,,,,1,0,,,,2025
+,28,16/10/2025,21:30,Vitoria,Bahia,,,,,,,2,1,,,,2025
+,29,18/10/2025,18:30,Corinthians,Mineiro,,,,,,,1,0,,,,2025
+,29,18/10/2025,21:00,Cruzeiro,Fortaleza,,,,,,,1,0,,,,2025
+,29,19/10/2025,16:00,Flamengo,Palmeiras,,,,,,,3,2,,,,2025
+,29,19/10/2025,18:30,Mirassol,Sao Paulo,,,,,,,3,0,,,,2025
+,29,19/10/2025,18:30,Internacional,Sport,,,,,,,2,0,,,,2025
+,29,19/10/2025,18:30,Ceara,Botafogo,,,,,,,0,2,,,,2025
+,29,19/10/2025,20:30,Bahia,Gremio,,,,,,,4,0,,,,2025
+,29,20/10/2025,19:00,Juventude,Bragantino,,,,,,,1,0,,,,2025
+,29,20/10/2025,19:30,Vasco,Fluminense,,,,,,,2,0,,,,2025
+,29,20/10/2025,21:30,Santos,Vitoria,,,,,,,0,1,,,,2025
+,14,22/10/2025,19:00,Bahia,Internacional,,,,,,,1,0,,,,2025
+,30,25/10/2025,16:00,Mineiro,Ceara,,,,,,,1,0,,,,2025
+,30,25/10/2025,16:00,Vitoria,Corinthians,,,,,,,0,1,,,,2025
+,30,25/10/2025,17:30,Fluminense,Internacional,,,,,,,1,0,,,,2025
+,30,25/10/2025,18:30,Sport,Mirassol,,,,,,,1,2,,,,2025
+,30,25/10/2025,19:30,Fortaleza,Flamengo,,,,,,,1,0,,,,2025
+,30,25/10/2025,22:30,Sao Paulo,Bahia,,,,,,,2,0,,,,2025
+,30,26/10/2025,16:00,Botafogo,Santos,,,,,,,2,2,,,,2025
+,30,26/10/2025,16:00,Gremio,Juventude,,,,,,,3,1,,,,2025
+,30,26/10/2025,18:30,Bragantino,Vasco,,,,,,,0,3,,,,2025
+,30,26/10/2025,20:30,Palmeiras,Cruzeiro,,,,,,,0,0,,,,2025
+,12,29/10/2025,19:00,Fluminense,Ceara,,,,,,,1,0,,,,2025
+,31,01/11/2025,16:00,Santos,Fortaleza,,,,,,,1,1,,,,2025
+,31,01/11/2025,16:00,Cruzeiro,Vitoria,,,,,,,3,1,,,,2025
+,31,01/11/2025,18:00,Mirassol,Botafogo,,,,,,,0,0,,,,2025
+,31,01/11/2025,21:00,Flamengo,Sport,,,,,,,3,0,,,,2025
+,31,02/11/2025,16:00,Corinthians,Gremio,,,,,,,2,0,,,,2025
+,31,02/11/2025,16:00,Bahia,Bragantino,,,,,,,2,1,,,,2025
+,31,02/11/2025,16:00,Ceara,Fluminense,,,,,,,2,0,,,,2025
+,31,02/11/2025,18:30,Internacional,Mineiro,,,,,,,0,0,,,,2025
+,31,02/11/2025,18:30,Juventude,Palmeiras,,,,,,,0,2,,,,2025
+,31,02/11/2025,20:30,Vasco,Sao Paulo,,,,,,,0,2,,,,2025
+,32,05/11/2025,19:00,Bragantino,Corinthians,,,,,,,2,1,,,,2025
+,32,05/11/2025,19:00,Vitoria,Internacional,,,,,,,1,0,,,,2025
+,32,05/11/2025,19:00,Sport,Juventude,,,,,,,0,2,,,,2025
+,32,05/11/2025,19:30,Botafogo,Vasco,,,,,,,3,0,,,,2025
+,32,05/11/2025,20:00,Mineiro,Bahia,,,,,,,3,0,,,,2025
+,32,05/11/2025,20:00,Gremio,Cruzeiro,,,,,,,0,1,,,,2025
+,32,05/11/2025,21:30,Sao Paulo,Flamengo,,,,,,,2,2,,,,2025
+,32,06/11/2025,19:30,Fluminense,Mirassol,,,,,,,1,0,,,,2025
+,32,06/11/2025,20:00,Ceara,Fortaleza,,,,,,,1,1,,,,2025
+,32,06/11/2025,21:30,Palmeiras,Santos,,,,,,,2,0,,,,2025
+,33,08/11/2025,16:00,Sport,Mineiro,,,,,,,2,4,,,,2025
+,33,08/11/2025,18:00,Vasco,Juventude,,,,,,,1,3,,,,2025
+,33,08/11/2025,18:30,Internacional,Bahia,,,,,,,2,2,,,,2025
+,33,08/11/2025,21:00,Sao Paulo,Bragantino,,,,,,,0,1,,,,2025
+,33,09/11/2025,16:00,Corinthians,Ceara,,,,,,,0,1,,,,2025
+,33,09/11/2025,16:00,Cruzeiro,Fluminense,,,,,,,0,0,,,,2025
+,33,09/11/2025,16:00,Vitoria,Botafogo,,,,,,,0,0,,,,2025
+,33,09/11/2025,18:30,Flamengo,Santos,,,,,,,3,2,,,,2025
+,33,09/11/2025,20:30,Mirassol,Palmeiras,,,,,,,2,1,,,,2025
+,33,09/11/2025,20:30,Fortaleza,Gremio,,,,,,,2,2,,,,2025
+,16,12/11/2025,20:30,Mineiro,Fortaleza,,,,,,,3,3,,,,2025
+,12,15/11/2025,18:30,Sport,Flamengo,,,,,,,1,5,,,,2025
+,13,15/11/2025,21:00,Santos,Palmeiras,,,,,,,1,0,,,,2025
+,37,16/11/2025,19:00,Bragantino,Mineiro,,,,,,,2,0,,,,2025
+,34,18/11/2025,20:30,Botafogo,Sport,,,,,,,3,2,,,,2025
+,37,19/11/2025,19:30,Palmeiras,Vitoria,,,,,,,0,0,,,,2025
+,34,19/11/2025,21:30,Fluminense,Flamengo,,,,,,,2,1,,,,2025
+,34,19/11/2025,21:30,Santos,Mirassol,,,,,,,1,1,,,,2025
+,34,19/11/2025,21:30,Gremio,Vasco,,,,,,,2,0,,,,2025
+,34,20/11/2025,16:00,Juventude,Cruzeiro,,,,,,,3,3,,,,2025
+,34,20/11/2025,18:00,Bahia,Fortaleza,,,,,,,2,3,,,,2025
+,34,20/11/2025,19:30,Corinthians,Sao Paulo,,,,,,,3,1,,,,2025
+,34,20/11/2025,21:30,Ceara,Internacional,,,,,,,1,2,,,,2025
+,35,22/11/2025,19:30,Botafogo,Gremio,,,,,,,3,2,,,,2025
+,35,22/11/2025,21:30,Flamengo,Bragantino,,,,,,,3,0,,,,2025
+,35,22/11/2025,21:30,Palmeiras,Fluminense,,,,,,,0,0,,,,2025
+,35,23/11/2025,16:00,Sao Paulo,Juventude,,,,,,,2,1,,,,2025
+,35,23/11/2025,16:00,Bahia,Vasco,,,,,,,1,0,,,,2025
+,35,23/11/2025,18:30,Sport,Vitoria,,,,,,,1,3,,,,2025
+,35,23/11/2025,20:30,Cruzeiro,Corinthians,,,,,,,3,0,,,,2025
+,35,24/11/2025,19:00,Mirassol,Ceara,,,,,,,3,0,,,,2025
+,35,24/11/2025,21:00,Internacional,Santos,,,,,,,1,1,,,,2025
+,36,25/11/2025,21:30,Mineiro,Flamengo,,,,,,,1,1,,,,2025
+,36,25/11/2025,21:30,Gremio,Palmeiras,,,,,,,3,2,,,,2025
+,36,26/11/2025,19:00,Bragantino,Fortaleza,,,,,,,0,1,,,,2025
+,36,27/11/2025,20:30,Fluminense,Sao Paulo,,,,,,,6,0,,,,2025
+,36,28/11/2025,19:00,Juventude,Bahia,,,,,,,1,1,,,,2025
+,36,28/11/2025,19:30,Vasco,Internacional,,,,,,,5,1,,,,2025
+,36,28/11/2025,21:30,Santos,Sport,,,,,,,3,0,,,,2025
+,36,29/11/2025,16:00,Vitoria,Mirassol,,,,,,,2,0,,,,2025
+,36,29/11/2025,21:00,Ceara,Cruzeiro,,,,,,,1,1,,,,2025
+,36,30/11/2025,16:00,Corinthians,Botafogo,,,,,,,2,2,,,,2025
+,35,30/11/2025,18:30,Fortaleza,Mineiro,,,,,,,1,0,,,,2025
+,37,02/12/2025,19:00,Vasco,Mirassol,,,,,,,0,2,,,,2025
+,37,02/12/2025,21:30,Gremio,Fluminense,,,,,,,1,2,,,,2025
+,37,03/12/2025,19:00,Fortaleza,Corinthians,,,,,,,2,1,,,,2025
+,34,03/12/2025,19:00,Bragantino,Vitoria,,,,,,,4,0,,,,2025
+,37,03/12/2025,19:30,Juventude,Santos,,,,,,,0,3,,,,2025
+,37,03/12/2025,20:00,Sao Paulo,Internacional,,,,,,,3,0,,,,2025
+,37,03/12/2025,20:00,Bahia,Sport,,,,,,,2,0,,,,2025
+,34,03/12/2025,21:30,Mineiro,Palmeiras,,,,,,,0,3,,,,2025
+,37,03/12/2025,21:30,Flamengo,Ceara,,,,,,,1,0,,,,2025
+,37,04/12/2025,19:30,Cruzeiro,Botafogo,,,,,,,2,2,,,,2025
+,38,06/12/2025,18:30,Mirassol,Flamengo,,,,,,,3,3,,,,2025
+,38,07/12/2025,16:00,Fluminense,Bahia,,,,,,,2,0,,,,2025
+,38,07/12/2025,16:00,Botafogo,Fortaleza,,,,,,,4,2,,,,2025
+,38,07/12/2025,16:00,Corinthians,Juventude,,,,,,,1,1,,,,2025
+,38,07/12/2025,16:00,Santos,Cruzeiro,,,,,,,3,0,,,,2025
+,38,07/12/2025,16:00,Mineiro,Vasco,,,,,,,5,0,,,,2025
+,38,07/12/2025,16:00,Internacional,Bragantino,,,,,,,3,1,,,,2025
+,38,07/12/2025,16:00,Vitoria,Sao Paulo,,,,,,,1,0,,,,2025
+,38,07/12/2025,16:00,Ceara,Palmeiras,,,,,,,1,3,,,,2025
+,38,07/12/2025,16:00,Sport,Gremio,,,,,,,0,4,,,,2025
+,1,28/01/2026,19:00,Mineiro,Palmeiras,,,,,,,2,2,,,,2026
 ,1,28/01/2026,19:00,Coritiba,Bragantino,,,,,,,0,1,,,,2026
 ,1,28/01/2026,19:00,Internacional,Paranaense,,,,,,,0,1,,,,2026
 ,1,28/01/2026,19:00,Vitoria,Clube do Remo,,,,,,,2,0,,,,2026
@@ -7607,12 +7607,12 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,1,28/01/2026,20:00,Corinthians,Bahia,,,,,,,1,2,,,,2026
 ,1,28/01/2026,21:30,Sao Paulo,Flamengo,,,,,,,2,1,,,,2026
 ,1,29/01/2026,20:00,Mirassol,Vasco,,,,,,,2,1,,,,2026
-,1,29/01/2026,21:30,Botafogo-RJ,Cruzeiro,,,,,,,4,0,,,,2026
-,2,04/02/2026,19:00,Bragantino,Atletico-MG,,,,,,,1,0,,,,2026
+,1,29/01/2026,21:30,Botafogo,Cruzeiro,,,,,,,4,0,,,,2026
+,2,04/02/2026,19:00,Bragantino,Mineiro,,,,,,,1,0,,,,2026
 ,2,04/02/2026,19:00,Flamengo,Internacional,,,,,,,1,1,,,,2026
 ,2,04/02/2026,20:00,Clube do Remo,Mirassol,,,,,,,2,2,,,,2026
 ,2,04/02/2026,20:00,Santos,Sao Paulo,,,,,,,1,1,,,,2026
-,2,04/02/2026,21:30,Gremio,Botafogo-RJ,,,,,,,5,3,,,,2026
+,2,04/02/2026,21:30,Gremio,Botafogo,,,,,,,5,3,,,,2026
 ,2,04/02/2026,21:30,Palmeiras,Vitoria,,,,,,,5,1,,,,2026
 ,2,05/02/2026,19:00,Bahia,Fluminense,,,,,,,1,1,,,,2026
 ,2,05/02/2026,20:00,Vasco,Chapecoense,,,,,,,1,1,,,,2026
@@ -7620,11 +7620,11 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,3,10/02/2026,21:30,Vitoria,Flamengo,,,,,,,1,2,,,,2026
 ,3,11/02/2026,19:00,Chapecoense,Coritiba,,,,,,,3,3,,,,2026
 ,3,11/02/2026,19:00,Mirassol,Cruzeiro,,,,,,,2,2,,,,2026
-,3,11/02/2026,20:00,Atletico-MG,Clube do Remo,,,,,,,3,3,,,,2026
+,3,11/02/2026,20:00,Mineiro,Clube do Remo,,,,,,,3,3,,,,2026
 ,3,11/02/2026,21:30,Sao Paulo,Gremio,,,,,,,2,0,,,,2026
 ,3,11/02/2026,21:30,Vasco,Bahia,,,,,,,0,1,,,,2026
 ,3,12/02/2026,19:00,Paranaense,Santos,,,,,,,2,1,,,,2026
-,3,12/02/2026,19:30,Fluminense,Botafogo-RJ,,,,,,,1,0,,,,2026
+,3,12/02/2026,19:30,Fluminense,Botafogo,,,,,,,1,0,,,,2026
 ,3,12/02/2026,20:00,Corinthians,Bragantino,,,,,,,2,0,,,,2026
 ,3,12/02/2026,21:30,Internacional,Palmeiras,,,,,,,1,3,,,,2026
 ,2,19/02/2026,19:30,Paranaense,Corinthians,,,,,,,0,1,,,,2026
@@ -7632,11 +7632,11 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,4,25/02/2026,19:00,Clube do Remo,Internacional,,,,,,,1,1,,,,2026
 ,4,25/02/2026,19:30,Coritiba,Sao Paulo,,,,,,,0,1,,,,2026
 ,4,25/02/2026,20:00,Cruzeiro,Corinthians,,,,,,,1,1,,,,2026
-,4,25/02/2026,21:30,Gremio,Atletico-MG,,,,,,,2,1,,,,2026
+,4,25/02/2026,21:30,Gremio,Mineiro,,,,,,,2,1,,,,2026
 ,4,25/02/2026,21:30,Palmeiras,Fluminense,,,,,,,2,1,,,,2026
 ,4,26/02/2026,19:00,Santos,Vasco,,,,,,,2,1,,,,2026
 ,5,10/03/2026,21:30,Mirassol,Santos,,,,,,,2,2,,,,2026
-,5,11/03/2026,19:00,Atletico-MG,Internacional,,,,,,,1,0,,,,2026
+,5,11/03/2026,19:00,Mineiro,Internacional,,,,,,,1,0,,,,2026
 ,5,11/03/2026,20:00,Bahia,Vitoria,,,,,,,1,1,,,,2026
 ,5,11/03/2026,21:30,Corinthians,Coritiba,,,,,,,0,2,,,,2026
 ,5,11/03/2026,21:30,Flamengo,Cruzeiro,,,,,,,2,0,,,,2026
@@ -7644,8 +7644,8 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,5,12/03/2026,19:30,Vasco,Palmeiras,,,,,,,2,1,,,,2026
 ,5,12/03/2026,20:00,Sao Paulo,Chapecoense,,,,,,,2,0,,,,2026
 ,5,12/03/2026,21:30,Gremio,Bragantino,,,,,,,1,1,,,,2026
-,6,14/03/2026,18:30,Vitoria,Atletico-MG,,,,,,,2,0,,,,2026
-,6,14/03/2026,20:30,Botafogo-RJ,Flamengo,,,,,,,0,3,,,,2026
+,6,14/03/2026,18:30,Vitoria,Mineiro,,,,,,,2,0,,,,2026
+,6,14/03/2026,20:30,Botafogo,Flamengo,,,,,,,0,3,,,,2026
 ,6,15/03/2026,16:00,Fluminense,Paranaense,,,,,,,3,2,,,,2026
 ,6,15/03/2026,16:00,Internacional,Bahia,,,,,,,0,1,,,,2026
 ,6,15/03/2026,16:00,Santos,Corinthians,,,,,,,1,1,,,,2026
@@ -7655,17 +7655,17 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,6,15/03/2026,20:30,Cruzeiro,Vasco,,,,,,,3,3,,,,2026
 ,6,16/03/2026,20:00,Chapecoense,Gremio,,,,,,,1,1,,,,2026
 ,7,18/03/2026,19:00,Bahia,Bragantino,,,,,,,2,0,,,,2026
-,7,18/03/2026,19:00,Palmeiras,Botafogo-RJ,,,,,,,2,1,,,,2026
+,7,18/03/2026,19:00,Palmeiras,Botafogo,,,,,,,2,1,,,,2026
 ,7,18/03/2026,19:30,Paranaense,Cruzeiro,,,,,,,2,1,,,,2026
-,7,18/03/2026,20:00,Atletico-MG,Sao Paulo,,,,,,,1,0,,,,2026
+,7,18/03/2026,20:00,Mineiro,Sao Paulo,,,,,,,1,0,,,,2026
 ,7,18/03/2026,20:00,Mirassol,Coritiba,,,,,,,0,1,,,,2026
 ,7,18/03/2026,21:30,Santos,Internacional,,,,,,,1,2,,,,2026
 ,7,18/03/2026,21:30,Vasco,Fluminense,,,,,,,3,2,,,,2026
 ,7,19/03/2026,19:00,Gremio,Vitoria,,,,,,,2,0,,,,2026
 ,7,19/03/2026,20:00,Flamengo,Clube do Remo,,,,,,,3,0,,,,2026
 ,7,19/03/2026,21:30,Chapecoense,Corinthians,,,,,,,0,0,,,,2026
-,8,21/03/2026,16:00,Bragantino,Botafogo-RJ,,,,,,,1,2,,,,2026
-,8,21/03/2026,18:30,Fluminense,Atletico-MG,,,,,,,1,0,,,,2026
+,8,21/03/2026,16:00,Bragantino,Botafogo,,,,,,,1,2,,,,2026
+,8,21/03/2026,18:30,Fluminense,Mineiro,,,,,,,1,0,,,,2026
 ,8,21/03/2026,21:00,Sao Paulo,Palmeiras,,,,,,,0,1,,,,2026
 ,8,22/03/2026,16:00,Paranaense,Coritiba,,,,,,,2,0,,,,2026
 ,8,22/03/2026,16:00,Cruzeiro,Santos,,,,,,,0,0,,,,2026
@@ -7674,22 +7674,22 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,8,22/03/2026,18:30,Internacional,Chapecoense,,,,,,,2,0,,,,2026
 ,8,22/03/2026,18:30,Vitoria,Mirassol,,,,,,,1,0,,,,2026
 ,8,22/03/2026,20:30,Corinthians,Flamengo,,,,,,,1,1,,,,2026
-,5,29/03/2026,19:30,Paranaense,Botafogo-RJ,,,,,,,4,1,,,,2026
-,9,01/04/2026,19:30,Botafogo-RJ,Mirassol,,,,,,,3,2,,,,2026
+,5,29/03/2026,19:30,Paranaense,Botafogo,,,,,,,4,1,,,,2026
+,9,01/04/2026,19:30,Botafogo,Mirassol,,,,,,,3,2,,,,2026
 ,9,01/04/2026,19:30,Internacional,Sao Paulo,,,,,,,1,1,,,,2026
 ,9,01/04/2026,20:00,Bahia,Paranaense,,,,,,,3,0,,,,2026
 ,9,01/04/2026,20:00,Cruzeiro,Vitoria,,,,,,,3,0,,,,2026
 ,9,01/04/2026,20:30,Coritiba,Vasco,,,,,,,1,1,,,,2026
 ,9,01/04/2026,21:30,Fluminense,Corinthians,,,,,,,3,1,,,,2026
-,9,02/04/2026,19:00,Chapecoense,Atletico-MG,,,,,,,0,4,,,,2026
+,9,02/04/2026,19:00,Chapecoense,Mineiro,,,,,,,0,4,,,,2026
 ,9,02/04/2026,19:00,Santos,Clube do Remo,,,,,,,2,0,,,,2026
 ,9,02/04/2026,21:30,Bragantino,Flamengo,,,,,,,3,0,,,,2026
 ,9,02/04/2026,21:30,Palmeiras,Gremio,,,,,,,2,1,,,,2026
 ,10,04/04/2026,18:30,Sao Paulo,Cruzeiro,,,,,,,4,1,,,,2026
 ,10,04/04/2026,20:30,Coritiba,Fluminense,,,,,,,1,1,,,,2026
-,10,04/04/2026,21:00,Vasco,Botafogo-RJ,,,,,,,1,2,,,,2026
+,10,04/04/2026,21:00,Vasco,Botafogo,,,,,,,1,2,,,,2026
 ,10,05/04/2026,16:00,Chapecoense,Vitoria,,,,,,,1,1,,,,2026
-,10,05/04/2026,17:30,Atletico-MG,Paranaense,,,,,,,2,1,,,,2026
+,10,05/04/2026,17:30,Mineiro,Paranaense,,,,,,,2,1,,,,2026
 ,10,05/04/2026,17:30,Flamengo,Santos,,,,,,,3,1,,,,2026
 ,10,05/04/2026,19:30,Bahia,Palmeiras,,,,,,,1,2,,,,2026
 ,10,05/04/2026,19:30,Corinthians,Internacional,,,,,,,0,1,,,,2026
@@ -7698,38 +7698,38 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,11,11/04/2026,16:30,Clube do Remo,Vasco,,,,,,,1,1,,,,2026
 ,11,11/04/2026,16:30,Vitoria,Sao Paulo,,,,,,,2,0,,,,2026
 ,11,11/04/2026,18:30,Mirassol,Bahia,,,,,,,1,2,,,,2026
-,11,11/04/2026,20:00,Santos,Atletico-MG,,,,,,,1,0,,,,2026
+,11,11/04/2026,20:00,Santos,Mineiro,,,,,,,1,0,,,,2026
 ,11,11/04/2026,20:30,Internacional,Gremio,,,,,,,0,0,,,,2026
 ,11,12/04/2026,11:00,Paranaense,Chapecoense,,,,,,,2,0,,,,2026
-,11,12/04/2026,16:00,Botafogo-RJ,Coritiba,,,,,,,2,2,,,,2026
+,11,12/04/2026,16:00,Botafogo,Coritiba,,,,,,,2,2,,,,2026
 ,11,12/04/2026,18:00,Fluminense,Flamengo,,,,,,,1,2,,,,2026
 ,11,12/04/2026,18:30,Corinthians,Palmeiras,,,,,,,0,0,,,,2026
 ,11,12/04/2026,18:30,Cruzeiro,Bragantino,,,,,,,2,1,,,,2026
-,12,18/04/2026,18:30,Chapecoense,Botafogo-RJ,,,,,,,1,4,,,,2026
+,12,18/04/2026,18:30,Chapecoense,Botafogo,,,,,,,1,4,,,,2026
 ,12,18/04/2026,18:30,Vasco,Sao Paulo,,,,,,,2,1,,,,2026
 ,12,18/04/2026,20:00,Vitoria,Corinthians,,,,,,,0,0,,,,2026
 ,12,18/04/2026,20:30,Cruzeiro,Gremio,,,,,,,2,0,,,,2026
 ,12,19/04/2026,11:00,Internacional,Mirassol,,,,,,,1,2,,,,2026
-,12,19/04/2026,16:00,Coritiba,Atletico-MG,,,,,,,2,0,,,,2026
+,12,19/04/2026,16:00,Coritiba,Mineiro,,,,,,,2,0,,,,2026
 ,12,19/04/2026,16:00,Santos,Fluminense,,,,,,,2,3,,,,2026
 ,12,19/04/2026,18:30,Bragantino,Clube do Remo,,,,,,,4,2,,,,2026
 ,12,19/04/2026,18:30,Palmeiras,Paranaense,,,,,,,1,0,,,,2026
 ,12,19/04/2026,19:30,Flamengo,Bahia,,,,,,,2,0,,,,2026
 ,13,25/04/2026,18:30,Bahia,Santos,,,,,,,2,2,,,,2026
-,13,25/04/2026,18:30,Botafogo-RJ,Internacional,,,,,,,2,2,,,,2026
+,13,25/04/2026,18:30,Botafogo,Internacional,,,,,,,2,2,,,,2026
 ,13,25/04/2026,18:30,Clube do Remo,Cruzeiro,,,,,,,0,1,,,,2026
 ,13,25/04/2026,21:00,Sao Paulo,Mirassol,,,,,,,1,0,,,,2026
 ,13,26/04/2026,16:00,Corinthians,Vasco,,,,,,,1,0,,,,2026
 ,13,26/04/2026,16:00,Gremio,Coritiba,,,,,,,1,0,,,,2026
 ,13,26/04/2026,18:30,Paranaense,Vitoria,,,,,,,3,1,,,,2026
 ,13,26/04/2026,18:30,Bragantino,Palmeiras,,,,,,,0,1,,,,2026
-,13,26/04/2026,20:30,Atletico-MG,Flamengo,,,,,,,0,4,,,,2026
+,13,26/04/2026,20:30,Mineiro,Flamengo,,,,,,,0,4,,,,2026
 ,13,26/04/2026,20:30,Fluminense,Chapecoense,,,,,,,2,1,,,,2026
-,14,02/05/2026,16:00,Botafogo-RJ,Clube do Remo,,,,,,,1,2,,,,2026
+,14,02/05/2026,16:00,Botafogo,Clube do Remo,,,,,,,1,2,,,,2026
 ,14,02/05/2026,18:30,Palmeiras,Santos,,,,,,,1,1,,,,2026
 ,14,02/05/2026,18:30,Vitoria,Coritiba,,,,,,,4,1,,,,2026
 ,14,02/05/2026,20:30,Paranaense,Gremio,,,,,,,0,0,,,,2026
-,14,02/05/2026,21:00,Cruzeiro,Atletico-MG,,,,,,,1,3,,,,2026
+,14,02/05/2026,21:00,Cruzeiro,Mineiro,,,,,,,1,3,,,,2026
 ,14,03/05/2026,16:00,Flamengo,Vasco,,,,,,,2,2,,,,2026
 ,14,03/05/2026,16:00,Sao Paulo,Bahia,,,,,,,2,2,,,,2026
 ,14,03/05/2026,18:30,Chapecoense,Bragantino,,,,,,,1,2,,,,2026
@@ -7738,64 +7738,64 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,15,09/05/2026,16:00,Coritiba,Internacional,,,,,,,2,2,,,,2026
 ,15,09/05/2026,18:00,Fluminense,Vitoria,,,,,,,2,2,,,,2026
 ,15,09/05/2026,21:00,Bahia,Cruzeiro,,,,,,,1,2,,,,2026
-,15,10/05/2026,16:00,Atletico-MG,Botafogo-RJ,,,,,,,1,1,,,,2026
+,15,10/05/2026,16:00,Mineiro,Botafogo,,,,,,,1,1,,,,2026
 ,15,10/05/2026,17:40,Clube do Remo,Palmeiras,,,,,,,1,1,,,,2026
 ,15,10/05/2026,18:30,Corinthians,Sao Paulo,,,,,,,3,2,,,,2026
 ,15,10/05/2026,18:30,Mirassol,Chapecoense,,,,,,,1,1,,,,2026
 ,15,10/05/2026,18:30,Santos,Bragantino,,,,,,,2,0,,,,2026
 ,15,10/05/2026,19:30,Gremio,Flamengo,,,,,,,0,1,,,,2026
 ,15,10/05/2026,20:30,Vasco,Paranaense,,,,,,,1,0,,,,2026
-,16,16/05/2026,18:30,Atletico-MG,Mirassol,,,,,,,3,1,,,,2026
+,16,16/05/2026,18:30,Mineiro,Mirassol,,,,,,,3,1,,,,2026
 ,16,16/05/2026,18:30,Internacional,Vasco,,,,,,,4,1,,,,2026
 ,16,16/05/2026,19:00,Fluminense,Sao Paulo,,,,,,,2,1,,,,2026
 ,16,16/05/2026,21:00,Palmeiras,Cruzeiro,,,,,,,1,1,,,,2026
 ,16,17/05/2026,11:00,Santos,Coritiba,,,,,,,0,3,,,,2026
 ,16,17/05/2026,16:00,Bahia,Gremio,,,,,,,1,1,,,,2026
-,16,17/05/2026,16:00,Botafogo-RJ,Corinthians,,,,,,,3,1,,,,2026
+,16,17/05/2026,16:00,Botafogo,Corinthians,,,,,,,3,1,,,,2026
 ,16,17/05/2026,18:30,Bragantino,Vitoria,,,,,,,2,0,,,,2026
 ,16,17/05/2026,18:30,Chapecoense,Clube do Remo,,,,,,,2,3,,,,2026
 ,16,17/05/2026,19:30,Paranaense,Flamengo,,,,,,,1,1,,,,2026
-,17,23/05/2026,17:00,Sao Paulo,Botafogo-RJ,,,,,,,1,1,,,,2026
+,17,23/05/2026,17:00,Sao Paulo,Botafogo,,,,,,,1,1,,,,2026
 ,17,23/05/2026,17:00,Vitoria,Internacional,,,,,,,2,0,,,,2026
 ,17,23/05/2026,19:00,Gremio,Santos,,,,,,,3,2,,,,2026
 ,17,23/05/2026,19:00,Mirassol,Fluminense,,,,,,,1,0,,,,2026
 ,17,23/05/2026,21:00,Flamengo,Palmeiras,,,,,,,0,3,,,,2026
 ,17,24/05/2026,16:00,Cruzeiro,Chapecoense,,,,,,,2,1,,,,2026
 ,17,24/05/2026,16:00,Clube do Remo,Paranaense,,,,,,,1,2,,,,2026
-,17,24/05/2026,18:30,Corinthians,Atletico-MG,,,,,,,1,0,,,,2026
+,17,24/05/2026,18:30,Corinthians,Mineiro,,,,,,,1,0,,,,2026
 ,17,24/05/2026,20:30,Vasco,Bragantino,,,,,,,0,3,,,,2026
 ,17,25/05/2026,20:00,Coritiba,Bahia,,,,,,,3,2,,,,2026
 ,18,30/05/2026,16:00,Paranaense,Mirassol,,,,,,,1,0,,,,2026
 ,18,30/05/2026,16:00,Flamengo,Coritiba,,,,,,,3,0,,,,2026
-,18,30/05/2026,17:30,Bahia,Botafogo-RJ,,,,,,,2,1,,,,2026
+,18,30/05/2026,17:30,Bahia,Botafogo,,,,,,,2,1,,,,2026
 ,18,30/05/2026,17:30,Gremio,Corinthians,,,,,,,1,3,,,,2026
 ,18,30/05/2026,20:00,Santos,Vitoria,,,,,,,3,1,,,,2026
 ,18,31/05/2026,11:00,Bragantino,Internacional,,,,,,,3,1,,,,2026
 ,18,31/05/2026,16:00,Palmeiras,Chapecoense,,,,,,,1,0,,,,2026
-,18,31/05/2026,16:00,Vasco,Atletico-MG,,,,,,,0,1,,,,2026
+,18,31/05/2026,16:00,Vasco,Mineiro,,,,,,,0,1,,,,2026
 ,18,31/05/2026,20:30,Cruzeiro,Fluminense,,,,,,,1,1,,,,2026
 ,18,31/05/2026,20:30,Clube do Remo,Sao Paulo,,,,,,,1,0,,,,2026
-,19,16/07/2026,19:30,Botafogo-RJ,Santos,,,,,,,2,1,,,,2026
+,19,16/07/2026,19:30,Botafogo,Santos,,,,,,,2,1,,,,2026
 ,19,16/07/2026,19:30,Vitoria,Vasco,,,,,,,1,0,,,,2026
 ,4,17/07/2026,19:30,Bahia,Chapecoense,,,,,,,2,0,,,,2026
 ,19,17/07/2026,20:00,Fluminense,Bragantino,,,,,,,1,1,,,,2026
 ,19,17/07/2026,20:00,Mirassol,Gremio,,,,,,,2,1,,,,2026
-,19,21/07/2026,19:30,Atletico-MG,Bahia,,,,,,,1,1,,,,2026
+,19,21/07/2026,19:30,Mineiro,Bahia,,,,,,,1,1,,,,2026
 ,19,22/07/2026,19:30,Coritiba,Palmeiras,,,,,,,1,3,,,,2026
 ,19,22/07/2026,21:30,Chapecoense,Flamengo,,,,,,,0,4,,,,2026
 ,19,22/07/2026,21:30,Internacional,Cruzeiro,,,,,,,1,2,,,,2026
 ,19,22/07/2026,21:30,Sao Paulo,Paranaense,,,,,,,1,2,,,,2026
-,4,23/07/2026,19:30,Botafogo-RJ,Vitoria,,,,,,,0,0,,,,2026
+,4,23/07/2026,19:30,Botafogo,Vitoria,,,,,,,0,0,,,,2026
 ,19,23/07/2026,19:30,Corinthians,Clube do Remo,,,,,,,3,0,,,,2026
 ,20,25/07/2026,18:30,Paranaense,Internacional,,,,,,,2,0,,,,2026
 ,20,25/07/2026,18:30,Santos,Chapecoense,,,,,,,2,2,,,,2026
 ,20,25/07/2026,20:30,Vasco,Mirassol,,,,,,,1,1,,,,2026
 ,20,26/07/2026,16:00,Bahia,Corinthians,,,,,,,1,1,,,,2026
-,20,26/07/2026,16:00,Cruzeiro,Botafogo-RJ,,,,,,,0,1,,,,2026
+,20,26/07/2026,16:00,Cruzeiro,Botafogo,,,,,,,0,1,,,,2026
 ,20,26/07/2026,18:30,Bragantino,Coritiba,,,,,,,0,0,,,,2026
 ,20,26/07/2026,18:30,Flamengo,Sao Paulo,,,,,,,1,1,,,,2026
 ,20,26/07/2026,18:30,Gremio,Fluminense,,,,,,,1,1,,,,2026
-,20,26/07/2026,19:30,Palmeiras,Atletico-MG,,,,,,,1,2,,,,2026
+,20,26/07/2026,19:30,Palmeiras,Mineiro,,,,,,,1,2,,,,2026
 ,20,26/07/2026,19:30,Clube do Remo,Vitoria,,,,,,,2,0,,,,2026
 ,21,28/07/2026,21:00,Chapecoense,Vasco,,,,,,,,,,,,2026
 ,21,29/07/2026,19:30,Internacional,Flamengo,,,,,,,1,1,,,,2026
@@ -7805,9 +7805,9 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,21,30/07/2026,19:30,Corinthians,Paranaense,,,,,,,0,0,,,,2026
 ,21,30/07/2026,21:30,Coritiba,Cruzeiro,,,,,,,0,1,,,,2026
 ,22,08/08/2026,16:00,Gremio,Sao Paulo,,,,,,,2,1,,,,2026
-,22,08/08/2026,18:30,Clube do Remo,Atletico-MG,,,,,,,2,2,,,,2026
+,22,08/08/2026,18:30,Clube do Remo,Mineiro,,,,,,,2,2,,,,2026
 ,22,08/08/2026,20:30,Coritiba,Chapecoense,,,,,,,2,1,,,,2026
-,22,08/08/2026,21:00,Botafogo-RJ,Fluminense,,,,,,,1,1,,,,2026
+,22,08/08/2026,21:00,Botafogo,Fluminense,,,,,,,1,1,,,,2026
 ,22,09/08/2026,11:00,Cruzeiro,Mirassol,,,,,,,3,1,,,,2026
 ,22,09/08/2026,16:00,Bahia,Vasco,,,,,,,0,0,,,,2026
 ,22,09/08/2026,16:00,Palmeiras,Internacional,,,,,,,0,0,,,,2026
@@ -7818,14 +7818,14 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,23,15/08/2026,18:30,Paranaense,Bragantino,,,,,,,1,1,,,,2026
 ,23,15/08/2026,21:00,Sao Paulo,Coritiba,,,,,,,1,1,,,,2026
 ,23,16/08/2026,11:00,Chapecoense,Bahia,,,,,,,3,3,,,,2026
-,23,16/08/2026,16:00,Atletico-MG,Gremio,,,,,,,3,0,,,,2026
+,23,16/08/2026,16:00,Mineiro,Gremio,,,,,,,3,0,,,,2026
 ,23,16/08/2026,16:00,Vasco,Santos,,,,,,,0,3,,,,2026
 ,23,16/08/2026,18:30,Mirassol,Flamengo,,,,,,,1,5,,,,2026
-,23,16/08/2026,18:30,Vitoria,Botafogo-RJ,,,,,,,1,0,,,,2026
+,23,16/08/2026,18:30,Vitoria,Botafogo,,,,,,,1,0,,,,2026
 ,23,16/08/2026,19:30,Corinthians,Cruzeiro,,,,,,,1,2,,,,2026
 ,23,17/08/2026,20:00,Internacional,Clube do Remo,,,,,,,1,1,,,,2026
 ,24,22/08/2026,16:00,Fluminense,Clube do Remo,,,,,,,2,1,,,,2026
-,24,22/08/2026,18:30,Internacional,Atletico-MG,,,,,,,0,0,,,,2026
+,24,22/08/2026,18:30,Internacional,Mineiro,,,,,,,0,0,,,,2026
 ,24,22/08/2026,20:30,Cruzeiro,Flamengo,,,,,,,2,1,,,,2026
 ,24,23/08/2026,16:00,Bragantino,Gremio,,,,,,,1,0,,,,2026
 ,24,23/08/2026,16:00,Palmeiras,Vasco,,,,,,,4,1,,,,2026
@@ -7833,41 +7833,41 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,24,23/08/2026,18:30,Chapecoense,Sao Paulo,,,,,,,1,0,,,,2026
 ,24,23/08/2026,18:30,Santos,Mirassol,,,,,,,1,1,,,,2026
 ,24,23/08/2026,19:30,Coritiba,Corinthians,,,,,,,2,1,,,,2026
-,24,24/08/2026,20:00,Botafogo-RJ,Paranaense,,,,,,,2,3,,,,2026
-,25,29/08/2026,18:30,Atletico-MG,Vitoria,,,,,,,2,1,,,,2026
+,24,24/08/2026,20:00,Botafogo,Paranaense,,,,,,,2,3,,,,2026
+,25,29/08/2026,18:30,Mineiro,Vitoria,,,,,,,2,1,,,,2026
 ,25,29/08/2026,20:00,Sao Paulo,Bragantino,,,,,,,2,1,,,,2026
 ,25,29/08/2026,21:20,Vasco,Cruzeiro,,,,,,,3,1,,,,2026
 ,25,30/08/2026,11:00,Paranaense,Fluminense,,,,,,,3,3,,,,2026
 ,25,30/08/2026,16:00,Corinthians,Santos,,,,,,,0,1,,,,2026
-,25,30/08/2026,16:00,Flamengo,Botafogo-RJ,,,,,,,3,0,,,,2026
+,25,30/08/2026,16:00,Flamengo,Botafogo,,,,,,,3,0,,,,2026
 ,25,30/08/2026,18:30,Gremio,Chapecoense,,,,,,,3,1,,,,2026
 ,25,30/08/2026,18:30,Mirassol,Palmeiras,,,,,,,1,1,,,,2026
 ,25,30/08/2026,19:30,Bahia,Internacional,,,,,,,3,2,,,,2026
 ,25,31/08/2026,20:00,Clube do Remo,Coritiba,,,,,,,2,3,,,,2026
 ,4,02/09/2026,19:30,Flamengo,Mirassol,,,,,,,2,0,,,,2026
 ,26,05/09/2026,16:00,Bragantino,Bahia,,,,,,,2,3,,,,2026
-,26,05/09/2026,18:30,Sao Paulo,Atletico-MG,,,,,,,2,0,,,,2026
+,26,05/09/2026,18:30,Sao Paulo,Mineiro,,,,,,,2,0,,,,2026
 ,26,05/09/2026,21:00,Fluminense,Vasco,,,,,,,1,0,,,,2026
 ,26,06/09/2026,11:00,Coritiba,Mirassol,,,,,,,1,2,,,,2026
 ,26,06/09/2026,16:00,Cruzeiro,Paranaense,,,,,,,3,1,,,,2026
 ,26,06/09/2026,16:00,Internacional,Santos,,,,,,,2,3,,,,2026
 ,26,06/09/2026,16:00,Clube do Remo,Flamengo,,,,,,,0,1,,,,2026
-,26,06/09/2026,18:30,Botafogo-RJ,Palmeiras,,,,,,,0,0,,,,2026
+,26,06/09/2026,18:30,Botafogo,Palmeiras,,,,,,,0,0,,,,2026
 ,26,06/09/2026,19:30,Corinthians,Chapecoense,,,,,,,1,2,,,,2026
 ,26,07/09/2026,20:00,Vitoria,Gremio,,,,,,,1,0,,,,2026
 ,27,11/09/2026,21:00,Coritiba,Paranaense,,,,,,,3,3,,,,2026
-,27,12/09/2026,16:00,Atletico-MG,Fluminense,,,,,,,3,1,,,,2026
+,27,12/09/2026,16:00,Mineiro,Fluminense,,,,,,,3,1,,,,2026
 ,27,12/09/2026,16:00,Gremio,Vasco,,,,,,,1,2,,,,2026
 ,27,12/09/2026,17:00,Chapecoense,Internacional,,,,,,,1,2,,,,2026
 ,27,12/09/2026,18:30,Palmeiras,Sao Paulo,,,,,,,2,0,,,,2026
-,27,12/09/2026,20:30,Botafogo-RJ,Bragantino,,,,,,,1,1,,,,2026
+,27,12/09/2026,20:30,Botafogo,Bragantino,,,,,,,1,1,,,,2026
 ,27,12/09/2026,21:00,Santos,Cruzeiro,,,,,,,2,1,,,,2026
 ,27,13/09/2026,16:00,Mirassol,Vitoria,,,,,,,2,2,,,,2026
 ,27,13/09/2026,17:30,Flamengo,Corinthians,,,,,,,2,1,,,,2026
 ,27,14/09/2026,20:00,Bahia,Clube do Remo,,,,,,,2,1,,,,2026
-,21,16/09/2026,19:30,Botafogo-RJ,Gremio,,,,,,,3,2,,,,2026
-,28,19/09/2026,16:00,Atletico-MG,Chapecoense,,,,,,,1,1,,,,2026
-,28,19/09/2026,17:00,Mirassol,Botafogo-RJ,,,,,,,2,0,,,,2026
+,21,16/09/2026,19:30,Botafogo,Gremio,,,,,,,3,2,,,,2026
+,28,19/09/2026,16:00,Mineiro,Chapecoense,,,,,,,1,1,,,,2026
+,28,19/09/2026,17:00,Mirassol,Botafogo,,,,,,,2,0,,,,2026
 ,28,19/09/2026,18:30,Clube do Remo,Santos,,,,,,,1,2,,,,2026
 ,28,19/09/2026,20:30,Vasco,Coritiba,,,,,,,5,0,,,,2026
 ,28,19/09/2026,21:00,Sao Paulo,Internacional,,,,,,,1,0,,,,2026
@@ -7877,30 +7877,30 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,28,20/09/2026,18:30,Flamengo,Bragantino,,,,,,,2,1,,,,2026
 ,28,20/09/2026,19:30,Paranaense,Bahia,,,,,,,2,1,,,,2026
 ,21,02/10/2026,20:00,Sao Paulo,Santos,,,,,,,1,2,,,,2026
-,21,03/10/2026,18:30,Atletico-MG,Bragantino,,,,,,,1,0,,,,2026
+,21,03/10/2026,18:30,Mineiro,Bragantino,,,,,,,1,0,,,,2026
 ,29,07/10/2026,19:30,Bragantino,Mirassol,,,,,,,1,1,,,,2026
 ,29,07/10/2026,19:30,Internacional,Corinthians,,,,,,,2,1,,,,2026
 ,29,07/10/2026,19:30,Clube do Remo,Gremio,,,,,,,1,1,,,,2026
 ,29,07/10/2026,20:00,Vitoria,Chapecoense,,,,,,,4,0,,,,2026
-,29,07/10/2026,20:30,Botafogo-RJ,Vasco,,,,,,,1,2,,,,2026
+,29,07/10/2026,20:30,Botafogo,Vasco,,,,,,,1,2,,,,2026
 ,29,07/10/2026,21:30,Cruzeiro,Sao Paulo,,,,,,,2,0,,,,2026
 ,29,08/10/2026,19:30,Santos,Flamengo,,,,,,,2,2,,,,2026
-,29,08/10/2026,20:00,Paranaense,Atletico-MG,,,,,,,2,2,,,,2026
+,29,08/10/2026,20:00,Paranaense,Mineiro,,,,,,,2,2,,,,2026
 ,29,08/10/2026,21:30,Fluminense,Coritiba,,,,,,,4,0,,,,2026
 ,29,08/10/2026,21:30,Palmeiras,Bahia,,,,,,,1,0,,,,2026
 ,30,10/10/2026,18:00,Vasco,Clube do Remo,,,,,,,0,0,,,,2026
 ,30,10/10/2026,21:00,Sao Paulo,Vitoria,,,,,,,2,1,,,,2026
-,30,11/10/2026,16:00,Atletico-MG,Santos,,,,,,,2,1,,,,2026
+,30,11/10/2026,16:00,Mineiro,Santos,,,,,,,2,1,,,,2026
 ,30,11/10/2026,17:30,Flamengo,Fluminense,,,,,,,1,0,,,,2026
 ,30,11/10/2026,17:30,Gremio,Internacional,,,,,,,1,1,,,,2026
 ,30,11/10/2026,17:30,Palmeiras,Corinthians,,,,,,,4,1,,,,2026
 ,30,11/10/2026,19:30,Bahia,Mirassol,,,,,,,1,0,,,,2026
-,30,12/10/2026,16:00,Coritiba,Botafogo-RJ,,,,,,,1,1,,,,2026
+,30,12/10/2026,16:00,Coritiba,Botafogo,,,,,,,1,1,,,,2026
 ,30,12/10/2026,19:30,Chapecoense,Paranaense,,,,,,,1,4,,,,2026
 ,30,12/10/2026,21:00,Bragantino,Cruzeiro,,,,,,,4,2,,,,2026
 ,31,16/10/2026,20:00,Mirassol,Internacional,,,,,,,2,0,,,,2026
-,31,17/10/2026,18:00,Botafogo-RJ,Chapecoense,,,,,,,1,0,,,,2026
-,31,17/10/2026,18:30,Atletico-MG,Coritiba,,,,,,,1,0,,,,2026
+,31,17/10/2026,18:00,Botafogo,Chapecoense,,,,,,,1,0,,,,2026
+,31,17/10/2026,18:30,Mineiro,Coritiba,,,,,,,1,0,,,,2026
 ,31,17/10/2026,19:30,Paranaense,Palmeiras,,,,,,,0,2,,,,2026
 ,31,17/10/2026,21:00,Sao Paulo,Vasco,,,,,,,1,0,,,,2026
 ,31,18/10/2026,16:00,Fluminense,Santos,,,,,,,1,2,,,,2026
@@ -7909,7 +7909,7 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,31,18/10/2026,19:30,Clube do Remo,Bragantino,,,,,,,1,1,,,,2026
 ,31,19/10/2026,20:00,Corinthians,Vitoria,,,,,,,1,1,,,,2026
 ,32,23/10/2026,20:00,Cruzeiro,Clube do Remo,,,,,,,1,0,,,,2026
-,32,24/10/2026,16:30,Internacional,Botafogo-RJ,,,,,,,3,0,,,,2026
+,32,24/10/2026,16:30,Internacional,Botafogo,,,,,,,3,0,,,,2026
 ,32,24/10/2026,16:30,Mirassol,Sao Paulo,,,,,,,1,1,,,,2026
 ,32,24/10/2026,16:30,Vitoria,Paranaense,,,,,,,1,1,,,,2026
 ,32,24/10/2026,18:30,Palmeiras,Bragantino,,,,,,,2,0,,,,2026
@@ -7917,13 +7917,13 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,32,24/10/2026,19:30,Chapecoense,Fluminense,,,,,,,2,1,,,,2026
 ,32,24/10/2026,22:00,Santos,Bahia,,,,,,,1,1,,,,2026
 ,32,26/10/2026,19:30,Coritiba,Gremio,,,,,,,0,1,,,,2026
-,32,26/10/2026,20:00,Flamengo,Atletico-MG,,,,,,,3,2,,,,2026
+,32,26/10/2026,20:00,Flamengo,Mineiro,,,,,,,3,2,,,,2026
 ,33,28/10/2026,19:30,Bragantino,Chapecoense,,,,,,,3,0,,,,2026
 ,33,28/10/2026,19:30,Fluminense,Internacional,,,,,,,2,1,,,,2026
 ,33,28/10/2026,19:30,Santos,Palmeiras,,,,,,,0,0,,,,2026
 ,33,28/10/2026,21:30,Bahia,Sao Paulo,,,,,,,3,2,,,,2026
-,33,28/10/2026,21:30,Clube do Remo,Botafogo-RJ,,,,,,,2,1,,,,2026
-,33,29/10/2026,19:30,Atletico-MG,Cruzeiro,,,,,,,0,1,,,,2026
+,33,28/10/2026,21:30,Clube do Remo,Botafogo,,,,,,,2,1,,,,2026
+,33,29/10/2026,19:30,Mineiro,Cruzeiro,,,,,,,0,1,,,,2026
 ,33,29/10/2026,20:00,Vasco,Flamengo,,,,,,,1,4,,,,2026
 ,33,29/10/2026,21:30,Gremio,Paranaense,,,,,,,2,0,,,,2026
 ,33,30/10/2026,20:00,Corinthians,Mirassol,,,,,,,,,,,,2026
@@ -7933,17 +7933,17 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,34,03/11/2026,21:30,Internacional,Coritiba,,,,,,,,,,,,2026
 ,34,04/11/2026,19:30,Paranaense,Vasco,,,,,,,,,,,,2026
 ,34,04/11/2026,19:30,Flamengo,Gremio,,,,,,,,,,,,2026
-,34,04/11/2026,21:30,Botafogo-RJ,Atletico-MG,,,,,,,,,,,,2026
+,34,04/11/2026,21:30,Botafogo,Mineiro,,,,,,,,,,,,2026
 ,34,04/11/2026,21:30,Sao Paulo,Corinthians,,,,,,,,,,,,2026
 ,34,05/11/2026,19:30,Palmeiras,Clube do Remo,,,,,,,,,,,,2026
 ,34,05/11/2026,21:30,Cruzeiro,Bahia,,,,,,,,,,,,2026
 ,34,06/11/2026,20:00,Vitoria,Fluminense,,,,,,,,,,,,2026
-,35,14/11/2026,18:30,Mirassol,Atletico-MG,,,,,,,,,,,,2026
+,35,14/11/2026,18:30,Mirassol,Mineiro,,,,,,,,,,,,2026
 ,35,18/11/2026,19:30,Coritiba,Santos,,,,,,,,,,,,2026
 ,35,18/11/2026,20:00,Clube do Remo,Chapecoense,,,,,,,,,,,,2026
 ,35,18/11/2026,20:30,Cruzeiro,Palmeiras,,,,,,,,,,,,2026
 ,35,18/11/2026,20:30,Flamengo,Paranaense,,,,,,,,,,,,2026
-,35,18/11/2026,21:30,Corinthians,Botafogo-RJ,,,,,,,,,,,,2026
+,35,18/11/2026,21:30,Corinthians,Botafogo,,,,,,,,,,,,2026
 ,35,18/11/2026,21:30,Gremio,Bahia,,,,,,,,,,,,2026
 ,35,19/11/2026,19:30,Vasco,Internacional,,,,,,,,,,,,2026
 ,35,19/11/2026,19:30,Vitoria,Bragantino,,,,,,,,,,,,2026
@@ -7955,11 +7955,11 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,36,22/11/2026,18:30,Fluminense,Mirassol,,,,,,,,,,,,2026
 ,36,22/11/2026,19:30,Bragantino,Vasco,,,,,,,,,,,,2026
 ,36,23/11/2026,19:30,Internacional,Vitoria,,,,,,,,,,,,2026
-,36,23/11/2026,20:00,Botafogo-RJ,Sao Paulo,,,,,,,,,,,,2026
+,36,23/11/2026,20:00,Botafogo,Sao Paulo,,,,,,,,,,,,2026
 ,36,23/11/2026,21:00,Santos,Gremio,,,,,,,,,,,,2026
-,36,25/11/2026,20:00,Atletico-MG,Corinthians,,,,,,,,,,,,2026
-,37,27/11/2026,21:00,Atletico-MG,Vasco,,,,,,,,,,,,2026
-,37,27/11/2026,21:00,Botafogo-RJ,Bahia,,,,,,,,,,,,2026
+,36,25/11/2026,20:00,Mineiro,Corinthians,,,,,,,,,,,,2026
+,37,27/11/2026,21:00,Mineiro,Vasco,,,,,,,,,,,,2026
+,37,27/11/2026,21:00,Botafogo,Bahia,,,,,,,,,,,,2026
 ,37,27/11/2026,21:00,Chapecoense,Palmeiras,,,,,,,,,,,,2026
 ,37,27/11/2026,21:00,Corinthians,Gremio,,,,,,,,,,,,2026
 ,37,27/11/2026,21:00,Coritiba,Flamengo,,,,,,,,,,,,2026
@@ -7969,12 +7969,12 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,37,27/11/2026,21:00,Sao Paulo,Clube do Remo,,,,,,,,,,,,2026
 ,37,27/11/2026,21:00,Vitoria,Santos,,,,,,,,,,,,2026
 ,38,01/12/2026,21:00,Paranaense,Sao Paulo,,,,,,,,,,,,2026
-,38,01/12/2026,21:00,Bahia,Atletico-MG,,,,,,,,,,,,2026
+,38,01/12/2026,21:00,Bahia,Mineiro,,,,,,,,,,,,2026
 ,38,01/12/2026,21:00,Bragantino,Fluminense,,,,,,,,,,,,2026
 ,38,01/12/2026,21:00,Cruzeiro,Internacional,,,,,,,,,,,,2026
 ,38,01/12/2026,21:00,Flamengo,Chapecoense,,,,,,,,,,,,2026
 ,38,01/12/2026,21:00,Gremio,Mirassol,,,,,,,,,,,,2026
 ,38,01/12/2026,21:00,Palmeiras,Coritiba,,,,,,,,,,,,2026
 ,38,01/12/2026,21:00,Clube do Remo,Corinthians,,,,,,,,,,,,2026
-,38,01/12/2026,21:00,Santos,Botafogo-RJ,,,,,,,,,,,,2026
+,38,01/12/2026,21:00,Santos,Botafogo,,,,,,,,,,,,2026
 ,38,01/12/2026,21:00,Vasco,Vitoria,,,,,,,,,,,,2026
