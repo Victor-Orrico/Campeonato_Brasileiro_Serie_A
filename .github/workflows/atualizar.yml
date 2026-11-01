@@ -1,7 +1,7 @@
 name: Atualizar jogos
 on:
   schedule:
-    - cron: "0 6 * * *"   # todo dia, 03:00 no horário de Brasília
+    - cron: "17 7 * * *"   # todo dia, 04:17 no horário de Brasília
   workflow_dispatch: {}    # permite rodar manualmente na aba Actions
 permissions:
   contents: write
