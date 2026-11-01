@@ -7797,7 +7797,6 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,20,26/07/2026,18:30,Gremio,Fluminense,,,,,,,1,1,,,,2026
 ,20,26/07/2026,19:30,Palmeiras,Atletico-MG,,,,,,,1,2,,,,2026
 ,20,26/07/2026,19:30,Clube do Remo,Vitoria,,,,,,,2,0,,,,2026
-,21,28/07/2026,21:00,Chapecoense,Vasco,,,,,,,,,,,,2026
 ,21,29/07/2026,19:30,Internacional,Flamengo,,,,,,,1,1,,,,2026
 ,21,29/07/2026,19:30,Mirassol,Clube do Remo,,,,,,,2,1,,,,2026
 ,21,29/07/2026,21:30,Fluminense,Bahia,,,,,,,0,0,,,,2026
@@ -7927,7 +7926,7 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,33,29/10/2026,20:00,Vasco,Flamengo,,,,,,,1,4,,,,2026
 ,33,29/10/2026,21:30,Gremio,Athletico-PR,,,,,,,2,0,,,,2026
 ,33,30/10/2026,20:00,Corinthians,Mirassol,,,,,,,2,0,,,,2026
-,33,31/10/2026,16:00,Coritiba,Vitoria,,,,,,,,,,,,2026
+,33,31/10/2026,16:00,Coritiba,Vitoria,,,,,,,2,0,,,,2026
 ,34,02/11/2026,20:00,Bragantino,Santos,,,,,,,,,,,,2026
 ,34,03/11/2026,19:30,Chapecoense,Mirassol,,,,,,,,,,,,2026
 ,34,03/11/2026,21:30,Internacional,Coritiba,,,,,,,,,,,,2026
@@ -7939,6 +7938,7 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,34,05/11/2026,21:30,Cruzeiro,Bahia,,,,,,,,,,,,2026
 ,34,06/11/2026,20:00,Vitoria,Fluminense,,,,,,,,,,,,2026
 ,35,14/11/2026,18:30,Mirassol,Atletico-MG,,,,,,,,,,,,2026
+,21,14/11/2026,20:30,Chapecoense,Vasco,,,,,,,,,,,,2026
 ,35,18/11/2026,19:30,Coritiba,Santos,,,,,,,,,,,,2026
 ,35,18/11/2026,20:00,Clube do Remo,Chapecoense,,,,,,,,,,,,2026
 ,35,18/11/2026,20:30,Cruzeiro,Palmeiras,,,,,,,,,,,,2026
