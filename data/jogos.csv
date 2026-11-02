@@ -5586,118 +5586,118 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 7153,27,27/12/2020,18:15,Palmeiras,Bragantino,4-2-3-1,4-2-3-1,A. Moreira Ferreira,M. Nogueira Barbieri,Palmeiras,Allianz Parque,1,0,SP,SP,,2020
 7154,27,27/12/2020,18:16,Santos,Ceara,4-3-3,4-2-3-1,A. Stival,A. Ferreira,-,Estádio Urbano Caldeira,1,1,SP,CE,,2020
 7155,27,27/12/2020,20:30,Gremio,Atletico-GO,4-2-3-1,4-4-2,Renato Gaúcho,M. Ribeiro Cabo,Gremio,Arena do Grêmio,2,1,RS,GO,,2020
-7156,28,06/01/2021,19:15,Gremio,Bahia,4-2-3-1,4-1-4-1,Renato Gaúcho,L. Cavalcanti,Gremio,Arena do Grêmio,2,1,RS,BA,,2021
-7157,28,06/01/2021,19:15,Botafogo,Athletico-PR,4-3-3,4-4-2,E. de Souza Barroca,P. Autuori de Mello,Athletico-PR,Estádio Nilton Santos,0,2,RJ,PR,,2021
-7159,28,06/01/2021,20:30,Sport,Fortaleza,4-2-3-1,4-2-3-1,J. Ribeiro Ventura,M. Oliveira Chamusca,Sport,Adelmar da Costa Carvalho,1,0,PE,CE,,2021
-7158,28,06/01/2021,20:31,Coritiba,Goias,4-3-3,5-3-2,J. Bertagnoli,G. Ramos da Silva,Goias, Couto Pereira,1,2,PR,GO,,2021
-7160,28,06/01/2021,21:30,Flamengo,Fluminense,4-4-2,4-2-3-1,R. Ceni,A. dos Santos Ferraz,Fluminense, Maracanã,1,2,RJ,RJ,,2021
-7161,28,06/01/2021,21:30,Bragantino,Sao Paulo,4-1-4-1,4-4-2,M. Nogueira Barbieri,F. Diniz Silva,Bragantino,Nabizão,4,2,SP,SP,,2021
-7162,28,07/01/2021,19:00,Ceara,Internacional,4-2-3-1,4-2-3-1,A. Ferreira,A. da Silva Braga,Internacional,Arena Castelão,0,2,CE,RS,,2021
-7163,28,07/01/2021,21:00,Atletico-GO,Vasco,4-2-3-1,4-1-4-1,M. Ribeiro Cabo,V. Luxemburgo da Silva,-,Estádio Antônio Accioly,0,0,GO,RJ,,2021
-7167,29,09/01/2021,19:00,Coritiba,Athletico-PR,4-3-3,4-2-3-1,J. Bertagnoli,P. Autuori de Mello,-, Couto Pereira,0,0,PR,PR,,2021
-7166,29,09/01/2021,19:01,Sport,Palmeiras,4-2-3-1,3-4-2-1,J. Ribeiro Ventura,A. Moreira Ferreira,Palmeiras,Adelmar da Costa Carvalho,0,1,PE,SP,,2021
-7168,29,09/01/2021,21:00,Fortaleza,Gremio,4-2-3-1,4-2-3-1,E. Alves Moreira,Renato Gaúcho,-,Arena Castelão,0,0,CE,RS,,2021
-7169,29,10/01/2021,16:00,Sao Paulo,Santos,4-4-2,4-1-4-1,F. Diniz Silva,A. Stival,Santos, Morumbi,0,1,SP,SP,,2021
-7170,29,10/01/2021,16:00,Flamengo,Ceara,4-4-2,4-2-3-1,R. Ceni,A. Ferreira,Ceara, Maracanã,0,2,RJ,CE,,2021
-7171,29,10/01/2021,18:14,Atletico-GO,Bahia,4-2-3-1,4-1-4-1,M. Ribeiro Cabo,L. Cavalcanti,-,Estádio Antônio Accioly,1,1,GO,BA,,2021
-7172,29,10/01/2021,18:15,Internacional,Goias,4-2-3-1,5-3-2,A. da Silva Braga,A. César,Internacional,Estádio José Pinheiro Borda,1,0,RS,GO,,2021
-7173,29,10/01/2021,20:30,Vasco,Botafogo,4-1-4-1,4-2-3-1,V. Luxemburgo da Silva,E. de Souza Barroca,Vasco,Estádio Vasco da Gama,3,0,RJ,RJ,,2021
-7174,29,11/01/2021,20:01,Bragantino,Atletico-MG,4-3-3,4-3-3,M. Nogueira Barbieri,J. Sampaoli Moya,-,Nabizão,2,2,SP,MG,,2021
-7175,29,13/01/2021,21:30,Corinthians,Fluminense,4-2-3-1,4-3-3,V. Carmo Mancini,A. dos Santos Ferraz,Corinthians,Neo Química Arena,5,0,SP,RJ,,2021
-7176,30,15/01/2021,21:30,Palmeiras,Gremio,4-2-3-1,4-2-3-1,A. Moreira Ferreira,Renato Gaúcho,-,Allianz Parque,1,1,SP,RS,,2021
-7177,30,16/01/2021,19:00,Fluminense,Sport,4-2-3-1,4-1-4-1,M. de Oliveira,J. Ribeiro Ventura,Fluminense,Estádio Nilton Santos,1,0,RJ,PE,,2021
-7178,30,16/01/2021,20:59,Vasco,Coritiba,4-1-4-1,4-3-3,V. Luxemburgo da Silva,J. Bertagnoli,Coritiba,Estádio Vasco da Gama,0,1,RJ,PR,,2021
-7179,30,17/01/2021,15:59,Athletico-PR,Sao Paulo,4-2-3-1,4-4-2,P. Autuori de Mello,F. Diniz Silva,-,Estádio Joaquim Américo Guimarães,1,1,PR,SP,,2021
-7180,30,17/01/2021,15:59,Santos,Botafogo,4-2-3-1,4-2-3-1,A. Stival,E. de Souza Barroca,Santos,Estádio Urbano Caldeira,2,1,SP,RJ,,2021
-7181,30,17/01/2021,18:15,Atletico-MG,Atletico-GO,4-3-3,4-2-3-1,J. Sampaoli Moya,M. Ribeiro Cabo,Atletico-MG, Mineirão,3,1,MG,GO,,2021
-7182,30,17/01/2021,20:30,Ceara,Bragantino,4-2-3-1,4-3-3,A. Faganello,M. Nogueira Barbieri,Bragantino,Arena Castelão,1,2,CE,SP,,2021
-7183,30,17/01/2021,20:31,Internacional,Fortaleza,4-2-3-1,4-2-3-1,A. da Silva Braga,E. Alves Moreira,Internacional,Estádio José Pinheiro Borda,4,2,RS,CE,,2021
-7164,28,18/01/2021,19:00,Palmeiras,Corinthians,4-1-4-1,4-2-3-1,A. Moreira Ferreira,V. Carmo Mancini,Palmeiras,Allianz Parque,4,0,SP,SP,,2021
-7184,30,18/01/2021,20:00,Goias,Flamengo,3-5-2,4-4-2,G. Ramos da Silva,R. Ceni,Flamengo,Estádio da Serrinha,0,3,GO,RJ,,2021
-7186,31,20/01/2021,17:00,Botafogo,Atletico-GO,4-2-3-1,4-2-3-1,E. de Souza Barroca,M. Ribeiro Cabo,Atletico-GO,Estádio Nilton Santos,1,3,RJ,GO,,2021
-7187,31,20/01/2021,17:59,Bahia,Athletico-PR,4-2-3-1,4-2-3-1,L. Cavalcanti,P. Autuori de Mello,Bahia,Itaipava Arena Fonte Nova,1,0,BA,PR,,2021
-7188,31,20/01/2021,19:15,Gremio,Atletico-MG,4-2-3-1,4-3-3,Renato Gaúcho,J. Sampaoli Moya,-,Arena do Grêmio,1,1,RS,MG,,2021
-7189,31,20/01/2021,20:30,Coritiba,Fluminense,4-2-3-1,4-2-3-1,J. Bertagnoli,M. de Oliveira,-, Couto Pereira,3,3,PR,RJ,,2021
-7191,31,20/01/2021,21:29,Bragantino,Vasco,4-3-3,4-1-4-1,M. Nogueira Barbieri,V. Luxemburgo da Silva,Bragantino,Nabizão,4,1,SP,RJ,,2021
-7190,31,20/01/2021,21:30,Sao Paulo,Internacional,4-4-2,4-1-4-1,F. Diniz Silva,A. da Silva Braga,Internacional, Morumbi,1,5,SP,RS,,2021
-7192,31,21/01/2021,19:00,Flamengo,Palmeiras,4-4-2,4-1-4-1,R. Ceni,A. Moreira Ferreira,Flamengo,Estádio Nacional de Brasília,2,0,RJ,SP,,2021
-7193,31,21/01/2021,19:00,Fortaleza,Santos,4-2-3-1,4-1-4-1,E. Alves Moreira,A. Stival,Fortaleza,Arena Castelão,2,0,CE,SP,,2021
-7194,31,21/01/2021,19:00,Goias,Ceara,3-1-4-2,4-2-3-1,G. Ramos da Silva,A. Ferreira,Ceara,Estádio da Serrinha,0,4,GO,CE,,2021
-7195,31,21/01/2021,21:00,Corinthians,Sport,4-2-3-1,4-2-3-1,V. Carmo Mancini,J. Ribeiro Ventura,Corinthians,Neo Química Arena,3,0,SP,PE,,2021
-7196,32,23/01/2021,19:00,Sao Paulo,Coritiba,4-4-2,4-3-3,F. Diniz Silva,J. Bertagnoli,-, Morumbi,1,1,SP,PR,,2021
-7197,32,23/01/2021,21:00,Vasco,Atletico-MG,4-2-3-1,3-1-4-2,V. Luxemburgo da Silva,J. Sampaoli Moya,Vasco,Estádio Vasco da Gama,3,2,RJ,MG,,2021
-7198,32,24/01/2021,16:00,Internacional,Gremio,4-1-4-1,4-1-4-1,A. da Silva Braga,Renato Gaúcho,Internacional,Estádio José Pinheiro Borda,2,1,RS,RS,,2021
-7200,32,24/01/2021,16:00,Ceara,Palmeiras,4-2-3-1,4-2-3-1,A. Ferreira,A. Moreira Ferreira,Ceara,Arena Castelão,2,1,CE,SP,,2021
-7199,32,24/01/2021,16:01,Athletico-PR,Flamengo,4-1-4-1,4-4-2,P. Autuori de Mello,R. Ceni,Athletico-PR,Estádio Joaquim Américo Guimarães,2,1,PR,RJ,,2021
-7202,32,24/01/2021,18:15,Sport,Bahia,4-2-3-1,4-2-3-1,J. Ribeiro Ventura,L. Cavalcanti,Sport,Adelmar da Costa Carvalho,2,0,PE,BA,,2021
-7203,32,24/01/2021,18:15,Santos,Goias,4-3-3,5-3-2,A. Stival,A. César,Goias,Estádio Urbano Caldeira,3,4,SP,GO,,2021
-7201,32,24/01/2021,18:16,Atletico-GO,Fortaleza,4-2-3-1,4-2-3-1,M. Ribeiro Cabo,E. Alves Moreira,Atletico-GO,Estádio Antônio Accioly,2,0,GO,CE,,2021
-7204,32,24/01/2021,20:30,Fluminense,Botafogo,4-2-3-1,4-1-4-1,M. de Oliveira,E. de Souza Barroca,Fluminense,Estádio Vasco da Gama,2,0,RJ,RJ,,2021
-7205,32,25/01/2021,20:00,Corinthians,Bragantino,4-2-3-1,4-4-2,V. Carmo Mancini,M. Nogueira Barbieri,Bragantino,Neo Química Arena,0,2,SP,SP,,2021
-6895,1,26/01/2021,20:00,Palmeiras,Vasco,4-1-4-1,4-2-3-1,A. Moreira Ferreira,V. Luxemburgo da Silva,-,Allianz Parque,1,1,SP,RJ,,2021
-7165,28,26/01/2021,19:59,Atletico-MG,Santos,4-2-3-1,4-1-4-1,J. Sampaoli Moya,A. Stival,Atletico-MG, Mineirão,2,0,MG,SP,,2021
-7115,23,28/01/2021,20:00,Gremio,Flamengo,4-2-3-1,4-2-3-1,Renato Gaúcho,R. Ceni,Flamengo,Arena do Grêmio,2,4,RS,RJ,,2021
-7185,30,28/01/2021,18:59,Bahia,Corinthians,4-2-3-1,4-2-3-1,L. Cavalcanti,V. Carmo Mancini,Bahia,Itaipava Arena Fonte Nova,2,1,BA,SP,,2021
-7208,33,31/01/2021,15:59,Atletico-GO,Sao Paulo,4-2-3-1,4-4-2,M. Ribeiro Cabo,F. Diniz Silva,Atletico-GO,Estádio Antônio Accioly,2,1,GO,SP,,2021
-7206,33,31/01/2021,16:00,Vasco,Bahia,4-3-3,4-2-3-1,V. Luxemburgo da Silva,L. Cavalcanti,-,Estádio Vasco da Gama,0,0,RJ,BA,,2021
-7207,33,31/01/2021,16:00,Ceara,Athletico-PR,4-2-3-1,4-4-2,A. Ferreira,P. Autuori de Mello,Athletico-PR,Arena Castelão,0,2,CE,PR,,2021
-7209,33,31/01/2021,16:01,Coritiba,Gremio,4-1-4-1,4-2-3-1,G. Morínigo,Renato Gaúcho,-, Couto Pereira,1,1,PR,RS,,2021
-7210,33,31/01/2021,17:00,Atletico-MG,Fortaleza,4-2-3-1,5-4-1,J. Sampaoli Moya,L. Porto Siqueira,Atletico-MG, Mineirão,2,0,MG,CE,,2021
-7211,33,31/01/2021,18:15,Internacional,Bragantino,4-1-4-1,4-3-3,A. da Silva Braga,M. Nogueira Barbieri,Internacional,Estádio José Pinheiro Borda,2,1,RS,SP,,2021
-7212,33,31/01/2021,20:30,Fluminense,Goias,4-2-3-1,4-3-3,M. de Oliveira,G. Ramos da Silva,Fluminense,Estádio Nilton Santos,3,0,RJ,GO,,2021
-7213,33,01/02/2021,19:59,Sport,Flamengo,4-2-3-1,4-4-2,J. Ribeiro Ventura,R. Ceni,Flamengo,Adelmar da Costa Carvalho,0,3,PE,RJ,,2021
-7214,33,02/02/2021,16:00,Palmeiras,Botafogo,4-2-3-1,4-4-2,A. Moreira Ferreira,E. de Souza Barroca,-,Allianz Parque,1,1,SP,RJ,,2021
-7216,34,03/02/2021,15:59,Gremio,Santos,4-2-3-1,4-1-4-1,Renato Gaúcho,A. Stival,-,Arena do Grêmio,3,3,RS,SP,,2021
-7217,34,03/02/2021,19:15,Bragantino,Atletico-GO,4-4-2,4-2-3-1,M. Nogueira Barbieri,M. Ribeiro Cabo,Bragantino,Nabizão,2,0,SP,GO,,2021
-7218,34,03/02/2021,21:30,Corinthians,Ceara,4-2-3-1,4-2-3-1,V. Carmo Mancini,A. Ferreira,Corinthians,Neo Química Arena,2,1,SP,CE,,2021
-7219,34,03/02/2021,21:30,Goias,Atletico-MG,5-3-2,3-5-2,G. Ramos da Silva,J. Sampaoli Moya,Goias,Estádio da Serrinha,1,0,GO,MG,,2021
-7220,34,03/02/2021,21:30,Bahia,Fluminense,4-1-4-1,4-2-3-1,L. Cavalcanti,M. de Oliveira,Fluminense,Itaipava Arena Fonte Nova,0,1,BA,RJ,,2021
-7221,34,04/02/2021,18:30,Fortaleza,Coritiba,4-2-3-1,5-4-1,E. Alves Moreira,G. Morínigo,Fortaleza,Arena Castelão,3,1,CE,PR,,2021
-7222,34,04/02/2021,20:59,Flamengo,Vasco,4-4-2,4-1-4-1,R. Ceni,V. Luxemburgo da Silva,Flamengo, Maracanã,2,0,RJ,RJ,,2021
-7223,34,04/02/2021,21:00,Athletico-PR,Internacional,4-2-2-2,4-1-4-1,P. Autuori de Mello,A. da Silva Braga,-,Estádio Joaquim Américo Guimarães,0,0,PR,RS,,2021
-7224,34,05/02/2021,20:00,Botafogo,Sport,4-4-2,4-4-2,E. de Souza Barroca,J. Ribeiro Ventura,Sport,Estádio Nilton Santos,0,1,RJ,PE,,2021
-7226,35,06/02/2021,19:00,Bahia,Goias,4-3-3,3-5-2,L. Cavalcanti,A. César,-,Itaipava Arena Fonte Nova,3,3,BA,GO,,2021
-7227,35,06/02/2021,21:00,Atletico-GO,Santos,4-2-3-1,4-2-3-1,M. Ribeiro Cabo,A. Stival,-,Estádio Antônio Accioly,1,1,GO,SP,,2021
-7228,35,07/02/2021,20:30,Bragantino,Flamengo,4-3-3,4-4-2,M. Nogueira Barbieri,R. Ceni,-,Nabizão,1,1,SP,RJ,,2021
-7229,35,08/02/2021,20:00,Botafogo,Gremio,4-4-2,4-2-3-1,L. Flávio,Renato Gaúcho,Gremio,Estádio Nilton Santos,2,5,RJ,RS,,2021
-7230,35,10/02/2021,19:00,Internacional,Sport,4-1-4-1,3-4-2-1,A. da Silva Braga,J. Ribeiro Ventura,Sport,Estádio José Pinheiro Borda,1,2,RS,PE,,2021
-7231,35,10/02/2021,19:15,Fortaleza,Vasco,4-2-3-1,4-2-3-1,E. Alves Moreira,V. Luxemburgo da Silva,Fortaleza,Arena Castelão,3,0,CE,RJ,,2021
-7232,35,10/02/2021,21:01,Sao Paulo,Ceara,4-4-2,4-2-3-1,M. Vizolli,A. Ferreira,-, Morumbi,1,1,SP,CE,,2021
-7233,35,10/02/2021,21:30,Fluminense,Atletico-MG,4-2-3-1,3-4-3,M. de Oliveira,J. Sampaoli Moya,-, Maracanã,0,0,RJ,MG,,2021
-7234,35,10/02/2021,21:30,Corinthians,Athletico-PR,4-2-3-1,4-2-2-2,V. Carmo Mancini,P. Autuori de Mello,-,Neo Química Arena,3,3,SP,PR,,2021
-7236,36,13/02/2021,17:00,Goias,Botafogo,4-4-2,3-5-2,A. César,L. Flávio,Goias,Estádio da Serrinha,2,0,GO,RJ,,2021
-7237,36,13/02/2021,19:00,Atletico-MG,Bahia,3-4-3,5-3-2,J. Sampaoli Moya,L. Cavalcanti,-, Mineirão,1,1,MG,BA,,2021
-7238,36,13/02/2021,19:00,Santos,Coritiba,4-3-3,4-4-2,A. Stival,G. Morínigo,Santos,Estádio Urbano Caldeira,2,0,SP,PR,,2021
-7239,36,14/02/2021,16:00,Flamengo,Corinthians,4-4-2,4-2-3-1,R. Ceni,V. Carmo Mancini,Flamengo, Maracanã,2,1,RJ,SP,,2021
-7240,36,14/02/2021,16:00,Vasco,Internacional,4-2-3-1,4-1-4-1,V. Luxemburgo da Silva,A. da Silva Braga,Internacional,Estádio Vasco da Gama,0,2,RJ,RS,,2021
-7241,36,14/02/2021,18:14,Athletico-PR,Atletico-GO,4-2-3-1,4-2-3-1,P. Autuori de Mello,M. Ribeiro Cabo,Athletico-PR,Estádio Joaquim Américo Guimarães,2,1,PR,GO,,2021
-7242,36,14/02/2021,18:15,Palmeiras,Fortaleza,3-4-2-1,4-2-3-1,A. Moreira Ferreira,E. Alves Moreira,Palmeiras,Allianz Parque,3,0,SP,CE,,2021
-7243,36,14/02/2021,20:29,Gremio,Sao Paulo,4-2-3-1,4-4-2,Renato Gaúcho,M. Vizolli,Sao Paulo,Arena do Grêmio,1,2,RS,SP,,2021
-7244,36,15/02/2021,17:59,Ceara,Fluminense,4-2-3-1,4-2-3-1,D. Sampaio de Azambuja,M. de Oliveira,Fluminense,Arena Castelão,1,3,CE,RJ,,2021
-7245,36,15/02/2021,20:00,Sport,Bragantino,3-4-2-1,4-1-4-1,J. Ribeiro Ventura,M. Nogueira Barbieri,-,Adelmar da Costa Carvalho,0,0,PE,SP,,2021
-7215,33,17/02/2021,18:59,Santos,Corinthians,4-3-3,4-2-3-1,A. Stival,V. Carmo Mancini,Santos,Estádio Urbano Caldeira,1,0,SP,SP,,2021
-7235,35,17/02/2021,19:30,Coritiba,Palmeiras,4-5-1,4-2-3-1,G. Morínigo,A. Moreira Ferreira,Coritiba, Couto Pereira,1,0,PR,SP,,2021
-7225,34,19/02/2021,21:31,Sao Paulo,Palmeiras,4-4-2,4-2-3-1,M. Vizolli,A. Moreira Ferreira,-, Morumbi,1,1,SP,SP,,2021
-7246,37,20/02/2021,18:30,Coritiba,Ceara,4-3-3,4-2-3-1,G. Morínigo,A. Ferreira,Ceara, Couto Pereira,0,2,PR,CE,,2021
-7247,37,20/02/2021,21:00,Fortaleza,Bahia,4-2-3-1,4-3-3,E. Alves Moreira,L. Cavalcanti,Bahia,Arena Castelão,0,4,CE,BA,,2021
-7249,37,21/02/2021,16:00,Corinthians,Vasco,4-2-3-1,4-1-4-1,V. Carmo Mancini,V. Luxemburgo da Silva,-,Neo Química Arena,0,0,SP,RJ,,2021
-7248,37,21/02/2021,16:01,Sport,Atletico-MG,5-4-1,4-3-3,J. Ribeiro Ventura,J. Sampaoli Moya,Atletico-MG,Adelmar da Costa Carvalho,2,3,PE,MG,,2021
-7250,37,21/02/2021,16:02,Flamengo,Internacional,4-4-2,4-1-4-1,R. Ceni,A. da Silva Braga,Flamengo, Maracanã,2,1,RJ,RS,,2021
-7251,37,21/02/2021,18:14,Santos,Fluminense,4-3-3,4-2-3-1,A. Stival,M. de Oliveira,-,Estádio Urbano Caldeira,1,1,SP,RJ,,2021
-7252,37,21/02/2021,18:15,Gremio,Athletico-PR,4-3-3,4-2-2-2,Renato Gaúcho,A. Cardoso de Oliveira,Gremio,Arena do Grêmio,1,0,RS,PR,,2021
-7253,37,21/02/2021,20:30,Goias,Bragantino,3-5-2,4-3-3,A. César,M. Nogueira Barbieri,-,Estádio da Serrinha,0,0,GO,SP,,2021
-7254,37,22/02/2021,18:00,Palmeiras,Atletico-GO,4-2-3-1,4-2-3-1,A. Moreira Ferreira,M. Ribeiro Cabo,-,Allianz Parque,1,1,SP,GO,,2021
-7255,37,22/02/2021,19:59,Botafogo,Sao Paulo,4-4-2,4-4-2,L. Flávio,M. Vizolli,Botafogo,Estádio Nilton Santos,1,0,RJ,SP,,2021
-7264,38,25/02/2021,21:29,Vasco,Goias,4-1-4-1,4-4-2,V. Luxemburgo da Silva,A. César,Vasco,Estádio Vasco da Gama,3,2,RJ,GO,,2021
-7256,38,25/02/2021,21:30,Bragantino,Gremio,4-3-3,4-2-3-1,M. Nogueira Barbieri,Renato Gaúcho,Bragantino,Nabizão,1,0,SP,RS,,2021
-7257,38,25/02/2021,21:30,Bahia,Santos,3-4-2-1,4-4-1-1,L. Cavalcanti,M. Fernandes,Bahia,Itaipava Arena Fonte Nova,2,0,BA,SP,,2021
-7258,38,25/02/2021,21:30,Athletico-PR,Sport,4-2-2-2,5-4-1,A. Cardoso de Oliveira,J. Ribeiro Ventura,Athletico-PR,Estádio Joaquim Américo Guimarães,2,0,PR,PE,,2021
-7259,38,25/02/2021,21:30,Atletico-GO,Coritiba,4-2-3-1,5-4-1,M. Ribeiro Cabo,J. Bertagnoli,Atletico-GO,Estádio Antônio Accioly,3,1,GO,PR,,2021
-7261,38,25/02/2021,21:30,Ceara,Botafogo,4-2-3-1,4-2-3-1,A. Ferreira,L. Flávio,Ceara,Arena Castelão,2,1,CE,RJ,,2021
-7263,38,25/02/2021,21:30,Atletico-MG,Palmeiras,4-4-2,4-1-3-2,J. Desio,A. Moreira Ferreira,Atletico-MG, Mineirão,2,0,MG,SP,,2021
-7265,38,25/02/2021,21:30,Fluminense,Fortaleza,4-2-3-1,4-2-3-1,M. de Oliveira,E. Alves Moreira,Fluminense, Maracanã,2,0,RJ,CE,,2021
-7260,38,25/02/2021,21:31,Internacional,Corinthians,4-1-4-1,4-2-3-1,A. da Silva Braga,V. Carmo Mancini,-,Estádio José Pinheiro Borda,0,0,RS,SP,,2021
-7262,38,25/02/2021,21:31,Sao Paulo,Flamengo,3-5-2,4-4-2,M. Vizolli,R. Ceni,Sao Paulo, Morumbi,2,1,SP,RJ,,2021
+7156,28,06/01/2021,19:15,Gremio,Bahia,4-2-3-1,4-1-4-1,Renato Gaúcho,L. Cavalcanti,Gremio,Arena do Grêmio,2,1,RS,BA,,2020
+7157,28,06/01/2021,19:15,Botafogo,Athletico-PR,4-3-3,4-4-2,E. de Souza Barroca,P. Autuori de Mello,Athletico-PR,Estádio Nilton Santos,0,2,RJ,PR,,2020
+7159,28,06/01/2021,20:30,Sport,Fortaleza,4-2-3-1,4-2-3-1,J. Ribeiro Ventura,M. Oliveira Chamusca,Sport,Adelmar da Costa Carvalho,1,0,PE,CE,,2020
+7158,28,06/01/2021,20:31,Coritiba,Goias,4-3-3,5-3-2,J. Bertagnoli,G. Ramos da Silva,Goias, Couto Pereira,1,2,PR,GO,,2020
+7160,28,06/01/2021,21:30,Flamengo,Fluminense,4-4-2,4-2-3-1,R. Ceni,A. dos Santos Ferraz,Fluminense, Maracanã,1,2,RJ,RJ,,2020
+7161,28,06/01/2021,21:30,Bragantino,Sao Paulo,4-1-4-1,4-4-2,M. Nogueira Barbieri,F. Diniz Silva,Bragantino,Nabizão,4,2,SP,SP,,2020
+7162,28,07/01/2021,19:00,Ceara,Internacional,4-2-3-1,4-2-3-1,A. Ferreira,A. da Silva Braga,Internacional,Arena Castelão,0,2,CE,RS,,2020
+7163,28,07/01/2021,21:00,Atletico-GO,Vasco,4-2-3-1,4-1-4-1,M. Ribeiro Cabo,V. Luxemburgo da Silva,-,Estádio Antônio Accioly,0,0,GO,RJ,,2020
+7167,29,09/01/2021,19:00,Coritiba,Athletico-PR,4-3-3,4-2-3-1,J. Bertagnoli,P. Autuori de Mello,-, Couto Pereira,0,0,PR,PR,,2020
+7166,29,09/01/2021,19:01,Sport,Palmeiras,4-2-3-1,3-4-2-1,J. Ribeiro Ventura,A. Moreira Ferreira,Palmeiras,Adelmar da Costa Carvalho,0,1,PE,SP,,2020
+7168,29,09/01/2021,21:00,Fortaleza,Gremio,4-2-3-1,4-2-3-1,E. Alves Moreira,Renato Gaúcho,-,Arena Castelão,0,0,CE,RS,,2020
+7169,29,10/01/2021,16:00,Sao Paulo,Santos,4-4-2,4-1-4-1,F. Diniz Silva,A. Stival,Santos, Morumbi,0,1,SP,SP,,2020
+7170,29,10/01/2021,16:00,Flamengo,Ceara,4-4-2,4-2-3-1,R. Ceni,A. Ferreira,Ceara, Maracanã,0,2,RJ,CE,,2020
+7171,29,10/01/2021,18:14,Atletico-GO,Bahia,4-2-3-1,4-1-4-1,M. Ribeiro Cabo,L. Cavalcanti,-,Estádio Antônio Accioly,1,1,GO,BA,,2020
+7172,29,10/01/2021,18:15,Internacional,Goias,4-2-3-1,5-3-2,A. da Silva Braga,A. César,Internacional,Estádio José Pinheiro Borda,1,0,RS,GO,,2020
+7173,29,10/01/2021,20:30,Vasco,Botafogo,4-1-4-1,4-2-3-1,V. Luxemburgo da Silva,E. de Souza Barroca,Vasco,Estádio Vasco da Gama,3,0,RJ,RJ,,2020
+7174,29,11/01/2021,20:01,Bragantino,Atletico-MG,4-3-3,4-3-3,M. Nogueira Barbieri,J. Sampaoli Moya,-,Nabizão,2,2,SP,MG,,2020
+7175,29,13/01/2021,21:30,Corinthians,Fluminense,4-2-3-1,4-3-3,V. Carmo Mancini,A. dos Santos Ferraz,Corinthians,Neo Química Arena,5,0,SP,RJ,,2020
+7176,30,15/01/2021,21:30,Palmeiras,Gremio,4-2-3-1,4-2-3-1,A. Moreira Ferreira,Renato Gaúcho,-,Allianz Parque,1,1,SP,RS,,2020
+7177,30,16/01/2021,19:00,Fluminense,Sport,4-2-3-1,4-1-4-1,M. de Oliveira,J. Ribeiro Ventura,Fluminense,Estádio Nilton Santos,1,0,RJ,PE,,2020
+7178,30,16/01/2021,20:59,Vasco,Coritiba,4-1-4-1,4-3-3,V. Luxemburgo da Silva,J. Bertagnoli,Coritiba,Estádio Vasco da Gama,0,1,RJ,PR,,2020
+7179,30,17/01/2021,15:59,Athletico-PR,Sao Paulo,4-2-3-1,4-4-2,P. Autuori de Mello,F. Diniz Silva,-,Estádio Joaquim Américo Guimarães,1,1,PR,SP,,2020
+7180,30,17/01/2021,15:59,Santos,Botafogo,4-2-3-1,4-2-3-1,A. Stival,E. de Souza Barroca,Santos,Estádio Urbano Caldeira,2,1,SP,RJ,,2020
+7181,30,17/01/2021,18:15,Atletico-MG,Atletico-GO,4-3-3,4-2-3-1,J. Sampaoli Moya,M. Ribeiro Cabo,Atletico-MG, Mineirão,3,1,MG,GO,,2020
+7182,30,17/01/2021,20:30,Ceara,Bragantino,4-2-3-1,4-3-3,A. Faganello,M. Nogueira Barbieri,Bragantino,Arena Castelão,1,2,CE,SP,,2020
+7183,30,17/01/2021,20:31,Internacional,Fortaleza,4-2-3-1,4-2-3-1,A. da Silva Braga,E. Alves Moreira,Internacional,Estádio José Pinheiro Borda,4,2,RS,CE,,2020
+7164,28,18/01/2021,19:00,Palmeiras,Corinthians,4-1-4-1,4-2-3-1,A. Moreira Ferreira,V. Carmo Mancini,Palmeiras,Allianz Parque,4,0,SP,SP,,2020
+7184,30,18/01/2021,20:00,Goias,Flamengo,3-5-2,4-4-2,G. Ramos da Silva,R. Ceni,Flamengo,Estádio da Serrinha,0,3,GO,RJ,,2020
+7186,31,20/01/2021,17:00,Botafogo,Atletico-GO,4-2-3-1,4-2-3-1,E. de Souza Barroca,M. Ribeiro Cabo,Atletico-GO,Estádio Nilton Santos,1,3,RJ,GO,,2020
+7187,31,20/01/2021,17:59,Bahia,Athletico-PR,4-2-3-1,4-2-3-1,L. Cavalcanti,P. Autuori de Mello,Bahia,Itaipava Arena Fonte Nova,1,0,BA,PR,,2020
+7188,31,20/01/2021,19:15,Gremio,Atletico-MG,4-2-3-1,4-3-3,Renato Gaúcho,J. Sampaoli Moya,-,Arena do Grêmio,1,1,RS,MG,,2020
+7189,31,20/01/2021,20:30,Coritiba,Fluminense,4-2-3-1,4-2-3-1,J. Bertagnoli,M. de Oliveira,-, Couto Pereira,3,3,PR,RJ,,2020
+7191,31,20/01/2021,21:29,Bragantino,Vasco,4-3-3,4-1-4-1,M. Nogueira Barbieri,V. Luxemburgo da Silva,Bragantino,Nabizão,4,1,SP,RJ,,2020
+7190,31,20/01/2021,21:30,Sao Paulo,Internacional,4-4-2,4-1-4-1,F. Diniz Silva,A. da Silva Braga,Internacional, Morumbi,1,5,SP,RS,,2020
+7192,31,21/01/2021,19:00,Flamengo,Palmeiras,4-4-2,4-1-4-1,R. Ceni,A. Moreira Ferreira,Flamengo,Estádio Nacional de Brasília,2,0,RJ,SP,,2020
+7193,31,21/01/2021,19:00,Fortaleza,Santos,4-2-3-1,4-1-4-1,E. Alves Moreira,A. Stival,Fortaleza,Arena Castelão,2,0,CE,SP,,2020
+7194,31,21/01/2021,19:00,Goias,Ceara,3-1-4-2,4-2-3-1,G. Ramos da Silva,A. Ferreira,Ceara,Estádio da Serrinha,0,4,GO,CE,,2020
+7195,31,21/01/2021,21:00,Corinthians,Sport,4-2-3-1,4-2-3-1,V. Carmo Mancini,J. Ribeiro Ventura,Corinthians,Neo Química Arena,3,0,SP,PE,,2020
+7196,32,23/01/2021,19:00,Sao Paulo,Coritiba,4-4-2,4-3-3,F. Diniz Silva,J. Bertagnoli,-, Morumbi,1,1,SP,PR,,2020
+7197,32,23/01/2021,21:00,Vasco,Atletico-MG,4-2-3-1,3-1-4-2,V. Luxemburgo da Silva,J. Sampaoli Moya,Vasco,Estádio Vasco da Gama,3,2,RJ,MG,,2020
+7198,32,24/01/2021,16:00,Internacional,Gremio,4-1-4-1,4-1-4-1,A. da Silva Braga,Renato Gaúcho,Internacional,Estádio José Pinheiro Borda,2,1,RS,RS,,2020
+7200,32,24/01/2021,16:00,Ceara,Palmeiras,4-2-3-1,4-2-3-1,A. Ferreira,A. Moreira Ferreira,Ceara,Arena Castelão,2,1,CE,SP,,2020
+7199,32,24/01/2021,16:01,Athletico-PR,Flamengo,4-1-4-1,4-4-2,P. Autuori de Mello,R. Ceni,Athletico-PR,Estádio Joaquim Américo Guimarães,2,1,PR,RJ,,2020
+7202,32,24/01/2021,18:15,Sport,Bahia,4-2-3-1,4-2-3-1,J. Ribeiro Ventura,L. Cavalcanti,Sport,Adelmar da Costa Carvalho,2,0,PE,BA,,2020
+7203,32,24/01/2021,18:15,Santos,Goias,4-3-3,5-3-2,A. Stival,A. César,Goias,Estádio Urbano Caldeira,3,4,SP,GO,,2020
+7201,32,24/01/2021,18:16,Atletico-GO,Fortaleza,4-2-3-1,4-2-3-1,M. Ribeiro Cabo,E. Alves Moreira,Atletico-GO,Estádio Antônio Accioly,2,0,GO,CE,,2020
+7204,32,24/01/2021,20:30,Fluminense,Botafogo,4-2-3-1,4-1-4-1,M. de Oliveira,E. de Souza Barroca,Fluminense,Estádio Vasco da Gama,2,0,RJ,RJ,,2020
+7205,32,25/01/2021,20:00,Corinthians,Bragantino,4-2-3-1,4-4-2,V. Carmo Mancini,M. Nogueira Barbieri,Bragantino,Neo Química Arena,0,2,SP,SP,,2020
+6895,1,26/01/2021,20:00,Palmeiras,Vasco,4-1-4-1,4-2-3-1,A. Moreira Ferreira,V. Luxemburgo da Silva,-,Allianz Parque,1,1,SP,RJ,,2020
+7165,28,26/01/2021,19:59,Atletico-MG,Santos,4-2-3-1,4-1-4-1,J. Sampaoli Moya,A. Stival,Atletico-MG, Mineirão,2,0,MG,SP,,2020
+7115,23,28/01/2021,20:00,Gremio,Flamengo,4-2-3-1,4-2-3-1,Renato Gaúcho,R. Ceni,Flamengo,Arena do Grêmio,2,4,RS,RJ,,2020
+7185,30,28/01/2021,18:59,Bahia,Corinthians,4-2-3-1,4-2-3-1,L. Cavalcanti,V. Carmo Mancini,Bahia,Itaipava Arena Fonte Nova,2,1,BA,SP,,2020
+7208,33,31/01/2021,15:59,Atletico-GO,Sao Paulo,4-2-3-1,4-4-2,M. Ribeiro Cabo,F. Diniz Silva,Atletico-GO,Estádio Antônio Accioly,2,1,GO,SP,,2020
+7206,33,31/01/2021,16:00,Vasco,Bahia,4-3-3,4-2-3-1,V. Luxemburgo da Silva,L. Cavalcanti,-,Estádio Vasco da Gama,0,0,RJ,BA,,2020
+7207,33,31/01/2021,16:00,Ceara,Athletico-PR,4-2-3-1,4-4-2,A. Ferreira,P. Autuori de Mello,Athletico-PR,Arena Castelão,0,2,CE,PR,,2020
+7209,33,31/01/2021,16:01,Coritiba,Gremio,4-1-4-1,4-2-3-1,G. Morínigo,Renato Gaúcho,-, Couto Pereira,1,1,PR,RS,,2020
+7210,33,31/01/2021,17:00,Atletico-MG,Fortaleza,4-2-3-1,5-4-1,J. Sampaoli Moya,L. Porto Siqueira,Atletico-MG, Mineirão,2,0,MG,CE,,2020
+7211,33,31/01/2021,18:15,Internacional,Bragantino,4-1-4-1,4-3-3,A. da Silva Braga,M. Nogueira Barbieri,Internacional,Estádio José Pinheiro Borda,2,1,RS,SP,,2020
+7212,33,31/01/2021,20:30,Fluminense,Goias,4-2-3-1,4-3-3,M. de Oliveira,G. Ramos da Silva,Fluminense,Estádio Nilton Santos,3,0,RJ,GO,,2020
+7213,33,01/02/2021,19:59,Sport,Flamengo,4-2-3-1,4-4-2,J. Ribeiro Ventura,R. Ceni,Flamengo,Adelmar da Costa Carvalho,0,3,PE,RJ,,2020
+7214,33,02/02/2021,16:00,Palmeiras,Botafogo,4-2-3-1,4-4-2,A. Moreira Ferreira,E. de Souza Barroca,-,Allianz Parque,1,1,SP,RJ,,2020
+7216,34,03/02/2021,15:59,Gremio,Santos,4-2-3-1,4-1-4-1,Renato Gaúcho,A. Stival,-,Arena do Grêmio,3,3,RS,SP,,2020
+7217,34,03/02/2021,19:15,Bragantino,Atletico-GO,4-4-2,4-2-3-1,M. Nogueira Barbieri,M. Ribeiro Cabo,Bragantino,Nabizão,2,0,SP,GO,,2020
+7218,34,03/02/2021,21:30,Corinthians,Ceara,4-2-3-1,4-2-3-1,V. Carmo Mancini,A. Ferreira,Corinthians,Neo Química Arena,2,1,SP,CE,,2020
+7219,34,03/02/2021,21:30,Goias,Atletico-MG,5-3-2,3-5-2,G. Ramos da Silva,J. Sampaoli Moya,Goias,Estádio da Serrinha,1,0,GO,MG,,2020
+7220,34,03/02/2021,21:30,Bahia,Fluminense,4-1-4-1,4-2-3-1,L. Cavalcanti,M. de Oliveira,Fluminense,Itaipava Arena Fonte Nova,0,1,BA,RJ,,2020
+7221,34,04/02/2021,18:30,Fortaleza,Coritiba,4-2-3-1,5-4-1,E. Alves Moreira,G. Morínigo,Fortaleza,Arena Castelão,3,1,CE,PR,,2020
+7222,34,04/02/2021,20:59,Flamengo,Vasco,4-4-2,4-1-4-1,R. Ceni,V. Luxemburgo da Silva,Flamengo, Maracanã,2,0,RJ,RJ,,2020
+7223,34,04/02/2021,21:00,Athletico-PR,Internacional,4-2-2-2,4-1-4-1,P. Autuori de Mello,A. da Silva Braga,-,Estádio Joaquim Américo Guimarães,0,0,PR,RS,,2020
+7224,34,05/02/2021,20:00,Botafogo,Sport,4-4-2,4-4-2,E. de Souza Barroca,J. Ribeiro Ventura,Sport,Estádio Nilton Santos,0,1,RJ,PE,,2020
+7226,35,06/02/2021,19:00,Bahia,Goias,4-3-3,3-5-2,L. Cavalcanti,A. César,-,Itaipava Arena Fonte Nova,3,3,BA,GO,,2020
+7227,35,06/02/2021,21:00,Atletico-GO,Santos,4-2-3-1,4-2-3-1,M. Ribeiro Cabo,A. Stival,-,Estádio Antônio Accioly,1,1,GO,SP,,2020
+7228,35,07/02/2021,20:30,Bragantino,Flamengo,4-3-3,4-4-2,M. Nogueira Barbieri,R. Ceni,-,Nabizão,1,1,SP,RJ,,2020
+7229,35,08/02/2021,20:00,Botafogo,Gremio,4-4-2,4-2-3-1,L. Flávio,Renato Gaúcho,Gremio,Estádio Nilton Santos,2,5,RJ,RS,,2020
+7230,35,10/02/2021,19:00,Internacional,Sport,4-1-4-1,3-4-2-1,A. da Silva Braga,J. Ribeiro Ventura,Sport,Estádio José Pinheiro Borda,1,2,RS,PE,,2020
+7231,35,10/02/2021,19:15,Fortaleza,Vasco,4-2-3-1,4-2-3-1,E. Alves Moreira,V. Luxemburgo da Silva,Fortaleza,Arena Castelão,3,0,CE,RJ,,2020
+7232,35,10/02/2021,21:01,Sao Paulo,Ceara,4-4-2,4-2-3-1,M. Vizolli,A. Ferreira,-, Morumbi,1,1,SP,CE,,2020
+7233,35,10/02/2021,21:30,Fluminense,Atletico-MG,4-2-3-1,3-4-3,M. de Oliveira,J. Sampaoli Moya,-, Maracanã,0,0,RJ,MG,,2020
+7234,35,10/02/2021,21:30,Corinthians,Athletico-PR,4-2-3-1,4-2-2-2,V. Carmo Mancini,P. Autuori de Mello,-,Neo Química Arena,3,3,SP,PR,,2020
+7236,36,13/02/2021,17:00,Goias,Botafogo,4-4-2,3-5-2,A. César,L. Flávio,Goias,Estádio da Serrinha,2,0,GO,RJ,,2020
+7237,36,13/02/2021,19:00,Atletico-MG,Bahia,3-4-3,5-3-2,J. Sampaoli Moya,L. Cavalcanti,-, Mineirão,1,1,MG,BA,,2020
+7238,36,13/02/2021,19:00,Santos,Coritiba,4-3-3,4-4-2,A. Stival,G. Morínigo,Santos,Estádio Urbano Caldeira,2,0,SP,PR,,2020
+7239,36,14/02/2021,16:00,Flamengo,Corinthians,4-4-2,4-2-3-1,R. Ceni,V. Carmo Mancini,Flamengo, Maracanã,2,1,RJ,SP,,2020
+7240,36,14/02/2021,16:00,Vasco,Internacional,4-2-3-1,4-1-4-1,V. Luxemburgo da Silva,A. da Silva Braga,Internacional,Estádio Vasco da Gama,0,2,RJ,RS,,2020
+7241,36,14/02/2021,18:14,Athletico-PR,Atletico-GO,4-2-3-1,4-2-3-1,P. Autuori de Mello,M. Ribeiro Cabo,Athletico-PR,Estádio Joaquim Américo Guimarães,2,1,PR,GO,,2020
+7242,36,14/02/2021,18:15,Palmeiras,Fortaleza,3-4-2-1,4-2-3-1,A. Moreira Ferreira,E. Alves Moreira,Palmeiras,Allianz Parque,3,0,SP,CE,,2020
+7243,36,14/02/2021,20:29,Gremio,Sao Paulo,4-2-3-1,4-4-2,Renato Gaúcho,M. Vizolli,Sao Paulo,Arena do Grêmio,1,2,RS,SP,,2020
+7244,36,15/02/2021,17:59,Ceara,Fluminense,4-2-3-1,4-2-3-1,D. Sampaio de Azambuja,M. de Oliveira,Fluminense,Arena Castelão,1,3,CE,RJ,,2020
+7245,36,15/02/2021,20:00,Sport,Bragantino,3-4-2-1,4-1-4-1,J. Ribeiro Ventura,M. Nogueira Barbieri,-,Adelmar da Costa Carvalho,0,0,PE,SP,,2020
+7215,33,17/02/2021,18:59,Santos,Corinthians,4-3-3,4-2-3-1,A. Stival,V. Carmo Mancini,Santos,Estádio Urbano Caldeira,1,0,SP,SP,,2020
+7235,35,17/02/2021,19:30,Coritiba,Palmeiras,4-5-1,4-2-3-1,G. Morínigo,A. Moreira Ferreira,Coritiba, Couto Pereira,1,0,PR,SP,,2020
+7225,34,19/02/2021,21:31,Sao Paulo,Palmeiras,4-4-2,4-2-3-1,M. Vizolli,A. Moreira Ferreira,-, Morumbi,1,1,SP,SP,,2020
+7246,37,20/02/2021,18:30,Coritiba,Ceara,4-3-3,4-2-3-1,G. Morínigo,A. Ferreira,Ceara, Couto Pereira,0,2,PR,CE,,2020
+7247,37,20/02/2021,21:00,Fortaleza,Bahia,4-2-3-1,4-3-3,E. Alves Moreira,L. Cavalcanti,Bahia,Arena Castelão,0,4,CE,BA,,2020
+7249,37,21/02/2021,16:00,Corinthians,Vasco,4-2-3-1,4-1-4-1,V. Carmo Mancini,V. Luxemburgo da Silva,-,Neo Química Arena,0,0,SP,RJ,,2020
+7248,37,21/02/2021,16:01,Sport,Atletico-MG,5-4-1,4-3-3,J. Ribeiro Ventura,J. Sampaoli Moya,Atletico-MG,Adelmar da Costa Carvalho,2,3,PE,MG,,2020
+7250,37,21/02/2021,16:02,Flamengo,Internacional,4-4-2,4-1-4-1,R. Ceni,A. da Silva Braga,Flamengo, Maracanã,2,1,RJ,RS,,2020
+7251,37,21/02/2021,18:14,Santos,Fluminense,4-3-3,4-2-3-1,A. Stival,M. de Oliveira,-,Estádio Urbano Caldeira,1,1,SP,RJ,,2020
+7252,37,21/02/2021,18:15,Gremio,Athletico-PR,4-3-3,4-2-2-2,Renato Gaúcho,A. Cardoso de Oliveira,Gremio,Arena do Grêmio,1,0,RS,PR,,2020
+7253,37,21/02/2021,20:30,Goias,Bragantino,3-5-2,4-3-3,A. César,M. Nogueira Barbieri,-,Estádio da Serrinha,0,0,GO,SP,,2020
+7254,37,22/02/2021,18:00,Palmeiras,Atletico-GO,4-2-3-1,4-2-3-1,A. Moreira Ferreira,M. Ribeiro Cabo,-,Allianz Parque,1,1,SP,GO,,2020
+7255,37,22/02/2021,19:59,Botafogo,Sao Paulo,4-4-2,4-4-2,L. Flávio,M. Vizolli,Botafogo,Estádio Nilton Santos,1,0,RJ,SP,,2020
+7264,38,25/02/2021,21:29,Vasco,Goias,4-1-4-1,4-4-2,V. Luxemburgo da Silva,A. César,Vasco,Estádio Vasco da Gama,3,2,RJ,GO,,2020
+7256,38,25/02/2021,21:30,Bragantino,Gremio,4-3-3,4-2-3-1,M. Nogueira Barbieri,Renato Gaúcho,Bragantino,Nabizão,1,0,SP,RS,,2020
+7257,38,25/02/2021,21:30,Bahia,Santos,3-4-2-1,4-4-1-1,L. Cavalcanti,M. Fernandes,Bahia,Itaipava Arena Fonte Nova,2,0,BA,SP,,2020
+7258,38,25/02/2021,21:30,Athletico-PR,Sport,4-2-2-2,5-4-1,A. Cardoso de Oliveira,J. Ribeiro Ventura,Athletico-PR,Estádio Joaquim Américo Guimarães,2,0,PR,PE,,2020
+7259,38,25/02/2021,21:30,Atletico-GO,Coritiba,4-2-3-1,5-4-1,M. Ribeiro Cabo,J. Bertagnoli,Atletico-GO,Estádio Antônio Accioly,3,1,GO,PR,,2020
+7261,38,25/02/2021,21:30,Ceara,Botafogo,4-2-3-1,4-2-3-1,A. Ferreira,L. Flávio,Ceara,Arena Castelão,2,1,CE,RJ,,2020
+7263,38,25/02/2021,21:30,Atletico-MG,Palmeiras,4-4-2,4-1-3-2,J. Desio,A. Moreira Ferreira,Atletico-MG, Mineirão,2,0,MG,SP,,2020
+7265,38,25/02/2021,21:30,Fluminense,Fortaleza,4-2-3-1,4-2-3-1,M. de Oliveira,E. Alves Moreira,Fluminense, Maracanã,2,0,RJ,CE,,2020
+7260,38,25/02/2021,21:31,Internacional,Corinthians,4-1-4-1,4-2-3-1,A. da Silva Braga,V. Carmo Mancini,-,Estádio José Pinheiro Borda,0,0,RS,SP,,2020
+7262,38,25/02/2021,21:31,Sao Paulo,Flamengo,3-5-2,4-4-2,M. Vizolli,R. Ceni,Sao Paulo, Morumbi,2,1,SP,RJ,,2020
 7266,1,29/05/2021,19:00,Cuiaba,Juventude,4-3-3,4-2-3-1,A. Valentim do Carmo Neto,E. de Barros,-,Arena Pantanal,2,2,MT,RS,,2021
 7267,1,29/05/2021,20:00,Bahia,Santos,4-3-3,4-3-3,L. Cavalcanti,F. Diniz Silva,Bahia,Estádio de Pituaçu,3,0,BA,SP,,2021
 7268,1,29/05/2021,21:00,Sao Paulo,Fluminense,3-5-2,4-2-3-1,H. Crespo,R. Machado Marques,-, Morumbi,0,0,SP,RJ,,2021
