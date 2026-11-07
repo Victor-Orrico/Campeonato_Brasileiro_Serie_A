@@ -7936,7 +7936,7 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,34,04/11/2026,21:30,Sao Paulo,Corinthians,,,,,,,0,0,,,,2026
 ,34,05/11/2026,19:30,Palmeiras,Clube do Remo,,,,,,,6,1,,,,2026
 ,34,05/11/2026,21:30,Cruzeiro,Bahia,,,,,,,3,2,,,,2026
-,34,06/11/2026,20:00,Vitoria,Fluminense,,,,,,,,,,,,2026
+,34,06/11/2026,20:00,Vitoria,Fluminense,,,,,,,0,3,,,,2026
 ,35,14/11/2026,18:30,Mirassol,Atletico-MG,,,,,,,,,,,,2026
 ,21,14/11/2026,20:30,Chapecoense,Vasco,,,,,,,,,,,,2026
 ,35,18/11/2026,19:30,Coritiba,Santos,,,,,,,,,,,,2026
