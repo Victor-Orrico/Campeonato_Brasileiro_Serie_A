@@ -27,6 +27,7 @@ table{border-collapse:separate;border-spacing:0;width:100%;font-variant-numeric:
 th{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--mut);font-weight:600;padding:8px;text-align:right;border-bottom:2px solid var(--line)}
 td{padding:8px;text-align:right;white-space:nowrap;border-bottom:1px solid var(--line)}
 tr:hover td{background:var(--hov)}tr:last-child td{border-bottom:0}
+th:first-child{text-align:center}
 td:first-child{color:var(--mut);font-weight:700;text-align:center;width:38px}
 td.t,th.t{text-align:left}td.t{font-weight:600}
 tr.up td:first-child{box-shadow:inset 4px 0 var(--acc);background:var(--up);color:var(--pos)}
@@ -113,7 +114,7 @@ return`<div class="card"><h2>Classificação histórica <span class="mut">${lo}�
 ord(rows).map(t=>`<tr><td>${t.pos}</td><td class="t">${tb(t.n)}${t.n}</td><td class="p">${t.P}${t.pen?'<sup title="Inclui punições">*</sup>':''}</td><td>${t.J}</td><td>${t.V}</td><td>${t.E}</td><td>${t.D}</td><td>${t.GP}</td><td>${t.GC}</td><td class="${sgc(t.SG)}">${t.SG>0?'+':''}${t.SG}</td><td>${ap(t)}</td><td>${t.ys}</td></tr>`).join('')+
 `</table></div><div class="mut" style="margin-top:6px">Soma de todas as temporadas do período, incluindo a que está em andamento e as punições (*). Temp. = temporadas disputadas. Critérios: pontos, vitórias, saldo, gols pró. Times que mudaram de nome aparecem separados. Clique no título de uma coluna para ordenar.</div></div>`}
 const SDEF=[['sv','Seq. vitórias',g=>g.f>g.c],['si','Seq. invicta',g=>g.f>=g.c],['sw','Seq. sem vencer',g=>g.f<=g.c],['sd','Seq. derrotas',g=>g.f<g.c],['sc','Seq. sem sofrer gol',g=>g.c==0],['sm','Seq. marcando gol',g=>g.f>0],['sn','Seq. sem marcar',g=>g.f==0],['ss','Seq. sofrendo gol',g=>g.c>0]];
-const SX=(k,l)=>`<th data-xk="${k}" class="srt${st.xk==k?' on':''}" title="Ordenar por esta coluna">${l}${st.xk==k?(st.xd=='a'?' ▲':' ▼'):''}</th>`;
+const SX=(k,l,c='')=>`<th data-xk="${k}" class="srt ${c}${st.xk==k?' on':''}" title="Ordenar por esta coluna">${l}${st.xk==k?(st.xd=='a'?' ▲':' ▼'):''}</th>`;
 function stats(sel){const [X0,X]=rng(),m=st.m,all=sel=='all',cross=all&&$('#sq').value=='c';
 const gs=G.filter(g=>(all||g.y==sel)&&g.hg!=null&&g.ag!=null&&(!X||g.r<=X)&&(!X0||g.r>=X0)).sort((a,b)=>a.d.localeCompare(b.d)||a.r-b.r),L={},nm={};
 for(const g of gs)for(const[n,f,c,sd,o]of[[g.h,g.hg,g.ag,'h',g.a],[g.a,g.ag,g.hg,'a',g.h]]){if(m!='t'&&m!=sd)continue;const k=nk(n);nm[k]=n;(L[k]=L[k]||[]).push({y:g.y,r:g.r,f,c,o})}
@@ -129,15 +130,15 @@ let bw=null,bl=null;for(const g of l){if(g.f>g.c&&(!bw||g.f-g.c>bw.f-bw.c||g.f-g
 const y0=g=>all?g.y+' ':'';
 r.bw=bw?bw.f-bw.c:0;r.bwt=bw?`${bw.f} x ${bw.c}`:'–';r.bwo=bw?`${y0(bw)}R${bw.r} vs ${bw.o}`:'';
 r.bl=bl?bl.c-bl.f:0;r.blt=bl?`${bl.f} x ${bl.c}`:'–';r.blo=bl?`${y0(bl)}R${bl.r} vs ${bl.o}`:'';
-r.cs=l.filter(g=>g.c==0).length;return r});
+return r});
 let out=rows.sort((a,b)=>a.pos-b.pos||a.n.localeCompare(b.n));
 if(st.xk){const k=st.xk,d=st.xd=='a'?1:-1;out=[...out].sort((a,b)=>{const x=a[k],z=b[k],c=typeof x=='string'?x.localeCompare(z):x-z;return d*c||a.pos-b.pos})}
-const best={};for(const k of[...SDEF.map(d=>d[0]),'bw','bl','cs'])best[k]=Math.max(0,...rows.map(r=>r[k]));
+const best={};for(const k of[...SDEF.map(d=>d[0]),'bw','bl'])best[k]=Math.max(0,...rows.map(r=>r[k]));
 const cell=k=>r=>`<td class="${r[k]&&r[k]==best[k]?'best':''}" title="${r[k+'t']||''}">${r[k]}${r[k+'t']?`<small>${r[k+'t']}</small>`:''}</td>`;
 const cols=SDEF.map(d=>cell(d[0])),mt={t:'Geral',h:'Só em casa',a:'Só fora'}[m];
 const sub=all?(cross?' • sequências contínuas entre temporadas':' • sequências dentro de cada temporada'):'';
-return`<div class="card"><h2>Estatísticas ${all?'– todas as temporadas':sel} <span class="mut">${mt} • ${rtxt(X0,X,all)}${sub}</span></h2><div class="sc"><table><tr><th>#</th>${SX('n','Time')}${all?SX('ys','Temp.'):''}${SX('J','J')}${SDEF.map(d=>SX(d[0],d[1])).join('')}${SX('bw','Maior vitória')}${SX('bl','Maior derrota')}${SX('cs','Jogos sem sofrer gol')}</tr>`+
-out.map(r=>`<tr><td>${r.pos==99?'–':r.pos}</td><td class="t">${tb(r.n)}${r.n}</td>${all?`<td>${r.ys}</td>`:''}<td>${r.J}</td>${cols.map(c=>c(r)).join('')}<td class="${r.bw&&r.bw==best.bw?'best':''}" title="${r.bwo}">${r.bwt}</td><td class="${r.bl&&r.bl==best.bl?'best':''}" title="${r.blo}">${r.blt}</td><td class="${r.cs&&r.cs==best.cs?'best':''}">${r.cs}</td></tr>`).join('')+
+return`<div class="card"><h2>Estatísticas ${all?'– todas as temporadas':sel} <span class="mut">${mt} • ${rtxt(X0,X,all)}${sub}</span></h2><div class="sc"><table><tr><th>#</th>${SX('n','Time','t')}${SDEF.map(d=>SX(d[0],d[1])).join('')}${SX('bw','Maior vitória')}${SX('bl','Maior derrota')}</tr>`+
+out.map(r=>`<tr><td>${r.pos==99?'–':r.pos}</td><td class="t">${tb(r.n)}${r.n}</td>${cols.map(c=>c(r)).join('')}<td class="${r.bw&&r.bw==best.bw?'best':''}" title="${r.bwo}">${r.bwt}</td><td class="${r.bl&&r.bl==best.bl?'best':''}" title="${r.blo}">${r.blt}</td></tr>`).join('')+
 `</table></div><div class="mut" style="margin-top:6px">Sequências consideram os jogos de cada time em ordem de data (só os jogos em casa ou fora, conforme a condição). R = rodadas em que a sequência ocorreu${all?', com o ano; em "Todas as temporadas" a opção Sequências define se elas podem atravessar temporadas consecutivas':''}. Destaque verde = maior valor da coluna. Passe o mouse sobre a maior vitória ou derrota para ver o adversário. Clique no título para ordenar; # = ${all?'posição pelos pontos somados no período':'posição na classificação'}.</div></div>`}
 const roundsOf=y=>[...new Set(G.filter(g=>g.y==y).map(g=>g.r))].sort((a,b)=>a-b);
 function games(){const y=+$('#sa').value,f=$('#ft').value,rs=roundsOf(y);
