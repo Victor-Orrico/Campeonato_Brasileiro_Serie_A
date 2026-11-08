@@ -38,7 +38,12 @@ img.tb{background:none!important;border-radius:0;object-fit:contain}
 .g th,.g td{text-align:center}.g td.h{text-align:right}.g td.h .tb{margin:0 0 0 8px}.g td.a{text-align:left}.g td:first-child{width:auto;color:inherit;font-weight:400}
 .g b{display:inline-block;min-width:56px;padding:3px 10px;border-radius:999px;background:var(--bg);border:1px solid var(--line)}
 th.srt{cursor:pointer;user-select:none;white-space:nowrap}th.srt:hover{color:var(--acc)}th.srt.on{color:var(--fg)}
-td.best{font-weight:800;color:var(--acc)}td small{color:var(--mut);font-size:10px;font-weight:400;margin-left:4px}
+td.best{font-weight:800;color:var(--pos);background:color-mix(in srgb,var(--acc) 24%,transparent);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--acc) 50%,transparent)}
+tr:hover td.best{background:color-mix(in srgb,var(--acc) 32%,var(--hov))}td[title]:not([title='']){cursor:help}
+.stk th:nth-child(-n+2),.stk td:nth-child(-n+2){position:sticky;background:var(--card);z-index:1}
+.stk th:first-child,.stk td:first-child{left:0;min-width:42px;width:42px;max-width:42px}
+.stk th:nth-child(2),.stk td:nth-child(2){left:42px;box-shadow:1px 0 0 var(--line)}
+.stk tr:hover td:nth-child(-n+2){background:var(--hov)}td small{color:var(--mut);font-size:10px;font-weight:400;margin-left:4px}
 .mut{color:var(--mut);font-size:13px;font-weight:400}.hide{display:none!important}
 .chk{display:flex;flex-wrap:wrap;gap:4px;max-width:440px;max-height:90px;overflow:auto}
 .chk label{flex-direction:row;align-items:center;gap:4px;font-size:13px;font-weight:500;text-transform:none;letter-spacing:0;color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:3px 8px}
@@ -131,15 +136,15 @@ const y0=g=>all?g.y+' ':'';
 r.bw=bw?bw.f-bw.c:0;r.bwt=bw?`${bw.f} x ${bw.c}`:'–';r.bwo=bw?`${y0(bw)}R${bw.r} vs ${bw.o}`:'';
 r.bl=bl?bl.c-bl.f:0;r.blt=bl?`${bl.f} x ${bl.c}`:'–';r.blo=bl?`${y0(bl)}R${bl.r} vs ${bl.o}`:'';
 return r});
-let out=rows.sort((a,b)=>a.pos-b.pos||a.n.localeCompare(b.n));
-if(st.xk){const k=st.xk,d=st.xd=='a'?1:-1;out=[...out].sort((a,b)=>{const x=a[k],z=b[k],c=typeof x=='string'?x.localeCompare(z):x-z;return d*c||a.pos-b.pos})}
+let out=rows.sort((a,b)=>a.n.localeCompare(b.n));
+if(st.xk){const k=st.xk,d=st.xd=='a'?1:-1;out=[...out].sort((a,b)=>{const x=a[k],z=b[k],c=typeof x=='string'?x.localeCompare(z):x-z;return d*c||a.n.localeCompare(b.n)})}
 const best={};for(const k of[...SDEF.map(d=>d[0]),'bw','bl'])best[k]=Math.max(0,...rows.map(r=>r[k]));
-const cell=k=>r=>`<td class="${r[k]&&r[k]==best[k]?'best':''}" title="${r[k+'t']||''}">${r[k]}${r[k+'t']?`<small>${r[k+'t']}</small>`:''}</td>`;
+const cell=k=>r=>`<td class="${r[k]&&r[k]==best[k]?'best':''}" title="${r[k+'t']?'Ocorreu em '+r[k+'t']:''}">${r[k]}</td>`;
 const cols=SDEF.map(d=>cell(d[0])),mt={t:'Geral',h:'Só em casa',a:'Só fora'}[m];
 const sub=all?(cross?' • sequências contínuas entre temporadas':' • sequências dentro de cada temporada'):'';
-return`<div class="card"><h2>Estatísticas ${all?'– todas as temporadas':sel} <span class="mut">${mt} • ${rtxt(X0,X,all)}${sub}</span></h2><div class="sc"><table><tr><th>#</th>${SX('n','Time','t')}${SDEF.map(d=>SX(d[0],d[1])).join('')}${SX('bw','Maior vitória')}${SX('bl','Maior derrota')}</tr>`+
+return`<div class="card"><h2>Estatísticas ${all?'– todas as temporadas':sel} <span class="mut">${mt} • ${rtxt(X0,X,all)}${sub}</span></h2><div class="sc"><table class="stk"><tr><th>#</th>${SX('n','Time','t')}${SDEF.map(d=>SX(d[0],d[1])).join('')}${SX('bw','Maior vitória')}${SX('bl','Maior derrota')}</tr>`+
 out.map(r=>`<tr><td>${r.pos==99?'–':r.pos}</td><td class="t">${tb(r.n)}${r.n}</td>${cols.map(c=>c(r)).join('')}<td class="${r.bw&&r.bw==best.bw?'best':''}" title="${r.bwo}">${r.bwt}</td><td class="${r.bl&&r.bl==best.bl?'best':''}" title="${r.blo}">${r.blt}</td></tr>`).join('')+
-`</table></div><div class="mut" style="margin-top:6px">Sequências consideram os jogos de cada time em ordem de data (só os jogos em casa ou fora, conforme a condição). R = rodadas em que a sequência ocorreu${all?', com o ano; em "Todas as temporadas" a opção Sequências define se elas podem atravessar temporadas consecutivas':''}. Destaque verde = maior valor da coluna. Passe o mouse sobre a maior vitória ou derrota para ver o adversário. Clique no título para ordenar; # = ${all?'posição pelos pontos somados no período':'posição na classificação'}.</div></div>`}
+`</table></div><div class="mut" style="margin-top:6px">Sequências consideram os jogos de cada time em ordem de data (só os jogos em casa ou fora, conforme a condição). R = rodadas em que a sequência ocorreu${all?', com o ano; em "Todas as temporadas" a opção Sequências define se elas podem atravessar temporadas consecutivas':''}. Destaque verde = maior valor da coluna. Passe o mouse sobre um valor para ver as rodadas em que ocorreu. Passe o mouse sobre a maior vitória ou derrota para ver o adversário. Clique no título para ordenar; # = ${all?'posição pelos pontos somados no período':'posição na classificação'}.</div></div>`}
 const roundsOf=y=>[...new Set(G.filter(g=>g.y==y).map(g=>g.r))].sort((a,b)=>a-b);
 function games(){const y=+$('#sa').value,f=$('#ft').value,rs=roundsOf(y);
 $('#lo').classList.toggle('hide',!f);
@@ -238,7 +243,7 @@ ord.sort((p,q)=>B[q][0]-B[p][0]||B[q][1]-B[p][1]||B[q][2]-B[p][2]||B[q][3]-B[p][
 cnt[ord[0]][0]++;for(let k=0;k<4;k++)cnt[ord[k]][1]++;for(let k=n-4;k<n;k++)cnt[ord[k]][2]++}
 const d={};names.forEach((q,k)=>d[q]={c:cnt[k][0],g:cnt[k][1],r:cnt[k][2]});return{N,d}}
 function draw(){const t=st.t,c=st.cmp&&(t=='c'||t=='e'),s=t=='s';
-$('#la').classList.toggle('hide',c||s||t=='h'||t=='x');$('#lsx').classList.toggle('hide',t!='x');$('#lsq').classList.toggle('hide',t!='x'||$('#sx').value!='all');$('#lh').classList.toggle('hide',t!='h');$('#lr').classList.toggle('hide',!((st.sk&&(t=='c'||t=='h'))||(st.xk&&t=='x')));$('#lb').classList.toggle('hide',!c);$('#le').classList.toggle('hide',t!='e');$('#lk').classList.toggle('hide',t!='e');
+$('#la').classList.toggle('hide',c||s||t=='h'||t=='x');$('#lsx').classList.toggle('hide',t!='x');$('#lsq').classList.toggle('hide',t!='x'||$('#sx').value!='all');$('#lh').classList.toggle('hide',t!='h');$('#rst').textContent=t=='x'?'↺ Ordem normal (A–Z)':'↺ Ordem normal (pontos)';$('#lr').classList.toggle('hide',!((st.sk&&(t=='c'||t=='h'))||(st.xk&&t=='x')));$('#lb').classList.toggle('hide',!c);$('#le').classList.toggle('hide',t!='e');$('#lk').classList.toggle('hide',t!='e');
 $('#lx').classList.toggle('hide',t!='c'&&t!='h'&&t!='x');$('#lm').classList.toggle('hide',t!='c'&&t!='e'&&t!='h'&&t!='x');$('#ln').classList.toggle('hide',t!='c'&&t!='h');
 $('#cmp').classList.toggle('on',st.cmp);$('#cmp').classList.toggle('hide',t=='j'||s||t=='h'||t=='x');
 $('#vc').classList.toggle('hide',t=='j'||s);$('#vj').classList.toggle('hide',t!='j');$('#vs').classList.toggle('hide',!s);
