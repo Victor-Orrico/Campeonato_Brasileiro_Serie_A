@@ -37,6 +37,7 @@ img.tb{background:none!important;border-radius:0;object-fit:contain}
 .g th,.g td{text-align:center}.g td.h{text-align:right}.g td.h .tb{margin:0 0 0 8px}.g td.a{text-align:left}.g td:first-child{width:auto;color:inherit;font-weight:400}
 .g b{display:inline-block;min-width:56px;padding:3px 10px;border-radius:999px;background:var(--bg);border:1px solid var(--line)}
 th.srt{cursor:pointer;user-select:none;white-space:nowrap}th.srt:hover{color:var(--acc)}th.srt.on{color:var(--fg)}
+td.best{font-weight:800;color:var(--acc)}td small{color:var(--mut);font-size:10px;font-weight:400;margin-left:4px}
 .mut{color:var(--mut);font-size:13px;font-weight:400}.hide{display:none!important}
 .chk{display:flex;flex-wrap:wrap;gap:4px;max-width:440px;max-height:90px;overflow:auto}
 .chk label{flex-direction:row;align-items:center;gap:4px;font-size:13px;font-weight:500;text-transform:none;letter-spacing:0;color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:3px 8px}
@@ -49,14 +50,14 @@ th.srt{cursor:pointer;user-select:none;white-space:nowrap}th.srt:hover{color:var
 <input type="file" id="file" accept=".csv,.txt"> <button id="clr" class="hide">Apagar dados</button> <span id="msg" class="mut"></span></div>
 <div id="app" class="hide">
 <div class="bar">
-<div class="seg" id="tabs"><button data-t="c" class="on">Classificação</button><button data-t="h">Histórico</button><button data-t="e">Evolução</button><button data-t="j">Jogos</button><button data-t="s">Simulação</button></div>
+<div class="seg" id="tabs"><button data-t="c" class="on">Classificação</button><button data-t="h">Histórico</button><button data-t="x">Estatísticas</button><button data-t="e">Evolução</button><button data-t="j">Jogos</button><button data-t="s">Simulação</button></div>
 <label id="la">Temporada<select id="sa"></select></label>
 <div id="lb" class="hide" style="display:flex;flex-direction:column;font-size:12px;color:var(--mut);gap:3px">Temporadas a comparar<div id="chk" class="chk"></div></div>
 <label id="lh" class="hide">Período<div style="display:flex;gap:6px;align-items:center"><select id="hf"></select> a <select id="ht"></select></div></label>
 <label id="lk" class="hide">Métrica<select id="mt"><option value="p">Posição</option><option value="s">Pontos acumulados</option><option value="gp">Gols marcados (acumulado)</option><option value="gc">Gols sofridos (acumulado)</option></select></label>
 <label id="lr" class="hide">&nbsp;<button id="rst">↺ Ordem normal (pontos)</button></label>
 <label id="le" class="hide">Destacar time<select id="et"></select></label>
-<label id="lx">Após a rodada<input id="x" type="number" min="1" placeholder="todas" style="width:90px"></label>
+<label id="lx">Rodadas (de – até)<div style="display:flex;gap:6px;align-items:center"><input id="x0" type="number" min="1" placeholder="1" style="width:70px"> – <input id="x" type="number" min="1" placeholder="todas" style="width:70px"></div></label>
 <label id="lm">Condição<div class="seg" id="modo"><button data-m="t" class="on">Geral</button><button data-m="h">Casa</button><button data-m="a">Fora</button></div></label>
 <label id="ln">Turno<div class="seg" id="turno"><button data-n="t" class="on">Campeonato</button><button data-n="1">1º turno</button><button data-n="2">2º turno</button></div></label>
 <label>&nbsp;<button id="cmp">Comparar temporadas</button></label>
@@ -70,7 +71,7 @@ th.srt{cursor:pointer;user-select:none;white-space:nowrap}th.srt:hover{color:var
 </main>
 <script>
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
-let G=[],st={t:'c',m:'t',o:'r',cmp:false,sk:null,sd:'d',gr:null,tn:'t',sim:{},mc:null,rd:null};
+let G=[],st={t:'c',m:'t',o:'r',cmp:false,xk:null,xd:'d',sk:null,sd:'d',gr:null,tn:'t',sim:{},mc:null,rd:null};
 const norm=s=>s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').trim();
 const AL={r:['rodada','round'],d:['data','date'],h:['mandante','home','time_mandante'],a:['visitante','away','time_visitante'],hg:['mandante_placar','gols_mandante','home_goals','mandante_gols'],ag:['visitante_placar','gols_visitante','away_goals','visitante_gols'],y:['ano_campeonato','ano','season','temporada']};
 function csv(t){const l1=t.split('\n')[0],d=(l1.match(/;/g)||[]).length>(l1.match(/,/g)||[]).length?';':',';const rows=[];let r=[],c='',q=false;
@@ -92,23 +93,45 @@ const ys=[...new Set(G.map(g=>g.y))].sort((a,b)=>b-a);const def=[ys[0],ys.includ
 {const asc=[...ys].reverse(),oa=asc.map(y=>`<option>${y}</option>`).join('');$('#hf').innerHTML=oa;$('#ht').innerHTML=oa;$('#ht').selectedIndex=asc.length-1}
 $('#msg').textContent=`${G.length} jogos • ${ys.length} temporadas (${ys[ys.length-1]}–${ys[0]})`;fillTeams();draw()}
 function fillTeams(){const y=+$('#sa').value,t=[...new Set(G.filter(g=>g.y==y).flatMap(g=>[g.h,g.a]))].sort();$('#ft').innerHTML='<option value="">Todos</option>'+t.map(x=>`<option>${x}</option>`).join('')}
-function table(y,X,m,tn='t'){const hf=halfOf(y);const T={};const get=n=>T[n]||(T[n]={n,P:0,J:0,V:0,E:0,D:0,GP:0,GC:0});
-for(const g of G){if(g.y!=y||g.hg==null||g.ag==null||(X&&g.r>X)||(tn=='1'&&g.r>hf)||(tn=='2'&&g.r<=hf))continue;
+function table(y,X,m,tn='t',X0=0){const hf=halfOf(y);const T={};const get=n=>T[n]||(T[n]={n,P:0,J:0,V:0,E:0,D:0,GP:0,GC:0});
+for(const g of G){if(g.y!=y||g.hg==null||g.ag==null||(X&&g.r>X)||(X0&&g.r<X0)||(tn=='1'&&g.r>hf)||(tn=='2'&&g.r<=hf))continue;
 const sides=[[g.h,g.hg,g.ag,'h'],[g.a,g.ag,g.hg,'a']];for(const[n,f,c,s]of sides){if(m!='t'&&m!=s)continue;const t=get(n);t.J++;t.GP+=f;t.GC+=c;if(f>c){t.V++;t.P+=3}else if(f==c){t.E++;t.P++}else t.D++}}
-const pn=penOn(y,X,m,tn);
+const pn=penOn(y,X,m,tn,X0);
 return Object.values(T).map(t=>{t.SG=t.GP-t.GC;for(const p of pn)if(nk(p.t)==nk(t.n)){t.P-=p.p;t.pen=(t.pen||0)+p.p}return t}).sort((a,b)=>b.P-a.P||b.V-a.V||b.SG-a.SG||b.GP-a.GP||a.n.localeCompare(b.n))}
-function panel(y){const X=+$('#x').value||0,m=st.m,rows=table(y,X,m,st.tn),n=rows.length,hf=halfOf(y),tl=st.tn=='1'?` • 1º turno (rodadas 1–${hf})`:st.tn=='2'?` • 2º turno (rodadas ${hf+1}–${2*hf})`:'';
+function panel(y){const [X0,X]=rng(),m=st.m,rows=table(y,X,m,st.tn,X0),n=rows.length,hf=halfOf(y),tl=st.tn=='1'?` • 1º turno (rodadas 1–${hf})`:st.tn=='2'?` • 2º turno (rodadas ${hf+1}–${2*hf})`:'';
 const mt={t:'Geral',h:'Só em casa',a:'Só fora'}[m];
-return`<div class="card"><h2>${y} <span class="mut">${mt}${tl} • ${X?'após '+X+' rodadas':'todas as rodadas'}</span></h2><div class="sc"><table><tr>${heads()}</tr>`+
-ord(rows).map(t=>{const i=t.pos-1;return`<tr class="${i<4?'up':i>=n-4&&n>=16?'dn':''}"><td>${t.pos}</td><td class="t">${tb(t.n)}${t.n}</td><td class="p">${t.P}${t.pen?'<sup title="Perdeu '+t.pen+' pts por punição">*</sup>':''}</td><td>${t.J}</td><td>${t.V}</td><td>${t.E}</td><td>${t.D}</td><td>${t.GP}</td><td>${t.GC}</td><td class="${sgc(t.SG)}">${t.SG>0?'+':''}${t.SG}</td><td>${ap(t)}</td></tr>`}).join('')+`</table></div><div class="mut" style="margin-top:6px">Aprov. = pontos conquistados ÷ pontos disputados (3 por jogo). Clique no título de uma coluna para ordenar (a coluna # mantém a posição da classificação normal). Critérios: pontos, vitórias, saldo, gols pró. Verde: 4 primeiros; vermelho: 4 últimos.</div>${penOn(y,X,m,st.tn).length?`<div class="mut" style="margin-top:4px">* Punições: ${penOn(y,X,m,st.tn).map(p=>`${p.t} −${p.p} pts (${p.m})`).join('; ')}.</div>`:''}</div>`}
-function hist(){const X=+$('#x').value||0,m=st.m,tn=st.tn,a=+$('#hf').value,b=+$('#ht').value,lo=Math.min(a,b),hi=Math.max(a,b);
+return`<div class="card"><h2>${y} <span class="mut">${mt}${tl} • ${rtxt(X0,X)}</span></h2><div class="sc"><table><tr>${heads()}</tr>`+
+ord(rows).map(t=>{const i=t.pos-1;return`<tr class="${i<4?'up':i>=n-4&&n>=16?'dn':''}"><td>${t.pos}</td><td class="t">${tb(t.n)}${t.n}</td><td class="p">${t.P}${t.pen?'<sup title="Perdeu '+t.pen+' pts por punição">*</sup>':''}</td><td>${t.J}</td><td>${t.V}</td><td>${t.E}</td><td>${t.D}</td><td>${t.GP}</td><td>${t.GC}</td><td class="${sgc(t.SG)}">${t.SG>0?'+':''}${t.SG}</td><td>${ap(t)}</td></tr>`}).join('')+`</table></div><div class="mut" style="margin-top:6px">Aprov. = pontos conquistados ÷ pontos disputados (3 por jogo). Clique no título de uma coluna para ordenar (a coluna # mantém a posição da classificação normal). Critérios: pontos, vitórias, saldo, gols pró. Verde: 4 primeiros; vermelho: 4 últimos.</div>${penOn(y,X,m,st.tn,X0).length?`<div class="mut" style="margin-top:4px">* Punições: ${penOn(y,X,m,st.tn,X0).map(p=>`${p.t} −${p.p} pts (${p.m})`).join('; ')}.</div>`:''}</div>`}
+function hist(){const [X0,X]=rng(),m=st.m,tn=st.tn,a=+$('#hf').value,b=+$('#ht').value,lo=Math.min(a,b),hi=Math.max(a,b);
 const ys=[...new Set(G.map(g=>g.y))].filter(y=>y>=lo&&y<=hi).sort((p,q)=>p-q),T={};
-for(const y of ys)for(const t of table(y,X,m,tn)){const k=nk(t.n),o=T[k]||(T[k]={n:t.n,P:0,J:0,V:0,E:0,D:0,GP:0,GC:0,ys:0,pen:0});o.n=t.n;for(const f of['P','J','V','E','D','GP','GC'])o[f]+=t[f];o.pen+=t.pen||0;if(t.J)o.ys++}
+for(const y of ys)for(const t of table(y,X,m,tn,X0)){const k=nk(t.n),o=T[k]||(T[k]={n:t.n,P:0,J:0,V:0,E:0,D:0,GP:0,GC:0,ys:0,pen:0});o.n=t.n;for(const f of['P','J','V','E','D','GP','GC'])o[f]+=t[f];o.pen+=t.pen||0;if(t.J)o.ys++}
 const rows=Object.values(T).map(t=>(t.SG=t.GP-t.GC,t)).sort(cmpT);
 const mt={t:'Geral',h:'Só em casa',a:'Só fora'}[m],tl=tn=='1'?' • 1º turno':tn=='2'?' • 2º turno':'';
-return`<div class="card"><h2>Classificação histórica <span class="mut">${lo}–${hi} • ${mt}${tl} • ${X?'até a rodada '+X+' de cada temporada':'todas as rodadas'}</span></h2><div class="sc"><table><tr>${heads()}${SH('ys','Temp.')}</tr>`+
+return`<div class="card"><h2>Classificação histórica <span class="mut">${lo}–${hi} • ${mt}${tl} • ${rtxt(X0,X,1)}</span></h2><div class="sc"><table><tr>${heads()}${SH('ys','Temp.')}</tr>`+
 ord(rows).map(t=>`<tr><td>${t.pos}</td><td class="t">${tb(t.n)}${t.n}</td><td class="p">${t.P}${t.pen?'<sup title="Inclui punições">*</sup>':''}</td><td>${t.J}</td><td>${t.V}</td><td>${t.E}</td><td>${t.D}</td><td>${t.GP}</td><td>${t.GC}</td><td class="${sgc(t.SG)}">${t.SG>0?'+':''}${t.SG}</td><td>${ap(t)}</td><td>${t.ys}</td></tr>`).join('')+
 `</table></div><div class="mut" style="margin-top:6px">Soma de todas as temporadas do período, incluindo a que está em andamento e as punições (*). Temp. = temporadas disputadas. Critérios: pontos, vitórias, saldo, gols pró. Times que mudaram de nome aparecem separados. Clique no título de uma coluna para ordenar.</div></div>`}
+const SDEF=[['sv','Seq. vitórias',g=>g.f>g.c],['si','Seq. invicta',g=>g.f>=g.c],['sw','Seq. sem vencer',g=>g.f<=g.c],['sd','Seq. derrotas',g=>g.f<g.c],['sc','Seq. sem sofrer gol',g=>g.c==0],['sm','Seq. marcando gol',g=>g.f>0],['sn','Seq. sem marcar',g=>g.f==0],['ss','Seq. sofrendo gol',g=>g.c>0]];
+const SX=(k,l)=>`<th data-xk="${k}" class="srt${st.xk==k?' on':''}" title="Ordenar por esta coluna">${l}${st.xk==k?(st.xd=='a'?' ▲':' ▼'):''}</th>`;
+function stats(y){const [X0,X]=rng(),m=st.m;
+const gs=G.filter(g=>g.y==y&&g.hg!=null&&g.ag!=null&&(!X||g.r<=X)&&(!X0||g.r>=X0)).sort((a,b)=>a.d.localeCompare(b.d)||a.r-b.r),L={};
+for(const g of gs)for(const[n,f,c,sd,o]of[[g.h,g.hg,g.ag,'h',g.a],[g.a,g.ag,g.hg,'a',g.h]]){if(m!='t'&&m!=sd)continue;(L[n]=L[n]||[]).push({r:g.r,f,c,o})}
+const run=(l,fn)=>{let b={n:0},cur=0,i0=0;l.forEach((g,i)=>{if(fn(g)){if(!cur)i0=i;cur++;if(cur>b.n)b={n:cur,a:l[i0].r,b:g.r}}else cur=0});return b};
+const pos={};table(y,0,'t').forEach((t,i)=>pos[t.n]=i+1);
+const rows=Object.keys(L).map(n=>{const l=L[n],r={n,pos:pos[n]||99,J:l.length};
+for(const[k,,fn]of SDEF){const q=run(l,fn);r[k]=q.n;r[k+'t']=q.n?(q.a==q.b?`R${q.a}`:`R${q.a}–${q.b}`):''}
+let bw=null,bl=null;for(const g of l){if(g.f>g.c&&(!bw||g.f-g.c>bw.f-bw.c||g.f-g.c==bw.f-bw.c&&g.f>bw.f))bw=g;if(g.f<g.c&&(!bl||g.c-g.f>bl.c-bl.f||g.c-g.f==bl.c-bl.f&&g.c>bl.c))bl=g}
+r.bw=bw?bw.f-bw.c:0;r.bwt=bw?`${bw.f} x ${bw.c}`:'–';r.bwo=bw?`R${bw.r} vs ${bw.o}`:'';
+r.bl=bl?bl.c-bl.f:0;r.blt=bl?`${bl.f} x ${bl.c}`:'–';r.blo=bl?`R${bl.r} vs ${bl.o}`:'';
+r.cs=l.filter(g=>g.c==0).length;r.gp=l.reduce((a,g)=>a+g.f,0)/(l.length||1);r.gc=l.reduce((a,g)=>a+g.c,0)/(l.length||1);return r});
+let out=rows.sort((a,b)=>a.pos-b.pos||a.n.localeCompare(b.n));
+if(st.xk){const k=st.xk,d=st.xd=='a'?1:-1;out=[...out].sort((a,b)=>{const x=a[k],z=b[k],c=typeof x=='string'?x.localeCompare(z):x-z;return d*c||a.pos-b.pos})}
+const best={};for(const k of[...SDEF.map(d=>d[0]),'bw','bl','cs'])best[k]=Math.max(0,...rows.map(r=>r[k]));
+const cell=k=>r=>`<td class="${r[k]&&r[k]==best[k]?'best':''}" title="${r[k+'t']||''}">${r[k]}${r[k+'t']?`<small>${r[k+'t']}</small>`:''}</td>`;
+const cols=SDEF.map(d=>cell(d[0]));
+const mt={t:'Geral',h:'Só em casa',a:'Só fora'}[m];
+return`<div class="card"><h2>Estatísticas ${y} <span class="mut">${mt} • ${rtxt(X0,X)}</span></h2><div class="sc"><table><tr><th>#</th>${SX('n','Time')}${SX('J','J')}${SDEF.map(d=>SX(d[0],d[1])).join('')}${SX('bw','Maior vitória')}${SX('bl','Maior derrota')}${SX('cs','Jogos sem sofrer gol')}${SX('gp','Média gols pró')}${SX('gc','Média gols contra')}</tr>`+
+out.map(r=>`<tr><td>${r.pos==99?'–':r.pos}</td><td class="t">${tb(r.n)}${r.n}</td><td>${r.J}</td>${cols.map(c=>c(r)).join('')}<td class="${r.bw&&r.bw==best.bw?'best':''}" title="${r.bwo}">${r.bwt}</td><td class="${r.bl&&r.bl==best.bl?'best':''}" title="${r.blo}">${r.blt}</td><td class="${r.cs&&r.cs==best.cs?'best':''}">${r.cs}</td><td>${r.gp.toFixed(2).replace('.',',')}</td><td>${r.gc.toFixed(2).replace('.',',')}</td></tr>`).join('')+
+`</table></div><div class="mut" style="margin-top:6px">Sequências consideram os jogos de cada time em ordem de data (só os jogos em casa ou fora, conforme a condição). R = rodadas em que a sequência ocorreu. Destaque verde = maior valor da coluna. Passe o mouse sobre a maior vitória ou derrota para ver o adversário. Clique no título para ordenar; # = posição na classificação.</div></div>`}
 const roundsOf=y=>[...new Set(G.filter(g=>g.y==y).map(g=>g.r))].sort((a,b)=>a-b);
 function games(){const y=+$('#sa').value,f=$('#ft').value,rs=roundsOf(y);
 $('#lo').classList.toggle('hide',!f);
@@ -128,7 +151,7 @@ const PEN=[
  {y:2013,t:'Flamengo',p:4,r:38,m:'escalação irregular de André Santos'}
 ];
 const halfOf=y=>new Set(G.filter(g=>g.y==y).flatMap(g=>[g.h,g.a])).size-1;
-const penOn=(y,X,m,tn='t')=>{const hf=halfOf(y);return m=='t'?PEN.filter(p=>p.y==y&&(!X||X>=p.r)&&(tn=='t'||(tn=='1'?p.r<=hf:p.r>hf))):[]};
+const penOn=(y,X,m,tn='t',X0=0)=>{const hf=halfOf(y);return m=='t'?PEN.filter(p=>p.y==y&&(!X||X>=p.r)&&(!X0||X0<=p.r)&&(tn=='t'||(tn=='1'?p.r<=hf:p.r>hf))):[]};
 const ESC={},ESCN={},nk=s=>norm(s).replace(/[^a-z0-9]/g,'');
 const tbi=n=>{let h=0;for(const c of n)h=(h*31+c.charCodeAt(0))%360;return`<span class="tb" style="background:hsl(${h},50%,42%)">${n.replace(/[^A-Za-zÀ-ÿ]/g,'').slice(0,3).toUpperCase()}</span>`};
 const tb=n=>{const u=ESC[n]||ESCN[nk(n)];return u?`<img class="tb" src="${u}" alt="${n.replace(/"/g,'&quot;')}" loading="lazy" onerror="this.outerHTML=tbi(this.alt)">`:tbi(n)};
@@ -136,6 +159,8 @@ const SH=(k,l,c='')=>`<th data-k="${k}" class="srt ${c}${st.sk==k?' on':''}" tit
 const heads=()=>'<th>#</th>'+SH('n','Time','t')+[['P','P'],['J','J'],['V','V'],['E','E'],['D','D'],['GP','GP'],['GC','GC'],['SG','SG'],['AP','Aprov.']].map(([k,l])=>SH(k,l)).join('');
 function ord(rows){rows.forEach((t,i)=>t.pos=i+1);if(!st.sk)return rows;const k=st.sk,d=st.sd=='a'?1:-1,v=t=>k=='n'?t.n:k=='AP'?(t.J?t.P/t.J:-1):t[k];
 return[...rows].sort((a,b)=>{const x=v(a),y=v(b),c=typeof x=='string'?x.localeCompare(y):x-y;return d*c||a.pos-b.pos})}
+const rng=()=>{let a=+$('#x0').value||0,b=+$('#x').value||0;if(a&&b&&a>b)[a,b]=[b,a];return[a,b]};
+const rtxt=(a,b,p)=>a&&b?`rodadas ${a} a ${b}${p?' de cada temporada':''}`:a?`da rodada ${a} em diante`:b?(p?`até a rodada ${b} de cada temporada`:`após ${b} rodadas`):'todas as rodadas';
 const ap=t=>t.J?(t.P/(t.J*3)*100).toFixed(1).replace('.',',')+'%':'–';
 const sgc=v=>v>0?'pos':v<0?'neg':'';
 const sel=()=>st.cmp?[...$$('#chk input:checked')].map(i=>+i.value).sort((a,b)=>b-a):[+$('#sa').value];
@@ -205,14 +230,14 @@ ord.sort((p,q)=>B[q][0]-B[p][0]||B[q][1]-B[p][1]||B[q][2]-B[p][2]||B[q][3]-B[p][
 cnt[ord[0]][0]++;for(let k=0;k<4;k++)cnt[ord[k]][1]++;for(let k=n-4;k<n;k++)cnt[ord[k]][2]++}
 const d={};names.forEach((q,k)=>d[q]={c:cnt[k][0],g:cnt[k][1],r:cnt[k][2]});return{N,d}}
 function draw(){const t=st.t,c=st.cmp&&(t=='c'||t=='e'),s=t=='s';
-$('#la').classList.toggle('hide',c||s||t=='h');$('#lh').classList.toggle('hide',t!='h');$('#lr').classList.toggle('hide',!(st.sk&&(t=='c'||t=='h')));$('#lb').classList.toggle('hide',!c);$('#le').classList.toggle('hide',t!='e');$('#lk').classList.toggle('hide',t!='e');
-$('#lx').classList.toggle('hide',t!='c'&&t!='h');$('#lm').classList.toggle('hide',t!='c'&&t!='e'&&t!='h');$('#ln').classList.toggle('hide',t!='c'&&t!='h');
-$('#cmp').classList.toggle('on',st.cmp);$('#cmp').classList.toggle('hide',t=='j'||s||t=='h');
+$('#la').classList.toggle('hide',c||s||t=='h');$('#lh').classList.toggle('hide',t!='h');$('#lr').classList.toggle('hide',!((st.sk&&(t=='c'||t=='h'))||(st.xk&&t=='x')));$('#lb').classList.toggle('hide',!c);$('#le').classList.toggle('hide',t!='e');$('#lk').classList.toggle('hide',t!='e');
+$('#lx').classList.toggle('hide',t!='c'&&t!='h'&&t!='x');$('#lm').classList.toggle('hide',t!='c'&&t!='e'&&t!='h'&&t!='x');$('#ln').classList.toggle('hide',t!='c'&&t!='h');
+$('#cmp').classList.toggle('on',st.cmp);$('#cmp').classList.toggle('hide',t=='j'||s||t=='h'||t=='x');
 $('#vc').classList.toggle('hide',t=='j'||s);$('#vj').classList.toggle('hide',t!='j');$('#vs').classList.toggle('hide',!s);
-$('#vc').style.gridTemplateColumns=t=='e'||t=='h'?'1fr':'';
+$('#vc').style.gridTemplateColumns=t=='e'||t=='h'||t=='x'?'1fr':'';
 if(t=='c')$('#vc').innerHTML=sel().map(y=>panel(y)).join('')||'<div class="mut">Marque ao menos uma temporada.</div>';
 else if(t=='e'){fillET();$('#vc').innerHTML=sel().map(chart).join('')||'<div class="mut">Marque ao menos uma temporada.</div>'}
-else if(t=='h')$('#vc').innerHTML=hist();else if(s)sim();else games()}
+else if(t=='x')$('#vc').innerHTML=stats(+$('#sa').value);else if(t=='h')$('#vc').innerHTML=hist();else if(s)sim();else games()}
 function seg(id,attr,key){$(id).onclick=e=>{const b=e.target.closest('button');if(!b)return;st[key]=b.dataset[attr];$$(id+' button').forEach(x=>x.classList.toggle('on',x==b));draw()}}
 seg('#tabs','t','t');
 $('#jl').onclick=e=>{const b=e.target.closest('button[data-d]');if(!b)return;const rs=roundsOf(+$('#sa').value),k=rs.indexOf(st.gr)+(+b.dataset.d);if(k>=0&&k<rs.length){st.gr=rs[k];games()}};
@@ -226,7 +251,7 @@ $('#sg').oninput=e=>{const i=e.target.dataset.i;if(i==null)return;const [a,b]=e.
 if(a.value!==''&&b.value!==''&&+a.value>=0&&+b.value>=0)st.sim[i]={h:Math.floor(+a.value),a:Math.floor(+b.value)};else delete st.sim[i];st.mc=null;simTable();$('#rs').innerHTML=optHtml()};
 seg('#modo','m','m');seg('#turno','n','tn');seg('#ord','o','o');
 $('#cmp').onclick=()=>{st.cmp=!st.cmp;draw()};
-$('#sa').onchange=()=>{st.gr=null;fillTeams();draw()};$('#chk').onchange=draw;$('#mt').onchange=draw;$('#rst').onclick=()=>{st.sk=null;draw()};$('#vc').onclick=e=>{const th=e.target.closest('th[data-k]');if(!th)return;const k=th.dataset.k;if(st.sk==k)st.sd=st.sd=='a'?'d':'a';else{st.sk=k;st.sd=k=='n'||k=='GC'?'a':'d'}draw()};$('#hf').onchange=draw;$('#ht').onchange=draw;$('#et').onchange=draw;$('#x').oninput=draw;$('#ft').onchange=draw;
+$('#sa').onchange=()=>{st.gr=null;fillTeams();draw()};$('#chk').onchange=draw;$('#mt').onchange=draw;$('#rst').onclick=()=>{st.sk=null;st.xk=null;draw()};$('#vc').onclick=e=>{const tx=e.target.closest('th[data-xk]');if(tx){const k=tx.dataset.xk;if(st.xk==k)st.xd=st.xd=='a'?'d':'a';else{st.xk=k;st.xd=k=='n'||k=='gc'?'a':'d'}draw();return}const th=e.target.closest('th[data-k]');if(!th)return;const k=th.dataset.k;if(st.sk==k)st.sd=st.sd=='a'?'d':'a';else{st.sk=k;st.sd=k=='n'||k=='GC'?'a':'d'}draw()};$('#hf').onchange=draw;$('#ht').onchange=draw;$('#et').onchange=draw;$('#x').oninput=draw;$('#x0').oninput=draw;$('#ft').onchange=draw;
 $('#file').onchange=async e=>{const f=e.target.files[0];if(!f)return;try{G=load(await f.text());save();init()}catch(err){$('#msg').textContent='Erro: '+err.message}}
 $('#clr').onclick=()=>{try{localStorage.removeItem('bra_g')}catch(e){}G=[];location.reload()}
 fetch('data/escudos.json').then(r=>r.ok?r.json():{}).then(j=>{Object.assign(ESC,j);for(const k in ESC)ESCN[nk(k)]=ESC[k];if(G.length)draw()}).catch(()=>{});
