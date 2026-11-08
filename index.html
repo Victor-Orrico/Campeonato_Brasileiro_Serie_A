@@ -54,6 +54,8 @@ td.best{font-weight:800;color:var(--acc)}td small{color:var(--mut);font-size:10p
 <label id="la">Temporada<select id="sa"></select></label>
 <div id="lb" class="hide" style="display:flex;flex-direction:column;font-size:12px;color:var(--mut);gap:3px">Temporadas a comparar<div id="chk" class="chk"></div></div>
 <label id="lh" class="hide">Período<div style="display:flex;gap:6px;align-items:center"><select id="hf"></select> a <select id="ht"></select></div></label>
+<label id="lsx" class="hide">Estatísticas de<select id="sx"></select></label>
+<label id="lsq" class="hide">Sequências<select id="sq"><option value="w">Dentro de cada temporada</option><option value="c">Contínuas entre temporadas</option></select></label>
 <label id="lk" class="hide">Métrica<select id="mt"><option value="p">Posição</option><option value="s">Pontos acumulados</option><option value="gp">Gols marcados (acumulado)</option><option value="gc">Gols sofridos (acumulado)</option></select></label>
 <label id="lr" class="hide">&nbsp;<button id="rst">↺ Ordem normal (pontos)</button></label>
 <label id="le" class="hide">Destacar time<select id="et"></select></label>
@@ -90,7 +92,7 @@ function save(){try{localStorage.setItem('bra_g',JSON.stringify(G))}catch(e){$('
 function init(){if(!G.length)return;$('#ld').classList.add('hide');$('#app').classList.remove('hide');$('#clr').classList.remove('hide');
 const ys=[...new Set(G.map(g=>g.y))].sort((a,b)=>b-a);const def=[ys[0],ys.includes(2010)?2010:ys[1]];const o=ys.map(y=>`<option>${y}</option>`).join('');$('#sa').innerHTML=o;$('#chk').innerHTML=ys.map(y=>`<label><input type="checkbox" value="${y}" ${def.includes(y)?'checked':''}>${y}</label>`).join('');
 
-{const asc=[...ys].reverse(),oa=asc.map(y=>`<option>${y}</option>`).join('');$('#hf').innerHTML=oa;$('#ht').innerHTML=oa;$('#ht').selectedIndex=asc.length-1}
+{const asc=[...ys].reverse(),oa=asc.map(y=>`<option>${y}</option>`).join('');$('#hf').innerHTML=oa;$('#ht').innerHTML=oa;$('#ht').selectedIndex=asc.length-1;$('#sx').innerHTML='<option value="all">Todas as temporadas</option>'+ys.map(y=>`<option>${y}</option>`).join('');$('#sx').selectedIndex=1}
 $('#msg').textContent=`${G.length} jogos • ${ys.length} temporadas (${ys[ys.length-1]}–${ys[0]})`;fillTeams();draw()}
 function fillTeams(){const y=+$('#sa').value,t=[...new Set(G.filter(g=>g.y==y).flatMap(g=>[g.h,g.a]))].sort();$('#ft').innerHTML='<option value="">Todos</option>'+t.map(x=>`<option>${x}</option>`).join('')}
 function table(y,X,m,tn='t',X0=0){const hf=halfOf(y);const T={};const get=n=>T[n]||(T[n]={n,P:0,J:0,V:0,E:0,D:0,GP:0,GC:0});
@@ -112,26 +114,31 @@ ord(rows).map(t=>`<tr><td>${t.pos}</td><td class="t">${tb(t.n)}${t.n}</td><td cl
 `</table></div><div class="mut" style="margin-top:6px">Soma de todas as temporadas do período, incluindo a que está em andamento e as punições (*). Temp. = temporadas disputadas. Critérios: pontos, vitórias, saldo, gols pró. Times que mudaram de nome aparecem separados. Clique no título de uma coluna para ordenar.</div></div>`}
 const SDEF=[['sv','Seq. vitórias',g=>g.f>g.c],['si','Seq. invicta',g=>g.f>=g.c],['sw','Seq. sem vencer',g=>g.f<=g.c],['sd','Seq. derrotas',g=>g.f<g.c],['sc','Seq. sem sofrer gol',g=>g.c==0],['sm','Seq. marcando gol',g=>g.f>0],['sn','Seq. sem marcar',g=>g.f==0],['ss','Seq. sofrendo gol',g=>g.c>0]];
 const SX=(k,l)=>`<th data-xk="${k}" class="srt${st.xk==k?' on':''}" title="Ordenar por esta coluna">${l}${st.xk==k?(st.xd=='a'?' ▲':' ▼'):''}</th>`;
-function stats(y){const [X0,X]=rng(),m=st.m;
-const gs=G.filter(g=>g.y==y&&g.hg!=null&&g.ag!=null&&(!X||g.r<=X)&&(!X0||g.r>=X0)).sort((a,b)=>a.d.localeCompare(b.d)||a.r-b.r),L={};
-for(const g of gs)for(const[n,f,c,sd,o]of[[g.h,g.hg,g.ag,'h',g.a],[g.a,g.ag,g.hg,'a',g.h]]){if(m!='t'&&m!=sd)continue;(L[n]=L[n]||[]).push({r:g.r,f,c,o})}
-const run=(l,fn)=>{let b={n:0},cur=0,i0=0;l.forEach((g,i)=>{if(fn(g)){if(!cur)i0=i;cur++;if(cur>b.n)b={n:cur,a:l[i0].r,b:g.r}}else cur=0});return b};
-const pos={};table(y,0,'t').forEach((t,i)=>pos[t.n]=i+1);
-const rows=Object.keys(L).map(n=>{const l=L[n],r={n,pos:pos[n]||99,J:l.length};
-for(const[k,,fn]of SDEF){const q=run(l,fn);r[k]=q.n;r[k+'t']=q.n?(q.a==q.b?`R${q.a}`:`R${q.a}–${q.b}`):''}
+function stats(sel){const [X0,X]=rng(),m=st.m,all=sel=='all',cross=all&&$('#sq').value=='c';
+const gs=G.filter(g=>(all||g.y==sel)&&g.hg!=null&&g.ag!=null&&(!X||g.r<=X)&&(!X0||g.r>=X0)).sort((a,b)=>a.d.localeCompare(b.d)||a.r-b.r),L={},nm={};
+for(const g of gs)for(const[n,f,c,sd,o]of[[g.h,g.hg,g.ag,'h',g.a],[g.a,g.ag,g.hg,'a',g.h]]){if(m!='t'&&m!=sd)continue;const k=nk(n);nm[k]=n;(L[k]=L[k]||[]).push({y:g.y,r:g.r,f,c,o})}
+const run=(l,fn)=>{let b={n:0},cur=0,i0=0;l.forEach((g,i)=>{const p=l[i-1];if(cur&&p&&(cross?g.y-p.y>1:g.y!=p.y))cur=0;if(fn(g)){if(!cur)i0=i;cur++;if(cur>b.n)b={n:cur,a:l[i0],b:g}}else cur=0});return b};
+const fmt=(a,b)=>{if(a.y==b.y){const t=a.r==b.r?`R${a.r}`:`R${a.r}–${b.r}`;return all?`${a.y} ${t}`:t}return`${a.y} R${a.r} – ${b.y} R${b.r}`};
+const pos={};
+if(all){const P={};for(const y of new Set(G.map(g=>g.y)))for(const t of table(y,X,m,'t',X0)){const k=nk(t.n);P[k]=(P[k]||0)+t.P}
+Object.keys(P).sort((a,b)=>P[b]-P[a]||a.localeCompare(b)).forEach((k,i)=>pos[k]=i+1)}
+else table(sel,0,'t').forEach((t,i)=>pos[nk(t.n)]=i+1);
+const rows=Object.keys(L).map(k=>{const l=L[k],r={n:nm[k],pos:pos[k]||99,J:l.length,ys:new Set(l.map(g=>g.y)).size};
+for(const[q,,fn]of SDEF){const z=run(l,fn);r[q]=z.n;r[q+'t']=z.n?fmt(z.a,z.b):''}
 let bw=null,bl=null;for(const g of l){if(g.f>g.c&&(!bw||g.f-g.c>bw.f-bw.c||g.f-g.c==bw.f-bw.c&&g.f>bw.f))bw=g;if(g.f<g.c&&(!bl||g.c-g.f>bl.c-bl.f||g.c-g.f==bl.c-bl.f&&g.c>bl.c))bl=g}
-r.bw=bw?bw.f-bw.c:0;r.bwt=bw?`${bw.f} x ${bw.c}`:'–';r.bwo=bw?`R${bw.r} vs ${bw.o}`:'';
-r.bl=bl?bl.c-bl.f:0;r.blt=bl?`${bl.f} x ${bl.c}`:'–';r.blo=bl?`R${bl.r} vs ${bl.o}`:'';
-r.cs=l.filter(g=>g.c==0).length;r.gp=l.reduce((a,g)=>a+g.f,0)/(l.length||1);r.gc=l.reduce((a,g)=>a+g.c,0)/(l.length||1);return r});
+const y0=g=>all?g.y+' ':'';
+r.bw=bw?bw.f-bw.c:0;r.bwt=bw?`${bw.f} x ${bw.c}`:'–';r.bwo=bw?`${y0(bw)}R${bw.r} vs ${bw.o}`:'';
+r.bl=bl?bl.c-bl.f:0;r.blt=bl?`${bl.f} x ${bl.c}`:'–';r.blo=bl?`${y0(bl)}R${bl.r} vs ${bl.o}`:'';
+r.cs=l.filter(g=>g.c==0).length;return r});
 let out=rows.sort((a,b)=>a.pos-b.pos||a.n.localeCompare(b.n));
 if(st.xk){const k=st.xk,d=st.xd=='a'?1:-1;out=[...out].sort((a,b)=>{const x=a[k],z=b[k],c=typeof x=='string'?x.localeCompare(z):x-z;return d*c||a.pos-b.pos})}
 const best={};for(const k of[...SDEF.map(d=>d[0]),'bw','bl','cs'])best[k]=Math.max(0,...rows.map(r=>r[k]));
 const cell=k=>r=>`<td class="${r[k]&&r[k]==best[k]?'best':''}" title="${r[k+'t']||''}">${r[k]}${r[k+'t']?`<small>${r[k+'t']}</small>`:''}</td>`;
-const cols=SDEF.map(d=>cell(d[0]));
-const mt={t:'Geral',h:'Só em casa',a:'Só fora'}[m];
-return`<div class="card"><h2>Estatísticas ${y} <span class="mut">${mt} • ${rtxt(X0,X)}</span></h2><div class="sc"><table><tr><th>#</th>${SX('n','Time')}${SX('J','J')}${SDEF.map(d=>SX(d[0],d[1])).join('')}${SX('bw','Maior vitória')}${SX('bl','Maior derrota')}${SX('cs','Jogos sem sofrer gol')}${SX('gp','Média gols pró')}${SX('gc','Média gols contra')}</tr>`+
-out.map(r=>`<tr><td>${r.pos==99?'–':r.pos}</td><td class="t">${tb(r.n)}${r.n}</td><td>${r.J}</td>${cols.map(c=>c(r)).join('')}<td class="${r.bw&&r.bw==best.bw?'best':''}" title="${r.bwo}">${r.bwt}</td><td class="${r.bl&&r.bl==best.bl?'best':''}" title="${r.blo}">${r.blt}</td><td class="${r.cs&&r.cs==best.cs?'best':''}">${r.cs}</td><td>${r.gp.toFixed(2).replace('.',',')}</td><td>${r.gc.toFixed(2).replace('.',',')}</td></tr>`).join('')+
-`</table></div><div class="mut" style="margin-top:6px">Sequências consideram os jogos de cada time em ordem de data (só os jogos em casa ou fora, conforme a condição). R = rodadas em que a sequência ocorreu. Destaque verde = maior valor da coluna. Passe o mouse sobre a maior vitória ou derrota para ver o adversário. Clique no título para ordenar; # = posição na classificação.</div></div>`}
+const cols=SDEF.map(d=>cell(d[0])),mt={t:'Geral',h:'Só em casa',a:'Só fora'}[m];
+const sub=all?(cross?' • sequências contínuas entre temporadas':' • sequências dentro de cada temporada'):'';
+return`<div class="card"><h2>Estatísticas ${all?'– todas as temporadas':sel} <span class="mut">${mt} • ${rtxt(X0,X,all)}${sub}</span></h2><div class="sc"><table><tr><th>#</th>${SX('n','Time')}${all?SX('ys','Temp.'):''}${SX('J','J')}${SDEF.map(d=>SX(d[0],d[1])).join('')}${SX('bw','Maior vitória')}${SX('bl','Maior derrota')}${SX('cs','Jogos sem sofrer gol')}</tr>`+
+out.map(r=>`<tr><td>${r.pos==99?'–':r.pos}</td><td class="t">${tb(r.n)}${r.n}</td>${all?`<td>${r.ys}</td>`:''}<td>${r.J}</td>${cols.map(c=>c(r)).join('')}<td class="${r.bw&&r.bw==best.bw?'best':''}" title="${r.bwo}">${r.bwt}</td><td class="${r.bl&&r.bl==best.bl?'best':''}" title="${r.blo}">${r.blt}</td><td class="${r.cs&&r.cs==best.cs?'best':''}">${r.cs}</td></tr>`).join('')+
+`</table></div><div class="mut" style="margin-top:6px">Sequências consideram os jogos de cada time em ordem de data (só os jogos em casa ou fora, conforme a condição). R = rodadas em que a sequência ocorreu${all?', com o ano; em "Todas as temporadas" a opção Sequências define se elas podem atravessar temporadas consecutivas':''}. Destaque verde = maior valor da coluna. Passe o mouse sobre a maior vitória ou derrota para ver o adversário. Clique no título para ordenar; # = ${all?'posição pelos pontos somados no período':'posição na classificação'}.</div></div>`}
 const roundsOf=y=>[...new Set(G.filter(g=>g.y==y).map(g=>g.r))].sort((a,b)=>a-b);
 function games(){const y=+$('#sa').value,f=$('#ft').value,rs=roundsOf(y);
 $('#lo').classList.toggle('hide',!f);
@@ -230,14 +237,14 @@ ord.sort((p,q)=>B[q][0]-B[p][0]||B[q][1]-B[p][1]||B[q][2]-B[p][2]||B[q][3]-B[p][
 cnt[ord[0]][0]++;for(let k=0;k<4;k++)cnt[ord[k]][1]++;for(let k=n-4;k<n;k++)cnt[ord[k]][2]++}
 const d={};names.forEach((q,k)=>d[q]={c:cnt[k][0],g:cnt[k][1],r:cnt[k][2]});return{N,d}}
 function draw(){const t=st.t,c=st.cmp&&(t=='c'||t=='e'),s=t=='s';
-$('#la').classList.toggle('hide',c||s||t=='h');$('#lh').classList.toggle('hide',t!='h');$('#lr').classList.toggle('hide',!((st.sk&&(t=='c'||t=='h'))||(st.xk&&t=='x')));$('#lb').classList.toggle('hide',!c);$('#le').classList.toggle('hide',t!='e');$('#lk').classList.toggle('hide',t!='e');
+$('#la').classList.toggle('hide',c||s||t=='h'||t=='x');$('#lsx').classList.toggle('hide',t!='x');$('#lsq').classList.toggle('hide',t!='x'||$('#sx').value!='all');$('#lh').classList.toggle('hide',t!='h');$('#lr').classList.toggle('hide',!((st.sk&&(t=='c'||t=='h'))||(st.xk&&t=='x')));$('#lb').classList.toggle('hide',!c);$('#le').classList.toggle('hide',t!='e');$('#lk').classList.toggle('hide',t!='e');
 $('#lx').classList.toggle('hide',t!='c'&&t!='h'&&t!='x');$('#lm').classList.toggle('hide',t!='c'&&t!='e'&&t!='h'&&t!='x');$('#ln').classList.toggle('hide',t!='c'&&t!='h');
 $('#cmp').classList.toggle('on',st.cmp);$('#cmp').classList.toggle('hide',t=='j'||s||t=='h'||t=='x');
 $('#vc').classList.toggle('hide',t=='j'||s);$('#vj').classList.toggle('hide',t!='j');$('#vs').classList.toggle('hide',!s);
 $('#vc').style.gridTemplateColumns=t=='e'||t=='h'||t=='x'?'1fr':'';
 if(t=='c')$('#vc').innerHTML=sel().map(y=>panel(y)).join('')||'<div class="mut">Marque ao menos uma temporada.</div>';
 else if(t=='e'){fillET();$('#vc').innerHTML=sel().map(chart).join('')||'<div class="mut">Marque ao menos uma temporada.</div>'}
-else if(t=='x')$('#vc').innerHTML=stats(+$('#sa').value);else if(t=='h')$('#vc').innerHTML=hist();else if(s)sim();else games()}
+else if(t=='x')$('#vc').innerHTML=stats($('#sx').value=='all'?'all':+$('#sx').value);else if(t=='h')$('#vc').innerHTML=hist();else if(s)sim();else games()}
 function seg(id,attr,key){$(id).onclick=e=>{const b=e.target.closest('button');if(!b)return;st[key]=b.dataset[attr];$$(id+' button').forEach(x=>x.classList.toggle('on',x==b));draw()}}
 seg('#tabs','t','t');
 $('#jl').onclick=e=>{const b=e.target.closest('button[data-d]');if(!b)return;const rs=roundsOf(+$('#sa').value),k=rs.indexOf(st.gr)+(+b.dataset.d);if(k>=0&&k<rs.length){st.gr=rs[k];games()}};
@@ -251,7 +258,7 @@ $('#sg').oninput=e=>{const i=e.target.dataset.i;if(i==null)return;const [a,b]=e.
 if(a.value!==''&&b.value!==''&&+a.value>=0&&+b.value>=0)st.sim[i]={h:Math.floor(+a.value),a:Math.floor(+b.value)};else delete st.sim[i];st.mc=null;simTable();$('#rs').innerHTML=optHtml()};
 seg('#modo','m','m');seg('#turno','n','tn');seg('#ord','o','o');
 $('#cmp').onclick=()=>{st.cmp=!st.cmp;draw()};
-$('#sa').onchange=()=>{st.gr=null;fillTeams();draw()};$('#chk').onchange=draw;$('#mt').onchange=draw;$('#rst').onclick=()=>{st.sk=null;st.xk=null;draw()};$('#vc').onclick=e=>{const tx=e.target.closest('th[data-xk]');if(tx){const k=tx.dataset.xk;if(st.xk==k)st.xd=st.xd=='a'?'d':'a';else{st.xk=k;st.xd=k=='n'||k=='gc'?'a':'d'}draw();return}const th=e.target.closest('th[data-k]');if(!th)return;const k=th.dataset.k;if(st.sk==k)st.sd=st.sd=='a'?'d':'a';else{st.sk=k;st.sd=k=='n'||k=='GC'?'a':'d'}draw()};$('#hf').onchange=draw;$('#ht').onchange=draw;$('#et').onchange=draw;$('#x').oninput=draw;$('#x0').oninput=draw;$('#ft').onchange=draw;
+$('#sa').onchange=()=>{st.gr=null;fillTeams();draw()};$('#chk').onchange=draw;$('#mt').onchange=draw;$('#rst').onclick=()=>{st.sk=null;st.xk=null;draw()};$('#vc').onclick=e=>{const tx=e.target.closest('th[data-xk]');if(tx){const k=tx.dataset.xk;if(st.xk==k)st.xd=st.xd=='a'?'d':'a';else{st.xk=k;st.xd=k=='n'||k=='gc'?'a':'d'}draw();return}const th=e.target.closest('th[data-k]');if(!th)return;const k=th.dataset.k;if(st.sk==k)st.sd=st.sd=='a'?'d':'a';else{st.sk=k;st.sd=k=='n'||k=='GC'?'a':'d'}draw()};$('#sx').onchange=draw;$('#sq').onchange=draw;$('#hf').onchange=draw;$('#ht').onchange=draw;$('#et').onchange=draw;$('#x').oninput=draw;$('#x0').oninput=draw;$('#ft').onchange=draw;
 $('#file').onchange=async e=>{const f=e.target.files[0];if(!f)return;try{G=load(await f.text());save();init()}catch(err){$('#msg').textContent='Erro: '+err.message}}
 $('#clr').onclick=()=>{try{localStorage.removeItem('bra_g')}catch(e){}G=[];location.reload()}
 fetch('data/escudos.json').then(r=>r.ok?r.json():{}).then(j=>{Object.assign(ESC,j);for(const k in ESC)ESCN[nk(k)]=ESC[k];if(G.length)draw()}).catch(()=>{});
