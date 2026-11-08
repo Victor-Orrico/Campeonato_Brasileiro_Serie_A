@@ -125,11 +125,7 @@ const gs=G.filter(g=>(all||g.y==sel)&&g.hg!=null&&g.ag!=null&&(!X||g.r<=X)&&(!X0
 for(const g of gs)for(const[n,f,c,sd,o]of[[g.h,g.hg,g.ag,'h',g.a],[g.a,g.ag,g.hg,'a',g.h]]){if(m!='t'&&m!=sd)continue;const k=nk(n);nm[k]=n;(L[k]=L[k]||[]).push({y:g.y,r:g.r,f,c,o})}
 const run=(l,fn)=>{let b={n:0},cur=0,i0=0;l.forEach((g,i)=>{const p=l[i-1];if(cur&&p&&(cross?g.y-p.y>1:g.y!=p.y))cur=0;if(fn(g)){if(!cur)i0=i;cur++;if(cur>b.n)b={n:cur,a:l[i0],b:g}}else cur=0});return b};
 const fmt=(a,b)=>{if(a.y==b.y){const t=a.r==b.r?`R${a.r}`:`R${a.r}–${b.r}`;return all?`${a.y} ${t}`:t}return`${a.y} R${a.r} – ${b.y} R${b.r}`};
-const pos={};
-if(all){const P={};for(const y of new Set(G.map(g=>g.y)))for(const t of table(y,X,m,'t',X0)){const k=nk(t.n);P[k]=(P[k]||0)+t.P}
-Object.keys(P).sort((a,b)=>P[b]-P[a]||a.localeCompare(b)).forEach((k,i)=>pos[k]=i+1)}
-else table(sel,0,'t').forEach((t,i)=>pos[nk(t.n)]=i+1);
-const rows=Object.keys(L).map(k=>{const l=L[k],r={n:nm[k],pos:pos[k]||99,J:l.length,ys:new Set(l.map(g=>g.y)).size};
+const rows=Object.keys(L).map(k=>{const l=L[k],r={n:nm[k],J:l.length,ys:new Set(l.map(g=>g.y)).size};
 for(const[q,,fn]of SDEF){const z=run(l,fn);r[q]=z.n;r[q+'t']=z.n?fmt(z.a,z.b):''}
 let bw=null,bl=null;for(const g of l){if(g.f>g.c&&(!bw||g.f-g.c>bw.f-bw.c||g.f-g.c==bw.f-bw.c&&g.f>bw.f))bw=g;if(g.f<g.c&&(!bl||g.c-g.f>bl.c-bl.f||g.c-g.f==bl.c-bl.f&&g.c>bl.c))bl=g}
 const y0=g=>all?g.y+' ':'';
@@ -143,8 +139,8 @@ const cell=k=>r=>`<td class="${r[k]&&r[k]==best[k]?'best':''}" title="${r[k+'t']
 const cols=SDEF.map(d=>cell(d[0])),mt={t:'Geral',h:'Só em casa',a:'Só fora'}[m];
 const sub=all?(cross?' • sequências contínuas entre temporadas':' • sequências dentro de cada temporada'):'';
 return`<div class="card"><h2>Estatísticas ${all?'– todas as temporadas':sel} <span class="mut">${mt} • ${rtxt(X0,X,all)}${sub}</span></h2><div class="sc"><table class="stk"><tr><th>#</th>${SX('n','Time','t')}${SDEF.map(d=>SX(d[0],d[1])).join('')}${SX('bw','Maior vitória')}${SX('bl','Maior derrota')}</tr>`+
-out.map(r=>`<tr><td>${r.pos==99?'–':r.pos}</td><td class="t">${tb(r.n)}${r.n}</td>${cols.map(c=>c(r)).join('')}<td class="${r.bw&&r.bw==best.bw?'best':''}" title="${r.bwo}">${r.bwt}</td><td class="${r.bl&&r.bl==best.bl?'best':''}" title="${r.blo}">${r.blt}</td></tr>`).join('')+
-`</table></div><div class="mut" style="margin-top:6px">Sequências consideram os jogos de cada time em ordem de data (só os jogos em casa ou fora, conforme a condição). R = rodadas em que a sequência ocorreu${all?', com o ano; em "Todas as temporadas" a opção Sequências define se elas podem atravessar temporadas consecutivas':''}. Destaque verde = maior valor da coluna. Passe o mouse sobre um valor para ver as rodadas em que ocorreu. Passe o mouse sobre a maior vitória ou derrota para ver o adversário. Clique no título para ordenar; # = ${all?'posição pelos pontos somados no período':'posição na classificação'}.</div></div>`}
+out.map((r,i)=>`<tr><td>${i+1}</td><td class="t">${tb(r.n)}${r.n}</td>${cols.map(c=>c(r)).join('')}<td class="${r.bw&&r.bw==best.bw?'best':''}" title="${r.bwo}">${r.bwt}</td><td class="${r.bl&&r.bl==best.bl?'best':''}" title="${r.blo}">${r.blt}</td></tr>`).join('')+
+`</table></div><div class="mut" style="margin-top:6px">Sequências consideram os jogos de cada time em ordem de data (só os jogos em casa ou fora, conforme a condição). R = rodadas em que a sequência ocorreu${all?', com o ano; em "Todas as temporadas" a opção Sequências define se elas podem atravessar temporadas consecutivas':''}. Destaque verde = maior valor da coluna. Passe o mouse sobre um valor para ver as rodadas em que ocorreu. Passe o mouse sobre a maior vitória ou derrota para ver o adversário. Clique no título para ordenar; # = posição na ordenação atual.</div></div>`}
 const roundsOf=y=>[...new Set(G.filter(g=>g.y==y).map(g=>g.r))].sort((a,b)=>a-b);
 function games(){const y=+$('#sa').value,f=$('#ft').value,rs=roundsOf(y);
 $('#lo').classList.toggle('hide',!f);
