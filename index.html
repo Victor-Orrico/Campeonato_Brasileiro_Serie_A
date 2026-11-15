@@ -31,6 +31,10 @@ th:first-child{text-align:center}
 td:first-child{color:var(--mut);font-weight:700;text-align:center;width:38px}
 td.t,th.t{text-align:left}td.t{font-weight:600}
 tr.up td:first-child{box-shadow:inset 4px 0 var(--acc);background:var(--up);color:var(--pos)}
+tr.lg td:first-child{box-shadow:inset 4px 0 var(--acc);background:var(--up);color:var(--pos)}
+tr.lp td:first-child{box-shadow:inset 4px 0 #5bbf8f;background:color-mix(in srgb,#5bbf8f 16%,transparent);color:var(--pos)}
+tr.sa td:first-child{box-shadow:inset 4px 0 #3a8fd9;background:color-mix(in srgb,#3a8fd9 16%,transparent);color:#3a8fd9}
+.zl{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:12px;margin-top:6px;color:var(--mut)}.zl i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px}.zl small{flex-basis:100%;font-size:11px;opacity:.85}.z1{background:var(--acc)}.z2{background:#5bbf8f}.z3{background:#3a8fd9}.z4{background:var(--neg)}
 tr.dn td:first-child{box-shadow:inset 4px 0 var(--neg);color:var(--neg)}
 td.p{font-weight:800;font-size:15px}.pos{color:var(--pos)}.neg{color:var(--neg)}
 img.tb{background:none!important;border-radius:0;object-fit:contain}
@@ -129,15 +133,15 @@ return Object.values(T).map(t=>{t.SG=t.GP-t.GC;for(const p of pn)if(nk(p.t)==nk(
 function panel(y){const [X0,X]=rng(),m=st.m,rows=table(y,X,m,st.tn,X0),n=rows.length,hf=halfOf(y),tl=st.tn=='1'?` • 1º turno (rodadas 1–${hf})`:st.tn=='2'?` • 2º turno (rodadas ${hf+1}–${2*hf})`:'';
 const mt={t:'Geral',h:'Só em casa',a:'Só fora'}[m];
 return`<div class="card"><h2>${y} <span class="mut">${mt}${tl} • ${rtxt(X0,X)}</span></h2><div class="sc"><table><tr>${heads()}</tr>`+
-ord(rows).map(t=>{const i=t.pos-1;return`<tr class="${i<4?'up':i>=n-4&&n>=16?'dn':''}"><td>${t.pos}</td><td class="t">${tb(t.n)}${t.n}</td><td class="p">${t.P}${t.pen?'<sup title="Perdeu '+t.pen+' pts por punição">*</sup>':''}</td><td>${t.J}</td><td>${t.V}</td><td>${t.E}</td><td>${t.D}</td><td>${t.GP}</td><td>${t.GC}</td><td class="${sgc(t.SG)}">${t.SG>0?'+':''}${t.SG}</td><td>${ap(t)}</td></tr>`}).join('')+`</table></div><div class="mut" style="margin-top:6px">Aprov. = pontos conquistados ÷ pontos disputados (3 por jogo). Clique no título de uma coluna para ordenar (a coluna # mantém a posição da classificação normal). Critérios: pontos, vitórias, saldo, gols pró. Verde: 4 primeiros; vermelho: 4 últimos.</div>${penOn(y,X,m,st.tn,X0).length?`<div class="mut" style="margin-top:4px">* Punições: ${penOn(y,X,m,st.tn,X0).map(p=>`${p.t} −${p.p} pts (${p.m})`).join('; ')}.</div>`:''}</div>`}
+ord(rows).map(t=>{const i=t.pos-1;return`<tr class="${zone(y,i,n)}"><td>${t.pos}</td><td class="t">${tb(t.n)}${t.n}</td><td class="p">${t.P}${t.pen?'<sup title="Perdeu '+t.pen+' pts por punição">*</sup>':''}</td><td>${t.J}</td><td>${t.V}</td><td>${t.E}</td><td>${t.D}</td><td>${t.GP}</td><td>${t.GC}</td><td class="${sgc(t.SG)}">${t.SG>0?'+':''}${t.SG}</td><td>${ap(t)}</td></tr>`}).join('')+`</table></div><div class="mut" style="margin-top:6px">Aprov. = pontos conquistados ÷ pontos disputados (3 por jogo). Clique no título de uma coluna para ordenar (a coluna # mantém a posição da classificação normal). Critérios: pontos, vitórias, saldo, gols pró.</div><div class="zl">${zl(y,n)}</div>${penOn(y,X,m,st.tn,X0).length?`<div class="mut" style="margin-top:4px">* Punições: ${penOn(y,X,m,st.tn,X0).map(p=>`${p.t} −${p.p} pts (${p.m})`).join('; ')}.</div>`:''}</div>`}
 function hist(){const [X0,X]=rng(),m=st.m,tn=st.tn,a=+$('#hf').value,b=+$('#ht').value,lo=Math.min(a,b),hi=Math.max(a,b);
 const ys=[...new Set(G.map(g=>g.y))].filter(y=>y>=lo&&y<=hi).sort((p,q)=>p-q),T={};
 for(const y of ys)for(const t of table(y,X,m,tn,X0)){const k=nk(t.n),o=T[k]||(T[k]={n:t.n,P:0,J:0,V:0,E:0,D:0,GP:0,GC:0,ys:0,pen:0});o.n=t.n;for(const f of['P','J','V','E','D','GP','GC'])o[f]+=t[f];o.pen+=t.pen||0;if(t.J)o.ys++}
 const rows=Object.values(T).map(t=>(t.SG=t.GP-t.GC,t)).sort(cmpT);
 const mt={t:'Geral',h:'Só em casa',a:'Só fora'}[m],tl=tn=='1'?' • 1º turno':tn=='2'?' • 2º turno':'';
 return`<div class="card"><h2>Classificação histórica <span class="mut">${lo}–${hi} • ${mt}${tl} • ${rtxt(X0,X,1)}</span></h2><div class="sc"><table><tr>${heads()}${SH('ys','Temp.')}</tr>`+
-ord(rows).map(t=>`<tr><td>${t.pos}</td><td class="t">${tb(t.n)}${t.n}</td><td class="p">${t.P}${t.pen?'<sup title="Inclui punições">*</sup>':''}</td><td>${t.J}</td><td>${t.V}</td><td>${t.E}</td><td>${t.D}</td><td>${t.GP}</td><td>${t.GC}</td><td class="${sgc(t.SG)}">${t.SG>0?'+':''}${t.SG}</td><td>${ap(t)}</td><td>${t.ys}</td></tr>`).join('')+
-`</table></div><div class="mut" style="margin-top:6px">Soma de todas as temporadas do período, incluindo a que está em andamento e as punições (*). Temp. = temporadas disputadas. Critérios: pontos, vitórias, saldo, gols pró. Times que mudaram de nome aparecem separados. Clique no título de uma coluna para ordenar.</div></div>`}
+ord(rows).map((t,i)=>`<tr><td>${i+1}</td><td class="t">${tb(t.n)}${t.n}</td><td class="p">${t.P}${t.pen?'<sup title="Inclui punições">*</sup>':''}</td><td>${t.J}</td><td>${t.V}</td><td>${t.E}</td><td>${t.D}</td><td>${t.GP}</td><td>${t.GC}</td><td class="${sgc(t.SG)}">${t.SG>0?'+':''}${t.SG}</td><td>${ap(t)}</td><td>${t.ys}</td></tr>`).join('')+
+`</table></div><div class="mut" style="margin-top:6px">Soma de todas as temporadas do período, incluindo a que está em andamento e as punições (*). Temp. = temporadas disputadas. Critérios: pontos, vitórias, saldo, gols pró. Times que mudaram de nome aparecem separados. Clique no título de uma coluna para ordenar; a coluna # acompanha a ordem escolhida.</div></div>`}
 const SDEF=[['sv','Seq. vitórias',g=>g.f>g.c],['si','Seq. invicta',g=>g.f>=g.c],['sw','Seq. sem vencer',g=>g.f<=g.c],['sd','Seq. derrotas',g=>g.f<g.c],['sc','Seq. sem sofrer gol',g=>g.c==0],['sm','Seq. marcando gol',g=>g.f>0],['sn','Seq. sem marcar',g=>g.f==0],['ss','Seq. sofrendo gol',g=>g.c>0]];
 const SX=(k,l,c='')=>`<th data-xk="${k}" class="srt ${c}${st.xk==k?' on':''}" title="Ordenar por esta coluna">${l}${st.xk==k?(st.xd=='a'?' ▲':' ▼'):''}</th>`;
 function sdata(sel){const [X0,X]=rng(),m=st.m,all=sel=='all',cross=all&&$('#sq').value=='c';
@@ -229,6 +233,16 @@ const PEN=[
 ];
 const halfOf=y=>new Set(G.filter(g=>g.y==y).flatMap(g=>[g.h,g.a])).size-1;
 const penOn=(y,X,m,tn='t',X0=0)=>{const hf=halfOf(y);return m=='t'?PEN.filter(p=>p.y==y&&(!X||X>=p.r)&&(!X0||X0<=p.r)&&(tn=='t'||(tn=='1'?p.r<=hf:p.r>hf))):[]};
+// Vagas continentais por temporada: [Libertadores fase de grupos, Libertadores fase preliminar, Sul-Americana (quantidade logo abaixo)].
+// Valores-base pelo regulamento de cada época; o número real varia conforme os títulos de Copa do Brasil, Libertadores e Sul-Americana.
+// Para ajustar um ano, basta alterar a linha correspondente (ex.: VAGAS[2023]=[4,3,6]).
+const VAGAS={};
+for(let y=2003;y<=2015;y++)VAGAS[y]=[4,0,0];   // até 2015: G4 (Sul-Americana: preencha se quiser, ex.: VAGAS[2012]=[4,0,4])
+for(let y=2016;y<=2025;y++)VAGAS[y]=[4,2,6];   // G6 (4 direta + 2 preliminar) e Sul-Americana nos 6 seguintes
+VAGAS[2026]=[4,1,6];                            // 2026: 4 direta + 1 preliminar; Sul-Americana do 6º ao 11º
+const zone=(y,i,n)=>{const v=VAGAS[y]||[4,0,0],a=v[0],b=a+v[1],c=b+v[2];return i<a?'lg':i<b?'lp':i<c?'sa':i>=n-4&&n>=16?'dn':''};
+const zl=(y,n)=>{const v=VAGAS[y]||[4,0,0],a=v[0],b=a+v[1],c=b+v[2],rg=(x,z)=>x+1==z?`${z}º`:`${x+1}º–${z}º`;
+return(v[0]?`<span><i class="z1"></i>Libertadores – fase de grupos (${rg(0,a)})</span>`:'')+(v[1]?`<span><i class="z2"></i>Libertadores – fase preliminar (${rg(a,b)})</span>`:'')+(v[2]?`<span><i class="z3"></i>Sul-Americana (${rg(b,c)})</span>`:'')+(n>=16?`<span><i class="z4"></i>Rebaixamento (${rg(n-4,n)})</span>`:'')+`<small>Vagas estimadas pelo regulamento da época; o número real varia com os títulos de Copa do Brasil, Libertadores e Sul-Americana.</small>`};
 const ESC={},ESCN={},nk=s=>norm(s).replace(/[^a-z0-9]/g,'');
 const tbi=n=>{let h=0;for(const c of n)h=(h*31+c.charCodeAt(0))%360;return`<span class="tb" style="background:hsl(${h},50%,42%)">${n.replace(/[^A-Za-zÀ-ÿ]/g,'').slice(0,3).toUpperCase()}</span>`};
 const tb=n=>{const u=ESC[n]||ESCN[nk(n)];return u?`<img class="tb" src="${u}" alt="${n.replace(/"/g,'&quot;')}" loading="lazy" onerror="this.outerHTML=tbi(this.alt)">`:tbi(n)};
@@ -294,7 +308,7 @@ const n=prj.length,mc=st.mc,ex=mc?'<th>Título</th><th>G4</th><th>Z4</th>':'';
 const pc=v=>(v/mc.N*100).toFixed(1)+'%';
 $('#ss').innerHTML=`<div class="card"><h2>${y} <span class="mut">classificação projetada • ${fixed.length} de ${np} jogos definidos</span></h2><div class="sc"><table><tr><th>#</th><th class="t">Time</th><th>P</th><th>J</th><th>V</th><th>SG</th><th>Δ</th>${ex}</tr>`+
 prj.map((t,i)=>{const d=(p0[t.n]||i+1)-(i+1),dd=d>0?'▲'+d:d<0?'▼'+(-d):'=';const e=mc?`<td>${pc(mc.d[t.n].c)}</td><td>${pc(mc.d[t.n].g)}</td><td>${pc(mc.d[t.n].r)}</td>`:'';
-return`<tr class="${i<4?'up':i>=n-4&&n>=16?'dn':''}"><td>${i+1}</td><td class="t">${tb(t.n)}${t.n}</td><td class="p">${t.P}${t.pen?'<sup title="Perdeu '+t.pen+' pts por punição">*</sup>':''}</td><td>${t.J}</td><td>${t.V}</td><td class="${sgc(t.SG)}">${t.SG>0?'+':''}${t.SG}</td><td>${dd}</td>${e}</tr>`}).join('')+
+return`<tr class="${zone(y,i,n)}"><td>${i+1}</td><td class="t">${tb(t.n)}${t.n}</td><td class="p">${t.P}${t.pen?'<sup title="Perdeu '+t.pen+' pts por punição">*</sup>':''}</td><td>${t.J}</td><td>${t.V}</td><td class="${sgc(t.SG)}">${t.SG>0?'+':''}${t.SG}</td><td>${dd}</td>${e}</tr>`}).join('')+
 `</table></div><div class="mut" style="margin-top:6px">Δ: variação frente à tabela atual. Preencha os dois campos do placar para definir um jogo. Chances: jogos não definidos são sorteados com 45% mandante, 27% empate e 28% visitante (placares 1x0, 0x0 ou 0x1), igual para todos os times; G4 = 4 primeiros, Z4 = 4 últimos.</div></div>`}
 function monte(){const y=simY(),N=10000,all=G.filter(g=>g.y==y),names=[...new Set(all.flatMap(g=>[g.h,g.a]))].sort(),ix={};names.forEach((q,k)=>ix[q]=k);
 const base=names.map(()=>[0,0,0,0]),free=[];
