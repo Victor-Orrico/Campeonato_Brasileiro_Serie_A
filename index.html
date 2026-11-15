@@ -130,10 +130,10 @@ for(const g of G){if(g.y!=y||g.hg==null||g.ag==null||(X&&g.r>X)||(X0&&g.r<X0)||(
 const sides=[[g.h,g.hg,g.ag,'h'],[g.a,g.ag,g.hg,'a']];for(const[n,f,c,s]of sides){if(m!='t'&&m!=s)continue;const t=get(n);t.J++;t.GP+=f;t.GC+=c;if(f>c){t.V++;t.P+=3}else if(f==c){t.E++;t.P++}else t.D++}}
 const pn=penOn(y,X,m,tn,X0);
 return Object.values(T).map(t=>{t.SG=t.GP-t.GC;for(const p of pn)if(nk(p.t)==nk(t.n)){t.P-=p.p;t.pen=(t.pen||0)+p.p}return t}).sort((a,b)=>b.P-a.P||b.V-a.V||b.SG-a.SG||b.GP-a.GP||a.n.localeCompare(b.n))}
-function panel(y){const [X0,X]=rng(),m=st.m,rows=table(y,X,m,st.tn,X0),n=rows.length,hf=halfOf(y),tl=st.tn=='1'?` • 1º turno (rodadas 1–${hf})`:st.tn=='2'?` • 2º turno (rodadas ${hf+1}–${2*hf})`:'';
+function panel(y){const [X0,X]=rng(),m=st.m,zon=m=='t'&&st.tn=='t'&&!X0&&!X,rows=table(y,X,m,st.tn,X0),n=rows.length,hf=halfOf(y),tl=st.tn=='1'?` • 1º turno (rodadas 1–${hf})`:st.tn=='2'?` • 2º turno (rodadas ${hf+1}–${2*hf})`:'';
 const mt={t:'Geral',h:'Só em casa',a:'Só fora'}[m];
 return`<div class="card"><h2>${y} <span class="mut">${mt}${tl} • ${rtxt(X0,X)}</span></h2><div class="sc"><table><tr>${heads()}</tr>`+
-ord(rows).map(t=>{const i=t.pos-1;return`<tr class="${zone(y,i,n)}"><td>${t.pos}</td><td class="t">${tb(t.n)}${t.n}</td><td class="p">${t.P}${t.pen?'<sup title="Perdeu '+t.pen+' pts por punição">*</sup>':''}</td><td>${t.J}</td><td>${t.V}</td><td>${t.E}</td><td>${t.D}</td><td>${t.GP}</td><td>${t.GC}</td><td class="${sgc(t.SG)}">${t.SG>0?'+':''}${t.SG}</td><td>${ap(t)}</td></tr>`}).join('')+`</table></div><div class="mut" style="margin-top:6px">Aprov. = pontos conquistados ÷ pontos disputados (3 por jogo). Clique no título de uma coluna para ordenar (a coluna # mantém a posição da classificação normal). Critérios: pontos, vitórias, saldo, gols pró.</div>${zl(y,n)?`<div class="zl">${zl(y,n)}</div>`:''}${penOn(y,X,m,st.tn,X0).length?`<div class="mut" style="margin-top:4px">* Punições: ${penOn(y,X,m,st.tn,X0).map(p=>`${p.t} −${p.p} pts (${p.m})`).join('; ')}.</div>`:''}</div>`}
+ord(rows).map(t=>{const i=t.pos-1;return`<tr class="${zon||zone(y,i,n)=='dn'?zone(y,i,n):''}"><td>${t.pos}</td><td class="t">${tb(t.n)}${t.n}</td><td class="p">${t.P}${t.pen?'<sup title="Perdeu '+t.pen+' pts por punição">*</sup>':''}</td><td>${t.J}</td><td>${t.V}</td><td>${t.E}</td><td>${t.D}</td><td>${t.GP}</td><td>${t.GC}</td><td class="${sgc(t.SG)}">${t.SG>0?'+':''}${t.SG}</td><td>${ap(t)}</td></tr>`}).join('')+`</table></div><div class="mut" style="margin-top:6px">Aprov. = pontos conquistados ÷ pontos disputados (3 por jogo). Clique no título de uma coluna para ordenar (a coluna # mantém a posição da classificação normal). Critérios: pontos, vitórias, saldo, gols pró.</div>${zon&&zl(y,n)?`<div class="zl">${zl(y,n)}</div>`:''}${penOn(y,X,m,st.tn,X0).length?`<div class="mut" style="margin-top:4px">* Punições: ${penOn(y,X,m,st.tn,X0).map(p=>`${p.t} −${p.p} pts (${p.m})`).join('; ')}.</div>`:''}</div>`}
 function hist(){const [X0,X]=rng(),m=st.m,tn=st.tn,a=+$('#hf').value,b=+$('#ht').value,lo=Math.min(a,b),hi=Math.max(a,b);
 const ys=[...new Set(G.map(g=>g.y))].filter(y=>y>=lo&&y<=hi).sort((p,q)=>p-q),T={};
 for(const y of ys)for(const t of table(y,X,m,tn,X0)){const k=nk(t.n),o=T[k]||(T[k]={n:t.n,P:0,J:0,V:0,E:0,D:0,GP:0,GC:0,ys:0,pen:0});o.n=t.n;for(const f of['P','J','V','E','D','GP','GC'])o[f]+=t[f];o.pen+=t.pen||0;if(t.J)o.ys++}
@@ -228,9 +228,9 @@ $('#jl').innerHTML=`<div style="display:flex;gap:8px;align-items:center;flex-wra
 // Punições decididas na justiça desportiva (alteram a pontuação, não os placares).
 // y = temporada, t = time, p = pontos retirados, r = rodada a partir da qual vale, m = motivo.
 const PEN=[
- {y:2010,t:'Gremio Prudente',p:3,r:38,m:'escalação irregular de Paulão'},
  {y:2013,t:'Portuguesa',p:4,r:38,m:'escalação irregular de Héverton'},
  {y:2013,t:'Flamengo',p:4,r:38,m:'escalação irregular de André Santos'},
+ {y:2010,t:'Gremio Prudente',p:3,r:38,m:'escalação irregular de Paulão'},
  {y:2016,t:'Santa Cruz',p:3,r:38,m:'atraso de salário'}
 ];
 const halfOf=y=>new Set(G.filter(g=>g.y==y).flatMap(g=>[g.h,g.a])).size-1;
@@ -242,8 +242,9 @@ const penOn=(y,X,m,tn='t',X0=0)=>{const hf=halfOf(y);return m=='t'?PEN.filter(p=
 // Anos sem linha própria usam as regras-base abaixo (aproximadas; o número real muda com os títulos de Copa do Brasil, Libertadores e Sul-Americana).
 const fromCount=(a,b,c)=>({lg:a?`1-${a}`:'',lp:b?`${a+1}-${a+b}`:'',sa:c?`${a+b+1}-${a+b+c}`:''});
 const VAGAS={};
-for(let y=2016;y<=2025;y++)VAGAS[y]=fromCount(6,2,6);   // G6 (4 direta + 2 preliminar) e Sul-Americana nos 6 seguintes
-VAGAS[2026]=fromCount(4,2,6);                            // 4 direta + 2 preliminar; Sul-Americana do 7º ao 12º
+for(let y=2003;y<=2015;y++)VAGAS[y]=fromCount(4,0,0);   // até 2015: G4
+for(let y=2016;y<=2025;y++)VAGAS[y]=fromCount(4,2,6);   // G6 (4 direta + 2 preliminar) e Sul-Americana nos 6 seguintes
+VAGAS[2026]=fromCount(4,1,6);                            // 4 direta + 1 preliminar; Sul-Americana do 6º ao 11º
 VAGAS[2006]={lg:'1-3,11',lp:'4-5',sa:'6-10,12-13',nota:'Flamengo: Título Copa do Brasil. Internacional: Título Libertadores'};
 VAGAS[2007]={lg:'1-4',lp:'5',sa:'6-12',nota:'Fluminense: Título Copa do Brasil'};
 VAGAS[2008]={lg:'1-3,11',lp:'4',sa:'5-10,12-14',nota:'Internacional: Título Sulamericana'};
@@ -255,15 +256,16 @@ VAGAS[2013]={lg:'1-2,8,16',lp:'3-4',sa:'',nota:'Flamengo: Título Copa do Brasil
 VAGAS[2014]={lg:'1-3,5',lp:'4',sa:'',nota:'Atlético-MG: Título Copa do Brasil'};
 VAGAS[2015]={lg:'1-3,9',lp:'4',sa:'',nota:'Palmeiras: Título Copa do Brasil'};
 VAGAS[2016]={lg:'1-4,9,11',lp:'5-6',sa:'7-8,10,12-14',nota:'Grêmio: Título Copa do Brasil. Chapecoense: Título Sulamericana'};
-VAGAS[2017]=VAGAS[2017]+{nota:'Cruzeiro: Título Copa do Brasil. Grêmio: Título Libertadores'};
+VAGAS[2017]={lg:'1-6',lp:'7-8',sa:'9-14',nota:'Cruzeiro: Título Copa do Brasil. Grêmio: Título Libertadores'};
 VAGAS[2018]={lg:'1-4,7-8',lp:'5-6',sa:'9-14',nota:'Cruzeiro: Título Copa do Brasil. Athletico-PR: Título Sulamericana'};
-VAGAS[2019]=VAGAS[2019]+{nota:'Athletico: Título Copa do Brasil. Flamengo: Título Libertadores'};
+VAGAS[2019]={lg:'1-6',lp:'7-8',sa:'9-14',nota:'Athletico: Título Copa do Brasil. Flamengo: Título Libertadores'};
 VAGAS[2020]={lg:'1-5,7',lp:'6,8',sa:'9-14',nota:'Palmeiras: Título Copa do Brasil e da Libertadores'};
 VAGAS[2021]={lg:'1-6,14',lp:'7-8',sa:'9-15',nota:'Atlético-MG: Título Copa do Brasil. Athletico-PR: Título Sulamericana. Palmeiras: Título Libertadores'};
-VAGAS[2022]=VAGAS[2022]+{nota:'Flamengo: Título Copa do Brasil e da Libertadores'};
+VAGAS[2022]={lg:'1-6',lp:'7-8',sa:'9-14',nota:'Flamengo: Título Copa do Brasil e da Libertadores'};
 VAGAS[2023]={lg:'1-4,7,11',lp:'5-6',sa:'8-10,12-14',nota:'São Paulo: Título Copa do Brasil. Fluminense: Título Libertadores'};
-VAGAS[2024]=VAGAS[2024]+{nota:'Flamengo: Título Copa do Brasil. Botafogo: Título Libertadores'};
+VAGAS[2024]={lg:'1-6',lp:'7-8',sa:'9-14',nota:'Flamengo: Título Copa do Brasil. Botafogo: Título Libertadores'};
 VAGAS[2025]={lg:'1-5,13',lp:'6-7',sa:'8-12,14',nota:'Corinthians: Título Copa do Brasil. Flamengo: Título Libertadores'};
+// --- Adicione/edite abaixo os demais anos (exemplos):
 const parsePos=t=>{const r=new Set();String(t||'').split(',').forEach(p=>{const m=p.trim().match(/^(\d+)(?:\s*-\s*(\d+))?$/);if(m)for(let i=+m[1];i<=+(m[2]||m[1]);i++)r.add(i)});return r};
 const zset=y=>{const v=VAGAS[y]||fromCount(4,0,0);return{lg:parsePos(v.lg),lp:parsePos(v.lp),sa:parsePos(v.sa),nota:v.nota||''}};
 const zone=(y,i,n)=>{const z=zset(y),p=i+1;return z.lg.has(p)?'lg':z.lp.has(p)?'lp':z.sa.has(p)?'sa':i>=n-4&&n>=16?'dn':''};
