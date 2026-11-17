@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-BR"><head><meta charset="utf-8"><title>Brasileirão Série A – Classificação e Jogos</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0e6f7e">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Brasileirão">
 <style>
-:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#eef2ef;--fg:#18221d;--card:#fff;--mut:#5a675f;--line:#e3e9e5;--acc:#0a7d4b;--on:#fff;--up:#e2f5ea;--hov:#f3f8f5;--pos:#0a7d4b;--neg:#c93a3a;--sh:0 1px 2px rgba(20,40,30,.06),0 8px 24px rgba(20,40,30,.06)}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#eef2ef;--fg:#18221d;--card:#fff;--mut:#5a675f;--line:#e3e9e5;--acc:#0e6f7e;--zg:#16a34a;--on:#fff;--up:#e2f5ea;--hov:#f3f8f5;--pos:#0a7d4b;--neg:#c93a3a;--sh:0 1px 2px rgba(20,40,30,.06),0 8px 24px rgba(20,40,30,.06)}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0f1512;--fg:#e8eeea;--card:#18211d;--mut:#8fa197;--line:#26332d;--acc:#3ecf8e;--on:#08150e;--up:#143324;--hov:#1e2a25;--pos:#4ade80;--neg:#f87171;--sh:none}}
-:root[data-theme="dark"]{color-scheme:dark;--bg:#0f1512;--fg:#e8eeea;--card:#18211d;--mut:#8fa197;--line:#26332d;--acc:#3ecf8e;--on:#08150e;--up:#143324;--hov:#1e2a25;--pos:#4ade80;--neg:#f87171;--sh:none}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0f1512;--fg:#e8eeea;--card:#18211d;--mut:#8fa197;--line:#26332d;--acc:#3fbfd4;--zg:#4ade80;--on:#08150e;--up:#143324;--hov:#1e2a25;--pos:#4ade80;--neg:#f87171;--sh:none}}
+:root[data-theme="light"]{color-scheme:light}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#0f1512;--fg:#e8eeea;--card:#18211d;--mut:#8fa197;--line:#26332d;--acc:#3fbfd4;--zg:#4ade80;--on:#08150e;--up:#143324;--hov:#1e2a25;--pos:#4ade80;--neg:#f87171;--sh:none}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding:0 16px 32px}
-header{margin:0 -16px 18px;padding:24px 20px;background:linear-gradient(135deg,#0a7d4b,#0b5d3a 60%,#10442d);color:#fff}
+header{margin:0 -16px 18px;padding:24px 20px;background:linear-gradient(135deg,#0e6f7e,#0b5563 60%,#083c46);color:#fff}
 header>div{max-width:1280px;margin:0 auto}header h1{margin:0;font-size:26px;letter-spacing:-.4px}header p{margin:4px 0 0;opacity:.8;font-size:14px}
 main{max-width:1280px;margin:0 auto}
 .bar{display:flex;flex-wrap:wrap;gap:14px 16px;align-items:end;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:16px;box-shadow:var(--sh)}
@@ -31,10 +37,10 @@ th:first-child{text-align:center}
 td:first-child{color:var(--mut);font-weight:700;text-align:center;width:38px}
 td.t,th.t{text-align:left}td.t{font-weight:600}
 tr.up td:first-child{box-shadow:inset 4px 0 var(--acc);background:var(--up);color:var(--pos)}
-tr.lg td:first-child{box-shadow:inset 4px 0 var(--acc);background:var(--up);color:var(--pos)}
+tr.lg td:first-child{box-shadow:inset 4px 0 var(--zg);background:var(--up);color:var(--pos)}
 tr.lp td:first-child{box-shadow:inset 4px 0 #3b82f6;background:color-mix(in srgb,#3b82f6 16%,transparent);color:#3b82f6}
 tr.sa td:first-child{box-shadow:inset 4px 0 #8b5cf6;background:color-mix(in srgb,#8b5cf6 16%,transparent);color:#8b5cf6}
-.zl{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:13px;margin-top:6px;color:var(--mut)}.zl i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px}.zl small{flex-basis:100%;font-size:12px;opacity:.85}.z1{background:var(--acc)}.z2{background:#3b82f6}.z3{background:#8b5cf6}.z4{background:var(--neg)}
+.zl{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:13px;margin-top:6px;color:var(--mut)}.zl i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px}.zl small{flex-basis:100%;font-size:12px;opacity:.85}.z1{background:var(--zg)}.z2{background:#3b82f6}.z3{background:#8b5cf6}.z4{background:var(--neg)}
 tr.dn td:first-child{box-shadow:inset 4px 0 var(--neg);color:var(--neg)}
 td.p{font-weight:800;font-size:15px}.pos{color:var(--pos)}.neg{color:var(--neg)}
 img.tb{background:none!important;border-radius:0;object-fit:contain}
@@ -42,16 +48,16 @@ img.tb{background:none!important;border-radius:0;object-fit:contain}
 .g th,.g td{text-align:center}.g td.h{text-align:right}.g td.h .tb{margin:0 0 0 8px}.g td.a{text-align:left}.g td:first-child{width:auto;color:inherit;font-weight:400}
 .g b{display:inline-block;min-width:56px;padding:3px 10px;border-radius:999px;background:var(--bg);border:1px solid var(--line)}
 th.srt{cursor:pointer;user-select:none;white-space:nowrap}th.srt:hover{color:var(--acc)}th.srt.on{color:var(--fg)}
-td.best{font-weight:800;color:var(--pos);background:color-mix(in srgb,var(--acc) 24%,transparent);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--acc) 50%,transparent)}
-tr:hover td.best{background:color-mix(in srgb,var(--acc) 32%,var(--hov))}td[title]:not([title='']){cursor:help}
+td.best{font-weight:800;color:var(--pos);background:color-mix(in srgb,var(--zg) 24%,transparent);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--zg) 50%,transparent)}
+tr:hover td.best{background:color-mix(in srgb,var(--zg) 32%,var(--hov))}td[title]:not([title='']){cursor:help}
 .stk th:nth-child(-n+2),.stk td:nth-child(-n+2){position:sticky;background:var(--card);z-index:1}
 .stk th:first-child,.stk td:first-child{left:0;min-width:42px;width:42px;max-width:42px}
 .stk th:nth-child(2),.stk td:nth-child(2){left:42px;box-shadow:1px 0 0 var(--line)}
 .stk tr:hover td:nth-child(-n+2){background:var(--hov)}td small{color:var(--mut);font-size:10px;font-weight:400;margin-left:4px}
-.ig{--bg2:#e1f2e8;--tx:#0b4a2e;--rd:#0a7d4b;background:var(--bg2);color:var(--tx);border-radius:14px;padding:14px;display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));margin-bottom:16px}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .ig{--bg2:#12281e;--tx:#e2f3ea;--rd:#3ecf8e}}
-:root[data-theme="dark"] .ig{--bg2:#12281e;--tx:#e2f3ea;--rd:#3ecf8e}
-.ig .mut{color:inherit;opacity:.7}.igt{grid-column:1/-1;background:#0a5d3a;color:#fff;text-align:center;font-weight:800;font-size:20px;padding:12px;border-radius:6px;letter-spacing:.02em}.igt span{display:block;font-size:12px;font-weight:500;opacity:.8}
+.ig{--bg2:#dff0f3;--tx:#0b3c47;--rd:#0e6f7e;background:var(--bg2);color:var(--tx);border-radius:14px;padding:14px;display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));margin-bottom:16px}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .ig{--bg2:#10272c;--tx:#dff3f6;--rd:#3fbfd4}}
+:root[data-theme="dark"] .ig{--bg2:#10272c;--tx:#dff3f6;--rd:#3fbfd4}
+.ig .mut{color:inherit;opacity:.7}.igt{grid-column:1/-1;background:#0b4f5c;color:#fff;text-align:center;font-weight:800;font-size:20px;padding:12px;border-radius:6px;letter-spacing:.02em}.igt span{display:block;font-size:12px;font-weight:500;opacity:.8}
 .igc{background:color-mix(in srgb,var(--tx) 7%,transparent);border-radius:12px;padding:12px;min-width:0}
 .rb{background:var(--rd);color:var(--on);font-weight:800;text-align:center;padding:5px 14px;margin:0 auto 12px;width:max-content;max-width:100%;border-radius:3px}
 .t10{display:grid;grid-template-columns:repeat(auto-fit,minmax(104px,1fr));gap:10px}
@@ -133,12 +139,21 @@ td:first-child{min-width:50px}
 .stk .nm{display:inline-block;max-width:60px;overflow:hidden;text-overflow:ellipsis;vertical-align:middle;white-space:nowrap}
 .tsum{grid-template-columns:repeat(2,1fr)}
 }
+.si{opacity:.4;font-size:10px;margin-left:3px}
+.tp{display:grid;gap:16px}.tp .card h2{font-size:16px}
+.tp .tkb b{font-size:17px;white-space:nowrap}.tp .tkb span{font-size:12px}.tp .tkb small{font-size:11px}
+.tpch{max-width:480px}.tpch .ch{max-height:150px}
+.tp .pins{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:6px}
+.tp .pin{padding:5px 8px;gap:8px}.tp .pin b{font-size:14px;min-width:46px;white-space:nowrap;text-align:center}.tp .pin span{font-size:12px;line-height:1.25}.tp .pin small{font-size:11px;white-space:normal}
+.tp table{font-size:13px}
+#thm,#inst{background:#ffffff26;color:#fff;border-color:#ffffff77}
+@media(max-width:720px){.stk .si{display:none}#thm{min-height:44px}}
 .mut{color:var(--mut);font-size:14px;font-weight:400}.hide{display:none!important}
 .chk{display:flex;flex-wrap:wrap;gap:4px;max-width:440px;max-height:90px;overflow:auto}
 .chk label{flex-direction:row;align-items:center;gap:4px;font-size:13px;font-weight:500;text-transform:none;letter-spacing:0;color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:3px 8px}
 #imp{border:2px dashed var(--line);border-radius:14px;padding:20px;background:var(--card);margin-bottom:16px}
 </style></head><body>
-<header><div class="hd"><div><h1>⚽ Brasileirão Série A</h1><p>Classificação, evolução por rodada e simulações</p></div><div class="srch"><span id="srchc"></span><input id="srch" type="search" list="tl" placeholder="Buscar time  ( / )" aria-label="Buscar time" autocomplete="off"><datalist id="tl"></datalist><button id="lnk" title="Copiar o link desta tela">🔗 Copiar link</button></div></div></header>
+<header><div class="hd"><div><h1>⚽ Brasileirão Série A</h1><p>Classificação, evolução por rodada e simulações</p></div><div class="srch"><span id="srchc"></span><input id="srch" type="search" list="tl" placeholder="Buscar time  ( / )" aria-label="Buscar time" autocomplete="off"><datalist id="tl"></datalist><button id="lnk" title="Copiar o link desta tela">🔗 Copiar link</button><button id="thm" title="Alternar tema"></button><button id="inst" class="hide">📲 Instalar</button></div></div></header>
 <main>
 <p id="ld" class="mut">Carregando dados…</p>
 <div id="imp" class="hide"><b>Carregue os dados</b><p class="mut">O site tenta ler <i>data/jogos.csv</i> automaticamente; se você chegou aqui, o arquivo não foi encontrado (ou a página foi aberta direto do computador). Selecione o arquivo CSV com os jogos (ex.: <i>campeonato-brasileiro-full.csv</i>, de bases públicas no GitHub/Kaggle). Colunas esperadas: rodada, data, mandante, visitante, placar do mandante e do visitante. Os dados ficam salvos neste navegador.</p>
@@ -195,7 +210,9 @@ const ys=[...new Set(G.map(g=>g.y))].sort((a,b)=>b-a);const def=[ys[0],ys.includ
 {const asc=[...ys].reverse(),oa=asc.map(y=>`<option>${y}</option>`).join('');$('#hf').innerHTML=oa;$('#ht').innerHTML=oa;$('#ht').selectedIndex=asc.length-1;$('#sx').innerHTML='<option value="all">Todas as temporadas</option>'+ys.map(y=>`<option>${y}</option>`).join('');$('#sx').selectedIndex=1}
 $('#msg').textContent=`${G.length} jogos • ${ys.length} temporadas (${ys[ys.length-1]}–${ys[0]})`;$('#tl').innerHTML=allTeams().map(t=>`<option value="${t}">`).join('');applyHash();fillTeams();draw()}
 function fillTeams(){const y=+$('#sa').value,t=[...new Set(G.filter(g=>g.y==y).flatMap(g=>[g.h,g.a]))].sort();$('#ft').innerHTML='<option value="">Todos</option>'+t.map(x=>`<option>${x}</option>`).join('')}
-function table(y,X,m,tn='t',X0=0){const hf=halfOf(y);const T={};const get=n=>T[n]||(T[n]={n,P:0,J:0,V:0,E:0,D:0,GP:0,GC:0});
+const TC=new Map();let TCG=null;
+function table(y,X,m,tn='t',X0=0){if(TCG!==G){TC.clear();TCG=G}const k=y+'|'+X+'|'+m+'|'+tn+'|'+X0;let r=TC.get(k);if(!r){r=table0(y,X,m,tn,X0);TC.set(k,r)}return r}
+function table0(y,X,m,tn='t',X0=0){const hf=halfOf(y);const T={};const get=n=>T[n]||(T[n]={n,P:0,J:0,V:0,E:0,D:0,GP:0,GC:0});
 for(const g of G){if(g.y!=y||g.hg==null||g.ag==null||(X&&g.r>X)||(X0&&g.r<X0)||(tn=='1'&&g.r>hf)||(tn=='2'&&g.r<=hf))continue;
 const sides=[[g.h,g.hg,g.ag,'h'],[g.a,g.ag,g.hg,'a']];for(const[n,f,c,s]of sides){if(m!='t'&&m!=s)continue;const t=get(n);t.J++;t.GP+=f;t.GC+=c;if(f>c){t.V++;t.P+=3}else if(f==c){t.E++;t.P++}else t.D++}}
 const pn=penOn(y,X,m,tn,X0);
@@ -206,7 +223,7 @@ function panel(y,pv){lastPanelPos={};const [X0,X]=rng(),m=st.m,zon=m=='t'&&st.tn
 const mt={t:'Geral',h:'Só em casa',a:'Só fora'}[m];
 if(!rows.length)return`<div class="card"><h2>${y}</h2><p class="mut">Nenhum jogo encontrado com os filtros escolhidos.</p><button data-clear="1">Limpar filtros</button></div>`;
 return`<div class="card"><h2>${y} <span class="mut">${mt}${tl} • ${rtxt(X0,X)}</span><button class="mob colbtn" data-cols="1">${st.cols?'Menos colunas':'Mais colunas'}</button><button class="expb" data-exp="1" title="Baixar tabela em CSV">⬇ CSV</button></h2><div class="sc${st.cols?' allc':''}"><table><tr>${heads()}</tr>`+
-ord(rows).map(t=>{const i=t.pos-1,zc=srt?'':(zon||zone(y,i,n)=='dn')?zone(y,i,n):'',kk=nk(t.n);lastPanelPos[kk]=t.pos;return`<tr class="${zc}${st.fx&&nk(st.fx)==kk?' fx':''}" data-k="${kk}"><td>${t.pos}${ZI[zc]||''}${dvf(t,pv)}</td><td class="t">${tb(t.n)}${t.n}</td><td class="p">${t.P}${t.pen?'<sup title="Perdeu '+t.pen+' pts por punição">*</sup>':''}</td><td>${t.J}</td><td>${t.V}</td><td class="xc">${t.E}</td><td class="xc">${t.D}</td><td class="xc">${t.GP}</td><td class="xc">${t.GC}</td><td class="${sgc(t.SG)}">${t.SG>0?'+':''}${t.SG}</td><td class="xc">${ap(t)}</td></tr>`}).join('')+`</table></div>${(()=>{const lg=srt?'':leg(y,n,zon)+(zon?zl(y,n):'');return lg?`<div class="zl">${lg}</div>`:''})()}${penOn(y,X,m,st.tn,X0).length?`<div class="mut" style="margin-top:4px">* Punições: ${penOn(y,X,m,st.tn,X0).map(p=>`${p.t} −${p.p} pts (${p.m})`).join('; ')}.</div>`:''}</div>`}
+ord(rows).map((t,ix)=>{const i=t.pos-1,zc=srt?'':(zon||zone(y,i,n)=='dn')?zone(y,i,n):'',kk=nk(t.n);lastPanelPos[kk]=t.pos;return`<tr class="${zc}${st.fx&&nk(st.fx)==kk?' fx':''}" data-k="${kk}"><td>${ix+1}${ZI[zc]||''}${srt?'':dvf(t,pv)}</td><td class="t">${tb(t.n)}${t.n}</td><td class="p">${t.P}${t.pen?'<sup title="Perdeu '+t.pen+' pts por punição">*</sup>':''}</td><td>${t.J}</td><td>${t.V}</td><td class="xc">${t.E}</td><td class="xc">${t.D}</td><td class="xc">${t.GP}</td><td class="xc">${t.GC}</td><td class="${sgc(t.SG)}">${t.SG>0?'+':''}${t.SG}</td><td class="xc">${ap(t)}</td></tr>`}).join('')+`</table></div>${(()=>{const lg=srt?'':leg(y,n,zon)+(zon?zl(y,n):'');return lg?`<div class="zl">${lg}</div>`:''})()}${penOn(y,X,m,st.tn,X0).length?`<div class="mut" style="margin-top:4px">* Punições: ${penOn(y,X,m,st.tn,X0).map(p=>`${p.t} −${p.p} pts (${p.m})`).join('; ')}.</div>`:''}</div>`}
 function hist(){const [X0,X]=rng(),m=st.m,tn=st.tn,a=+$('#hf').value,b=+$('#ht').value,lo=Math.min(a,b),hi=Math.max(a,b);
 const ys=[...new Set(G.map(g=>g.y))].filter(y=>y>=lo&&y<=hi).sort((p,q)=>p-q),T={};
 for(const y of ys)for(const t of table(y,X,m,tn,X0)){const k=nk(t.n),o=T[k]||(T[k]={n:t.n,P:0,J:0,V:0,E:0,D:0,GP:0,GC:0,ys:0,pen:0});o.n=t.n;for(const f of['P','J','V','E','D','GP','GC'])o[f]+=t[f];o.pen+=t.pen||0;if(t.J)o.ys++}
@@ -216,7 +233,7 @@ return`<div class="card"><h2>Classificação histórica <span class="mut">${lo}�
 ord(rows).map((t,i)=>`<tr class="${st.fx&&nk(st.fx)==nk(t.n)?'fx':''}" data-k="${nk(t.n)}"><td>${i+1}</td><td class="t">${tb(t.n)}${t.n}</td><td class="p">${t.P}${t.pen?'<sup title="Inclui punições">*</sup>':''}</td><td>${t.J}</td><td>${t.V}</td><td class="xc">${t.E}</td><td class="xc">${t.D}</td><td class="xc">${t.GP}</td><td class="xc">${t.GC}</td><td class="${sgc(t.SG)}">${t.SG>0?'+':''}${t.SG}</td><td class="xc">${ap(t)}</td><td>${t.ys}</td></tr>`).join('')+
 `</table></div><div class="mut" style="margin-top:6px">Soma de todas as temporadas do período, incluindo a que está em andamento e as punições (*). Temp. = temporadas disputadas. Critérios: pontos, vitórias, saldo, gols pró. Times que mudaram de nome aparecem separados. Clique no título de uma coluna para ordenar; a coluna # acompanha a ordem escolhida.</div></div>`}
 const SDEF=[['sv','Seq. vitórias',g=>g.f>g.c],['si','Seq. invicta',g=>g.f>=g.c],['sw','Seq. sem vencer',g=>g.f<=g.c],['sd','Seq. derrotas',g=>g.f<g.c],['sc','Seq. sem sofrer gol',g=>g.c==0],['sm','Seq. marcando gol',g=>g.f>0],['sn','Seq. sem marcar',g=>g.f==0],['ss','Seq. sofrendo gol',g=>g.c>0]];
-const SX=(k,l,c='')=>`<th data-xk="${k}" class="srt ${c}${st.xk==k?' on':''}" tabindex="0" aria-sort="${st.xk==k?(st.xd=='a'?'ascending':'descending'):'none'}" title="Ordenar por esta coluna">${l}${st.xk==k?(st.xd=='a'?' ▲':' ▼'):''}</th>`;
+const SX=(k,l,c='')=>`<th data-xk="${k}" class="srt ${c}${st.xk==k?' on':''}" tabindex="0" aria-sort="${st.xk==k?(st.xd=='a'?'ascending':'descending'):'none'}" title="Ordenar por esta coluna">${l}${st.xk==k?(st.xd=='a'?' ▲':' ▼'):'<span class="si" aria-hidden="true">↕</span>'}</th>`;
 function sdata(sel){const [X0,X]=rng(),m=st.m,all=sel=='all',cross=all&&$('#sq').value=='c';
 const gs=G.filter(g=>(all||g.y==sel)&&g.hg!=null&&g.ag!=null&&(!X||g.r<=X)&&(!X0||g.r>=X0)).sort((a,b)=>a.d.localeCompare(b.d)||(a.t||'').localeCompare(b.t||'')||a.r-b.r),L={},nm={};
 for(const g of gs)for(const[n,f,c,sd,o]of[[g.h,g.hg,g.ag,'h',g.a],[g.a,g.ag,g.hg,'a',g.h]]){if(m!='t'&&m!=sd)continue;const k=nk(n);nm[k]=n;(L[k]=L[k]||[]).push({y:g.y,r:g.r,f,c,o})}
@@ -256,7 +273,7 @@ return`<svg viewBox="0 0 ${CW} ${CH}" class="ch">${gridY(S)}`+v.map((x,i)=>`<rec
 `${xlab(xs,i=>CL+i*bw+bw/2)}</svg>`};
 const stk=(v,xs,lbl,cl)=>{const S=scl(0,Math.max(...v.map(a=>a[0]+a[1]+a[2]),1),1),bw=PW/v.length;
 return`<svg viewBox="0 0 ${CW} ${CH}" class="ch">${gridY(S)}`+v.map((a,i)=>{let acc=0;return a.map((x,j)=>{if(!x)return'';const y0=S.Y(acc+x),hh=S.Y(acc)-y0;acc+=x;return`<rect x="${(CL+i*bw+1).toFixed(1)}" y="${y0.toFixed(1)}" width="${Math.max(1,bw-2).toFixed(1)}" height="${hh.toFixed(1)}" fill="${cl[j]}"><title>Rodada ${xs[i]}: ${a[0]} ${lbl[0]}, ${a[1]} ${lbl[1]}, ${a[2]} ${lbl[2]}</title></rect>`}).join('')}).join('')+`${xlab(xs,i=>CL+i*bw+bw/2)}</svg>`};
-const COL=['#0a7d4b','#f2b92c','#3aa5d9','#2fb67c','#8b6fd1','#7e97a8'];
+const COL=['#0e6f7e','#f2b92c','#3aa5d9','#2fb67c','#8b6fd1','#7e97a8'];
 const pie=(v,lb,hole)=>{const T=v.reduce((a,b)=>a+b,0)||1;let a0=-Math.PI/2,o='';const p=a=>[(50+46*Math.cos(a)).toFixed(2),(50+46*Math.sin(a)).toFixed(2)];
 v.forEach((x,i)=>{if(!x)return;const a1=a0+x/T*2*Math.PI,s0=p(a0),e0=p(a1);o+=x==T?`<circle cx="50" cy="50" r="46" fill="${COL[i]}"><title>${lb[i]}: ${x} (${pc(x,T)})</title></circle>`:`<path class="sl" d="M50 50L${s0[0]} ${s0[1]}A46 46 0 ${a1-a0>Math.PI?1:0} 1 ${e0[0]} ${e0[1]}Z" fill="${COL[i]}"><title>${lb[i]}: ${x} (${pc(x,T)})</title></path>`;a0=a1});
 return`<svg viewBox="0 0 100 100" class="pie">${o}${hole?`<circle cx="50" cy="50" r="27" fill="var(--bg2)"/><text x="50" y="55" text-anchor="middle" font-size="14" font-weight="800" fill="currentColor">${hole}</text>`:''}</svg>`};
@@ -281,7 +298,7 @@ const q=fk?[['vitórias',H,'V'],['empates',E,'E'],['derrotas',A,'D']]:[['vitóri
 const md=fk?[[fn1(sf/N),'gols marcados por jogo','⌀'],[fn1(sc_/N),'gols sofridos por jogo','⌀'],[pc(L.filter(g=>!g.c).length,N),'jogos sem sofrer gol','0']]:[[fn1((sf+sc_)/N),'gols por jogo','⌀'],[pc(L.filter(g=>g.f&&g.c).length,N),'ambos marcam','⇄'],[pc(L.filter(g=>g.f+g.c>=3).length,N),'jogos com 3+ gols','3+']];
 const cl=['#f2b92c','#7e97a8','#b97a4a'];
 return`<div class="ig">${ban}
-<div class="igc" style="grid-column:1/-1"><div class="rb">Top 10 em aproveitamento</div><div class="t10">${top.map(t=>`<button class="t10b${nk(t.n)==fk?' on':''}" data-fx="${encodeURIComponent(t.n)}" title="${t.n}: ${t.P} pts em ${t.J} jogos. Clique para focar neste time"><span class="ig-c">${tb(t.n)}</span><b>${pc(t.P,t.J*3)}</b><small>${t.n}</small></button>`).join('')}</div></div>
+${fk?'':`<div class="igc" style="grid-column:1/-1"><div class="rb">Top 10 em aproveitamento</div><div class="t10">${top.map(t=>`<button class="t10b${nk(t.n)==fk?' on':''}" data-fx="${encodeURIComponent(t.n)}" title="${t.n}: ${t.P} pts em ${t.J} jogos. Clique para focar neste time"><span class="ig-c">${tb(t.n)}</span><b>${pc(t.P,t.J*3)}</b><small>${t.n}</small></button>`).join('')}</div></div>`}
 <div class="igc"><div class="rb">Resultados</div><div class="trio">${q.map((x,i)=>`<div>${trophy(cl[i],x[2])}<b>${pc(x[1],N)}</b><span>${x[0]}</span></div>`).join('')}</div><div class="mut">Resultados em cada rodada (quantidade de jogos)</div>${stk(sk,rk,q.map(x=>x[0]),cl)}<div class="lgd">${q.map((x,i)=>`<span><i style="background:${cl[i]}"></i>${x[0]}</span>`).join('')}</div></div>
 <div class="igc"><div class="rb">Gols</div><div class="trio">${md.map((x,i)=>`<div>${medal(cl[i],x[2])}<b>${x[0]}</b><span>${x[1]}</span></div>`).join('')}</div><div class="mut">${fk?'Gols marcados em cada rodada':'Gols por jogo em cada rodada'}</div>${bars(avg,rk,fk?'gols marcados':'gols por jogo')}</div>
 <div class="igc igr"><div class="rb">Recordes</div><div class="pins">${rec.map(r=>`<div class="pin" title="${r.w}"><b>${r.v}</b><span>${r.l}<small>${r.sub}</small></span></div>`).join('')||'<span class="mut">Sem recordes no período.</span>'}</div></div>
@@ -351,7 +368,7 @@ return z.nota?`<small>${z.nota}</small>`:''};
 const ESC={},ESCN={},nk=s=>norm(s).replace(/[^a-z0-9]/g,'');
 const tbi=n=>{let h=0;for(const c of n)h=(h*31+c.charCodeAt(0))%360;return`<span class="tb" aria-hidden="true" style="background:hsl(${h},50%,42%)">${n.replace(/[^A-Za-zÀ-ÿ]/g,'').slice(0,3).toUpperCase()}</span>`};
 const tb=n=>{const u=ESC[n]||ESCN[nk(n)];return u?`<img class="tb" src="${u}" alt="${n.replace(/"/g,'&quot;')}" loading="lazy" onerror="this.outerHTML=tbi(this.alt)">`:tbi(n)};
-const SH=(k,l,c='')=>`<th data-k="${k}" class="srt ${c}${st.sk==k?' on':''}" tabindex="0" aria-sort="${st.sk==k?(st.sd=='a'?'ascending':'descending'):'none'}" title="Ordenar por esta coluna">${l}${st.sk==k?(st.sd=='a'?' ▲':' ▼'):''}</th>`;
+const SH=(k,l,c='')=>`<th data-k="${k}" class="srt ${c}${st.sk==k?' on':''}" tabindex="0" aria-sort="${st.sk==k?(st.sd=='a'?'ascending':'descending'):'none'}" title="Ordenar por esta coluna">${l}${st.sk==k?(st.sd=='a'?' ▲':' ▼'):'<span class="si" aria-hidden="true">↕</span>'}</th>`;
 const heads=()=>'<th>#</th>'+SH('n','Time','t')+[['P','P'],['J','J'],['V','V'],['E','E'],['D','D'],['GP','GP'],['GC','GC'],['SG','SG'],['AP','Aprov.']].map(([k,l])=>SH(k,l,['E','D','GP','GC','AP'].includes(k)?'xc':'')).join('');
 function ord(rows){rows.forEach((t,i)=>t.pos=i+1);if(!st.sk)return rows;const k=st.sk,d=st.sd=='a'?1:-1,v=t=>k=='n'?t.n:k=='AP'?(t.J?t.P/t.J:-1):t[k];
 return[...rows].sort((a,b)=>{const x=v(a),y=v(b),c=typeof x=='string'?x.localeCompare(y):x-y;return d*c||a.pos-b.pos})}
@@ -487,13 +504,22 @@ const rw=D.rows.find(r=>nk(r.n)==k),rec=rw?SDEF.filter(([q])=>rw[q]).map(([q,l])
 const nt=Math.max(...R.map(r=>r.nt)),X=i=>CL+(R.length>1?i*PW/(R.length-1):PW/2),Y=p=>CT+(p-1)/Math.max(1,nt-1)*PH,tk=[1,...[5,10,15,20].filter(v=>v<=nt)];
 let d='';R.forEach((r,i)=>{d+=(i&&r.y-R[i-1].y==1?'L':'M')+X(i).toFixed(1)+','+Y(r.pos).toFixed(1)});
 const svg=`<svg viewBox="0 0 ${CW} ${CH}" class="ch">`+tk.map(v=>`<line x1="${CL}" x2="${CW-CR}" y1="${Y(v).toFixed(1)}" y2="${Y(v).toFixed(1)}" stroke="currentColor" opacity=".18"/><text x="${CL-4}" y="${(Y(v)+3).toFixed(1)}" text-anchor="end" font-size="9.5" fill="currentColor" opacity=".75">${v}º</text>`).join('')+`<path d="${d}" fill="none" stroke="var(--acc)" stroke-width="2" stroke-linejoin="round"/>`+R.map((r,i)=>`<circle cx="${X(i).toFixed(1)}" cy="${Y(r.pos).toFixed(1)}" r="3.5" fill="var(--acc)"><title>${r.y}: ${r.pos}º lugar, ${r.P} pts</title></circle>`).join('')+xlab(R.map(r=>r.y),X)+`</svg>`;
-return`<div class="card"><h2>${tb(nm)}${nm} <span class="mut">${R[0].y}–${R[R.length-1].y} na Série A (dados carregados)</span></h2><div class="tsum">${k1('Temporadas',R.length)}${k1('Melhor posição',best+'º',yrs(best))}${k1('Pior posição',worst+'º',yrs(worst))}${k1('Títulos',tit.length,tit.join(', '))}${k1('Jogos',J)}${k1('Aproveitamento',pc(P,J*3))}${k1('V / E / D',sm('V')+' / '+sm('E')+' / '+sm('D'))}${k1('Gols pró / contra',sm('GP')+' / '+sm('GC'))}</div></div>
-<div class="card"><h2>Posição final por temporada</h2><div class="mut">1º lugar no topo</div>${svg}</div>
+return`<div class="tp"><div class="card"><h2>${tb(nm)}${nm} <span class="mut">${R[0].y}–${R[R.length-1].y} na Série A (dados carregados)</span></h2><div class="tsum">${k1('Temporadas',R.length)}${k1('Melhor posição',best+'º',yrs(best))}${k1('Pior posição',worst+'º',yrs(worst))}${k1('Títulos',tit.length,tit.join(', '))}${k1('Jogos',J)}${k1('Aproveitamento',pc(P,J*3))}${k1('V / E / D',sm('V')+' / '+sm('E')+' / '+sm('D'))}${k1('Gols pró / contra',sm('GP')+' / '+sm('GC'))}</div></div>
+<div class="card"><h2>Posição final por temporada</h2><div class="mut">1º lugar no topo</div><div class="tpch">${svg}</div></div>
 <div class="card"><h2>Campanhas por ano<button class="expb" data-exp="1" title="Baixar em CSV">⬇ CSV</button></h2><div class="sc"><table><tr><th>Ano</th><th>#</th><th>P</th><th>J</th><th>V</th><th>E</th><th>D</th><th>GP</th><th>GC</th><th>SG</th><th>Aprov.</th></tr>`+
 R.slice().reverse().map(r=>`<tr><td>${r.y}</td><td>${r.pos}º${ZI[zone(r.y,r.pos-1,r.nt)]||''}</td><td class="p">${r.P}${r.pen?'<sup title="Inclui punição">*</sup>':''}</td><td>${r.J}</td><td>${r.V}</td><td>${r.E}</td><td>${r.D}</td><td>${r.GP}</td><td>${r.GC}</td><td class="${sgc(r.SG)}">${r.SG>0?'+':''}${r.SG}</td><td>${ap(r)}</td></tr>`).join('')+
 `</table></div><div class="mut" style="margin-top:6px">L = Libertadores (grupos) • P = preliminar • S = Sul-Americana • ↓ = rebaixamento, conforme as vagas cadastradas para cada ano.</div></div>
-<div class="card"><h2>Recordes de sequência <span class="mut">dentro de cada temporada</span></h2><div class="pins">${rec.join('')||'<span class="mut">Sem recordes.</span>'}</div></div>`}
+<div class="card"><h2>Recordes de sequência <span class="mut">dentro de cada temporada</span></h2><div class="pins">${rec.join('')||'<span class="mut">Sem recordes.</span>'}</div></div></div>`}
+const dbd=f=>{let t;return()=>{clearTimeout(t);t=setTimeout(f,220)}};
+const THN={auto:'🌓 Sistema',light:'☀️ Claro',dark:'🌙 Escuro'},THL={auto:'seguir o sistema',light:'claro',dark:'escuro'};
+function applyTheme(m){const r=document.documentElement;if(r){if(m=='auto')r.removeAttribute('data-theme');else r.setAttribute('data-theme',m)}const b=$('#thm');b.textContent=THN[m];b.setAttribute('aria-label','Tema: '+THL[m]+'. Clique para alternar.');b.dataset.m=m}
+function initTheme(){let m='auto';try{m=localStorage.getItem('bra_theme')||'auto'}catch(e){}if(!THN[m])m='auto';applyTheme(m);
+$('#thm').onclick=()=>{const n={auto:'light',light:'dark',dark:'auto'}[$('#thm').dataset.m||'auto'];try{localStorage.setItem('bra_theme',n)}catch(e){}applyTheme(n)}}
 function seg(id,attr,key){$(id).onclick=e=>{const b=e.target.closest('button');if(!b)return;st[key]=b.dataset[attr];$$(id+' button').forEach(x=>x.classList.toggle('on',x==b));draw()}}
+initTheme();
+let dip=null;if(typeof addEventListener=='function')addEventListener('beforeinstallprompt',e=>{e.preventDefault();dip=e;$('#inst').classList.remove('hide')});
+$('#inst').onclick=()=>{if(dip){dip.prompt();dip=null;$('#inst').classList.add('hide')}};
+if(typeof navigator!='undefined'&&navigator.serviceWorker&&typeof location!='undefined'&&/^https?:/.test(location.protocol||''))addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
 seg('#tabs','t','t');
 $('#bnav').onclick=e=>{const b=e.target.closest('button');if(!b)return;if(b.dataset.t=='more'){openSheet(false);$('#more').classList.toggle('show');return}go(b.dataset.t)};
 $('#more').onclick=e=>{const b=e.target.closest('button');if(b)go(b.dataset.t)};
@@ -528,7 +554,7 @@ $('#sg').oninput=e=>{const i=e.target.dataset.i;if(i==null)return;const [a,b]=e.
 if(a.value!==''&&b.value!==''&&+a.value>=0&&+b.value>=0)st.sim[i]={h:Math.floor(+a.value),a:Math.floor(+b.value)};else delete st.sim[i];st.mc=null;simTable();$('#rs').innerHTML=optHtml()};
 seg('#modo','m','m');seg('#turno','n','tn');seg('#ord','o','o');
 $('#cmp').onclick=()=>{st.cmp=!st.cmp;draw()};
-$('#sa').onchange=()=>{st.gr=null;fillTeams();draw()};$('#chk').onchange=draw;$('#mt').onchange=draw;$('#rst').onclick=()=>{st.sk=null;st.xk=null;draw()};$('#vc').onclick=e=>{const ex=e.target.closest('[data-exp]');if(ex){exportCsv(ex.closest('.card'));return}const gg=e.target.closest('[data-go]');if(gg){go(gg.dataset.go);return}if(e.target.closest('[data-print]')){print();return}if(e.target.closest('[data-cols]')){st.cols=!st.cols;draw();return}if(e.target.closest('[data-clear]')){resetFilters();return}if(e.target.closest('button[data-rst]')){st.xk=null;draw();return}const fx=e.target.closest('[data-fx]');if(fx){const n=decodeURIComponent(fx.dataset.fx);setFx(!n||st.fx==n?null:n);draw();return}const tx=e.target.closest('th[data-xk]');if(tx){const k=tx.dataset.xk;if(st.xk==k)st.xd=st.xd=='a'?'d':'a';else{st.xk=k;st.xd=k=='n'||k=='gc'?'a':'d'}draw();return}const th=e.target.closest('th[data-k]');if(!th)return;const k=th.dataset.k;if(st.sk==k)st.sd=st.sd=='a'?'d':'a';else{st.sk=k;st.sd=k=='n'||k=='GC'?'a':'d'}draw()};$('#sx').onchange=draw;$('#sq').onchange=draw;$('#hf').onchange=draw;$('#ht').onchange=draw;$('#et').onchange=draw;$('#x').oninput=draw;$('#x0').oninput=draw;$('#ft').onchange=draw;
+$('#sa').onchange=()=>{st.gr=null;fillTeams();draw()};$('#chk').onchange=draw;$('#mt').onchange=draw;$('#rst').onclick=()=>{st.sk=null;st.xk=null;draw()};$('#vc').onclick=e=>{const ex=e.target.closest('[data-exp]');if(ex){exportCsv(ex.closest('.card'));return}const gg=e.target.closest('[data-go]');if(gg){go(gg.dataset.go);return}if(e.target.closest('[data-print]')){print();return}if(e.target.closest('[data-cols]')){st.cols=!st.cols;draw();return}if(e.target.closest('[data-clear]')){resetFilters();return}if(e.target.closest('button[data-rst]')){st.xk=null;draw();return}const fx=e.target.closest('[data-fx]');if(fx){const n=decodeURIComponent(fx.dataset.fx);setFx(!n||st.fx==n?null:n);draw();return}const tx=e.target.closest('th[data-xk]');if(tx){const k=tx.dataset.xk;if(st.xk==k)st.xd=st.xd=='a'?'d':'a';else{st.xk=k;st.xd=k=='n'||k=='gc'?'a':'d'}draw();return}const th=e.target.closest('th[data-k]');if(!th)return;const k=th.dataset.k;if(st.sk==k)st.sd=st.sd=='a'?'d':'a';else{st.sk=k;st.sd=k=='n'||k=='GC'?'a':'d'}draw()};$('#sx').onchange=draw;$('#sq').onchange=draw;$('#hf').onchange=draw;$('#ht').onchange=draw;$('#et').onchange=draw;$('#x').oninput=dbd(draw);$('#x0').oninput=dbd(draw);$('#ft').onchange=draw;
 $('#file').onchange=async e=>{const f=e.target.files[0];if(!f)return;try{G=load(await f.text());save();init()}catch(err){$('#msg').textContent='Erro: '+err.message}}
 $('#clr').onclick=()=>{try{localStorage.removeItem('bra_g')}catch(e){}G=[];location.reload()}
 fetch('data/escudos.json').then(r=>r.ok?r.json():{}).then(j=>{Object.assign(ESC,j);for(const k in ESC)ESCN[nk(k)]=ESC[k];if(G.length)draw()}).catch(()=>{});
