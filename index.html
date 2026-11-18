@@ -188,6 +188,11 @@ td.cla{white-space:nowrap;font-weight:600;font-size:12px}.c1{color:var(--zg)}.c2
 .cgj1 col:nth-child(1){width:9%}.cgj1 col:nth-child(2){width:13%}.cgj1 col:nth-child(3){width:13%}.cgj1 col:nth-child(4){width:19%}.cgj1 col:nth-child(5){width:27%}.cgj1 col:nth-child(6){width:19%}
 .g.fx td{overflow:visible}.g td input{width:44px!important;min-height:40px;padding:4px 2px}
 }
+@media(min-width:721px){
+#sg{display:flex;flex-direction:column}
+#sg .sc.gb{flex:1 1 auto;min-height:0;max-height:none}
+#sg .sc.gb table{height:100%}
+}
 .mut{color:var(--mut);font-size:14px;font-weight:400}.hide{display:none!important}
 .chk{display:flex;flex-wrap:wrap;gap:4px;max-width:440px;max-height:90px;overflow:auto}
 .chk label{flex-direction:row;align-items:center;gap:4px;font-size:13px;font-weight:500;text-transform:none;letter-spacing:0;color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:3px 8px}
@@ -270,8 +275,8 @@ const ys=[...new Set(G.map(g=>g.y))].filter(y=>y>=lo&&y<=hi).sort((p,q)=>p-q),T=
 for(const y of ys)for(const t of table(y,X,m,tn,X0)){const k=nk(t.n),o=T[k]||(T[k]={n:t.n,P:0,J:0,V:0,E:0,D:0,GP:0,GC:0,ys:0,pen:0});o.n=t.n;for(const f of['P','J','V','E','D','GP','GC'])o[f]+=t[f];o.pen+=t.pen||0;if(t.J)o.ys++}
 const rows=Object.values(T).map(t=>(t.SG=t.GP-t.GC,t)).sort(cmpT);
 const mt={t:'Geral',h:'Só em casa',a:'Só fora'}[m],tl=tn=='1'?' • 1º turno':tn=='2'?' • 2º turno':'';
-return`<div class="card"><h2>Classificação histórica <span class="mut">${lo}–${hi} • ${mt}${tl} • ${rtxt(X0,X,1)}</span><button class="mob colbtn" data-cols="1">${st.cols?'Menos colunas':'Mais colunas'}</button><button class="expb" data-exp="1" title="Baixar tabela em CSV">⬇ CSV</button></h2><div class="sc${st.cols?' allc':''}"><table class="ctab"><tr>${heads()}${SH('ys','Temp.')}</tr>`+
-ord(rows).map((t,i)=>`<tr class="${st.fx&&nk(st.fx)==nk(t.n)?'fx':''}" data-k="${nk(t.n)}"><td>${i+1}</td><td class="t">${tb(t.n)}<span class="nm">${t.n}</span></td><td class="p">${t.P}${t.pen?'<sup title="Inclui punições">*</sup>':''}</td><td>${t.J}</td><td>${t.V}</td><td class="xc">${t.E}</td><td class="xc">${t.D}</td><td class="xc">${t.GP}</td><td class="xc">${t.GC}</td><td class="${sgc(t.SG)}">${t.SG>0?'+':''}${t.SG}</td><td class="xc">${ap(t)}</td><td>${t.ys}</td></tr>`).join('')+
+return`<div class="card"><h2>Classificação histórica <span class="mut">${lo}–${hi} • ${mt}${tl} • ${rtxt(X0,X,1)}</span><button class="mob colbtn" data-cols="1">${st.cols?'Menos colunas':'Mais colunas'}</button><button class="expb" data-exp="1" title="Baixar tabela em CSV">⬇ CSV</button></h2><div class="sc${st.cols?' allc':''}"><table class="ctab"><tr>${heads()}${SH('ys','Temp.','xc')}</tr>`+
+ord(rows).map((t,i)=>`<tr class="${st.fx&&nk(st.fx)==nk(t.n)?'fx':''}" data-k="${nk(t.n)}"><td>${i+1}</td><td class="t">${tb(t.n)}<span class="nm">${t.n}</span></td><td class="p">${t.P}${t.pen?'<sup title="Inclui punições">*</sup>':''}</td><td>${t.J}</td><td>${t.V}</td><td class="xc">${t.E}</td><td class="xc">${t.D}</td><td class="xc">${t.GP}</td><td class="xc">${t.GC}</td><td class="${sgc(t.SG)}">${t.SG>0?'+':''}${t.SG}</td><td class="xc">${ap(t)}</td><td class="xc">${t.ys}</td></tr>`).join('')+
 `</table></div><div class="mut" style="margin-top:6px">Soma de todas as temporadas do período, incluindo a que está em andamento e as punições (*). Temp. = temporadas disputadas. Critérios: pontos, vitórias, saldo, gols pró. Times que mudaram de nome aparecem separados. Clique no título de uma coluna para ordenar; a coluna # acompanha a ordem escolhida.</div></div>`}
 const SDEF=[['sv','Seq. vitórias',g=>g.f>g.c],['si','Seq. invicta',g=>g.f>=g.c],['sw','Seq. sem vencer',g=>g.f<=g.c],['sd','Seq. derrotas',g=>g.f<g.c],['sc','Seq. sem sofrer gol',g=>g.c==0],['sm','Seq. marcando gol',g=>g.f>0],['sn','Seq. sem marcar',g=>g.f==0],['ss','Seq. sofrendo gol',g=>g.c>0]];
 const SX=(k,l,c='')=>`<th data-xk="${k}" class="srt ${c}${st.xk==k?' on':''}" tabindex="0" aria-sort="${st.xk==k?(st.xd=='a'?'ascending':'descending'):'none'}" title="Ordenar por esta coluna">${l}${st.xk==k?(st.xd=='a'?' ▲':' ▼'):'<span class="si" aria-hidden="true">↕</span>'}</th>`;
