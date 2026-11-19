@@ -189,13 +189,15 @@ td.cla{white-space:nowrap;font-weight:600;font-size:12px}.c1{color:var(--zg)}.c2
 .g.fx td{overflow:visible}.g td input{width:44px!important;min-height:40px;padding:4px 2px}
 }
 @media(min-width:721px){
+#ss{display:flex}#ss>.card{flex:1;display:flex;flex-direction:column;min-width:0}#ss>.card>.sc{flex:1 1 auto;min-height:0}
 #sg{display:flex;flex-direction:column}
 #sg .sc.gb{flex:1 1 auto;min-height:0;max-height:none}
 #sg .sc.gb table{height:100%}
 }
 /* ===== Evolução: destaque, cursor, painel, tela cheia ===== */
 .evbar{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:12px}.evch{display:flex;flex-wrap:wrap;gap:4px;align-items:center}
-.evsvg{display:block;color:var(--fg)}.evsvg .lb,.evsvg .hit{cursor:pointer}.evsvg .ln{transition:opacity .12s}
+.evsvg{display:block;margin:0 auto;color:var(--fg)}.sc.evw{max-height:none}
+@media(min-width:721px){.evsvg{max-height:calc(100vh - 230px)}}.evsvg .lb,.evsvg .hit{cursor:pointer}.evsvg .ln{transition:opacity .12s}
 .evsvg.hvon .ln:not(.hv),.evsvg.hvon .lb:not(.hv){opacity:.12}.evsvg .ln.hv{stroke-width:3.5}.evsvg .ln.hv,.evsvg .lb.hv{opacity:1!important}
 #evtip{position:fixed;z-index:95;display:none;min-width:220px;max-width:300px;background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.25);padding:8px 10px;pointer-events:none;font-size:13px}
 .evh{font-weight:700;margin-bottom:4px}.evr{display:grid;grid-template-columns:30px 1fr auto;gap:6px;align-items:center;padding:1px 4px}.evr.on{background:color-mix(in srgb,var(--acc) 16%,transparent);border-radius:4px}
@@ -207,7 +209,6 @@ body.fsb{overflow:hidden}
 .card.fsx{position:fixed;inset:0;z-index:90;border-radius:0;overflow:auto;max-height:none;margin:0;padding:12px}.card.fsx .sc{max-height:none}
 @media(orientation:portrait){.card.fsx .fshint{display:block;font-size:13px;color:var(--mut);margin-bottom:6px}}
 @media(hover:none),(max-width:720px){.scrw{display:block}.fsbtn{display:inline-flex}}
-@media(max-width:720px){#vs{--simh:clamp(380px,calc(100vh - 330px),640px);--simh:clamp(380px,calc(100dvh - 330px),640px)}#vs #ss .sc,#vs .sc.gb{height:var(--simh);max-height:none}}
 .mut{color:var(--mut);font-size:14px;font-weight:400}.hide{display:none!important}
 .chk{display:flex;flex-wrap:wrap;gap:4px;max-width:440px;max-height:90px;overflow:auto}
 .chk label{flex-direction:row;align-items:center;gap:4px;font-size:13px;font-weight:500;text-transform:none;letter-spacing:0;color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:3px 8px}
@@ -228,7 +229,7 @@ body.fsb{overflow:hidden}
 <label id="lh" class="hide">Período<div style="display:flex;gap:6px;align-items:center"><select id="hf"></select> a <select id="ht"></select></div></label>
 <label id="lsx" class="hide">Estatísticas de<select id="sx"></select></label>
 <label id="lsq" class="hide">Sequências<select id="sq"><option value="w">Dentro de cada temporada</option><option value="c">Contínuas entre temporadas</option></select></label>
-<label id="lk" class="hide">Métrica<select id="mt"><option value="p">Posição</option><option value="s">Pontos acumulados</option><option value="gp">Gols marcados (acumulado)</option><option value="gc">Gols sofridos (acumulado)</option><option value="dl">Diferença p/ o líder (pts)</option><option value="d4">Diferença p/ o 4º colocado (pts)</option><option value="dz">Diferença p/ o 17º (zona de rebaixamento)</option><option value="ap">Aproveitamento acumulado</option><option value="sg">Saldo de gols acumulado</option></select></label>
+<label id="lk" class="hide">Métrica<select id="mt"><option value="p">Posição</option><option value="s">Pontos acumulados</option><option value="gp">Gols marcados (acumulado)</option><option value="gc">Gols sofridos (acumulado)</option></select></label>
 <label id="lr" class="hide">&nbsp;<button id="rst">↺ Ordem normal (pontos)</button></label>
 <label id="le" class="hide">Destacar times<select id="et"></select></label>
 <label id="lx">Rodadas (de – até)<div style="display:flex;gap:6px;align-items:center"><input id="x0" type="number" inputmode="numeric" min="1" placeholder="1" style="width:70px"> – <input id="x" type="number" inputmode="numeric" min="1" placeholder="todas" style="width:70px"></div></label>
@@ -461,7 +462,7 @@ function evPanel(d,r){const rows=d.rb[r],nm=st.tap||hlNames()[0];let sm='<div cl
 if(nm){const k=nk(nm),i=rows.findIndex(t=>nk(t.n)==k);if(i>=0){const t=rows[i];sm=`<div class="evs"><b>${tb(t.n)}${t.n}</b> • ${i+1}º lugar<br>${t.P} pts • ${t.J} jogos • ${t.V}V ${t.E}E ${t.D}D<br>Gols ${t.GP}:${t.GC} (${t.SG>0?'+':''}${t.SG}) • aproveitamento ${ap(t)}</div>`}}
 return`<div class="evh">Rodada ${r} <span class="mut">${MET[d.me]}</span></div>${sm}<div class="evl">${evList(d,r,20)}</div>`}
 function chart(y,idx){const m=st.m,me=$('#mt').value,mt={t:'Geral',h:'Só em casa',a:'Só fora'}[m],hs=new Set(hlNames().map(nk));
-const R=Math.max(0,...G.filter(g=>g.y==y&&g.hg!=null).map(g=>g.r)),fs=st.fsIdx===idx,fsb=`<button class="fsbtn" data-fs="${idx}">${fs?'✕ Sair da tela cheia':'⛶ Tela cheia'}</button>`;
+const R=Math.max(0,...G.filter(g=>g.y==y&&g.hg!=null).map(g=>g.r)),fs=st.fsIdx===idx,fsb=`<button class="fsbtn" data-fs="${idx}" aria-label="${fs?'Sair da tela cheia':'Tela cheia'}" title="${fs?'Sair da tela cheia':'Tela cheia'}">${fs?'✕':'⛶'}</button>`;
 const head=x=>`<h2>${y} <span class="mut">${mt} • ${MET[me]} após cada rodada</span>${x||''}</h2>`;
 if(!R)return`<div class="card">${head()}<div class="mut">Sem jogos disputados.</div></div>`;
 const pos={},rb={};let n=0,mn=Infinity,mx=-Infinity;
@@ -473,7 +474,7 @@ const W=780,H=60+n*20,L=38,Rm=130,T=14,B=26,X=r=>L+(r-1)*(W-L-Rm)/Math.max(1,R-1
 if(me=='p'){Y=p=>T+(p-1)*(H-T-B)/Math.max(1,n-1);ticks=Array.from({length:n},(_,i)=>i+1)}else{const S=evNice(mn,mx,me=='s'||me=='gp'||me=='gc'||me=='ap');Y=v=>H-B-(v-S.lo)/(S.hi-S.lo)*(H-T-B);ticks=S.tk}
 const bands=me=='p'&&m=='t'&&n>=16;
 let o=`<svg class="evsvg" data-ev="${idx}" viewBox="0 0 ${W} ${H}" style="width:100%;min-width:${nH&&me!='p'?900:600}px;height:auto" font-size="10">`;
-if(bands){const bh=(H-T-B)/Math.max(1,n-1);for(let p=1;p<=n;p++){const z=zone(y,p-1,n);if(z)o+=`<rect x="${L}" y="${(Y(p)-bh/2).toFixed(1)}" width="${W-Rm-L}" height="${bh.toFixed(1)}" style="fill:${ZC[z]}" opacity=".14"/>`}}
+if(bands){const bh=(H-T-B)/Math.max(1,n-1);for(let p=1;p<=n;p++){const z=p<=4?'lg':p>n-4?'dn':'';if(z)o+=`<rect x="${L}" y="${(Y(p)-bh/2).toFixed(1)}" width="${W-Rm-L}" height="${bh.toFixed(1)}" style="fill:${ZC[z]}" opacity=".14"/>`}}
 for(const v of ticks)o+=`<line x1="${L}" x2="${W-Rm}" y1="${Y(v).toFixed(1)}" y2="${Y(v).toFixed(1)}" style="stroke:var(--line)"/><text x="${L-6}" y="${(Y(v)+3).toFixed(1)}" text-anchor="end" style="fill:var(--mut)">${me=='ap'?v+'%':v}</text>`;
 if(me!='p'&&ticks[0]<0&&ticks[ticks.length-1]>0)o+=`<line x1="${L}" x2="${W-Rm}" y1="${Y(0).toFixed(1)}" y2="${Y(0).toFixed(1)}" style="stroke:var(--fg)" opacity=".4"/>`;
 for(let r=1;r<=R;r++)if(r==1||r%5==0||r==R)o+=`<text x="${X(r).toFixed(1)}" y="${H-8}" text-anchor="middle" style="fill:var(--mut)">${r}</text>`;
@@ -485,8 +486,8 @@ o+=`<path class="ln" data-t="${t}" d="${d}" fill="none" stroke="${c}" stroke-wid
 if(ly[t]!=null)o+=`<text class="lb" data-t="${t}" x="${W-Rm+6}" y="${(ly[t]+3).toFixed(1)}" fill="${c}" opacity="${on?1:.3}" ${anyH&&on?'font-weight="700"':''}>${t}</text>`;
 if(anyH&&on&&nH<=3)for(let r=1;r<=R;r++)if(pos[t][r]!=null)o+=`<circle cx="${X(r).toFixed(1)}" cy="${Y(pos[t][r]).toFixed(1)}" r="3" fill="${c}"><title>${t}: ${evFmt(me,pos[t][r])}${me=='p'?'':un} após a rodada ${r}</title></circle>`+(me!='p'&&nH<=2?`<text x="${X(r).toFixed(1)}" y="${(Y(pos[t][r])-7).toFixed(1)}" text-anchor="middle" font-size="9" font-weight="700" fill="${c}" style="paint-order:stroke;stroke:var(--card);stroke-width:3px">${evFmt(me,pos[t][r])}</text>`:'')}
 o+=`<line class="xh" x1="0" x2="0" y1="${T}" y2="${H-B}" stroke="currentColor" opacity=".45" style="display:none"/></svg>`;
-EVS[idx]={y,R,me,m,rb,X,W,L,Rm};const rv=Math.min(R,st.evr||R);
-return`<div class="card${fs?' fsx':''}">${head(fsb)}<div class="fshint">Vire o aparelho para a horizontal para ver o gráfico melhor.</div><div class="sc">${o}</div>${bands?`<div class="zl">${leg(y,n,true)}</div>`:''}<div class="scrw"><input type="range" class="scrub" data-ev="${idx}" min="1" max="${R}" value="${rv}" aria-label="Escolher rodada"><div class="evp" id="evp${idx}">${evPanel(EVS[idx],rv)}</div></div></div>`}
+EVS[idx]={y,R,me,m,rb,X,W,H,L,Rm};const rv=Math.min(R,st.evr||R);
+return`<div class="card${fs?' fsx':''}">${head(fsb)}<div class="fshint">Vire o aparelho para a horizontal para ver o gráfico melhor.</div><div class="sc evw">${o}</div>${bands?'<div class="zl"><span><i class="z1" aria-hidden="true"></i>Libertadores</span><span><i class="z4" aria-hidden="true"></i>Rebaixamento</span></div>':''}<div class="scrw"><input type="range" class="scrub" data-ev="${idx}" min="1" max="${R}" value="${rv}" aria-label="Escolher rodada"><div class="evp" id="evp${idx}">${evPanel(EVS[idx],rv)}</div></div></div>`}
 const cmpT=(a,b)=>b.P-a.P||b.V-a.V||b.SG-a.SG||b.GP-a.GP||a.n.localeCompare(b.n);
 function calc(l,names){const T={};const get=n=>T[n]||(T[n]={n,P:0,J:0,V:0,E:0,D:0,GP:0,GC:0});names.forEach(get);
 for(const g of l)for(const[n,f,c]of[[g.h,g.hg,g.ag],[g.a,g.ag,g.hg]]){const t=get(n);t.J++;t.GP+=f;t.GC+=c;if(f>c){t.V++;t.P+=3}else if(f==c){t.E++;t.P++}else t.D++}
@@ -636,7 +637,7 @@ function showEv(d,r,x,y){if(!evTipEl){evTipEl=document.createElement('div');evTi
 evTipEl.innerHTML=`<div class="evh">${d.y} • Rodada ${r}</div>${evList(d,r,10)}`;evTipEl.style.display='block';const w=evTipEl.offsetWidth,hh=evTipEl.offsetHeight;
 evTipEl.style.left=Math.max(8,Math.min(innerWidth-w-8,x+18>innerWidth-w-8?x-w-18:x+18))+'px';evTipEl.style.top=Math.max(8,Math.min(innerHeight-hh-8,y-hh/2))+'px'}
 $('#vc').addEventListener('mousemove',e=>{if(touchUi())return;const svg=e.target.closest&&e.target.closest('svg.evsvg');if(!svg){hideEv();return}const d=EVS[+svg.dataset.ev];if(!d)return;
-const bb=svg.getBoundingClientRect(),vx=(e.clientX-bb.left)/bb.width*d.W;if(vx<d.L-10||vx>d.W-d.Rm+6){hideEv();return}
+const bb=svg.getBoundingClientRect(),sc=Math.min(bb.width/d.W,bb.height/d.H),vx=(e.clientX-bb.left-(bb.width-d.W*sc)/2)/sc;if(vx<d.L-10||vx>d.W-d.Rm+6){hideEv();return}
 const r=Math.max(1,Math.min(d.R,Math.round((vx-d.L)/((d.W-d.L-d.Rm)/Math.max(1,d.R-1)))+1));setXh(svg,d,r);showEv(d,r,e.clientX,e.clientY)});
 $('#vc').addEventListener('mouseover',e=>{const svg=e.target.closest&&e.target.closest('svg.evsvg');if(!svg)return;const el=e.target.closest('[data-t]');hvSet(svg,el?el.dataset.t:null)});
 $('#vc').addEventListener('input',e=>{const i=e.target;if(!i.matches||!i.matches('input.scrub'))return;const d=EVS[+i.dataset.ev],r=+i.value;if(!d)return;st.evr=r;const p=$('#evp'+i.dataset.ev);if(p)p.innerHTML=evPanel(d,r);setXh(i.closest('.card').querySelector('svg.evsvg'),d,r)});
