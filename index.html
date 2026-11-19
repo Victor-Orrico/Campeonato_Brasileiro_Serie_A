@@ -189,15 +189,14 @@ td.cla{white-space:nowrap;font-weight:600;font-size:12px}.c1{color:var(--zg)}.c2
 .g.fx td{overflow:visible}.g td input{width:44px!important;min-height:40px;padding:4px 2px}
 }
 @media(min-width:721px){
-#ss{display:flex}#ss>.card{flex:1;display:flex;flex-direction:column;min-width:0}#ss>.card>.sc{flex:1 1 auto;min-height:0}
+#ss{display:flex}#ss>.card{flex:1;display:flex;flex-direction:column;min-width:0}#ss>.card>.sc{flex:1 1 auto;min-height:0;max-height:none}#ss>.card>.sc table{height:100%}
 #sg{display:flex;flex-direction:column}
 #sg .sc.gb{flex:1 1 auto;min-height:0;max-height:none}
 #sg .sc.gb table{height:100%}
 }
 /* ===== Evolução: destaque, cursor, painel, tela cheia ===== */
 .evbar{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:12px}.evch{display:flex;flex-wrap:wrap;gap:4px;align-items:center}
-.evsvg{display:block;margin:0 auto;color:var(--fg)}.sc.evw{max-height:none}
-@media(min-width:721px){.evsvg{max-height:calc(100vh - 230px)}}.evsvg .lb,.evsvg .hit{cursor:pointer}.evsvg .ln{transition:opacity .12s}
+.evsvg{display:block;margin:0 auto;color:var(--fg)}.sc.evw{max-height:none}.evsvg .lb,.evsvg .hit{cursor:pointer}.evsvg .ln{transition:opacity .12s}
 .evsvg.hvon .ln:not(.hv),.evsvg.hvon .lb:not(.hv){opacity:.12}.evsvg .ln.hv{stroke-width:3.5}.evsvg .ln.hv,.evsvg .lb.hv{opacity:1!important}
 #evtip{position:fixed;z-index:95;display:none;min-width:220px;max-width:300px;background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.25);padding:8px 10px;pointer-events:none;font-size:13px}
 .evh{font-weight:700;margin-bottom:4px}.evr{display:grid;grid-template-columns:30px 1fr auto;gap:6px;align-items:center;padding:1px 4px}.evr.on{background:color-mix(in srgb,var(--acc) 16%,transparent);border-radius:4px}
@@ -239,7 +238,7 @@ body.fsb{overflow:hidden}
 <label>&nbsp;<button id="clrf">Limpar filtros</button></label><button id="fclose" class="mob">Aplicar</button>
 </div>
 <div id="vc" class="panels"></div>
-<div id="vs" class="hide"><div class="bar"><button id="rnd">Sortear todos os restantes</button><button id="mcb">Calcular chances (10.000 simulações)</button><button id="clr2">Limpar simulação</button><span class="mut">Digite o placar dos jogos ou sorteie. Jogos definidos ficam fixos no cálculo das chances.</span></div><div class="panels"><div id="ss"></div><div class="card" id="sg"></div></div></div>
+<div id="vs" class="hide"><div class="bar"><button id="mcb">Calcular chances (10.000 simulações)</button><button id="clr2">Limpar simulação</button><span class="mut">Digite o placar dos jogos. Jogos definidos ficam fixos no cálculo das chances.</span></div><div class="panels"><div id="ss"></div><div class="card" id="sg"></div></div></div>
 <div id="vj" class="hide"><div class="bar">
 <label id="lo">Ordenar por<div class="seg" id="ord"><button data-o="r" class="on">Rodada</button><button data-o="d">Data</button></div></label>
 <label>Time<select id="ft"></select></label></div><div class="card" id="jl"></div></div>
@@ -470,10 +469,10 @@ for(let x=1;x<=R;x++){const rows=table(y,x,m);rb[x]=rows;n=Math.max(n,rows.lengt
 const fv=t=>pos[t][R]==null?(me=='p'?99:-1e9):pos[t][R],tm=Object.keys(pos).sort((a,b)=>me=='p'?fv(a)-fv(b):fv(b)-fv(a)),hl=t=>hs.has(nk(t)),nH=tm.filter(hl).length,anyH=nH>0;
 if(st.evt)return`<div class="card${fs?' fsx':''}">${head('<button class="expb" data-exp="1" title="Baixar em CSV">⬇ CSV</button>')}<div class="sc"><table class="ctab evt"><tr><th>#</th><th class="t">Time</th>${Array.from({length:R},(_,i)=>`<th>${i+1}</th>`).join('')}</tr>`+
 tm.map((t,i)=>`<tr class="${hl(t)?'fx':''}" data-k="${nk(t)}"><td>${i+1}</td><td class="t">${tb(t)}<span class="nm">${t}</span></td>${Array.from({length:R},(_,r)=>`<td>${pos[t][r+1]==null?'–':evFmt(me,pos[t][r+1])}</td>`).join('')}</tr>`).join('')+`</table></div><div class="mut" style="margin-top:6px">Colunas = rodadas. Valores após cada rodada. # = ordem do gráfico (pela rodada mais recente).</div></div>`;
-const W=780,H=60+n*20,L=38,Rm=130,T=14,B=26,X=r=>L+(r-1)*(W-L-Rm)/Math.max(1,R-1);let Y,ticks;
+const W=780,H=70+n*26,L=40,Rm=140,T=14,B=26,X=r=>L+(r-1)*(W-L-Rm)/Math.max(1,R-1);let Y,ticks;
 if(me=='p'){Y=p=>T+(p-1)*(H-T-B)/Math.max(1,n-1);ticks=Array.from({length:n},(_,i)=>i+1)}else{const S=evNice(mn,mx,me=='s'||me=='gp'||me=='gc'||me=='ap');Y=v=>H-B-(v-S.lo)/(S.hi-S.lo)*(H-T-B);ticks=S.tk}
 const bands=me=='p'&&m=='t'&&n>=16;
-let o=`<svg class="evsvg" data-ev="${idx}" viewBox="0 0 ${W} ${H}" style="width:100%;min-width:${nH&&me!='p'?900:600}px;height:auto" font-size="10">`;
+let o=`<svg class="evsvg" data-ev="${idx}" viewBox="-8 0 ${W+16} ${H}" style="width:100%;min-width:${nH&&me!='p'?900:600}px;height:auto" font-size="10">`;
 if(bands){const bh=(H-T-B)/Math.max(1,n-1);for(let p=1;p<=n;p++){const z=p<=4?'lg':p>n-4?'dn':'';if(z)o+=`<rect x="${L}" y="${(Y(p)-bh/2).toFixed(1)}" width="${W-Rm-L}" height="${bh.toFixed(1)}" style="fill:${ZC[z]}" opacity=".14"/>`}}
 for(const v of ticks)o+=`<line x1="${L}" x2="${W-Rm}" y1="${Y(v).toFixed(1)}" y2="${Y(v).toFixed(1)}" style="stroke:var(--line)"/><text x="${L-6}" y="${(Y(v)+3).toFixed(1)}" text-anchor="end" style="fill:var(--mut)">${me=='ap'?v+'%':v}</text>`;
 if(me!='p'&&ticks[0]<0&&ticks[ticks.length-1]>0)o+=`<line x1="${L}" x2="${W-Rm}" y1="${Y(0).toFixed(1)}" y2="${Y(0).toFixed(1)}" style="stroke:var(--fg)" opacity=".4"/>`;
@@ -486,7 +485,7 @@ o+=`<path class="ln" data-t="${t}" d="${d}" fill="none" stroke="${c}" stroke-wid
 if(ly[t]!=null)o+=`<text class="lb" data-t="${t}" x="${W-Rm+6}" y="${(ly[t]+3).toFixed(1)}" fill="${c}" opacity="${on?1:.3}" ${anyH&&on?'font-weight="700"':''}>${t}</text>`;
 if(anyH&&on&&nH<=3)for(let r=1;r<=R;r++)if(pos[t][r]!=null)o+=`<circle cx="${X(r).toFixed(1)}" cy="${Y(pos[t][r]).toFixed(1)}" r="3" fill="${c}"><title>${t}: ${evFmt(me,pos[t][r])}${me=='p'?'':un} após a rodada ${r}</title></circle>`+(me!='p'&&nH<=2?`<text x="${X(r).toFixed(1)}" y="${(Y(pos[t][r])-7).toFixed(1)}" text-anchor="middle" font-size="9" font-weight="700" fill="${c}" style="paint-order:stroke;stroke:var(--card);stroke-width:3px">${evFmt(me,pos[t][r])}</text>`:'')}
 o+=`<line class="xh" x1="0" x2="0" y1="${T}" y2="${H-B}" stroke="currentColor" opacity=".45" style="display:none"/></svg>`;
-EVS[idx]={y,R,me,m,rb,X,W,H,L,Rm};const rv=Math.min(R,st.evr||R);
+EVS[idx]={y,R,me,m,rb,X,W,H,L,Rm,vw:W+16,vx0:-8};const rv=Math.min(R,st.evr||R);
 return`<div class="card${fs?' fsx':''}">${head(fsb)}<div class="fshint">Vire o aparelho para a horizontal para ver o gráfico melhor.</div><div class="sc evw">${o}</div>${bands?'<div class="zl"><span><i class="z1" aria-hidden="true"></i>Libertadores</span><span><i class="z4" aria-hidden="true"></i>Rebaixamento</span></div>':''}<div class="scrw"><input type="range" class="scrub" data-ev="${idx}" min="1" max="${R}" value="${rv}" aria-label="Escolher rodada"><div class="evp" id="evp${idx}">${evPanel(EVS[idx],rv)}</div></div></div>`}
 const cmpT=(a,b)=>b.P-a.P||b.V-a.V||b.SG-a.SG||b.GP-a.GP||a.n.localeCompare(b.n);
 function calc(l,names){const T={};const get=n=>T[n]||(T[n]={n,P:0,J:0,V:0,E:0,D:0,GP:0,GC:0});names.forEach(get);
@@ -514,7 +513,7 @@ const pc=v=>(v/mc.N*100).toFixed(1)+'%';
 $('#ss').innerHTML=`<div class="card"><h2>${y} <span class="mut">classificação projetada • ${fixed.length} de ${np} jogos definidos</span></h2><div class="sc"><table><tr><th>#</th><th class="t">Time</th><th>P</th><th>J</th><th>V</th><th>SG</th><th class="dcol">Δ</th>${ex}</tr>`+
 prj.map((t,i)=>{const d=(p0[t.n]||i+1)-(i+1),dd=d>0?'▲'+d:d<0?'▼'+(-d):'=';const e=mc?`<td>${pc(mc.d[t.n].c)}</td><td>${pc(mc.d[t.n].g)}</td><td>${pc(mc.d[t.n].r)}</td>`:'';
 return`<tr class="${zone(y,i,n)}"><td>${i+1}</td><td class="t">${tb(t.n)}<span class="nm">${t.n}</span></td><td class="p">${t.P}${t.pen?'<sup title="Perdeu '+t.pen+' pts por punição">*</sup>':''}</td><td>${t.J}</td><td>${t.V}</td><td class="${sgc(t.SG)}">${t.SG>0?'+':''}${t.SG}</td><td class="dcol">${dd}</td>${e}</tr>`}).join('')+
-`</table></div><div class="mut" style="margin-top:6px">Δ: variação frente à tabela atual. Preencha os dois campos do placar para definir um jogo. Chances: jogos não definidos são sorteados com 45% mandante, 27% empate e 28% visitante (placares 1x0, 0x0 ou 0x1), igual para todos os times; G4 = 4 primeiros, Z4 = 4 últimos.</div></div>`}
+`</table></div></div>`}
 function monte(){const y=simY(),N=10000,all=G.filter(g=>g.y==y),names=[...new Set(all.flatMap(g=>[g.h,g.a]))].sort(),ix={};names.forEach((q,k)=>ix[q]=k);
 const base=names.map(()=>[0,0,0,0]),free=[];
 const add=(B,h,a,hg,ag)=>{for(const[k,f,c]of[[h,hg,ag],[a,ag,hg]]){const b=B[k];b[2]+=f-c;b[3]+=f;if(f>c){b[0]+=3;b[1]++}else if(f==c)b[0]++}};
@@ -637,7 +636,7 @@ function showEv(d,r,x,y){if(!evTipEl){evTipEl=document.createElement('div');evTi
 evTipEl.innerHTML=`<div class="evh">${d.y} • Rodada ${r}</div>${evList(d,r,10)}`;evTipEl.style.display='block';const w=evTipEl.offsetWidth,hh=evTipEl.offsetHeight;
 evTipEl.style.left=Math.max(8,Math.min(innerWidth-w-8,x+18>innerWidth-w-8?x-w-18:x+18))+'px';evTipEl.style.top=Math.max(8,Math.min(innerHeight-hh-8,y-hh/2))+'px'}
 $('#vc').addEventListener('mousemove',e=>{if(touchUi())return;const svg=e.target.closest&&e.target.closest('svg.evsvg');if(!svg){hideEv();return}const d=EVS[+svg.dataset.ev];if(!d)return;
-const bb=svg.getBoundingClientRect(),sc=Math.min(bb.width/d.W,bb.height/d.H),vx=(e.clientX-bb.left-(bb.width-d.W*sc)/2)/sc;if(vx<d.L-10||vx>d.W-d.Rm+6){hideEv();return}
+const bb=svg.getBoundingClientRect(),sc=Math.min(bb.width/d.vw,bb.height/d.H),vx=(e.clientX-bb.left-(bb.width-d.vw*sc)/2)/sc+d.vx0;if(vx<d.L-10||vx>d.W-d.Rm+6){hideEv();return}
 const r=Math.max(1,Math.min(d.R,Math.round((vx-d.L)/((d.W-d.L-d.Rm)/Math.max(1,d.R-1)))+1));setXh(svg,d,r);showEv(d,r,e.clientX,e.clientY)});
 $('#vc').addEventListener('mouseover',e=>{const svg=e.target.closest&&e.target.closest('svg.evsvg');if(!svg)return;const el=e.target.closest('[data-t]');hvSet(svg,el?el.dataset.t:null)});
 $('#vc').addEventListener('input',e=>{const i=e.target;if(!i.matches||!i.matches('input.scrub'))return;const d=EVS[+i.dataset.ev],r=+i.value;if(!d)return;st.evr=r;const p=$('#evp'+i.dataset.ev);if(p)p.innerHTML=evPanel(d,r);setXh(i.closest('.card').querySelector('svg.evsvg'),d,r)});
@@ -647,7 +646,6 @@ const hit=el.closest&&el.closest('[title]'),ch=el.querySelector&&el.querySelecto
 
 $('#jl').onclick=e=>{if(e.target.closest('[data-exp]')){exportCsv($('#jl'));return}if(e.target.closest('button[data-cur]')){st.gr=null;games();return}const b=e.target.closest('button[data-d]');if(!b)return;const rs=roundsOf(+$('#sa').value),k=rs.indexOf(st.gr)+(+b.dataset.d);if(k>=0&&k<rs.length){st.gr=rs[k];games()}};
 $('#jl').onchange=e=>{if(e.target.id=='gs'){st.gr=+e.target.value;games()}};
-$('#rnd').onclick=()=>{const y=simY();G.forEach((g,i)=>{if(g.y==y&&g.hg==null&&!st.sim[i]){const r=Math.random(),w=1+Math.floor(Math.random()*3),l=Math.floor(Math.random()*w),e=Math.floor(Math.random()*3);st.sim[i]=r<.45?{h:w,a:l}:r<.72?{h:e,a:e}:{h:l,a:w}}});st.mc=null;sim()};
 $('#clr2').onclick=()=>{st.sim={};st.mc=null;sim()};
 $('#mcb').onclick=()=>{st.mc=monte();simTable()};
 $('#sg').onclick=e=>{if(e.target.closest('button[data-cur]')){st.rd=null;sim();return}const b=e.target.closest('button[data-d]');if(!b)return;const rs=pendRounds(),k=rs.indexOf(st.rd)+(+b.dataset.d);if(k>=0&&k<rs.length){st.rd=rs[k];sim()}};
