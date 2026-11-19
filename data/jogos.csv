@@ -7939,12 +7939,12 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,34,06/11/2026,20:00,Vitoria,Fluminense,,,,,,,0,3,,,,2026
 ,35,14/11/2026,18:30,Mirassol,Atletico-MG,,,,,,,0,0,,,,2026
 ,21,14/11/2026,20:30,Chapecoense,Vasco,,,,,,,0,2,,,,2026
-,35,18/11/2026,19:30,Coritiba,Santos,,,,,,,,,,,,2026
-,35,18/11/2026,20:00,Clube do Remo,Chapecoense,,,,,,,,,,,,2026
-,35,18/11/2026,20:30,Cruzeiro,Palmeiras,,,,,,,,,,,,2026
-,35,18/11/2026,20:30,Flamengo,Athletico-PR,,,,,,,,,,,,2026
-,35,18/11/2026,21:30,Corinthians,Botafogo,,,,,,,,,,,,2026
-,35,18/11/2026,21:30,Gremio,Bahia,,,,,,,,,,,,2026
+,35,18/11/2026,19:30,Coritiba,Santos,,,,,,,0,1,,,,2026
+,35,18/11/2026,20:00,Clube do Remo,Chapecoense,,,,,,,2,0,,,,2026
+,35,18/11/2026,20:30,Cruzeiro,Palmeiras,,,,,,,2,1,,,,2026
+,35,18/11/2026,20:30,Flamengo,Athletico-PR,,,,,,,2,1,,,,2026
+,35,18/11/2026,21:30,Corinthians,Botafogo,,,,,,,4,0,,,,2026
+,35,18/11/2026,21:30,Gremio,Bahia,,,,,,,0,0,,,,2026
 ,35,19/11/2026,19:30,Vasco,Internacional,,,,,,,,,,,,2026
 ,35,19/11/2026,19:30,Vitoria,Bragantino,,,,,,,,,,,,2026
 ,35,19/11/2026,21:30,Sao Paulo,Fluminense,,,,,,,,,,,,2026
