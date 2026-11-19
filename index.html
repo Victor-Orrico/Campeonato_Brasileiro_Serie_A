@@ -210,7 +210,9 @@ body.fsb{overflow:hidden}
 @media(hover:none),(max-width:720px){.scrw{display:block}.fsbtn{display:inline-flex}}
 /* ===== corrida animada ===== */
 .evbt{display:flex;gap:8px;flex-wrap:wrap}
-.rctl{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:8px 0}.rslider{flex:1;min-width:160px;min-height:32px}.rsp{flex-direction:row;align-items:center;gap:6px;text-transform:none;letter-spacing:0;font-size:13px;font-weight:500}
+.rplay{background:var(--acc);color:var(--on);border-color:var(--acc);font-weight:700;padding:8px 16px;margin:0}
+.rplay:hover:not(:disabled){filter:brightness(1.08);border-color:var(--acc)}
+.rctl{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:8px 0;justify-content:flex-start}.rslider{flex:1;min-width:160px;min-height:32px}.rsp{flex-direction:row;align-items:center;gap:6px;text-transform:none;letter-spacing:0;font-size:13px;font-weight:500}
 .rinfo{margin:2px 0 8px;font-size:14px}
 .rbox{position:relative;--rnw:150px;--rt:550ms}
 .rr{position:absolute;left:0;right:0;top:0;height:var(--rh);display:grid;grid-template-columns:30px var(--rnw) 1fr 64px;gap:6px;align-items:center;cursor:pointer;transition:transform var(--rt) cubic-bezier(.2,.7,.2,1),opacity .3s}
@@ -263,7 +265,7 @@ body.fsb{overflow:hidden}
 <nav id="bnav" class="hide" aria-label="Navegação principal"><button data-t="c"><span aria-hidden="true">📊</span>Classificação</button><button data-t="x"><span aria-hidden="true">📈</span>Estatísticas</button><button data-t="j"><span aria-hidden="true">⚽</span>Jogos</button><button data-t="s"><span aria-hidden="true">🎯</span>Simulação</button><button data-t="more" aria-haspopup="true"><span aria-hidden="true">⋯</span>Mais</button></nav>
 <script>
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
-let G=[],st={t:'c',m:'t',o:'r',cmp:false,hl:[],evt:false,race:false,tap:null,evr:null,fsIdx:null,scr:false,cols:false,fx:null,xk:null,xd:'d',sk:null,sd:'d',gr:null,tn:'t',sim:{},mc:null,rd:null};
+let G=[],st={t:'c',m:'t',o:'r',cmp:false,hl:[],evt:false,race:false,ovl:false,tap:null,evr:null,fsIdx:null,scr:false,cols:false,fx:null,xk:null,xd:'d',sk:null,sd:'d',gr:null,tn:'t',sim:{},mc:null,rd:null};
 const norm=s=>s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').trim();
 const AL={r:['rodada','round'],d:['data','date'],h:['mandante','home','time_mandante'],a:['visitante','away','time_visitante'],hg:['mandante_placar','gols_mandante','home_goals','mandante_gols'],ag:['visitante_placar','gols_visitante','away_goals','visitante_gols'],y:['ano_campeonato','ano','season','temporada'],t:['hora','horario','hour','kickoff']};
 function csv(t){const l1=t.split('\n')[0],d=(l1.match(/;/g)||[]).length>(l1.match(/,/g)||[]).length?';':',';const rows=[];let r=[],c='',q=false;
@@ -412,9 +414,8 @@ const penOn=(y,X,m,tn='t',X0=0)=>{const hf=halfOf(y);return m=='t'?PEN.filter(p=
 // Anos sem linha própria usam as regras-base abaixo (aproximadas; o número real muda com os títulos de Copa do Brasil, Libertadores e Sul-Americana).
 const fromCount=(a,b,c)=>({lg:a?`1-${a}`:'',lp:b?`${a+1}-${a+b}`:'',sa:c?`${a+b+1}-${a+b+c}`:''});
 const VAGAS={};
-for(let y=2003;y<=2015;y++)VAGAS[y]=fromCount(4,0,0);   // até 2015: G4
-for(let y=2016;y<=2025;y++)VAGAS[y]=fromCount(4,2,6);   // G6 (4 direta + 2 preliminar) e Sul-Americana nos 6 seguintes
-VAGAS[2026]=fromCount(4,1,6);                            // 4 direta + 1 preliminar; Sul-Americana do 6º ao 11º
+for(let y=2027;y<=2050;y++)VAGAS[y]=fromCount(4,1,6);   // anos depois de 2026: 4 direta + 1 preliminar; Sul-Americana do 6º ao 11º
+VAGAS[2026]=fromCount(4,2,6);                            // 4 direta + 2 preliminar; Sul-Americana do 7º ao 12º
 VAGAS[2006]={lg:'1-3,11',lp:'4-5',sa:'6-10,12-13',nota:'Flamengo: Título Copa do Brasil. Internacional: Título Libertadores'};
 VAGAS[2007]={lg:'1-4',lp:'5',sa:'6-12',nota:'Fluminense: Título Copa do Brasil'};
 VAGAS[2008]={lg:'1-3,11',lp:'4',sa:'5-10,12-14',nota:'Internacional: Título Sulamericana'};
@@ -468,7 +469,7 @@ const fin=rb[R].map(t=>t.n),lab={p:'pontos (ordem da classificação)',s:'pontos
 const prev=RC[idx];RC[idx]={r:prev&&prev.R==R?prev.r:R,R,playing:prev?prev.playing:false,speed:prev?prev.speed:1,timer:null};RCD[idx]={y,R,me,m,rb,n,rh,maxV};
 const rows=fin.map((t,k)=>`<div class="rr${hs.has(nk(t))?' on':''}" data-t="${t}" data-k="${nk(t)}"><span class="rp"></span><span class="rn">${tb(t)}<span class="nm2">${t}</span></span><span class="rt"><i class="rf" style="background:hsl(${(k*137)%360},65%,50%)"></i></span><b class="rv"></b></div>`).join('');
 const sp=RC[idx].speed;
-return`<div class="card race"><h2>${y} <span class="mut">${mt} • corrida animada: ${lab}</span></h2><div class="rctl"><button class="rb" data-rplay="${idx}">▶ Reproduzir</button><button data-rrst="${idx}" title="Reiniciar" aria-label="Reiniciar">↺</button><input type="range" class="rslider" data-ri="${idx}" min="1" max="${R}" value="${RC[idx].r}" aria-label="Escolher rodada"><label class="rsp">Velocidade <select class="rspeed" data-ri="${idx}">${[[.5,'0,5x'],[1,'1x'],[2,'2x'],[4,'4x']].map(([v,l])=>`<option value="${v}"${v==sp?' selected':''}>${l}</option>`).join('')}</select></label></div><div class="rinfo" id="ri${idx}"></div><div class="rbox" id="rbx${idx}" style="height:${n*rh}px;--rh:${rh}px" role="img" aria-label="Corrida animada do ranking rodada a rodada">${rows}</div><div class="mut" style="margin-top:6px">Clique em um time para destacá-lo. As barras seguem a escala do valor final da temporada.</div></div>`}
+return`<div class="card race"><h2>${y} <span class="mut">${mt} • corrida animada: ${lab}</span></h2><div class="rctl"><button class="rplay" data-rplay="${idx}">▶ Reproduzir</button><button data-rrst="${idx}" title="Reiniciar" aria-label="Reiniciar">↺</button><input type="range" class="rslider" data-ri="${idx}" min="1" max="${R}" value="${RC[idx].r}" aria-label="Escolher rodada"><label class="rsp">Velocidade <select class="rspeed" data-ri="${idx}">${[[.5,'0,5x'],[1,'1x'],[2,'2x'],[4,'4x']].map(([v,l])=>`<option value="${v}"${v==sp?' selected':''}>${l}</option>`).join('')}</select></label></div><div class="rinfo" id="ri${idx}"></div><div class="rbox" id="rbx${idx}" style="height:${n*rh}px;--rh:${rh}px" role="img" aria-label="Corrida animada do ranking rodada a rodada">${rows}</div><div class="mut" style="margin-top:6px">Clique em um time para destacá-lo. As barras seguem a escala do valor final da temporada.</div></div>`}
 function raceFrame(idx){const c=RC[idx],d=RCD[idx],box=$('#rbx'+idx);if(!c||!d||!box)return;const r=c.r,rows=d.rb[r];if(!rows)return;
 const it=rows.map((t,i)=>({n:t.n,v:rcVal(d.me,t),p:i}));if(d.me!='p')it.sort((a,b)=>b.v-a.v||a.p-b.p);const pos={};it.forEach((x,i)=>{pos[nk(x.n)]=i});
 box.querySelectorAll('.rr').forEach(el=>{const i=pos[el.dataset.k];if(i==null){el.style.opacity='0';el.style.transform=`translateY(${d.n*d.rh}px)`;return}const x=it[i];el.style.opacity='1';el.style.transform=`translateY(${i*d.rh}px)`;
@@ -489,13 +490,37 @@ const evFmt=(me,v)=>me=='p'?v+'º':me=='ap'?v.toFixed(1).replace('.',',')+'%':(m
 const evNice=(mn,mx,z)=>{if(z)mn=0;const C=[1,2,5,10,20,25,50,100,200],sp=C.find(c=>Math.ceil(mx/c)-Math.floor(mn/c)<=6)||500,lo=Math.floor(mn/sp)*sp;let hi=Math.ceil(mx/sp)*sp;if(hi<=lo)hi=lo+sp;const tk=[];for(let v=lo;v<=hi+1e-9;v+=sp)tk.push(v);return{lo,hi,tk}};
 const hlNames=()=>{const a=[...st.hl];if(st.fx&&!a.some(x=>nk(x)==nk(st.fx)))a.push(st.fx);return a};
 function toggleHl(n){const k=nk(n),i=st.hl.findIndex(x=>nk(x)==k);if(i>=0)st.hl.splice(i,1);else if(st.fx&&nk(st.fx)==k)setFx(null);else st.hl.push(n)}
-function evBar(){const hs=hlNames();return`<div class="evbar"><div class="evch">${hs.map(n=>`<span class="chip">${tb(n)}${n}<button data-hlrm="${encodeURIComponent(n)}" aria-label="Remover destaque: ${n}">✕</button></span>`).join('')||'<span class="mut">Clique em uma linha ou no nome de um time para destacar (pode destacar vários).</span>'}</div><span class="evbt"><button data-race="1">${st.race?'📈 Ver gráfico':'🏁 Corrida animada'}</button><button data-evt="1">${st.evt?'📈 Ver gráfico':'📋 Ver como tabela'}</button></span></div>`}
-function evList(d,r,lim){const rows=d.rb[r],hs=new Set(hlNames().map(nk)),it=rows.map((t,i)=>({n:t.n,v:evVal(d.me,t,i,rows),p:i+1}));if(d.me!='p')it.sort((a,b)=>b.v-a.v||a.p-b.p);
+function evBar(){const hs=hlNames();return`<div class="evbar"><div class="evch">${hs.map(n=>`<span class="chip">${tb(n)}${n}<button data-hlrm="${encodeURIComponent(n)}" aria-label="Remover destaque: ${n}">✕</button></span>`).join('')||'<span class="mut">Clique em uma linha ou no nome de um time para destacar (pode destacar vários).</span>'}</div><span class="evbt">${st.cmp&&sel().length>1?`<button data-ovl="1">${st.ovl?'📊 Gráficos separados':'🗂️ Sobrepor temporadas'}</button>`:''}<button data-race="1">${st.race?'📈 Ver gráfico':'🏁 Corrida animada'}</button><button data-evt="1">${st.evt?'📈 Ver gráfico':'📋 Ver como tabela'}</button></span></div>`}
+function evList(d,r,lim){if(d.ovl)return d.items(r).slice(0,lim).map(x=>`<div class="evr"><span style="color:${x.c}">●</span><span class="evn">${x.y}</span><b>${evFmt(d.me,x.v)}</b></div>`).join('');const rows=d.rb[r],hs=new Set(hlNames().map(nk)),it=rows.map((t,i)=>({n:t.n,v:evVal(d.me,t,i,rows),p:i+1}));if(d.me!='p')it.sort((a,b)=>b.v-a.v||a.p-b.p);
 const hi=it.filter(x=>hs.has(nk(x.n))),rest=it.filter(x=>!hs.has(nk(x.n))),show=hs.size?[...hi,...rest.slice(0,Math.max(0,lim-hi.length))]:it.slice(0,lim);
 return show.map(x=>`<div class="evr${hs.has(nk(x.n))?' on':''}"><span>${x.p}º</span><span class="evn">${tb(x.n)}${x.n}</span><b>${evFmt(d.me,x.v)}</b></div>`).join('')+(it.length>show.length?`<div class="mut">… mais ${it.length-show.length} times</div>`:'')}
-function evPanel(d,r){const rows=d.rb[r],nm=st.tap||hlNames()[0];let sm='<div class="mut">Toque em uma linha ou no nome de um time para ver o resumo dele.</div>';
+function evPanel(d,r){if(d.ovl)return`<div class="evh">${d.team} • Rodada ${r} <span class="mut">${MET[d.me]}</span></div><div class="evl">${evList(d,r,30)}</div>`;const rows=d.rb[r],nm=st.tap||hlNames()[0];let sm='<div class="mut">Toque em uma linha ou no nome de um time para ver o resumo dele.</div>';
 if(nm){const k=nk(nm),i=rows.findIndex(t=>nk(t.n)==k);if(i>=0){const t=rows[i];sm=`<div class="evs"><b>${tb(t.n)}${t.n}</b> • ${i+1}º lugar<br>${t.P} pts • ${t.J} jogos • ${t.V}V ${t.E}E ${t.D}D<br>Gols ${t.GP}:${t.GC} (${t.SG>0?'+':''}${t.SG}) • aproveitamento ${ap(t)}</div>`}}
 return`<div class="evh">Rodada ${r} <span class="mut">${MET[d.me]}</span></div>${sm}<div class="evl">${evList(d,r,20)}</div>`}
+function ovlChart(){const ys=sel().slice().sort((a,b)=>a-b),m=st.m,me=$('#mt').value,mt={t:'Geral',h:'Só em casa',a:'Só fora'}[m],nm=hlNames()[0],idx=0,fs=st.fsIdx===idx;
+const fsb=`<button class="fsbtn" data-fs="${idx}" aria-label="${fs?'Sair da tela cheia':'Tela cheia'}" title="${fs?'Sair da tela cheia':'Tela cheia'}">${fs?'✕':'⛶'}</button>`;
+const head=x=>`<h2>${nm?tb(nm)+nm:'Sobrepor temporadas'} <span class="mut">${mt} • ${MET[me]} • temporadas sobrepostas</span>${x||''}</h2>`;
+if(!nm)return`<div class="card">${head()}<p class="mut">Escolha um time em “➕ Adicionar time…” ou na busca do topo para sobrepor as temporadas dele no mesmo gráfico.</p></div>`;
+const k=nk(nm),series=[],miss=[];let n=0,Rmax=0,mx=0;
+for(const y of ys){const tn=seasonTeam(y,nm),R=Math.max(0,...G.filter(g=>g.y==y&&g.hg!=null).map(g=>g.r));if(!tn||!R){miss.push(y);continue}
+const vals=[];for(let x=1;x<=R;x++){const rows=table(y,x,m),i=rows.findIndex(t=>nk(t.n)==k);n=Math.max(n,rows.length);if(i>=0){const v=evVal(me,rows[i],i,rows);vals[x]=v;if(v>mx)mx=v}}series.push({y,vals,R});Rmax=Math.max(Rmax,R)}
+if(!series.length)return`<div class="card">${head()}<p class="mut">Este time não tem jogos nas temporadas escolhidas.</p></div>`;
+series.forEach((q,i)=>{q.c=`hsl(${(i*137)%360},65%,48%)`});
+const W=780,rows_=me=='p'?Math.max(n,10):20,H=70+rows_*26,L=40,Rm=70,T=14,B=26,X=r=>L+(r-1)*(W-L-Rm)/Math.max(1,Rmax-1);let Y,ticks;
+if(me=='p'){Y=p=>T+(p-1)*(H-T-B)/Math.max(1,n-1);ticks=Array.from({length:n},(_,i)=>i+1)}else{const S=evNice(0,mx,true);Y=v=>H-B-(v-S.lo)/(S.hi-S.lo)*(H-T-B);ticks=S.tk}
+const bands=me=='p'&&m=='t'&&n>=16;
+let o=`<svg class="evsvg ovl" data-ev="${idx}" viewBox="-8 0 ${W+16} ${H}" style="width:100%;min-width:600px;height:auto" font-size="10">`;
+if(bands){const bh=(H-T-B)/Math.max(1,n-1);for(let p=1;p<=n;p++){const z=p<=4?'lg':p>n-4?'dn':'';if(z)o+=`<rect x="${L}" y="${(Y(p)-bh/2).toFixed(1)}" width="${W-Rm-L}" height="${bh.toFixed(1)}" style="fill:${ZC[z]}" opacity=".14"/>`}}
+for(const v of ticks)o+=`<line x1="${L}" x2="${W-Rm}" y1="${Y(v).toFixed(1)}" y2="${Y(v).toFixed(1)}" style="stroke:var(--line)"/><text x="${L-6}" y="${(Y(v)+3).toFixed(1)}" text-anchor="end" style="fill:var(--mut)">${v}</text>`;
+for(let r=1;r<=Rmax;r++)if(r==1||r%5==0||r==Rmax)o+=`<text x="${X(r).toFixed(1)}" y="${H-8}" text-anchor="middle" style="fill:var(--mut)">${r}</text>`;
+const lab=series.map(q=>({q,y:Y(q.vals[q.R]!=null?q.vals[q.R]:q.vals.filter(v=>v!=null).pop())})).sort((a,b)=>a.y-b.y);lab.forEach((l,i)=>{if(i)l.y=Math.max(l.y,lab[i-1].y+11)});
+for(const q of series){let d='';for(let r=1;r<=q.R;r++)if(q.vals[r]!=null)d+=(d?'L':'M')+X(r).toFixed(1)+' '+Y(q.vals[r]).toFixed(1);
+o+=`<path class="ln" data-t="${q.y}" d="${d}" fill="none" stroke="${q.c}" stroke-width="2.2" stroke-linejoin="round"><title>${nm} ${q.y}</title></path><path class="hit" data-t="${q.y}" d="${d}" fill="none" stroke="transparent" stroke-width="12" pointer-events="stroke"/>`;
+const l=lab.find(z=>z.q===q);o+=`<text class="lb" data-t="${q.y}" x="${W-Rm+6}" y="${(l.y+3).toFixed(1)}" fill="${q.c}" font-weight="700">${q.y}</text>`}
+o+=`<line class="xh" x1="0" x2="0" y1="${T}" y2="${H-B}" stroke="currentColor" opacity=".45" style="display:none"/></svg>`;
+EVS[idx]={ovl:true,team:nm,y:nm,R:Rmax,me,m,X,W,H,L,Rm,vw:W+16,vx0:-8,items:r=>series.filter(q=>q.vals[r]!=null).map(q=>({y:q.y,v:q.vals[r],c:q.c})).sort(me=='p'?(a,b)=>a.v-b.v:(a,b)=>b.v-a.v)};
+const rv=Math.min(Rmax,st.evr||Rmax);
+return`<div class="card${fs?' fsx':''}">${head(fsb)}<div class="fshint">Vire o aparelho para a horizontal para ver o gráfico melhor.</div><div class="sc evw">${o}</div>${bands?'<div class="zl"><span><i class="z1" aria-hidden="true"></i>G4</span><span><i class="z4" aria-hidden="true"></i>Rebaixamento</span></div>':''}${miss.length?`<div class="mut">Sem dados do time em: ${miss.join(', ')}.</div>`:''}<div class="scrw"><input type="range" class="scrub" data-ev="${idx}" min="1" max="${Rmax}" value="${rv}" aria-label="Escolher rodada"><div class="evp" id="evp${idx}">${evPanel(EVS[idx],rv)}</div></div></div>`}
 function chart(y,idx){const m=st.m,me=$('#mt').value,mt={t:'Geral',h:'Só em casa',a:'Só fora'}[m],hs=new Set(hlNames().map(nk));
 const R=Math.max(0,...G.filter(g=>g.y==y&&g.hg!=null).map(g=>g.r)),fs=st.fsIdx===idx,fsb=`<button class="fsbtn" data-fs="${idx}" aria-label="${fs?'Sair da tela cheia':'Tela cheia'}" title="${fs?'Sair da tela cheia':'Tela cheia'}">${fs?'✕':'⛶'}</button>`;
 const head=x=>`<h2>${y} <span class="mut">${mt} • ${MET[me]} após cada rodada</span>${x||''}</h2>`;
@@ -523,7 +548,7 @@ if(ly[t]!=null)o+=`<text class="lb" data-t="${t}" x="${W-Rm+6}" y="${(ly[t]+3).t
 if(anyH&&on&&nH<=3)for(let r=1;r<=R;r++)if(pos[t][r]!=null)o+=`<circle cx="${X(r).toFixed(1)}" cy="${Y(pos[t][r]).toFixed(1)}" r="3" fill="${c}"><title>${t}: ${evFmt(me,pos[t][r])}${me=='p'?'':un} após a rodada ${r}</title></circle>`+(me!='p'&&nH<=2?`<text x="${X(r).toFixed(1)}" y="${(Y(pos[t][r])-7).toFixed(1)}" text-anchor="middle" font-size="9" font-weight="700" fill="${c}" style="paint-order:stroke;stroke:var(--card);stroke-width:3px">${evFmt(me,pos[t][r])}</text>`:'')}
 o+=`<line class="xh" x1="0" x2="0" y1="${T}" y2="${H-B}" stroke="currentColor" opacity=".45" style="display:none"/></svg>`;
 EVS[idx]={y,R,me,m,rb,X,W,H,L,Rm,vw:W+16,vx0:-8};const rv=Math.min(R,st.evr||R);
-return`<div class="card${fs?' fsx':''}">${head(fsb)}<div class="fshint">Vire o aparelho para a horizontal para ver o gráfico melhor.</div><div class="sc evw">${o}</div>${bands?'<div class="zl"><span><i class="z1" aria-hidden="true"></i>Libertadores</span><span><i class="z4" aria-hidden="true"></i>Rebaixamento</span></div>':''}<div class="scrw"><input type="range" class="scrub" data-ev="${idx}" min="1" max="${R}" value="${rv}" aria-label="Escolher rodada"><div class="evp" id="evp${idx}">${evPanel(EVS[idx],rv)}</div></div></div>`}
+return`<div class="card${fs?' fsx':''}">${head(fsb)}<div class="fshint">Vire o aparelho para a horizontal para ver o gráfico melhor.</div><div class="sc evw">${o}</div>${bands?'<div class="zl"><span><i class="z1" aria-hidden="true"></i>G4</span><span><i class="z4" aria-hidden="true"></i>Rebaixamento</span></div>':''}<div class="scrw"><input type="range" class="scrub" data-ev="${idx}" min="1" max="${R}" value="${rv}" aria-label="Escolher rodada"><div class="evp" id="evp${idx}">${evPanel(EVS[idx],rv)}</div></div></div>`}
 const cmpT=(a,b)=>b.P-a.P||b.V-a.V||b.SG-a.SG||b.GP-a.GP||a.n.localeCompare(b.n);
 function calc(l,names){const T={};const get=n=>T[n]||(T[n]={n,P:0,J:0,V:0,E:0,D:0,GP:0,GC:0});names.forEach(get);
 for(const g of l)for(const[n,f,c]of[[g.h,g.hg,g.ag],[g.a,g.ag,g.hg]]){const t=get(n);t.J++;t.GP+=f;t.GC+=c;if(f>c){t.V++;t.P+=3}else if(f==c){t.E++;t.P++}else t.D++}
@@ -568,7 +593,7 @@ $('#cmp').classList.toggle('on',st.cmp);$('#cmp').classList.toggle('hide',t=='j'
 $('#vc').classList.toggle('hide',t=='j'||s);$('#vj').classList.toggle('hide',t!='j');$('#vs').classList.toggle('hide',!s);
 $('#vc').style.gridTemplateColumns=t=='e'||t=='h'||t=='x'||t=='p'?'1fr':'';
 if(t=='c'){const ys=sel();let pv=null;$('#vc').innerHTML=ys.map(y=>{const o=panel(y,ys.length>1?pv:null);pv=lastPanelPos;return o}).join('')||'<div class="mut">Marque ao menos uma temporada.</div>'}
-else if(t=='e'){fillET();EVS=[];RCD={};$('#vc').innerHTML=evBar()+(sel().map(chart).join('')||'<div class="mut">Marque ao menos uma temporada.</div>');syncScrubs();raceResume()}
+else if(t=='e'){fillET();EVS=[];RCD={};$('#vc').innerHTML=evBar()+(st.ovl&&st.cmp&&sel().length>1&&!st.evt&&!st.race?ovlChart():(sel().map(chart).join('')||'<div class="mut">Marque ao menos uma temporada.</div>'));syncScrubs();raceResume()}
 else if(t=='p')$('#vc').innerHTML=teamPage();else if(t=='x'){const v=$('#sx').value=='all'?'all':+$('#sx').value;$('#vc').innerHTML=infog(v)+stats(v)}else if(t=='h')$('#vc').innerHTML=hist();else if(s)sim();else games();chips();writeHash();if(st.scr){st.scr=false;const r=document.querySelector('tr.fx');if(r&&r.scrollIntoView)r.scrollIntoView({block:'center',behavior:'smooth'})}}
 const ZI=Object.fromEntries(Object.entries({lg:['L','Libertadores – fase de grupos'],lp:['P','Libertadores – fase preliminar'],sa:['S','Sul-Americana'],dn:['↓','Rebaixamento']}).map(([k,[l,t]])=>[k,`<span class="zi" title="${t}" aria-label="${t}">${l}</span>`]));
 const SL={n:'Time',P:'Pontos',J:'Jogos',V:'Vitórias',E:'Empates',D:'Derrotas',GP:'Gols pró',GC:'Gols contra',SG:'Saldo',AP:'Aprov.',ys:'Temporadas'};
@@ -671,7 +696,7 @@ function syncScrubs(){if(!touchUi())return;$$('input.scrub').forEach(i=>{const d
 let evTipEl=null;
 function hideEv(){if(evTipEl)evTipEl.style.display='none';if(!touchUi())$$('.xh').forEach(l=>{l.style.display='none'})}
 function showEv(d,r,x,y){if(!evTipEl){evTipEl=document.createElement('div');evTipEl.id='evtip';document.body.appendChild(evTipEl)}
-evTipEl.innerHTML=`<div class="evh">${d.y} • Rodada ${r}</div>${evList(d,r,10)}`;evTipEl.style.display='block';const w=evTipEl.offsetWidth,hh=evTipEl.offsetHeight;
+evTipEl.innerHTML=`<div class="evh">${d.ovl?d.team:d.y} • Rodada ${r}</div>${evList(d,r,10)}`;evTipEl.style.display='block';const w=evTipEl.offsetWidth,hh=evTipEl.offsetHeight;
 evTipEl.style.left=Math.max(8,Math.min(innerWidth-w-8,x+18>innerWidth-w-8?x-w-18:x+18))+'px';evTipEl.style.top=Math.max(8,Math.min(innerHeight-hh-8,y-hh/2))+'px'}
 $('#vc').addEventListener('mousemove',e=>{if(touchUi())return;const svg=e.target.closest&&e.target.closest('svg.evsvg');if(!svg){hideEv();return}const d=EVS[+svg.dataset.ev];if(!d)return;
 const bb=svg.getBoundingClientRect(),sc=Math.min(bb.width/d.vw,bb.height/d.H),vx=(e.clientX-bb.left-(bb.width-d.vw*sc)/2)/sc+d.vx0;if(vx<d.L-10||vx>d.W-d.Rm+6){hideEv();return}
@@ -692,10 +717,11 @@ $('#sg').oninput=e=>{const i=e.target.dataset.i;if(i==null)return;const [a,b]=e.
 if(a.value!==''&&b.value!==''&&+a.value>=0&&+b.value>=0)st.sim[i]={h:Math.floor(+a.value),a:Math.floor(+b.value)};else delete st.sim[i];st.mc=null;simTable();$('#rs').innerHTML=optHtml()};
 seg('#modo','m','m');seg('#turno','n','tn');seg('#ord','o','o');
 $('#cmp').onclick=()=>{st.cmp=!st.cmp;draw()};
-$('#sa').onchange=()=>{st.gr=null;fillTeams();draw()};$('#chk').onchange=draw;$('#mt').onchange=draw;$('#rst').onclick=()=>{st.sk=null;st.xk=null;draw()};$('#vc').onclick=e=>{const dt=e.target.closest&&e.target.closest('svg.evsvg [data-t], .race [data-t]');if(dt){const n=dt.dataset.t;toggleHl(n);st.tap=hlNames().some(x=>nk(x)==nk(n))?n:null;draw();return}
+$('#sa').onchange=()=>{st.gr=null;fillTeams();draw()};$('#chk').onchange=draw;$('#mt').onchange=draw;$('#rst').onclick=()=>{st.sk=null;st.xk=null;draw()};$('#vc').onclick=e=>{const dt=e.target.closest&&e.target.closest('svg.evsvg [data-t], .race [data-t]');if(dt){if(dt.closest('.ovl'))return;const n=dt.dataset.t;toggleHl(n);st.tap=hlNames().some(x=>nk(x)==nk(n))?n:null;draw();return}
 const hr=e.target.closest('[data-hlrm]');if(hr){const n=decodeURIComponent(hr.dataset.hlrm);if(st.fx&&nk(st.fx)==nk(n))setFx(null);else st.hl=st.hl.filter(x=>nk(x)!=nk(n));if(st.tap&&nk(st.tap)==nk(n))st.tap=null;draw();return}
-if(e.target.closest('[data-evt]')){st.evt=!st.evt;st.race=false;draw();return}
-if(e.target.closest('[data-race]')){st.race=!st.race;st.evt=false;draw();return}
+if(e.target.closest('[data-evt]')){st.evt=!st.evt;st.race=false;st.ovl=false;draw();return}
+if(e.target.closest('[data-ovl]')){st.ovl=!st.ovl;st.evt=false;st.race=false;draw();return}
+if(e.target.closest('[data-race]')){st.race=!st.race;st.evt=false;st.ovl=false;draw();return}
 const rpb=e.target.closest('[data-rplay]');if(rpb){const i=+rpb.dataset.rplay;if(RC[i]&&RC[i].playing)racePause(i);else racePlay(i);return}
 const rrs=e.target.closest('[data-rrst]');if(rrs){const i=+rrs.dataset.rrst;if(RC[i]){racePause(i);RC[i].r=1;raceFrame(i)}return}
 const fb=e.target.closest('[data-fs]');if(fb){const i=+fb.dataset.fs,on=st.fsIdx!==i;st.fsIdx=on?i:null;try{if(on){const r=document.documentElement.requestFullscreen||document.documentElement.webkitRequestFullscreen;if(r)r.call(document.documentElement);if(screen.orientation&&screen.orientation.lock)screen.orientation.lock('landscape').catch(()=>{})}else{if(document.fullscreenElement&&document.exitFullscreen)document.exitFullscreen();if(screen.orientation&&screen.orientation.unlock)screen.orientation.unlock()}}catch(x){}draw();return}const ex=e.target.closest('[data-exp]');if(ex){exportCsv(ex.closest('.card'));return}const gg=e.target.closest('[data-go]');if(gg){go(gg.dataset.go);return}if(e.target.closest('[data-print]')){print();return}if(e.target.closest('[data-cols]')){st.cols=!st.cols;draw();return}if(e.target.closest('[data-clear]')){resetFilters();return}if(e.target.closest('button[data-rst]')){st.xk=null;draw();return}const fx=e.target.closest('[data-fx]');if(fx){const n=decodeURIComponent(fx.dataset.fx);setFx(!n||st.fx==n?null:n);draw();return}const tx=e.target.closest('th[data-xk]');if(tx){const k=tx.dataset.xk;if(st.xk==k)st.xd=st.xd=='a'?'d':'a';else{st.xk=k;st.xd=k=='n'||k=='gc'?'a':'d'}draw();return}const th=e.target.closest('th[data-k]');if(!th)return;const k=th.dataset.k;if(st.sk==k)st.sd=st.sd=='a'?'d':'a';else{st.sk=k;st.sd=k=='n'||k=='GC'?'a':'d'}draw()};$('#sx').onchange=draw;$('#sq').onchange=draw;$('#hf').onchange=draw;$('#ht').onchange=draw;$('#et').onchange=()=>{const v=$('#et').value;if(v&&!hlNames().some(x=>nk(x)==nk(v)))st.hl.push(v);$('#et').value='';draw()};$('#x').oninput=dbd(draw);$('#x0').oninput=dbd(draw);$('#ft').onchange=draw;
