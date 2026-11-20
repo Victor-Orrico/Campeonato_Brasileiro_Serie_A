@@ -7945,9 +7945,9 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,35,18/11/2026,20:30,Flamengo,Athletico-PR,,,,,,,2,1,,,,2026
 ,35,18/11/2026,21:30,Corinthians,Botafogo,,,,,,,4,0,,,,2026
 ,35,18/11/2026,21:30,Gremio,Bahia,,,,,,,0,0,,,,2026
-,35,19/11/2026,19:30,Vasco,Internacional,,,,,,,,,,,,2026
-,35,19/11/2026,19:30,Vitoria,Bragantino,,,,,,,,,,,,2026
-,35,19/11/2026,21:30,Sao Paulo,Fluminense,,,,,,,,,,,,2026
+,35,19/11/2026,19:30,Vasco,Internacional,,,,,,,2,1,,,,2026
+,35,19/11/2026,19:30,Vitoria,Bragantino,,,,,,,2,1,,,,2026
+,35,19/11/2026,21:30,Sao Paulo,Fluminense,,,,,,,0,1,,,,2026
 ,36,21/11/2026,16:30,Palmeiras,Flamengo,,,,,,,,,,,,2026
 ,36,21/11/2026,17:30,Bahia,Coritiba,,,,,,,,,,,,2026
 ,36,21/11/2026,21:00,Chapecoense,Cruzeiro,,,,,,,,,,,,2026
