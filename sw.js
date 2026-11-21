@@ -1,10 +1,15 @@
 // Service worker: abre o site sem internet depois da primeira visita.
 // Estratégia "rede primeiro": busca sempre a versão mais nova (inclusive o jogos.csv) e usa a cópia guardada só se estiver offline.
-const V = "brasileirao-v1";
-const CORE = ["./", "./index.html", "./manifest.webmanifest", "./icons/icon-192.png", "./icons/icon-512.png"];
+const V = "brasileirao-v2";
+const CORE = ["./", "./index.html", "./cookies.js", "./manifest.webmanifest", "./icons/icon-192.png", "./icons/icon-512.png"];
 
 self.addEventListener("install", e => {
-  e.waitUntil(caches.open(V).then(c => c.addAll(CORE)).then(() => self.skipWaiting()));
+  // add() individual: se um arquivo faltar no site, os outros continuam sendo guardados.
+  e.waitUntil(
+    caches.open(V)
+      .then(c => Promise.all(CORE.map(u => c.add(u).catch(() => {}))))
+      .then(() => self.skipWaiting())
+  );
 });
 
 self.addEventListener("activate", e => {
@@ -19,7 +24,7 @@ self.addEventListener("fetch", e => {
   const r = e.request;
   if (r.method !== "GET") return;
   const u = new URL(r.url);
-  if (u.origin !== location.origin) return;
+  if (u.origin !== location.origin) return;   // anúncios e outros serviços externos não passam pelo cache
   e.respondWith(
     fetch(r)
       .then(res => {
