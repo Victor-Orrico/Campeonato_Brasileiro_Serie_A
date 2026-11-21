@@ -1,14 +1,21 @@
 name: Atualizar jogos
 on:
   schedule:
-    - cron: "17 7 * * *"   # todo dia, 04:17 no horário de Brasília
-    - cron: "17 0 * * *"   # todo dia, 21:17 no horário de Brasília 
-  workflow_dispatch: {}    # permite rodar manualmente na aba Actions
+    - cron: "3-59/10 * * * *"   # a cada 10 minutos (minutos 3, 13, 23, 33, 43 e 53, para fugir do pico do começo da hora)
+  workflow_dispatch:             # permite rodar manualmente na aba Actions
+    inputs:
+      temporadas:
+        description: "Temporadas (ex.: 2025,2026)"
+        default: "2026"
 permissions:
   contents: write
+concurrency:
+  group: atualizar-jogos          # nunca roda duas atualizações ao mesmo tempo
+  cancel-in-progress: false
 jobs:
   atualizar:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -17,11 +24,11 @@ jobs:
       - name: Buscar resultados
         env:
           FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
-          TEMPORADAS: "2026"
+          TEMPORADAS: ${{ github.event.inputs.temporadas || '2026' }}
         run: python scripts/atualizar_jogos.py
       - name: Commit se houve mudança
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add -A data
-          git diff --cached --quiet || (git commit -m "Atualiza jogos" && git push)
+          git diff --cached --quiet || (git commit -m "Atualiza jogos" && git pull --rebase && git push)
