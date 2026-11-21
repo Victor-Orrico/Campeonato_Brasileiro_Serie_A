@@ -125,7 +125,7 @@ td:first-child{min-width:38px}
 .tsum{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
 .tkb{background:color-mix(in srgb,var(--acc) 9%,var(--card));border:1px solid var(--line);border-radius:10px;padding:10px 12px}.tkb b{display:block;font-size:22px}.tkb span{font-size:13px;color:var(--mut)}.tkb small{display:block;font-size:12px;color:var(--mut);margin-top:2px}
 .card h2 .tb{width:30px;height:30px;font-size:9px;margin:0 4px 0 0}
-@media print{header,#fbar,#chips,#bnav,#more,#bd,#vs,#vj,.expb,.colbtn,.rstb,#tip,button{display:none!important}body{background:#fff;padding:0}.sc{max-height:none!important;overflow:visible!important}.ig{-webkit-print-color-adjust:exact;print-color-adjust:exact}.card{box-shadow:none;break-inside:avoid}}
+@media print{.site-f,header,#fbar,#chips,#bnav,#more,#bd,#vs,#vj,.expb,.colbtn,.rstb,#tip,button{display:none!important}body{background:#fff;padding:0}.sc{max-height:none!important;overflow:visible!important}.ig{-webkit-print-color-adjust:exact;print-color-adjust:exact}.card{box-shadow:none;break-inside:avoid}}
 @media(max-width:720px){
 .hd{gap:8px}.srch{width:100%}#srch{flex:1;min-width:0}#lnk{display:none}
 .g .tn,.g .df{display:none}.g .ds{display:inline}
@@ -224,6 +224,7 @@ body.fsb{overflow:hidden}
 .rr.on .rn{font-weight:800}.rr.on .rt{box-shadow:0 0 0 2px var(--fg)}
 @media(prefers-reduced-motion:reduce){.rr,.rf{transition:none}}
 @media(max-width:720px){.rbox{--rnw:96px}.rr{grid-template-columns:26px var(--rnw) 1fr 50px;gap:4px}.rn{font-size:12px}.rv{font-size:12px}}
+.site-f{margin:28px 0 8px;padding:16px 0 4px;border-top:1px solid var(--line);text-align:center;color:var(--mut);font-size:13px;line-height:1.7}.site-f a{color:var(--acc)}.site-f nav{display:flex;gap:6px 18px;justify-content:center;flex-wrap:wrap;margin-bottom:6px}
 .mut{color:var(--mut);font-size:14px;font-weight:400}.hide{display:none!important}
 .chk{display:flex;flex-wrap:wrap;gap:4px;max-width:440px;max-height:90px;overflow:auto}
 .chk label{flex-direction:row;align-items:center;gap:4px;font-size:13px;font-weight:500;text-transform:none;letter-spacing:0;color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:3px 8px}
@@ -259,6 +260,9 @@ body.fsb{overflow:hidden}
 <label id="lo">Ordenar por<div class="seg" id="ord"><button data-o="r" class="on">Rodada</button><button data-o="d">Data</button></div></label>
 <label>Time<select id="ft"></select></label></div><div class="card" id="jl"></div></div>
 </div>
+<footer class="site-f"><nav aria-label="Informações do site"><a href="sobre.html">Sobre</a><a href="privacidade.html">Política de privacidade</a><a href="contato.html">Contato</a></nav>
+<div>Football data provided by the <a href="https://www.football-data.org" target="_blank" rel="noopener">Football-Data.org</a> API</div>
+<div>Site independente, sem vínculo com a CBF ou com os clubes. © Victor Orrico</div></footer>
 </main>
 <div id="bd"></div>
 <div id="more" role="menu" aria-label="Mais seções"><button data-t="p">👕 Time</button><button data-t="h">📚 Histórico</button><button data-t="e">📉 Evolução</button></div>
