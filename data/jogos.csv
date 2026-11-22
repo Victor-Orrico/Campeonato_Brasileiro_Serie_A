@@ -7950,7 +7950,7 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,35,19/11/2026,21:30,Sao Paulo,Fluminense,,,,,,,0,1,,,,2026
 ,36,21/11/2026,16:30,Palmeiras,Flamengo,,,,,,,1,1,,,,2026
 ,36,21/11/2026,17:30,Bahia,Coritiba,,,,,,,0,1,,,,2026
-,36,21/11/2026,21:00,Chapecoense,Cruzeiro,,,,,,,,,,,,2026
+,36,21/11/2026,21:00,Chapecoense,Cruzeiro,,,,,,,1,2,,,,2026
 ,36,22/11/2026,16:00,Athletico-PR,Clube do Remo,,,,,,,,,,,,2026
 ,36,22/11/2026,18:30,Fluminense,Mirassol,,,,,,,,,,,,2026
 ,36,22/11/2026,19:30,Bragantino,Vasco,,,,,,,,,,,,2026
