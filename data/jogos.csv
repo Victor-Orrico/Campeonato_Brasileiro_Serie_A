@@ -7954,9 +7954,9 @@ ID,rodada,data,hora,mandante,visitante,formacao_mandante,formacao_visitante,tecn
 ,36,22/11/2026,16:00,Athletico-PR,Clube do Remo,,,,,,,4,2,,,,2026
 ,36,22/11/2026,18:30,Fluminense,Mirassol,,,,,,,1,0,,,,2026
 ,36,22/11/2026,19:30,Bragantino,Vasco,,,,,,,1,0,,,,2026
-,36,23/11/2026,19:30,Internacional,Vitoria,,,,,,,,,,,,2026
-,36,23/11/2026,20:00,Botafogo,Sao Paulo,,,,,,,,,,,,2026
-,36,23/11/2026,21:00,Santos,Gremio,,,,,,,,,,,,2026
+,36,23/11/2026,19:30,Internacional,Vitoria,,,,,,,2,5,,,,2026
+,36,23/11/2026,20:00,Botafogo,Sao Paulo,,,,,,,1,1,,,,2026
+,36,23/11/2026,21:00,Santos,Gremio,,,,,,,0,2,,,,2026
 ,37,24/11/2026,18:00,Chapecoense,Palmeiras,,,,,,,,,,,,2026
 ,36,25/11/2026,20:00,Atletico-MG,Corinthians,,,,,,,,,,,,2026
 ,37,26/11/2026,20:00,Sao Paulo,Clube do Remo,,,,,,,,,,,,2026
