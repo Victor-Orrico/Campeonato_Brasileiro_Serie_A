@@ -1,7 +1,7 @@
 // Service worker: abre o site sem internet depois da primeira visita.
 // Estratégia "rede primeiro": busca sempre a versão mais nova (inclusive o jogos.csv) e usa a cópia guardada só se estiver offline.
-const V = "brasileirao-v2";
-const CORE = ["./", "./index.html", "./cookies.js", "./manifest.webmanifest", "./icons/icon-192.png", "./icons/icon-512.png"];
+const V = "brasileirao-v3";
+const CORE = ["./", "./index.html", "./app.js", "./tema.js", "./manifest.webmanifest", "./icons/icon-192.png", "./icons/icon-512.png"];
 
 self.addEventListener("install", e => {
   // add() individual: se um arquivo faltar no site, os outros continuam sendo guardados.
