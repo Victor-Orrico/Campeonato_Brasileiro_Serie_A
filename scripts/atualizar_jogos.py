@@ -15,7 +15,7 @@ ARQ_ATU = os.path.join(PASTA, "atualizacao.json")
 TOKEN = os.environ.get("FOOTBALL_DATA_TOKEN")
 TEMPORADAS = [int(x) for x in os.environ.get("TEMPORADAS", "2026").split(",")]
 # Ajuste manual de nomes: {"nome na API": "nome no seu CSV"}
-NOMES = {"Vasco da Gama": "Vasco", "Recife": "Sport"}
+NOMES = {"Vasco da Gama": "Vasco", "Recife": "Sport","Paranaense":"Athletico-PR","Mineiro":"Atletico-MG","AC Goianiense":"Atletico-GO","Cuiabá EC":"Cuiaba"}
 CAMPOS = ["ano_campeonato", "rodada", "data", "hora", "mandante", "visitante", "mandante_placar", "visitante_placar"]
 RE_NOME = re.compile(r"^[\w .\-]{2,40}$")          # letras (com acento), números, espaço, ponto e hífen
 URL_ESCUDO = "https://crests.football-data.org/"
