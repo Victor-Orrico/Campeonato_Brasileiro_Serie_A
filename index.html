@@ -190,10 +190,14 @@ td.cla{white-space:nowrap;font-weight:600;font-size:12px}.c1{color:var(--zg)}.c2
 .g.fx td{overflow:visible}.g td input{width:44px!important;min-height:40px;padding:4px 2px}
 }
 @media(min-width:721px){
-#ss{display:flex}#ss>.card{flex:1;display:flex;flex-direction:column;min-width:0}#ss>.card>.sc{flex:1 1 auto;min-height:0;max-height:none}#ss>.card>.sc table{height:100%}
-#sg{display:flex;flex-direction:column}
-#sg .sc.gb{flex:1 1 auto;min-height:0;max-height:none}
-#sg .sc.gb table{height:100%}
+#vs .panels{align-items:start}
+#ss .sc{max-height:none}
+#sg .sc.gb{max-height:none;overflow:visible}
+#sg .g.fx th,#sg .g.fx td{overflow:visible;text-overflow:clip}
+#sg .g td.h,#sg .g td.a{white-space:normal;line-height:1.25}
+#sg .df{display:none}#sg .ds{display:inline}
+#sg .g td input{width:calc(50% - 10px);min-width:34px;max-width:56px}
+.cgs col:nth-child(1){width:12%}.cgs col:nth-child(2){width:10%}.cgs col:nth-child(3){width:27%}.cgs col:nth-child(4){width:24%}.cgs col:nth-child(5){width:27%}
 }
 /* ===== Evolução: destaque, cursor, painel, tela cheia ===== */
 .evbar{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:12px}.evch{display:flex;flex-wrap:wrap;gap:4px;align-items:center}
